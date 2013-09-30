@@ -1,0 +1,9 @@
+/* tinyMce */
+.tinymce table {
+    width: auto;
+}
+.tinymce table td, .tinymce table th { padding: 0;}
+
+
+ /* private style */
+.style-flash { padding: 7px 10px; margin-bottom: 20px; font-size: 18px; color: white; }
