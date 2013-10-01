@@ -27,9 +27,9 @@
     <div class="container clearfix">
         <div class="row">
             <div class="threecol floatleft logo">
-                <h1><a href="<?php echo Helper::url('/Shop/product/index') ?>" title="voxenangmoicucacloai.com">
-                    <span class="voxenang">Voxenang</span>
-                    <span class="cacloai">cacloai</span>
+                <h1><a href="<?php echo Helper::url('/Shop/product/index') ?>" title="shopmyphamhan.com">
+                    <span class="voxenang">Shopmypham</span>
+                    <span class="cacloai">han</span>
                     <span class="domain">.com</span>
                 </a></h1>
             </div>
@@ -246,10 +246,11 @@
         $window.scroll(function (e) {
             if ($window.scrollTop() > pos) {
                 $this.css({
-                    width: '15%',
+                    width: '7%',
                     position: 'fixed',
                     top: 0,
                     left: 0,
+                    size: '27px',
                     align: 'center'
                 });
             } else {
@@ -257,6 +258,7 @@
                     width: 650,
                     position: 'relative',
                     top: 0,
+                    size: '35px',
                     align: 'center'
                 });
             }
