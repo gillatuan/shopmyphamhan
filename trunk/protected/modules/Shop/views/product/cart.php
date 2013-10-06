@@ -95,7 +95,7 @@
                 <div class="add-info-cart">
                     <div class="row">
                         <label>Yêu cầu khác</label>
-                        <textarea rows="10" cols="" class="info-cart"></textarea>
+                        <textarea rows="10" cols="" class="other-info"></textarea>
                     </div>
                 </div>
             </div>
@@ -104,7 +104,7 @@
 
     <div class="cart-order">
         <p class="link active">Bạn chưa hoàn tất cung cấp thông tin đặt mua hàng của bạn. Thanks.</p>
-        <a class="link active" href="javascript:void;" title="Mua giỏ hàng này">Mua giỏ hàng này</a>
+        <a class="link active" href="javascript:;" title="Mua giỏ hàng này">Mua giỏ hàng này</a>
     </div>
 </div>
 
@@ -175,20 +175,20 @@ $scriptActionCart = '
                     userInfo.push($(value).val());
                 }
             });
-            userInfo.push($(".billto textarea").val());
-
-            userInfo.push($(".shipto input.fullname").val());
-            userInfo.push($(".shipto input.phone").val());
-            userInfo.push($(".shipto input.address").val());
 
             if ("' . Helper::user()->id . '") {
                 var userEmail = $(".user-email").text();
                 userInfo.push(userEmail);
             }
+            userInfo.push($(".billto textarea").val());
 
-            userInfo.push($(".shipto .info-cart").val());
+            userInfo.push($(".shipto input.fullname").val());
+            userInfo.push($(".shipto input.phone").val());
+            userInfo.push($(".shipto input.address").val());
+            userInfo.push($(".shipto .other-info").val());
 
             if (dataError == false) {
+                $(this).parent().html(\'<p class="link active" style="display: block;"><img src="' . Helper::themeUrl() . '/images/loading.gif" alt="loading image" /></p>\');
                 var url = "' . Helper::url('/Shop/product/userOrder') . '";
                 $.ajax({
                     url: url,

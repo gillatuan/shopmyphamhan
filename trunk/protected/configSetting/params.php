@@ -15,7 +15,7 @@
 //
 	define('commentCount', 10);
 //
-	define('DB_HOST' , 'localhost');
+	define('DB_HOST' , '205.178.146.106');
 //
 	define('DB_NAME' , 'myphamhan');
 //
@@ -39,7 +39,7 @@
 //
 	define('MAIL_METHOD', 'smtp');
 //
-	define('MAIL_SENDER_ADDRESS', 'tuan.buidoanngoc@gmail.com');
+	define('MAIL_SENDER_ADDRESS', 'gangtergilla4@gmail.com');
 //
 	define('MAIL_SENDER_NAME', 'Contact Web3in1');
 //
@@ -55,7 +55,7 @@
 //
 	define('SMTP_HOST', 'smtp.gmail.com');
 //
-	define('SMTP_PASSWORD', 'Ng9ct71n@');
+	define('SMTP_PASSWORD', 'Ng9cT71n');
 //
 	define('SMTP_PORT', 465);
 //

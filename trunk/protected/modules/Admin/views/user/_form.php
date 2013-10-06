@@ -57,7 +57,7 @@ if (!$model->isNewRecord) {
             <?php } else { ?>
                 <div class="row">
                     <?php echo $form->labelEx($model, 'email'); ?>
-                    <?php echo $form->textField($model, 'email', array('class' => 'text-input small-input')); ?>
+                    <?php echo $form->textField($model, 'email', array('class' => 'text-input small-input user-email')); ?>
                     <?php echo $form->error($model, 'email'); ?>
                 </div>
             <?php } ?>
