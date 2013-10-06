@@ -29,7 +29,7 @@ class SiteController extends FrontendController
 	public function actionIndex()
 	{
         $this->redirect(array('/Shop/product/index'));
-        /*// seo
+        // seo
         $this->breadcrumbs = array(
             ''
         );
@@ -45,7 +45,7 @@ class SiteController extends FrontendController
         );
         Helper::seo($seo);
 
-		$this->render('index');*/
+		$this->render('index');
 	}
 
     public function actionRegister($type = 3) {
@@ -220,7 +220,7 @@ class SiteController extends FrontendController
 
             Helper::setFlash('send-mail', Helper::t('TEXT_NOTIFICATION_SUCCESS_SEND_MAIL_TO_FRIENDS_THANK_YOU'));
 
-            $this->redirect(array('/site/index'));
+            $this->redirect(array('/Shop/product/index'));
         }
     }
 

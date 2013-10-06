@@ -74,7 +74,7 @@
                     </div>
                     <div class="row">
                         <label><?php echo Helper::t('description'); ?></label>
-                        <span><?php echo $billTo['description']; ?></span>
+                        <span><?php echo nl2br($billTo['description']); ?></span>
                     </div>
                 </div>
             </div>
@@ -100,7 +100,7 @@
                     </div>
                     <div class="row add-info-cart">
                         <label>Yêu cầu khác</label>
-                        <?php echo $cartInfo; ?>
+                        <?php echo nl2br($shipTo['other']); ?>
                     </div>
                 </div>
             </div>

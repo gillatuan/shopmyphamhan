@@ -199,16 +199,16 @@ class ProductController extends FrontendController {
         $this->layout = '//layouts/cart';
 
         $showCart = array();
-        if (!isset($_COOKIE['Cart'])) {
+        if (!Cart::hasCookie('Cart')) {
             throw new CHttpException(400, Helper::t('ERROR_LINK'));
         }
-        if (isset($_COOKIE['Cart']) && $_COOKIE['Cart'] != '[]') {
-            $cart = json_decode($_COOKIE['Cart']);
-            $totalValueAfterUpdate = $_COOKIE['totalValueAfterUpdate'];
+        if (Cart::hasCookie('Cart') && Cart::getCookie('Cart') != '[]') {
+            $cart = Cart::getCookie('Cart');
+            $totalValueAfterUpdate = Cart::getCookie('totalValueAfterUpdate');
             $showCart = Helper::objectToArray($cart);
         } else {
-            if (isset($_COOKIE['Cart']) && $_COOKIE['Cart'] == '[]') {
-                Cart::removeCart();
+            if (!Cart::hasCookie('Cart')) {
+                Cart::removeCookie();
             }
             $this->redirect(array('/site/index'));
         }
@@ -275,8 +275,8 @@ class ProductController extends FrontendController {
     }
 
     public function actionUpdateOrDeleteCart() {
-        if (isset($_COOKIE['Cart']) && $_COOKIE['Cart'] == '[]') {
-            Cart::removeCart();
+        if (Cart::hasCookie('Cart') && Cart::getCookie('Cart') == '[]') {
+            Cart::removeCookie();
         }
 
         if (Helper::post()) {
@@ -288,7 +288,7 @@ class ProductController extends FrontendController {
             $totalValueBefore = Helper::post('totalValueBefore');
             $valueBefore = Helper::post('valueBefore');
 
-            if (($type == 'updateCart' && $quantity > 0) || $type == 'addCart') {
+            if (($type == 'updateCart' || $type == 'addCart') && $quantity > 0) {
                 $dataCart = Cart::AddOrShowCart($category, $alias, $quantity, $valueBefore, $totalValueBefore, $type);
             } elseif ($type == 'delOneCart' || $quantity == 0) {
                 $newCart = Cart::RemoveProduct($alias, $valueBefore, $totalValueBefore);
@@ -309,22 +309,39 @@ class ProductController extends FrontendController {
     public function actionUserOrder() {
         if (Helper::post('userInfo')) {
             $userInfo = Helper::post('userInfo');
-            $arrayBillTo = array(
-                'email'     => $userInfo[0],
-                'full_name' => $userInfo[1],
-                'phone'     => $userInfo[2],
-                'address'   => $userInfo[3],
-                'description'  => $userInfo[4],
-            );
-            $arrayShipTo = array(
-                'full_name' => !empty($userInfo[5]) ? $userInfo[5] : $userInfo[1],
-                'phone'     => !empty($userInfo[6]) ? $userInfo[6] : $userInfo[2],
-                'address'   => !empty($userInfo[7]) ? $userInfo[7] : $userInfo[3],
-            );
-            isset($userInfo[8]) ? Cart::addCookie('cartInfo', $userInfo[8]) : '';
+            if (count($userInfo) > 10) {
+                $arrayBillTo = array(
+                    'username'  => $userInfo[0],
+                    'email'     => $userInfo[1],
+                    'full_name' => $userInfo[2],
+                    'phone'     => $userInfo[3],
+                    'address'   => $userInfo[4],
+                    'description'  => $userInfo[7],
+                );
+                $arrayShipTo = array(
+                    'full_name' => !empty($userInfo[8]) ? $userInfo[8] : $userInfo[2],
+                    'phone'     => !empty($userInfo[9]) ? $userInfo[9] : $userInfo[3],
+                    'address'   => !empty($userInfo[10]) ? $userInfo[10] : $userInfo[4],
+                    'other'     => !empty($userInfo[11]) ? $userInfo[11] : ''
+                );
+            } else {
+                $arrayBillTo = array(
+                    'email'     => $userInfo[0],
+                    'full_name' => $userInfo[1],
+                    'phone'     => $userInfo[2],
+                    'address'   => $userInfo[3],
+                    'description'      => $userInfo[4]
+                );
+                $arrayShipTo = array(
+                    'full_name' => !empty($userInfo[5]) ? $userInfo[5] : $userInfo[1],
+                    'phone'     => !empty($userInfo[6]) ? $userInfo[6] : $userInfo[2],
+                    'address'   => !empty($userInfo[7]) ? $userInfo[7] : $userInfo[3],
+                    'other'     => !empty($userInfo[8]) ? $userInfo[8] : ''
+                );
+            }
 
-            Cart::addCookie('billTo', $arrayBillTo);
-            Cart::addCookie('shipTo', $arrayShipTo);
+            Cart::setCookie('billTo', json_encode($arrayBillTo));
+            Cart::setCookie('shipTo', json_encode($arrayShipTo));
             echo CJSON::encode('Add-Cookie-success');
             Yii::app()->end();
         } else {
@@ -334,13 +351,14 @@ class ProductController extends FrontendController {
 
     public function actionConfirmOrder() {
         $this->layout = '//layouts/cart';
-        if (!isset($_COOKIE['Cart']) && Helper::post('confirmOrder')) {
+        if (!Cart::hasCookie('Cart') && Helper::post('confirmOrder')) {
             throw new CHttpException(400, Helper::t('ERROR_LINK'));
         }
-        $cart = Cart::displayCookie('Cart');
-        $billTo = Cart::displayCookie('billTo');
-        $shipTo = Cart::displayCookie('shipTo');
-        $cartInfo = !empty($_COOKIE['cartInfo']) ? nl2br($_COOKIE['cartInfo']) : '';
+        $cart = Helper::objectToArray(Cart::getCookie('Cart'));
+        $billTo = Helper::objectToArray(Cart::getCookie('billTo'));
+        $shipTo = Helper::objectToArray(Cart::getCookie('shipTo'));
+
+        $cartInfo = Cart::hasCookie('cartInfo') ? nl2br(Cart::getCookie('cartInfo')) : '';
         if (Helper::post('confirmOrder')) {
             // update to Product
             foreach ($cart as $gh) {
@@ -366,12 +384,12 @@ class ProductController extends FrontendController {
                     'cartInfo' => $cartInfo
                 ),
                 'mailTo'   => $billTo['email'],
-                'mailFrom' => array(ADMIN_EMAIL => 'shopmyphamhan.com - ' . ADMIN_EMAIL)
+                'mailFrom' => array(ADMIN_EMAIL => 'Shop Mỹ Phẩm hàn - ' . ADMIN_EMAIL)
             );
             // send
             Helper::sendMail($params);
             // remove Cart
-            Cart::removeCart();
+            Cart::removeCookie();
             Helper::setFlash('SUCCESS_ORDER', Helper::t('SUCCESS_ORDER'));
 
             echo CJSON::encode($data);

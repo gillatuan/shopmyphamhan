@@ -104,7 +104,8 @@
         <!-- Cart -->
         <div class="row bottom-20 cart-info">
             <div class="cart sevencol last">
-                <?php $amountProducts = is_object(Yii::app()->request->cookies['amountProducts']) ? 'Bạn có ' . Yii::app()->request->cookies['amountProducts']->value . ' sản phẩm trong giỏ hàng.' : 'Giỏ hàng'; ?>
+                <?php
+                $amountProducts = Cart::hasCookie('amountProducts') ? 'Bạn có ' . Cart::getCookie('amountProducts') . ' sản phẩm trong giỏ hàng.' : 'Giỏ hàng'; ?>
                 <a href="<?php echo Helper::url('/Shop/product/viewCart'); ?>" title="<?php echo $amountProducts; ?>" class="your-cart"><?php echo $amountProducts; ?>
                     <img src="<?php echo Helper::themeUrl(); ?>/images/voxenangcacloai-gio-hang.gif" alt="vỏ xe nâng các loại giỏ hàng">
                 </a>

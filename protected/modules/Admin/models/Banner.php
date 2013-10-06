@@ -145,6 +145,9 @@ class Banner extends CActiveRecord
 
     protected function beforeValidate() {
         $postBanner = Helper::post('Banner');
+        if (!empty($postBanner['page'])) {
+            $this->page = count($postBanner['page']) > 1 ? implode(',', $postBanner['page']) : $postBanner['page'];
+        }
         if (!$this->isNewRecord) {
             $this->expired_date = Helper::changeDateToFormat($this->expired_date, 'm-d-Y');
         }

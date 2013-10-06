@@ -150,7 +150,7 @@
                 <div class="row add-info-cart">
                     <label>Yêu cầu khác: </label>
                     <div class="clearfix"></div>
-                    <div class="info"><?php echo nl2br($cartInfo); ?></div>
+                    <div class="info"><?php echo nl2br($shipTo['other']); ?></div>
                 </div>
             </div>
         </div>

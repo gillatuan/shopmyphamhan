@@ -28,11 +28,4 @@ class AdminModule extends CWebModule {
             return false;
         }
     }
-
-    static public function suggestTags($keyword) {
-        $tags = Tags::model()->suggestTags($keyword);
-        if ($tags !== array()) {
-            echo implode("\n", $tags);
-        }
-    }
 }
