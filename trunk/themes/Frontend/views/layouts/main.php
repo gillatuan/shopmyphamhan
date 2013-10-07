@@ -193,7 +193,7 @@
             </form>
         </li>
         <li class="hot-products twocol last"><a href="#" title="Hot product">Hot Products</a></li>
-        <li class="hot-line threecol last"><p>Hot line: <span>0909793972 - 0909909999</span></p></li>
+        <li class="hot-line threecol last"><p>Hot line: <span>0903.66.44.64</span></p></li>
         <li class="nav-social floatright fourcol last">
             <a href="#" target="_blank">
                 <img class="footer_social" src="<?php echo Helper::themeUrl(); ?>/images/facebook_24.png" border="0" alt="facebook social">

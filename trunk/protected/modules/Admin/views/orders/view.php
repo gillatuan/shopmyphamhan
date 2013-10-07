@@ -115,20 +115,12 @@
                             <span><?php echo $billTo['full_name']; ?></span>
                         </div>
                         <div class="row">
-                            <label>Năm sinh</label>
-                            <span><?php echo $billTo['birthday']; ?></span>
-                        </div>
-                        <div class="row">
                             <label>Điện thoại</label>
                             <span><?php echo $billTo['phone']; ?></span>
                         </div>
                         <div class="row">
                             <label>Địa chỉ</label>
                             <span><?php echo $billTo['address']; ?></span>
-                        </div>
-                        <div class="row">
-                            <label>Quốc gia</label>
-                            <span><?php echo $billTo['national']; ?></span>
                         </div>
                     </div>
                 </div>

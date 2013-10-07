@@ -17,9 +17,6 @@ return array(
     // preloading 'log' component
     'preload'=>array('log'),
 
-    /*'onBeginRequest'=>create_function('$event', 'return ob_start("ob_gzhandler");'),
-    'onEndRequest'=>create_function('$event', 'return ob_end_flush();'),*/
-
     // autoloading model and component classes
     'import'=>array(
         'application.models.*',
@@ -46,6 +43,10 @@ return array(
 
     // application components
     'components'=>array(
+        'request'=>array(
+            'enableCookieValidation'=>true,
+//            'enableCsrfValidation'=>true,
+        ),
         'user'=>array(
             // enable cookie-based authentication
             'allowAutoLogin'=>true,

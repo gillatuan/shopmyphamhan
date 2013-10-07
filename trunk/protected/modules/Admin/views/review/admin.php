@@ -7,9 +7,9 @@ $this->breadcrumbs = array(
     'Manage',
 );
 
-$this->menu = array(
+/*$this->menu = array(
     array('label' => 'Create Review', 'url' => array('create')),
-);
+);*/
 
 Yii::app()->clientScript->registerScript('search', "
 $('.search-button').click(function(){

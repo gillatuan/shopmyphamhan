@@ -64,6 +64,10 @@ return array(
     'body' => 'Nội dung',
     'verifyCode' => 'Nhập mã xác nhận',
     'Fields_required'                         => 'Những ô trống có gắn <span class="required">*</span> là bắt buộc nhập.',/* Fields with * are required. */
+    'create_date'                     => 'Ngày tạo',
+
+    // Order
+    'order_status'                    => 'Tình trạng đơn hàng',
 
     // Homepage title, alt
     'HOME_title' => 'Thiết kế web - Trang chủ',

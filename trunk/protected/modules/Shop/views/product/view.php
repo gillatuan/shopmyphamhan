@@ -59,20 +59,27 @@ $dataImage = $data->image ? (is_array($explode) ? $explode[0] : $explode) : $noI
                 )); ?><span>&nbsp; / <?php echo $data->countReview; ?> reviews</span>
             </div>
             <div class="price">
-                <?php if ($data->is_sale_off != 0 && $data->discount != 0) {
-                    $discountedPrice = $data->price * ((100 - $data->discount) / 100);
-                    $discountPrice = $data->price * $data->discount / 100;
-                    ?>
-                    <p class="price-current"><?php echo Helper::t('price'); ?>: <span><?php echo Helper::formatNumber($data->price) ?></span></p>
-                    <p>Sales price: <span class="sale-off"><?php echo Helper::formatNumber($discountedPrice); ?></span></p>
-                    <p><?php echo Helper::t('discount'); ?>: <span class="discount">
-                            <?php echo Helper::formatNumber($discountPrice) ?>
-                            <input type="hidden" class="price-discount" value="<?php echo $data->price * $data->discount / 100; ?>" />
-                        </span></p>
+                <?php if (!empty($data->price)) { ?>
+                    <?php if ($data->is_sale_off != 0 && $data->discount != 0) {
+                        $discountedPrice = $data->price * ((100 - $data->discount) / 100);
+                        $discountPrice = $data->price * $data->discount / 100;
+                        ?>
+                        <p class="price-current"><?php echo Helper::t('price'); ?>: <span><?php echo Helper::formatNumber($data->price) ?></span></p>
+                        <p>Sales price: <span class="sale-off"><?php echo Helper::formatNumber($discountedPrice); ?></span></p>
+                        <p><?php echo Helper::t('discount'); ?>: <span class="discount">
+                                <?php echo Helper::formatNumber($discountPrice) ?>
+                                <input type="hidden" class="price-discount" value="<?php echo $data->price * $data->discount / 100; ?>" />
+                            </span></p>
+                    <?php } else { ?>
+                        <p><?php echo Helper::t('price'); ?>: <span><?php echo Helper::formatNumber($data->price) ?></span></p>
+                    <?php } ?>
                 <?php } else { ?>
-                    <p><?php echo Helper::t('price'); ?>: <span><?php echo Helper::formatNumber($data->price) ?></span></p>
+                    <p><?php echo Helper::t('price'); ?>: <span>LIÊN HỆ</span></p>
                 <?php } ?>
-                <p><?php echo Helper::t('barcode'); ?>: <span><?php echo $data->barcode; ?></span></p>
+
+                <?php if (!empty($data->barcode)) { ?>
+                    <p><?php echo Helper::t('barcode'); ?>: <span><?php echo $data->barcode; ?></span></p>
+                <?php } ?>
 
                 <p class="showFormReview"><a href="javascript:void:;" title="Review" class="link"><?php echo Helper::t('yourComments'); ?></a></p>
                     <div class="addtocart-area">
@@ -81,7 +88,10 @@ $dataImage = $data->image ? (is_array($explode) ? $explode[0] : $explode) : $noI
                             <input type="button" class="quantity-plus" />
                             <input type="button" class="quantity-minus" />
                         </div>
-                        <input type="submit" name="addtocart" class="addtocart-button" value="Mua sản phẩm" title="Mua sản phẩm" />
+
+                        <?php if (!empty($data->price)) { ?>
+                            <input type="submit" name="addtocart" class="addtocart-button" value="Mua sản phẩm" title="Mua sản phẩm" />
+                        <?php } ?>
                     </div>
             </div>
         </div>

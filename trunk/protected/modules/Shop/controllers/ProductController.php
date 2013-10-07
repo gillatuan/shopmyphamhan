@@ -177,12 +177,12 @@ class ProductController extends FrontendController {
         );
         $pageTitle = $this->pageTitle = $this->includeText . $productDetail->name;
         $seo = array(
-            'keywords'    => Yii::app()->language == 'vi' ? "{$productDetail->name}, thông tin sản phẩm {$productDetail->info} " . DEFAULT_META_KEYWORDS . 'vomamxenang.com' : "{$productDetail->name}, {$productDetail->info}",
-            'description' => Yii::app()->language == 'vi' ? "{$productDetail->name}, thông tin sản phẩm {$productDetail->info} " . DEFAULT_META_DESCRIPTION . ' vomamxenang.com'  : "{$productDetail->name}, {$productDetail->info}",
+            'keywords'    => Yii::app()->language == 'vi' ? "{$productDetail->name}, {$productDetail->info} " . DEFAULT_META_KEYWORDS . 'vomamxenang.com' : "{$productDetail->name}, {$productDetail->info}",
+            'description' => Yii::app()->language == 'vi' ? "{$productDetail->name}, {$productDetail->info} " . DEFAULT_META_DESCRIPTION . ' vomamxenang.com'  : "{$productDetail->name}, {$productDetail->info}",
             'title'       => $pageTitle,
             'type'        => 'Sản phẩm',
             'url'         => Yii::app()->createAbsoluteUrl(Yii::app()->request->requestUri),
-            'image'       => Helper::renderImage($productDetail->image, 'uploads/Products', ',', true, true),
+            'image'       => Helper::renderImage($productDetail->image, 'uploads/detail/Products', ',', true, true),
             'site_name'   => $pageTitle,
         );
         Helper::seo($seo);
@@ -384,7 +384,7 @@ class ProductController extends FrontendController {
                     'cartInfo' => $cartInfo
                 ),
                 'mailTo'   => $billTo['email'],
-                'mailFrom' => array(ADMIN_EMAIL => 'Shop Mỹ Phẩm hàn - ' . ADMIN_EMAIL)
+                'mailFrom' => array(ADMIN_EMAIL => 'Shop Mỹ Phẩm Hàn - ' . ADMIN_EMAIL)
             );
             // send
             Helper::sendMail($params);
