@@ -5,7 +5,30 @@ class DefaultController extends BackendController {
         $this->render('index');
     }
 
-    public function actionDeleteCache() {
+    public function actionDeleteImage()
+    {
+        if (Yii::app()->request->isPostRequest):
+            $imageName = Yii::app()->request->getPost('imageName');
+            $model     = Yii::app()->request->getPost('model');
+            $image = Helper::post('colImage') ? Helper::post('colImage') : 'image';
+
+            if ($imageName):
+                $params = array(
+                    'imageName'   => $imageName,
+                    'id'          => Yii::app()->request->getPost('imageID'),
+                    'model'       => $model,
+                    'colFileName' => $image,
+                    'folder'      => $image != 'avatar' ? Helper::basePath() . '/../uploads/' . strtolower($model) : Helper::basePath() . '/../uploads/avatar'
+                );
+                Helper::deleteImage($params);
+                echo CJSON::encode("Image was deleted");
+                Yii::app()->end();
+            endif;
+        endif;
+    }
+
+    public function actionDeleteCache()
+    {
         $this->cleanDir(Helper::basePath() . '/runtime/cache');
         $messageSuccess = 'deleteCached';
         Yii::app()->user->setFlash($messageSuccess, 'Cache Files have been deleted successfully.');

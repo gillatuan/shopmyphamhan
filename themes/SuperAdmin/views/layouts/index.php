@@ -34,34 +34,19 @@
                             <p>You have 14 new notifications</p>
                         </li>
                         <li>
-
-                            <a href="#"> <span class="label label-success"><i class="icon-plus"></i></span> New user registered. <span
-                                    class="time">Just now</span> </a>
-
+                            <a href="#"> <span class="label label-success"><i class="icon-plus"></i></span> New user registered. <span class="time">Just now</span> </a>
                         </li>
                         <li>
-
-                            <a href="#"> <span class="label label-important"><i class="icon-bolt"></i></span> Server #12 overloaded. <span
-                                    class="time">15 mins</span> </a>
-
+                            <a href="#"> <span class="label label-important"><i class="icon-bolt"></i></span> Server #12 overloaded. <span class="time">15 mins</span> </a>
                         </li>
                         <li>
-
-                            <a href="#"> <span class="label label-warning"><i class="icon-bell"></i></span> Server #2 not respoding. <span
-                                    class="time">22 mins</span> </a>
-
+                            <a href="#"> <span class="label label-warning"><i class="icon-bell"></i></span> Server #2 not respoding. <span class="time">22 mins</span> </a>
                         </li>
                         <li>
-
-                            <a href="#"> <span class="label label-info"><i class="icon-bullhorn"></i></span> Application error. <span
-                                    class="time">40 mins</span> </a>
-
+                            <a href="#"> <span class="label label-info"><i  class="icon-bullhorn"></i></span> Application error. <span class="time">40 mins</span> </a>
                         </li>
                         <li>
-
-                            <a href="#"> <span class="label label-important"><i class="icon-bolt"></i></span> Database overloaded 68%. <span
-                                    class="time">2 hrs</span> </a>
-
+                            <a href="#"> <span class="label label-important"><i class="icon-bolt"></i></span> Database overloaded 68%. <span class="time">2 hrs</span> </a>
                         </li>
                         <li>
                             <a href="#"> <span class="label label-important"><i class="icon-bolt"></i></span> 2 user IP blocked. <span class="time">5 hrs</span> </a>
@@ -214,10 +199,7 @@
                     </a>
                     <ul class="dropdown-menu">
                         <li>
-
-                            <a href="<?php echo Helper::url('/Admin/user/profile', array('id' => Helper::user()->id)); ?>" title="My Profile"><i
-                                    class="icon-user"></i> My Profile</a></li>
-
+                            <a href="<?php echo Helper::url('/Admin/user/profile', array('id' => Helper::user()->id)); ?>" title="My Profile"><i class="icon-user"></i> My Profile</a></li>
                         <li><a href="#"><i class="icon-tasks"></i> My Tasks</a></li>
                         <li class="divider"></li>
                         <li><a href="<?php echo Helper::url('/site/logout'); ?>" title="Log Out"><i class="icon-key"></i> Log Out</a>
@@ -275,6 +257,9 @@
                     <li class="<?php if (Yii::app()->getModule('SuperAdmin')->id == 'SuperAdmin' && Yii::app()->controller->id == 'lookup' && Yii::app()->getController()->action->id == 'admin') { ?>active<?php } ?>">
                         <a href="<?php echo Helper::url('/SuperAdmin/lookup/admin'); ?>"
                            title="Manage Lookup">Manage Lookup</a></li>
+                    <li class="<?php if (Yii::app()->getModule('SuperAdmin')->id == 'SuperAdmin' && Yii::app()->controller->id == 'banner' && Yii::app()->getController()->action->id == 'admin') { ?>active<?php } ?>">
+                        <a href="<?php echo Helper::url('/SuperAdmin/banner/admin'); ?>"
+                           title="Manage Banner">Manage Banner</a></li>
                 </ul>
             </li>
             <!--Extra-->
@@ -292,12 +277,6 @@
                     <li class="<?php if (Yii::app()->getModule('Admin')->id == 'Admin' && Yii::app()->controller->id == 'user' && Yii::app()->getController()->action->id == 'admin') { ?>active<?php } ?>">
                         <a href="<?php echo Helper::url('/Admin/user/admin', array('id' => Helper::user()->id)); ?>">Manage User</a>
                     </li>
-                    <li class="<?php if (Yii::app()->getModule('Admin')->id == 'Admin' && Yii::app()->controller->id == 'staticPage' && Yii::app()->getController()->action->id == 'admin') { ?>active<?php } ?>">
-                        <a href="<?php echo Helper::url('/Admin/staticPage/admin'); ?>">Manage Static Page</a>
-                    </li>
-                    <li class="<?php if (Yii::app()->getModule('Admin')->id == 'Admin' && Yii::app()->controller->id == 'banner' && Yii::app()->getController()->action->id == 'admin') { ?>active<?php } ?>">
-                        <a href="<?php echo Helper::url('/Admin/banner/admin'); ?>"
-                            title="Manage Banner">Manage Banner</a></li>
                     <li><a href="extra_faq.html">FAQ</a></li>
                     <li><a href="extra_search.html">Search Results</a></li>
                     <li><a href="extra_invoice.html">Invoice</a></li>
@@ -350,11 +329,9 @@
                     </h3>
                     <?php
                     $this->widget('zii.widgets.CBreadcrumbs', array(
-                        'homeLink'             => '<li><i class="icon-home"></i>' . CHtml::link('Trang chủ - Thiết kế website',
-                        Helper::url('/Blog/post/index', array('lang' => Yii::app()->language)),
-                        array('title' => 'Trang chủ - Thiết kế website - Web3in1.com')) . '<span class="icon-angle-right"></span></li>',
-                        'links'                => $this->breadcrumbs,
-                        'activeLinkTemplate'   => '<li><a href="{url}">{label}</a><span class="icon-angle-right"></span></li>',
+                        'homeLink' => '<li><i class="icon-home"></i>' . CHtml::link('Trang chủ - Thiết kế website', Helper::url('/Blog/post/index'), array('title' => 'Trang chủ - Thiết kế website - Web3in1.com')) . '<span class="icon-angle-right"></span></li>',
+                        'links' => $this->breadcrumbs,
+                        'activeLinkTemplate' => '<li><a href="{url}">{label}</a><span class="icon-angle-right"></span></li>',
                         // will generate the clickable breadcrumb links
                         'inactiveLinkTemplate' => '<li>{label}</li>',
                         // will generate the current page url : <li>News</li>

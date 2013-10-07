@@ -92,6 +92,7 @@
                 'showAnim'    => 'fold',
                 'dateFormat'  => 'mm-dd-yy',
 //                'minDate'     => '0',
+                'yearRange'=>'1955:1995',
                 'onSelect'    => "js:function() {
 
                 }",

@@ -33,10 +33,10 @@ class SiteController extends FrontendController
         $this->breadcrumbs = array(
             ''
         );
-        $pageTitle = $this->pageTitle = 'Web3in1.com - Trang chủ';
+        $pageTitle = $this->pageTitle = 'Shop Mỹ Phẩm Hàn - Trang chủ';
         $seo = array(
-            'keywords' => Yii::app()->language == 'vi' ? 'trang chủ, trang chủ thiết kế web, trang chủ web3in.com' : 'homepage, homepage design web, homepage web3in1.com',
-            'description' => Yii::app()->language == 'vi' ? 'trang chủ, trang chủ thiết kế web, trang chủ web3in.com' : 'homepage, homepage design web, homepage web3in1.com',
+            'keywords' => Yii::app()->language == 'vi' ? 'trang chủ, trang chủ thiết kế web, trang chủ shopmyphamhan.com' : 'homepage, homepage design web, homepage shopmyphamhan.com',
+            'description' => Yii::app()->language == 'vi' ? 'trang chủ, trang chủ thiết kế web, trang chủ shopmyphamhan.com' : 'homepage, homepage design web, homepage shopmyphamhan.com',
             'title' => $pageTitle,
             'type' => 'Blog',
             'url' => Yii::app()->createAbsoluteUrl('/site/index'),
@@ -74,14 +74,14 @@ class SiteController extends FrontendController
                     $params = array(
                         'viewPath' => 'application.views.site.mail',
                         'view' => 'registration_confirmation',
-                        'subject' => 'Web3in1.com - ' . Helper::t('TEXT_NOTIFICATION_CONFIRM_SUCCESS_REGISTRATION'),
+                        'subject' => 'Shop Mỹ Phẩm Hàn - ' . Helper::t('TEXT_NOTIFICATION_CONFIRM_SUCCESS_REGISTRATION'),
                         'body' => array(
                             'username' => $model->username,
                             'password' => $postUser['password'],
                             'link' => CHtml::link($url, $url, array('target' => '_blank')),
                         ),
                         'mailTo' => $model->email,
-                        'mailFrom' => array(ADMIN_EMAIL => 'Web3in1.com - ' . ADMIN_EMAIL)
+                        'mailFrom' => array(ADMIN_EMAIL => 'Shop Mỹ Phẩm Hàn - ' . ADMIN_EMAIL)
                     );
                     // send
                     Helper::sendMail($params);
@@ -96,10 +96,10 @@ class SiteController extends FrontendController
         $this->breadcrumbs = array(
             ' Đăng ký tài khoản'
         );
-        $pageTitle = $this->pageTitle = 'Web3in1.com - Đăng ký tài khoản';
+        $pageTitle = $this->pageTitle = 'Shop Mỹ Phẩm Hàn - Đăng ký tài khoản';
         $seo = array(
-            'keywords' => Yii::app()->language == 'vi' ? 'Đăng ký tài khoản, Đăng ký tài khoản thiết kế web, Đăng ký tài khoản web3in.com' : 'Register page, register page design web, homepage web3in1.com',
-            'description' => Yii::app()->language == 'vi' ? 'Đăng ký tài khoản, Đăng ký tài khoản thiết kế web, Đăng ký tài khoản web3in.com' : 'Register page, register page design web, homepage web3in1.com',
+            'keywords' => Yii::app()->language == 'vi' ? 'Đăng ký tài khoản, Đăng ký tài khoản thiết kế web, Đăng ký tài khoản shopmyphamhan.com' : 'Register page, register page design web, homepage shopmyphamhan.com',
+            'description' => Yii::app()->language == 'vi' ? 'Đăng ký tài khoản, Đăng ký tài khoản thiết kế web, Đăng ký tài khoản shopmyphamhan.com' : 'Register page, register page design web, homepage shopmyphamhan.com',
             'title' => $pageTitle,
             'type' => 'Blog',
             'url' => Yii::app()->createAbsoluteUrl('/site/register'),
@@ -129,12 +129,12 @@ class SiteController extends FrontendController
                 $params = array(
                     'viewPath' => 'application.views.site.mail',
                     'view' => 'welcome',
-                    'subject' => 'Web3in1.com - ' . Helper::t('TEXT_NOTIFICATION_SUCCESS_WELCOME'),
+                    'subject' => 'Shop Mỹ Phẩm Hàn - ' . Helper::t('TEXT_NOTIFICATION_SUCCESS_WELCOME'),
                     'body' => array(
                         'username' => $findUser->username,
                     ),
                     'mailTo' => $findUser->email,
-                    'mailFrom' => array(ADMIN_EMAIL => 'Web3in1.com - Welcome')
+                    'mailFrom' => array(ADMIN_EMAIL => 'Shop Mỹ Phẩm Hàn - Welcome')
                 );
                 // send
                 Helper::sendMail($params);
@@ -149,7 +149,9 @@ class SiteController extends FrontendController
      */
     public function actionContact()
     {
+        $this->layout = '//layouts/cart';
         $model = new ContactForm;
+
         // if it is ajax validation request
         Helper::performAjaxValidation($model, 'contact-form');
         if (Helper::post('ContactForm')) {
@@ -167,7 +169,7 @@ class SiteController extends FrontendController
                             'comment' => nl2br($model->body)
                         ),
                         'mailTo' => ADMIN_EMAIL,
-                        'mailFrom' => array($model->email => 'Contact - ' . $model->email)
+                        'mailFrom' => array($model->email => 'Shop Mỹ Phẩm Hàn - Liên hệ - ' . $model->email)
                     );
                     // send
                     Helper::sendMail($params);
@@ -181,12 +183,12 @@ class SiteController extends FrontendController
         $this->breadcrumbs = array(
             ' Liên hệ'
         );
-        $pageTitle = $this->pageTitle = 'Web3in1.com - Liên hệ';
+        $pageTitle = $this->pageTitle = 'Shop Mỹ Phẩm Hàn - Liên hệ';
         $seo = array(
-            'keywords'    => Yii::app()->language == 'vi' ? 'liên hệ, liên hệ thiết kế web, liên hệ web3in.com' : 'contact, contact to design web, contact to web3in1.com',
-            'description' => Yii::app()->language == 'vi' ? 'liên hệ, liên hệ thiết kế web, liên hệ web3in.com' : 'contact, contact to design web, contact to web3in1.com',
+            'keywords'    => Yii::app()->language == 'vi' ? 'liên hệ, liên hệ vỏ mâm xe nâng, liên hệ vỏ mâm xe nâng cũ các loại' : 'contact, contact to design web, contact to shopmyphamhan.com',
+            'description' => Yii::app()->language == 'vi' ? 'liên hệ, liên hệ vỏ mâm xe nâng, liên hệ vỏ mâm xe nâng cũ các loại' : 'contact, contact to design web, contact to shopmyphamhan.com',
             'title' => $pageTitle,
-            'type' => 'Blog',
+            'type' => 'Shop',
             'url' => Yii::app()->createAbsoluteUrl('/site/contact'),
             'image' => '',
             'site_name' => $pageTitle,
@@ -208,12 +210,12 @@ class SiteController extends FrontendController
             $params = array(
                 'viewPath' => 'application.views.site.mail',
                 'view' => 'send-mail-to-friend',
-                'subject' => 'Web3in1.com - ' . Helper::t('TEXT_NOTIFICATION_SUCCESS_SEND_MAIL_TO_FRIENDS'),
+                'subject' => 'Shop Mỹ Phẩm Hàn - ' . Helper::t('TEXT_NOTIFICATION_SUCCESS_SEND_MAIL_TO_FRIENDS'),
                 'body' => array(
                     'products' => $products
                 ),
                 'mailTo' => Helper::post('send-mail-to-friend'),
-                'mailFrom' => array(ADMIN_EMAIL => 'Web3in1.com - Thiết kế website')
+                'mailFrom' => array(ADMIN_EMAIL => 'Shop Mỹ Phẩm Hàn - Thiết kế website')
             );
             // send
             Helper::sendMail($params);
@@ -249,10 +251,10 @@ class SiteController extends FrontendController
         $this->breadcrumbs = array(
             ' Đăng nhập'
         );
-        $pageTitle = $this->pageTitle = 'Web3in1.com - Đăng nhập';
+        $pageTitle = $this->pageTitle = 'Shop Mỹ Phẩm Hàn - Đăng nhập';
         $seo = array(
-            'keywords'    => Yii::app()->language == 'vi' ? 'đăng nhập, đăng nhập thiết kế web, đăng nhập web3in.com' : 'login, login to design web, login to web3in1.com',
-            'description' => Yii::app()->language == 'vi' ? 'đăng nhập, đăng nhập thiết kế web, đăng nhập web3in.com' : 'login, login to design web, login to web3in1.com',
+            'keywords'    => Yii::app()->language == 'vi' ? 'đăng nhập, đăng nhập thiết kế web, đăng nhập shopmyphamhan.com' : 'login, login to design web, login to shopmyphamhan.com',
+            'description' => Yii::app()->language == 'vi' ? 'đăng nhập, đăng nhập thiết kế web, đăng nhập shopmyphamhan.com' : 'login, login to design web, login to shopmyphamhan.com',
             'title' => $pageTitle,
             'type' => 'Blog',
             'url' => Yii::app()->createAbsoluteUrl('/site/login'),
@@ -292,7 +294,7 @@ class SiteController extends FrontendController
                     $params = array(
                         'viewPath' => 'application.views.site.mail',
                         'view' => 'password_reset_confirmation',
-                        'subject' => 'Web3in1.com - ' . Helper::t('TEXT_NOTIFICATION_RESET_PASSWORD'),
+                        'subject' => 'Shop Mỹ Phẩm Hàn - ' . Helper::t('TEXT_NOTIFICATION_RESET_PASSWORD'),
                         'body' => array(
                             'username' => ucfirst($updateModel->username),
                             'link'     => CHtml::link($urlResetConfirm, $urlResetConfirm, array('target' => '_blank')),
@@ -300,7 +302,7 @@ class SiteController extends FrontendController
                             'code'     => $resetCode,
                         ),
                         'mailTo' => $updateModel->email,
-                        'mailFrom' => array(ADMIN_EMAIL => 'Web3in1.com - ' . ADMIN_EMAIL)
+                        'mailFrom' => array(ADMIN_EMAIL => 'Shop Mỹ Phẩm Hàn - ' . ADMIN_EMAIL)
                     );
                     // send
                     Helper::sendMail($params);
@@ -313,10 +315,10 @@ class SiteController extends FrontendController
         $this->breadcrumbs = array(
             ' Quên mật khẩu'
         );
-        $pageTitle = $this->pageTitle = 'Web3in1.com - Quên mật khẩu';
+        $pageTitle = $this->pageTitle = 'Shop Mỹ Phẩm Hàn - Quên mật khẩu';
         $seo = array(
-            'keywords'    => Yii::app()->language == 'vi' ? 'Quên mật khẩu, Quên mật khẩu thiết kế web, Quên mật khẩu web3in.com' : 'forgot, forgot to design web, forgot to web3in1.com',
-            'description' => Yii::app()->language == 'vi' ? 'Quên mật khẩu, Quên mật khẩu thiết kế web, Quên mật khẩu web3in.com' : 'forgot, forgot to design web, forgot to web3in1.com',
+            'keywords'    => Yii::app()->language == 'vi' ? 'Quên mật khẩu, Quên mật khẩu thiết kế web, Quên mật khẩu shopmyphamhan.com' : 'forgot, forgot to design web, forgot to shopmyphamhan.com',
+            'description' => Yii::app()->language == 'vi' ? 'Quên mật khẩu, Quên mật khẩu thiết kế web, Quên mật khẩu shopmyphamhan.com' : 'forgot, forgot to design web, forgot to shopmyphamhan.com',
             'title' => $pageTitle,
             'type' => 'Blog',
             'url' => Yii::app()->createAbsoluteUrl('/site/forgot'),
@@ -368,12 +370,12 @@ class SiteController extends FrontendController
                 $params = array(
                     'viewPath' => 'application.views.site.mail',
                     'view' => 'success_change_password',
-                    'subject' => 'Web3in1.com - ' . Helper::t('TEXT_NOTIFICATION_SUCCESS_CHANGE_PASSWORD'),
+                    'subject' => 'Shop Mỹ Phẩm Hàn - ' . Helper::t('TEXT_NOTIFICATION_SUCCESS_CHANGE_PASSWORD'),
                     'body' => array(
                         'username' => $findUser->username
                     ),
                     'mailTo' => $findUser->email,
-                    'mailFrom' => array(ADMIN_EMAIL => 'Web3in1.com - ' . ADMIN_EMAIL)
+                    'mailFrom' => array(ADMIN_EMAIL => 'Shop Mỹ Phẩm Hàn - ' . ADMIN_EMAIL)
                 );
                 // send
                 Helper::sendMail($params);
@@ -399,10 +401,10 @@ class SiteController extends FrontendController
         $this->breadcrumbs = array(
             ' Thay đổi mật khẩu'
         );
-        $pageTitle = $this->pageTitle = 'Web3in1.com - Thay đổi mật khẩu';
+        $pageTitle = $this->pageTitle = 'Shop Mỹ Phẩm Hàn - Thay đổi mật khẩu';
         $seo = array(
-            'keywords' => Yii::app()->language == 'vi' ? 'Thay đổi mật khẩu, Thay đổi mật khẩu thiết kế web, Thay đổi mật khẩu web3in.com' : 'forgot, forgot to design web, forgot to web3in1.com',
-            'description' => Yii::app()->language == 'vi' ? 'Thay đổi mật khẩu, Thay đổi mật khẩu thiết kế web, Thay đổi mật khẩu web3in.com' : 'forgot, forgot to design web, forgot to web3in1.com',
+            'keywords' => Yii::app()->language == 'vi' ? 'Thay đổi mật khẩu, Thay đổi mật khẩu thiết kế web, Thay đổi mật khẩu shopmyphamhan.com' : 'forgot, forgot to design web, forgot to shopmyphamhan.com',
+            'description' => Yii::app()->language == 'vi' ? 'Thay đổi mật khẩu, Thay đổi mật khẩu thiết kế web, Thay đổi mật khẩu shopmyphamhan.com' : 'forgot, forgot to design web, forgot to shopmyphamhan.com',
             'title' => $pageTitle,
             'type' => 'Blog',
             'url' => Yii::app()->createAbsoluteUrl('/site/changePassword'),
@@ -423,10 +425,10 @@ class SiteController extends FrontendController
         $this->breadcrumbs = array(
             ' Error'
         );
-        $pageTitle = $this->pageTitle = 'Web3in1.com - Xuất hiện lỗi';
+        $pageTitle = $this->pageTitle = 'Shop Mỹ Phẩm Hàn - Xuất hiện lỗi';
         $seo = array(
-            'keywords' => Yii::app()->language == 'vi' ? 'trang thông báo lỗi, trang thông báo lỗi thiết kế web, trang thông báo lỗi web3in.com' : 'errorpage, homepage design web, errorpage homepage web3in1.com',
-            'description' => Yii::app()->language == 'vi' ? 'trang thông báo lỗi, trang thông báo lỗi thiết kế web, trang thông báo lỗi web3in.com' : 'errorpage, homepage design web, errorpage homepage web3in1.com',
+            'keywords' => Yii::app()->language == 'vi' ? 'trang thông báo lỗi, trang thông báo lỗi thiết kế web, trang thông báo lỗi shopmyphamhan.com' : 'errorpage, homepage design web, errorpage homepage shopmyphamhan.com',
+            'description' => Yii::app()->language == 'vi' ? 'trang thông báo lỗi, trang thông báo lỗi thiết kế web, trang thông báo lỗi shopmyphamhan.com' : 'errorpage, homepage design web, errorpage homepage shopmyphamhan.com',
             'title' => $pageTitle,
             'type' => 'Blog',
             'url' => Yii::app()->createAbsoluteUrl('/site/error'),
