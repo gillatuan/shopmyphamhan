@@ -168,8 +168,7 @@ class OrdersController extends BackendController {
         $arrayData = Helper::objectToArray(json_decode($param));
         switch ($type) {
             case 'bill_to':
-                echo isset($arrayData['username']) ? $arrayData['username'] : '';
-                echo "<br />";
+                echo isset($arrayData['username']) ? $arrayData['username'] . '<br />' : '';
                 echo $arrayData['full_name'];
                 echo "<br />";
                 echo $arrayData['email'];
@@ -177,8 +176,6 @@ class OrdersController extends BackendController {
                 echo $arrayData['phone'];
                 echo "<br />";
                 echo $arrayData['address'];
-                echo "<br />";
-                echo $arrayData['national'];
                 break;
             case 'ship_to':
                 echo $arrayData['full_name'];
@@ -189,7 +186,7 @@ class OrdersController extends BackendController {
                 echo "<br />";
                 break;
             case 'cart':
-                echo "CPVC: 200.000,00 d";
+                echo "CPVC: " . Transport_Charge . " d";
                 echo "<br />";
                 $total = 0;
                 foreach ($arrayData as $array) {

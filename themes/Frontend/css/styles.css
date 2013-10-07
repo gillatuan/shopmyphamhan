@@ -206,7 +206,7 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
         .login .note, .login-social p.note { margin-top: 0; color: #898989; font-weight: bold; }
         .login label { display: inline; min-width: 9%; margin-right: 20px; }
         .login input { padding: 3px; }
-        .login .row.buttons input { display: inline; margin-right: 20px; }
+        .login .row.buttons input { display: inline; margin-right: 20px; cursor: pointer; }
         .login .row.buttons a { display: inline; font-weight: bold; }
 
 /* index page */
@@ -478,6 +478,7 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
 
 .product-desc h3.title, .mod-review h3.title { margin: 0 0 6px; padding-bottom: 5px; color: #999999; font-weight: 700; display: block; border-bottom: solid #CAC9C9 1px; font-size: 18px; text-align: left; }
 .product-desc p { line-height: 1.5em; margin-top: 3px; background: none !important; }
+.product-desc p strong { font-weight: bold; }
 .product-desc p a { display: inline; }
 
 .checkout-info, .cart-summary { padding: 15px 0; border-bottom: 1px solid #E9E8E8; overflow: hidden; }

@@ -78,8 +78,6 @@
                         <li>
                             <a href="<?php echo Helper::url('/Admin/products/admin'); ?>" class="<?php if (Yii::app()->controller->id == 'products' && Yii::app()->getController()->action->id == 'admin') { ?>current<?php } ?>" title="Quản lý Sản phẩm">Quản lý Sản phẩm</a></li>
                         <li>
-                            <a href="<?php echo Helper::url('/Admin/review/create'); ?>" class="<?php if (Yii::app()->controller->id == 'review' && Yii::app()->getController()->action->id == 'create') { ?>current<?php } ?>" title="Thêm mới Nhận xét sản phẩm">Thêm mới Nhận xét sản phẩm</a></li>
-                        <li>
                             <a href="<?php echo Helper::url('/Admin/review/admin'); ?>" class="<?php if (Yii::app()->controller->id == 'review' && Yii::app()->getController()->action->id == 'admin') { ?>current<?php } ?>" title="Quản lý Nhận xét sản phẩm">Quản lý Nhận xét sản phẩm</a></li>
                         <li>
                             <a href="<?php echo Helper::url('/Admin/orders/admin'); ?>" class="<?php if (Yii::app()->controller->id == 'orders' && Yii::app()->getController()->action->id == 'admin') { ?>current<?php } ?>" title="Quản lý bán hàng">Quản lý bán hàng</a></li>

@@ -151,6 +151,14 @@ class Products extends CActiveRecord {
         return parent::beforeSave();
     }
 
+    protected function afterSave() {
+        $cate = Category::model()->find('id=:id', array(':id' => $this->cate_id));
+
+        $this->updateByPk($this->id, array(
+            'cate_name' => $cate->name
+        ));
+    }
+
     protected function beforeValidate() {
         $postProduct = Helper::post('Products');
         $this->page =  implode(',', $postProduct['page']);
