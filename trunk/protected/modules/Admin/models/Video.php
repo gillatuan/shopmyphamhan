@@ -33,7 +33,7 @@ class Video extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'shop_video';
+		return 'site_video';
 	}
 
 	/**

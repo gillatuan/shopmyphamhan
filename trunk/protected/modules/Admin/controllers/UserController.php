@@ -33,7 +33,7 @@ class UserController extends BackendController {
                 'actions'  => array(
                     'delete', 'view', 'create', 'admin'
                 ),
-                'roles' => array('Admin'),
+                'roles' => array('Administrators'),
             ), array(
                 'allow', // allow admin user to perform 'admin' and 'delete' actions
                 'actions' => array('profile'),

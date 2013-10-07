@@ -33,7 +33,7 @@ class Banner extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'shop_banner';
+		return 'site_banner';
 	}
 
 	/**

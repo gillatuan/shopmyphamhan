@@ -93,22 +93,22 @@
         </div>
     </div>
 
-<?php if (!$model->isNewRecord) { ?>
-    <div class="control-group">
-        <?php echo $form->labelEx($model, 'alias', array('class' => 'control-label')); ?>
-        <div class="controls">
-            <label><?php echo $model->alias; ?></label>
-            <?php echo $form->error($model, 'alias', array('class' => 'help-inline')); ?>
+    <?php if (!$model->isNewRecord) { ?>
+        <div class="control-group">
+            <?php echo $form->labelEx($model, 'alias', array('class' => 'control-label')); ?>
+            <div class="controls">
+                <label><?php echo $model->alias; ?></label>
+                <?php echo $form->error($model, 'alias', array('class' => 'help-inline')); ?>
+            </div>
         </div>
-    </div>
 
-    <div class="control-group">
-        <?php echo $form->labelEx($model, 'status', array('class' => 'control-label')); ?>
-        <div class="controls">
-            <?php echo $form->dropDownList($model, 'status', Lookup::items('Status'), array('class' => 'span2 m-wrap')); ?>
-            <?php echo $form->error($model, 'status', array('class' => 'help-inline')); ?>
+        <div class="control-group">
+            <?php echo $form->labelEx($model, 'status', array('class' => 'control-label')); ?>
+            <div class="controls">
+                <?php echo $form->dropDownList($model, 'status', Lookup::items('Status'), array('class' => 'span2 m-wrap')); ?>
+                <?php echo $form->error($model, 'status', array('class' => 'help-inline')); ?>
+            </div>
         </div>
-    </div>
 
     <div class="control-group">
         <?php echo $form->labelEx($model, 'ordering', array('class' => 'control-label')); ?>
@@ -165,6 +165,7 @@ if("' . $model->image . '" != ""){
     function removeFile(fileName, pos) {
         var url = "' . Helper::url('/Admin/default/deleteimage') . '";
         var imageID = "' . $model->id . '";
+
         $.post(
             url, { imageID: imageID, imageName: fileName, model: "Banner" },
             function(data){

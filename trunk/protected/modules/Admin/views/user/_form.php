@@ -19,7 +19,7 @@ if (!$model->isNewRecord) {
 
         <p class="note"><?php echo Helper::t('Fields_required'); ?></p>
 
-        <?php //echo $form->errorSummary($model); p ?>
+        <?php //echo $form->errorSummary($model); ?>
 
         <?php if ($model->getScenario() != 'asGuest') { ?>
             <div class="row">
