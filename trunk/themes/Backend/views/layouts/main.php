@@ -48,12 +48,6 @@
                             <li>
                                 <a href="<?php echo Helper::url('/Admin/user/admin'); ?>" class="<?php if (Yii::app()->controller->id == 'user' && Yii::app()->controller->action->id == 'admin') { ?>current<?php } ?>" title="Thay đổi mật khẩu">Quản lý User</a>
                             </li>
-                            <li>
-                                <a href="<?php echo Helper::url('/Admin/category/create'); ?>" class="<?php if (Yii::app()->controller->id == 'category' && (Yii::app()->controller->action->id == 'create' || Yii::app()->controller->action->id == 'update')) { ?>current<?php } ?>" title="Tạo mới Chuyên mục">Tạo mới Chuyên mục</a></li>
-                            <li>
-                            <li>
-                                <a href="<?php echo Helper::url('/Admin/category/admin'); ?>" class="<?php if (Yii::app()->controller->id == 'category' && Yii::app()->controller->action->id == 'admin') { ?>current<?php } ?>" title="Quản lý Chuyên mục">Quản lý Chuyên mục</a></li>
-                            <li>
                             <!--<li>
                                 <a href="<?php /*echo Helper::url('/Admin/settingParams/configParams'); */?>" class="<?php /*if (Yii::app()->controller->id == 'settingParams' && Yii::app()->controller->action->id == 'configParams') { */?>current<?php /*} */?>" title=" Cập nhật giá trị cài đặt">Cập nhật giá trị cài đặt</a>
                             </li>
@@ -98,46 +92,46 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#" class="nav-top-item <?php if (Helper::get('type') == 1 && Yii::app()->controller->id == 'news') { ?>current<?php } ?>" title="Tin tức">Tin tức </a>
+                    <a href="#" class="nav-top-item <?php if (Helper::get('type') == 1 && Yii::app()->controller->id == 'news') { ?>current<?php } ?>" title="Giới Thiệu">Giới Thiệu</a>
                     <ul>
                         <li>
-                            <a class="<?php if (Yii::app()->getController()->action->id == 'create' && Helper::get('type') == 1) { ?>current<?php } ?>" href="<?php echo Helper::url('/Admin/news/create', array('type' => 1)) ?>" title="Tạo tin tức mới">Tạo tin tức mới </a>
+                            <a class="<?php if (Yii::app()->getController()->action->id == 'create' && Helper::get('type') == 1) { ?>current<?php } ?>" href="<?php echo Helper::url('/Admin/news/create', array('type' => 1)) ?>" title="Tạo Tin Giới Thiệu Mới">Tạo Tin Giới Thiệu Mới</a>
                         </li>
                         <li>
-                            <a class="<?php if (Helper::get('type') == 1 && Yii::app()->getController()->action->id == 'admin') { ?>current<?php } ?>" href="<?php echo Helper::url('/Admin/news/admin', array('type' => 1)) ?>" title="Quản lý tin tức">Quản lý tin tức </a>
+                            <a class="<?php if (Yii::app()->getController()->action->id == 'admin' && Helper::get('type') == 1) { ?>current<?php } ?>" href="<?php echo Helper::url('/Admin/news/admin', array('type' => 1)) ?>" title="Quản lý Tin Giới Thiệu">Quản lý Tin Giới Thiệu </a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#" class="nav-top-item <?php if (Helper::get('type') == 2 && Yii::app()->controller->id == 'news') { ?>current<?php } ?>" title="Tin Thông báo">Tin Thông báo </a>
+                    <a href="#" class="nav-top-item <?php if (Helper::get('type') == 2 && Yii::app()->controller->id == 'news') { ?>current<?php } ?>" title="Tin tức">Tin tức </a>
                     <ul>
                         <li>
-                            <a class="<?php if (Yii::app()->getController()->action->id == 'create' && Helper::get('type') == 2) { ?>current<?php } ?>" href="<?php echo Helper::url('/Admin/news/create', array('type' => 2)) ?>" title="Tạo tin Thông báo mới">Tạo tin Thông báo mới </a>
+                            <a class="<?php if (Yii::app()->getController()->action->id == 'create' && Helper::get('type') == 2) { ?>current<?php } ?>" href="<?php echo Helper::url('/Admin/news/create', array('type' => 2)) ?>" title="Tạo tin tức mới">Tạo tin tức mới </a>
                         </li>
                         <li>
-                            <a class="<?php if (Helper::get('type') == 2 && Yii::app()->getController()->action->id == 'admin') { ?>current<?php } ?>" href="<?php echo Helper::url('/Admin/news/admin', array('type' => 2)) ?>" title="Quản lý tin Thông báo">Quản lý tin Thông báo </a>
+                            <a class="<?php if (Helper::get('type') == 2 && Yii::app()->getController()->action->id == 'admin') { ?>current<?php } ?>" href="<?php echo Helper::url('/Admin/news/admin', array('type' => 2)) ?>" title="Quản lý tin tức">Quản lý tin tức </a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#" class="nav-top-item <?php if (Helper::get('type') == 3 && Yii::app()->controller->id == 'news') { ?>current<?php } ?>" title="Tin khuyến mãi">Tin khuyến mãi </a>
+                    <a href="#" class="nav-top-item <?php if (Helper::get('type') == 3 && Yii::app()->controller->id == 'news') { ?>current<?php } ?>" title="Tin Thông báo">Tin Thông báo </a>
                     <ul>
                         <li>
-                            <a class="<?php if (Yii::app()->getController()->action->id == 'create' && Helper::get('type') == 3) { ?>current<?php } ?>" href="<?php echo Helper::url('/Admin/news/create', array('type' => 3)) ?>" title="Tạo tin khuyến mãi mới">Tạo tin khuyến mãi mới </a>
+                            <a class="<?php if (Yii::app()->getController()->action->id == 'create' && Helper::get('type') == 3) { ?>current<?php } ?>" href="<?php echo Helper::url('/Admin/news/create', array('type' => 3)) ?>" title="Tạo tin Thông báo mới">Tạo tin Thông báo mới </a>
                         </li>
                         <li>
-                            <a class="<?php if (Helper::get('type') == 3 && Yii::app()->getController()->action->id == 'admin') { ?>current<?php } ?>" href="<?php echo Helper::url('/Admin/news/admin', array('type' => 3)) ?>" title="Quản lý tin khuyến mãi">Quản lý tin khuyến mãi </a>
+                            <a class="<?php if (Helper::get('type') == 3 && Yii::app()->getController()->action->id == 'admin') { ?>current<?php } ?>" href="<?php echo Helper::url('/Admin/news/admin', array('type' => 3)) ?>" title="Quản lý tin Thông báo">Quản lý tin Thông báo </a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#" class="nav-top-item <?php if (Helper::get('type') == 4 && Yii::app()->controller->id == 'news') { ?>current<?php } ?>" title="Giới Thiệu">Giới Thiệu</a>
+                    <a href="#" class="nav-top-item <?php if (Helper::get('type') == 4 && Yii::app()->controller->id == 'news') { ?>current<?php } ?>" title="Tin khuyến mãi">Tin khuyến mãi </a>
                     <ul>
                         <li>
-                            <a class="<?php if (Yii::app()->getController()->action->id == 'create' && Helper::get('type') == 4) { ?>current<?php } ?>" href="<?php echo Helper::url('/Admin/news/create', array('type' => 4)) ?>" title="Tạo Tin Giới Thiệu Mới">Tạo Tin Giới Thiệu Mới</a>
+                            <a class="<?php if (Yii::app()->getController()->action->id == 'create' && Helper::get('type') == 4) { ?>current<?php } ?>" href="<?php echo Helper::url('/Admin/news/create', array('type' => 4)) ?>" title="Tạo tin khuyến mãi mới">Tạo tin khuyến mãi mới </a>
                         </li>
                         <li>
-                            <a class="<?php if (Yii::app()->getController()->action->id == 'admin' && Helper::get('type') == 4) { ?>current<?php } ?>" href="<?php echo Helper::url('/Admin/news/admin', array('type' => 4)) ?>" title="Quản lý Tin Giới Thiệu">Quản lý Tin Giới Thiệu </a>
+                            <a class="<?php if (Helper::get('type') == 4 && Yii::app()->getController()->action->id == 'admin') { ?>current<?php } ?>" href="<?php echo Helper::url('/Admin/news/admin', array('type' => 4)) ?>" title="Quản lý tin khuyến mãi">Quản lý tin khuyến mãi </a>
                         </li>
                     </ul>
                 </li>

@@ -32,7 +32,7 @@ class Qa extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'shop_qa';
+		return 'site_qa';
 	}
 
 	/**

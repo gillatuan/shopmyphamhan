@@ -74,11 +74,15 @@ $dataImage = $data->image ? (is_array($explode) ? $explode[0] : $explode) : $noI
                         <p><?php echo Helper::t('price'); ?>: <span><?php echo Helper::formatNumber($data->price) ?></span></p>
                     <?php } ?>
                 <?php } else { ?>
-                    <p><?php echo Helper::t('price'); ?>: <span>LIÊN HỆ</span></p>
+                    <p class="no-price"><?php echo Helper::t('price'); ?>: <span>LIÊN HỆ</span></p>
                 <?php } ?>
 
                 <?php if (!empty($data->barcode)) { ?>
                     <p><?php echo Helper::t('barcode'); ?>: <span><?php echo $data->barcode; ?></span></p>
+                <?php } ?>
+
+                <?php if (!empty($data->info)) { ?>
+                    <p><?php echo Helper::t('info'); ?>: <span><?php echo nl2br($data->info); ?></span></p>
                 <?php } ?>
 
                 <p class="showFormReview"><a href="javascript:void:;" title="Review" class="link"><?php echo Helper::t('yourComments'); ?></a></p>
@@ -95,7 +99,7 @@ $dataImage = $data->image ? (is_array($explode) ? $explode[0] : $explode) : $noI
                     </div>
             </div>
         </div>
-        <div class="clear top-30">&nbsp;</div>
+        <div class="clear top-10">&nbsp;</div>
 
     <!--<div class="manufacturer">
         <div style="font-weight: bold;">Manufacturer: <a href="#" title="Blanca">Blanca</a></div>
@@ -105,7 +109,7 @@ $dataImage = $data->image ? (is_array($explode) ? $explode[0] : $explode) : $noI
         </div>
         <div class="product-desc">
             <h3 class="title"><?php echo Helper::t('description'); ?></h3>
-            <?php echo $data->description; ?>
+            <div><?php echo nl2br($data->description); ?></div>
         </div>
         <div class="mod-review clearfix">
             <h3 class="title"><?php echo Helper::t('reviews'); ?></h3>

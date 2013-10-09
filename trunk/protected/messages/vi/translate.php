@@ -22,7 +22,7 @@ return array(
     'phone'                           => 'Điện thoại',
     'address'                         => 'Địa chỉ',
     'country'                         => 'Quốc gia',
-    'description'                     => 'Mô tả',
+    'description'                     => 'Thông tin chi tiết',
     'avatar'                          => 'Hình đại diện',
     'status'                          => 'Kích hoạt',
     'website'                         => 'Website của bạn',

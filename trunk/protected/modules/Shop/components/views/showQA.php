@@ -4,7 +4,7 @@ $this->widget('zii.widgets.CListView', array(
     /*'viewData' => array(
         'isListPage' => $isListPage
     ),*/
-    'emptyText' => 'Chưa có câu hỏi nào',
+    'emptyText' => '',
     'itemView' => 'renderQA',
     'summaryText' => '',
     'pager' => array(

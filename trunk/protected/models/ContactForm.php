@@ -36,7 +36,11 @@ class ContactForm extends CFormModel
 	public function attributeLabels()
 	{
 		return array(
-			'verifyCode'=>'Verification Code',
+			'verifyCode' => Helper::t('verifyCode'),
+			'name' => Helper::t('name'),
+			'email' => Helper::t('email'),
+			'subject' => Helper::t('subject'),
+			'body' => Helper::t('body'),
 		);
 	}
 }

@@ -60,7 +60,6 @@ $('.search-form form').submit(function(){
         ),
 		'title',
 		'info',
-		'image',
         array(
             'name' => 'status',
             'value' => '"<a href=\"#\" class=\"set-status\" id=\"".$data->id."\">".($data->status == 1 ? CHtml::image(Yii::app()->theme->baseUrl."/images/log_severity1.gif","active") : CHtml::image(Yii::app()->theme->baseUrl."/images/delicon.gif","inactive"))."</a>"',
@@ -72,6 +71,7 @@ $('.search-form form').submit(function(){
 		'id',
 		'alias',
 		'content',
+		'image',
 		'create_date',
 		'update_date',
 		'type_news',

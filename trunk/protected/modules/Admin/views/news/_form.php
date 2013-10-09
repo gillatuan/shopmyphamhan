@@ -133,14 +133,14 @@
 $scriptDelete = '
     if("' . $model->image . '" != ""){
         function removeFile(fileName, pos) {
-            var url = "' . Helper::url('/Admin/default/deleteimage') .'";
+            var url = "' . Helper::url('/Admin/default/deleteimage') . '";
             var imageID = "' . $model->id . '";
 
             $.post(
                 url, { imageID: imageID, imageName: fileName, model: "News" },
                 function(data){
-                    $("a.remove_"+pos).parent().remove();
-                    parent.window.location = parent.window.location
+                    $("a.remove_"+pos).parent().html(data + ". Please refresh page after deleting no more.");
+    //                parent.window.location = parent.window.location
                 }, "json"
             );
 

@@ -211,9 +211,10 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
 
 /* index page */
 #wrapper .products-in-category { margin-top: 30px; border-bottom: 1px solid #EAEAEA; }
+#wrapper .products-in-category:first-child { margin-top: 0; }
 #wrapper .products-in-category.not-border-bottom .addcart-success { margin: 20px 0; }
-.products-in-category h2 { padding: 10px; background-color: #90d900; color: white; font-size: 20px; font-weight: bold; text-align: left; text-shadow: none;
-}
+.products-in-category h2 { padding: 10px; color: #fff; background-color: #90d900; font-size: 20px; font-weight: bold; text-align: left; text-shadow: none; }
+
 /* tabs */
 .tab-buttons { overflow: hidden; }
 
@@ -248,7 +249,7 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
         .products-in-category .product-list { margin-bottom: 10px; padding: 0 18px 0 22px; }
         .products-in-category .product-list.topbottom-20 { padding: 20px 18px 20px 22px; }
         .product-list .product {
-            max-height: 380px; margin-right: 3.5%; margin-top: 20px; padding: 10px 0; overflow: hidden;
+            max-height: 390px; margin-right: 3.5%; margin-top: 20px; padding: 10px 0; overflow: hidden;
             box-shadow: 0 0 1px #ccc;
             -moz-box-shadow: 0 0 1px #ccc;
             -webkit-box-shadow: 0 0 1px #ccc;
@@ -289,7 +290,7 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
     box-shadow: 0 0 1px #bbb;
     text-shadow: 0 1px #fff;
     text-decoration: none;
-    position: absolute; right: 5px; bottom: 35px;
+    position: absolute; right: 5px; bottom: 22px;
 }
 .product-list .product .price-group a.link:hover {
     border: 1px solid #1fd0fc !important;
@@ -297,6 +298,7 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
     color: #fff !important;
     text-shadow: 0 1px rgba(0, 0, 0, .2) !important;
 }
+
 .price-group .price { margin-top: 5px; }
 .price-group .price .price-text, .price-group .price .price-value { color: #02ABD6; font-weight: bold; text-shadow: 0 1px #FFFFFF; }
 .price-group .price.destroy { text-decoration: line-through; }
@@ -309,18 +311,17 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
 #wrapper .module-left {  }
 .module-left .category-list { border: 1px solid #EAEAEA; }
 .category-list h3 { background-color: #F4F4F4; padding: 5px 10px; color: #0088CC; font-weight: bold; text-align: left; }
-.category-list li { line-height: 30px; padding-left: 35px; padding-right: 10px; border-bottom: 1px dotted #EAEAEA; background: url("../images/voxenangcacloai-icon-category.jpg") no-repeat 10px 8px; }
+.category-list li { line-height: 30px; padding-left: 35px; padding-right: 10px; border-bottom: 1px dotted #EAEAEA; background: url("../images/voxenangcacloai-icon-category.jpg") no-repeat 10px 3px; }
 .category-list li a { text-align: left; }
-.module-left .banner { margin-top: 20px; padding: 10px 0; border: 1px solid #EAEAEA; }
-.module-left .banner:first-child { margin-top: 0 !important; }
+.module-left .banner { margin-top: 10px; border: 1px solid #EAEAEA; }
+.module-left .banner:first-child { margin-top: 0; }
 .module-left .banner h3 { background-color: #F4F4F4; padding: 5px 10px; color: #0088CC; font-weight: bold; text-align: left; }
-
-            .module-left .banner ul { margin-top: 20px; }
+            .module-left .banner ul { margin-top: 20px; padding-bottom: 10px; }
             .module-left .banner li { line-height: 20px; margin: 10px 10px 0; border-bottom: 1px dotted #EAEAEA;
                 /*padding: 5px 10px 5px 20px;
                 background: url("../images/voxenangcacloai-icon-category.jpg") no-repeat 0 8px;*/ }
             .module-left .banner li:last-child { border-bottom: none; }
-            .module-left .banner li:first-child { margin: 0 10px; text-align: center; }
+            .module-left .banner li:first-child { margin: 0 10px; }
     #wrapper .module-cart { }
         .module-cart p, .module-cart strong { color: #999999; }
         .module-cart h3 { background-color: #F4F4F4; padding: 5px 10px; color: #0088CC; font-weight: bold; text-align: left; }
@@ -369,6 +370,7 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
 
 .product-detail { padding: 15px; background: white; border-radius: 4px; }
 .product-detail span, .product-detail .product-short-description, .product-detail p { color: #999; }
+.product-detail p.no-price span { color: #02ABD6; font-weight: bold; }
 .product-detail .product-neighbours { margin-bottom: 30px; border-top: none; }
 .product-detail .product-neighbours .previous-page { float: left; line-height: 20px; padding-left: 24px; background: url('../images/control.png') 0 2px no-repeat }
 .product-detail .product-neighbours .next-page { float: right; line-height: 20px; padding-right: 24px; background: url('../images/control.png') 100% -19px no-repeat }
@@ -379,12 +381,13 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
 .product-detail .product-images .thumb-image { margin-bottom: 10px; }
 .product-detail .thumb-image li { float: left; width: 50px; height: auto; margin-left: 5px; padding: 6px; border-top: 1px solid #fff; border-right: 1px solid #e6e6e6; border-bottom: 1px solid #ccc; border-left: 0; cursor: pointer; }
 .product-detail .thumb-image li:first-child { margin-left: 0; }
-.product-detail .product-info h2 { line-height: 140%; margin: 0 0 6px; padding: 0; background: none; color: #999; font-size: 22px; font-weight: 700; text-shadow: 0 1px 1px #F9FDFF; border-bottom: 1px solid #E9E8E8; }
+.product-detail .product-info h2 { line-height: 140%; margin: 0 0 6px; padding: 0; background: none; color: #0088CC; font-size: 22px; font-weight: 700; text-shadow: 0 1px 1px #F9FDFF; border-bottom: 1px solid #E9E8E8; }
 .product-detail .social { }
 .product-detail .social a { float: left; max-width: 95px; }
 
 .product-detail .buy-area { margin-top: 20px; }
 .product-detail .buy-area p { padding-bottom: 5px; }
+.product-detail .buy-area p.call-for-price span { color: #02ABD6; font-weight: bold; }
 .product-detail .vote { overflow: hidden; }
 .product-detail .vote span { float: left; }
 .product-detail .vote .text-rating { margin-right: 10px; }
@@ -463,7 +466,7 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
 .quantity-controls .quantity-minus { background: url(../images/quantity-controls.png) repeat-x; background-position: 15px 0; }
 
 
-.manufacturer, .product-desc { margin-top: 30px; color: #999999; }
+.manufacturer, .product-desc { color: #999999; }
 .manufacturer a { color: #02ABD6; display: inline; }
 
 .mod-review { margin-top: 25px; }
@@ -476,7 +479,7 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
     .review-content .review-desc { color: #808080; font-size: 14px; }
 .user-review .fullname { font-weight: bold; }
 
-.product-desc h3.title, .mod-review h3.title { margin: 0 0 6px; padding-bottom: 5px; color: #999999; font-weight: 700; display: block; border-bottom: solid #CAC9C9 1px; font-size: 18px; text-align: left; }
+.product-desc h3.title, .mod-review h3.title { margin: 0 0 6px; padding-bottom: 5px; color: #0088CC; font-weight: 700; display: block; border-bottom: solid #CAC9C9 1px; font-size: 22px; text-align: left; }
 .product-desc p { line-height: 1.5em; margin-top: 3px; background: none !important; }
 .product-desc p strong { font-weight: bold; }
 .product-desc p a { display: inline; }
@@ -502,11 +505,11 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
 
 
 /* Some Review */
-#wrapper .comments { margin-bottom: 30px; padding-bottom: 20px; border-bottom: 1px solid #EAEAEA; }
+#wrapper .comments { margin-bottom: 20px; }
 .comments h2 { padding: 10px; background-color: #FBCA15; color: #ffffff; font-size: 18px; font-weight: bold; text-align: left; text-shadow: none;
 }
-.comments .comment-list { margin-bottom: 10px; padding-left: 3%; }
-.comment-list .comment { margin-right: 2%; margin-top: 20px; border-right: 1px solid #EAEAEA; }
+.comments .comment-list { padding: 0 1%; }
+.comment-list .comment { margin-right: 1.9%; margin-top: 20px; padding-right: 1%; border-right: 1px solid #EAEAEA; }
 .comment-list .comment.last { margin-right: 0; border-right: none;}
 .comment-list .comment h3 { color: #0088CC; font-weight: bold; text-align: left; }
 .comment-list .comment .rated {  }

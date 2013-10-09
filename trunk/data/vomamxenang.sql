@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Oct 07, 2013 at 11:07 AM
+-- Generation Time: Oct 09, 2013 at 02:49 PM
 -- Server version: 5.5.33a-MariaDB-log
 -- PHP Version: 5.4.20
 
@@ -33,155 +33,37 @@ CREATE TABLE IF NOT EXISTS `cache` (
   `expired` int(11) DEFAULT NULL,
   `duration` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=143 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=25 ;
 
 --
 -- Dumping data for table `cache`
 --
 
 INSERT INTO `cache` (`id`, `name`, `description`, `expired`, `duration`) VALUES
-(1, 'cached_Qa_all_limit-false-_pagingAjax-1_duration-6', 'Cache for Qa with time=600', 1378543715, 600),
-(2, 'cached_Qa_all_limit-false-_pagingAjax-1_duration-6', 'Cache for Qa with time=600', 1378557086, 600),
-(3, 'cache-product-600-9-Nhat', 'cache for Product 600-9-Nhat', 1378633484, 600),
-(4, 'cached_Qa_all_limit-false-_pagingAjax-1_duration-6', 'Cache for Qa with time=600', 1378700879, 600),
-(5, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1378702244, 600),
-(6, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1378702303, 600),
-(7, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1378712625, 600),
-(8, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1378712670, 600),
-(9, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1378712685, 600),
-(10, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1378712725, 600),
-(11, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1378712735, 600),
-(12, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1378712741, 600),
-(13, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1378712798, 600),
-(14, 'cache-product-650-10-PS', 'cache for Product 650-10-PS', 1378781469, 600),
-(15, 'cache-product-650-10-PS-1', 'cache for Product 650-10-PS-1', 1378782179, 600),
-(16, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1378782195, 600),
-(17, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1378782222, 600),
-(18, 'cache-product-Xe-dien-abc', 'cache for Product Xe-dien-abc', 1378782670, 600),
-(19, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1378788195, 600),
-(20, 'cached_Qa_all_limit-false-_pagingAjax-1_duration-6', 'Cache for Qa with time=600', 1378795203, 600),
-(21, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1378812009, 600),
-(22, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1378882195, 600),
-(23, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1378882212, 600),
-(24, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1378894418, 600),
-(25, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1378894556, 600),
-(26, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1378895724, 600),
-(27, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1378896431, 600),
-(28, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1378896434, 600),
-(29, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1378896557, 600),
-(30, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1378896563, 600),
-(31, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1378896737, 600),
-(32, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1378896810, 600),
-(33, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1378896881, 600),
-(34, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1378896887, 600),
-(35, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1378896902, 600),
-(36, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1378957887, 600),
-(37, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1378957958, 600),
-(38, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1378958031, 600),
-(39, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1378959366, 600),
-(40, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1379822597, 600),
-(41, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1379825620, 600),
-(42, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1379825627, 600),
-(43, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1379826651, 600),
-(44, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1379845397, 600),
-(45, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1379848804, 600),
-(46, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1379863274, 600),
-(47, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1379863331, 600),
-(48, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1380038670, 600),
-(49, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1380039313, 600),
-(50, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1380039369, 600),
-(51, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1380039379, 600),
-(52, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1380039385, 600),
-(53, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1380043943, 600),
-(54, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1380122571, 600),
-(55, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1380551929, 600),
-(56, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1380554218, 600),
-(57, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1380554234, 600),
-(58, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1380904960, 600),
-(59, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1380948640, 600),
-(60, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381040536, 600),
-(61, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381040546, 600),
-(62, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381040554, 600),
-(63, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381040560, 600),
-(64, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381040565, 600),
-(65, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381040567, 600),
-(66, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381040571, 600),
-(67, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381066714, 600),
-(68, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381069385, 600),
-(69, 'cached_Qa_all_limit-false-_pagingAjax-1_duration-6', 'Cache for Qa with time=600', 1381070078, 600),
-(70, 'cache-product-Vo-xe-nang-Bridgestone-Japan-dac-ruo', 'cache for Product Vo-xe-nang-Bridgestone-Japan-dac-ruot-700-12', 1381074029, 600),
-(71, 'cache-product-Vo-xe-nang-Bridgestone-Japan-dac-ruo', 'cache for Product Vo-xe-nang-Bridgestone-Japan-dac-ruot-700-12', 1381074434, 600),
-(72, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381074448, 600),
-(73, 'cache-product-Vo-xe-nang-Bridgestone-Japan-dac-ruo', 'cache for Product Vo-xe-nang-Bridgestone-Japan-dac-ruot-700-12', 1381076099, 600),
-(74, 'cache-product-Vo-xe-nang-Bridgestone-Japan-dac-ruo', 'cache for Product Vo-xe-nang-Bridgestone-Japan-dac-ruot-700-12', 1381076179, 600),
-(75, 'cache-product-Vo-xe-nang-Bridgestone-Japan-dac-ruo', 'cache for Product Vo-xe-nang-Bridgestone-Japan-dac-ruot-700-12', 1381076256, 600),
-(76, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381076340, 600),
-(77, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381076451, 600),
-(78, 'cache-product-Vo-xe-nang-Bergougnan-dac-ruot-600-9', 'cache for Product Vo-xe-nang-Bergougnan-dac-ruot-600-9', 1381077018, 600),
-(79, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381077202, 600),
-(80, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381077339, 600),
-(81, 'cache-product-Vo-xe-nang-Aichi-dac-ruot-700-12', 'cache for Product Vo-xe-nang-Aichi-dac-ruot-700-12', 1381077992, 600),
-(82, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381078141, 600),
-(83, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381078639, 600),
-(84, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381078653, 600),
-(85, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381078672, 600),
-(86, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381078729, 600),
-(87, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381078735, 600),
-(88, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381078754, 600),
-(89, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381078799, 600),
-(90, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381078834, 600),
-(91, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381078995, 600),
-(92, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381079033, 600),
-(93, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381079096, 600),
-(94, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381079116, 600),
-(95, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381079162, 600),
-(96, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381079178, 600),
-(97, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381079402, 600),
-(98, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381079419, 600),
-(99, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381079437, 600),
-(100, 'cache-product-Vo-xe-nang-Bridgestone-Japan-dac-ruo', 'cache for Product Vo-xe-nang-Bridgestone-Japan-dac-ruot-700-12', 1381079642, 600),
-(101, 'cache-product-Vo-xe-nang-Aichi-dac-ruot-28x9-15-70', 'cache for Product Vo-xe-nang-Aichi-dac-ruot-28x9-15-700', 1381080369, 600),
-(102, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381080389, 600),
-(103, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381080410, 600),
-(104, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381080416, 600),
-(105, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381080648, 600),
-(106, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381080658, 600),
-(107, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381080689, 600),
-(108, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381080734, 600),
-(109, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381080775, 600),
-(110, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381080857, 600),
-(111, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381080894, 600),
-(112, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381081036, 600),
-(113, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381081072, 600),
-(114, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381081076, 600),
-(115, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381081082, 600),
-(116, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381081117, 600),
-(117, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381081140, 600),
-(118, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381081153, 600),
-(119, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381081181, 600),
-(120, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381081186, 600),
-(121, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381081190, 600),
-(122, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381081192, 600),
-(123, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381081193, 600),
-(124, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381081202, 600),
-(125, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381081763, 600),
-(126, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381081820, 600),
-(127, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381081846, 600),
-(128, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381081864, 600),
-(129, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381082035, 600),
-(130, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381082183, 600),
-(131, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381082190, 600),
-(132, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381082201, 600),
-(133, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381082329, 600),
-(134, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381082332, 600),
-(135, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381082342, 600),
-(136, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381082496, 600),
-(137, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381082667, 600),
-(138, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381083847, 600),
-(139, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381083863, 600),
-(140, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381083880, 600),
-(141, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381083900, 600),
-(142, 'cache-product-Vo-xe-nang-Aichi-dac-ruot-28x9-15-70', 'cache for Product Vo-xe-nang-Aichi-dac-ruot-28x9-15-700', 1381112751, 600);
+(1, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381208234, 600),
+(2, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381208247, 600),
+(3, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381208251, 600),
+(4, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381222884, 600),
+(5, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381222904, 600),
+(6, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381223078, 600),
+(7, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381247393, 600),
+(8, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381247539, 600),
+(9, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381248356, 600),
+(10, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381248362, 600),
+(11, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381248376, 600),
+(12, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381253169, 600),
+(13, 'cached_Qa_all_limit-false-_pagingAjax-1_duration-6', 'Cache for Qa with time=600', 1381258097, 600),
+(14, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381258121, 600),
+(15, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381258125, 600),
+(16, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381258138, 600),
+(17, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381279024, 600),
+(18, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381288868, 600),
+(19, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381293580, 600),
+(20, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381293598, 600),
+(21, 'cached_Qa_all_limit-false-_pagingAjax-1_duration-6', 'Cache for Qa with time=600', 1381299235, 600),
+(22, 'cache-product-Vo-xe-dien-Komatsu-305x152', 'cache for Product Vo-xe-dien-Komatsu-305x152', 1381301343, 600),
+(23, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381303940, 600),
+(24, 'cached_Review_all_limit-false-_pagingAjax-1_durati', 'Cache for Review with time=600', 1381304309, 600);
 
 -- --------------------------------------------------------
 
@@ -196,7 +78,7 @@ CREATE TABLE IF NOT EXISTS `lookup` (
   `type` varchar(128) NOT NULL,
   `position` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=23 ;
 
 --
 -- Dumping data for table `lookup`
@@ -216,7 +98,15 @@ INSERT INTO `lookup` (`id`, `name`, `code`, `type`, `position`) VALUES
 (10, 'Online', '1', 'isOnline', 1),
 (12, 'Trang chủ', '1', 'Display_On_Page', 1),
 (13, 'Trang list', '2', 'Display_On_Page', 2),
-(14, 'Trang chi tiết', '3', 'Display_On_Page', 3);
+(14, 'Trang chi tiết', '3', 'Display_On_Page', 3),
+(15, 'Thành công', '1', 'Order_Status', 1),
+(16, 'Đang đợi', '2', 'Order_Status', 2),
+(17, 'Đang chuyển hàng', '3', 'Order_Status', 3),
+(18, 'Hủy', '4', 'Order_Status', 4),
+(19, 'Tin Giới Thiệu', '1', 'Type_News', 1),
+(20, 'Tin Tức', '2', 'Type_News', 2),
+(21, 'Tin Thông Báo', '3', 'Type_News', 3),
+(22, 'Tin Khuyến mãi', '4', 'Type_News', 4);
 
 -- --------------------------------------------------------
 
@@ -235,7 +125,7 @@ CREATE TABLE IF NOT EXISTS `setting_params` (
   `visible` char(1) DEFAULT NULL,
   `module` varchar(64) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=35 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=36 ;
 
 --
 -- Dumping data for table `setting_params`
@@ -275,38 +165,8 @@ INSERT INTO `setting_params` (`id`, `name`, `label`, `values`, `description`, `s
 (31, 'Type_Post', 'Type Post', '1', '', 'General', NULL, '1', ''),
 (32, 'INDEX_PAGE', 'INDEX PAGE', '1', NULL, 'General', NULL, '1', NULL),
 (33, 'Cache_Time', 'Cache time', '600', NULL, 'General', NULL, '1', NULL),
-(34, 'ITEM_PER_PAGE', 'Item per page', '10', NULL, 'General', NULL, '1', NULL);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `shop_banner`
---
-
-CREATE TABLE IF NOT EXISTS `shop_banner` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `alias` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `info` text COLLATE utf8_unicode_ci,
-  `page_link` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `image` varchar(1000) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `position` char(1) COLLATE utf8_unicode_ci NOT NULL,
-  `page` char(15) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `status` char(1) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `ordering` int(11) DEFAULT NULL,
-  `create_date` int(11) DEFAULT NULL,
-  `expired_date` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
-
---
--- Dumping data for table `shop_banner`
---
-
-INSERT INTO `shop_banner` (`id`, `name`, `alias`, `info`, `page_link`, `image`, `position`, `page`, `status`, `ordering`, `create_date`, `expired_date`) VALUES
-(1, 'Banner 1', 'Banner-1', '12345', 'http://voxe.web3in1.com', '', '1', '2', '1', NULL, 1378789311, 1410282000),
-(2, 'Banner 2', 'Banner-2', 'banner 2\r\nbanner 2\r\nbanner 2\r\nbanner 2', 'http://voxe.web3in1.com/shop/Vo-xe-nang-dac-ruot/650-10-PS.web3in1', '', '1', '2', '1', 2, 1378882209, 1410368400),
-(3, 'Banner 3', 'Banner-3', 'Đường dẫn đến web \r\nĐường dẫn đến web  Đường dẫn đến web Đường dẫn đến web ', 'http://voxe.web3in1.com/shop/Vo-xe-nang-dac-ruot/650-10-PS.web3in1', '2013_09_12_18_12_02_chiec-la.jpg,2013_09_12_18_12_02_chim-dai-bang.png,2013_09_12_18_12_02_chiec-vong.jpg', '1', '1,3', '1', 3, 1378885871, 1410368400);
+(34, 'ITEM_PER_PAGE', 'Item per page', '10', NULL, 'General', NULL, '1', NULL),
+(35, 'Transport_Charge', 'Transport Charge', '0', '', 'General', NULL, '1', '');
 
 -- --------------------------------------------------------
 
@@ -335,7 +195,7 @@ INSERT INTO `shop_category` (`id`, `name`, `alias`, `description`, `image`, `sta
 (2, 'Vỏ xe điện', 'Vo-xe-dien', '', '', '1', 0),
 (3, 'Vỏ xe nâng đăc ruột', 'Vo-xe-nang-dac-ruot', '', '', '1', 1),
 (4, 'Vỏ xe nâng có ruột', 'Vo-xe-nang-co-ruot', '', '', '1', 1),
-(5, 'Mâm xe', 'Mam-xe', 'Mâm xe', '', '1', 0);
+(5, 'Mâm xe nâng', 'Mam-xe-nang', 'Mâm xe', '', '1', 0);
 
 -- --------------------------------------------------------
 
@@ -397,7 +257,7 @@ INSERT INTO `shop_orders` (`id`, `bill_to`, `ship_to`, `cart`, `info`, `status`,
 (8, '{"username":"admin","email":"ngoctuan3010842003@yahoo.com1","full_name":"Bui Tran Ngoc Phu","phone":"09040909099","address":"27\\/21 Bui Tu Toan F.An Lac Q.Binh Tan","description":"t\\u00e9t\\n111111111111"}', '{"full_name":"phuong","phone":"09090999999999999","address":"dc 2","other":"2222222222\\n333333333"}', '[{"category":"","name":"650-10 PS","alias":"650-10-PS","price":"1200000","quantity":"1","value":1200000,"valueDiscount":60000,"valueAfterDiscount":1140000,"totalValueAfterDiscount":1140000,"formatValueDiscount":"60,000","formatValueAfterDiscount":"1,140,000","formatTotalValueAfterDiscount":"1,140,000","amountProductsInCart":2},{"category":"","name":"600-9 Nh\\u1eadt","alias":"600-9-Nhat","price":"2000000","quantity":"1","value":2000000,"valueDiscount":0,"valueAfterDiscount":2000000,"totalValueAfterDiscount":2000000,"formatValueDiscount":"0","formatValueAfterDiscount":"2,000,000","formatTotalValueAfterDiscount":"2,000,000","amountProductsInCart":2}]', '', '2', '2', 1381031773),
 (9, '{"email":"ngoctuan3010842003@yahoo.com","full_name":"ttttttttt","phone":"99999999999","address":"btt","description":"eeeeeeeeeeeeeee\\nrrrrrrrrrrrrrrrr\\nttttttttttttttt"}', '{"full_name":"pppppppppppp","phone":"8888888888888888888","address":"dc 2","other":"khaccccccccccccccc"}', '[{"category":"","name":"650-10 PS","alias":"650-10-PS","price":"1200000","quantity":"1","value":1200000,"valueDiscount":60000,"valueAfterDiscount":1140000,"totalValueAfterDiscount":1140000,"formatValueDiscount":"60,000","formatValueAfterDiscount":"1,140,000","formatTotalValueAfterDiscount":"1,140,000","amountProductsInCart":2},{"category":"","name":"600-9 Nh\\u1eadt","alias":"600-9-Nhat","price":"2000000","quantity":"5","value":10000000,"valueDiscount":0,"valueAfterDiscount":10000000,"totalValueAfterDiscount":11140000,"formatValueDiscount":"0","formatValueAfterDiscount":"10,000,000","formatTotalValueAfterDiscount":"11,140,000","amountProductsInCart":2}]', '', '2', '2', 1381032259),
 (10, '{"email":"ngoctuan3010842003@yahoo.com","full_name":"11111111","phone":"11112222222","address":"2223333333333333333","description":"444444444444"}', '{"full_name":"7777777777777","phone":"888888888888888","address":"99999999999999999","other":"444555555555555555"}', '[{"category":"","name":"650-10 PS","alias":"650-10-PS","price":"1200000","quantity":"1","value":1200000,"valueDiscount":60000,"valueAfterDiscount":1140000,"totalValueAfterDiscount":1140000,"formatValueDiscount":"60,000","formatValueAfterDiscount":"1,140,000","formatTotalValueAfterDiscount":"1,140,000","amountProductsInCart":2},{"category":"","name":"600-9 Nh\\u1eadt","alias":"600-9-Nhat","price":"2000000","quantity":"1","value":2000000,"valueDiscount":0,"valueAfterDiscount":2000000,"totalValueAfterDiscount":2000000,"formatValueDiscount":"0","formatValueAfterDiscount":"2,000,000","formatTotalValueAfterDiscount":"2,000,000","amountProductsInCart":2}]', '', '2', '2', 1381032622),
-(11, '{"username":"gilla","email":"ngoctuan3010842003@yahoo.com","full_name":"Bui Doan Ngoc Tuan","phone":"0977757911","address":"27\\/21 Bui Tu Toan","description":"Design Web, Yii Framework, Symfony, HTML, CSS, JQuery\\nacbdddd"}', '{"full_name":"Bui Doan Ngoc Tuan","phone":"0977757911","address":"27\\/21 Bui Tu Toan","other":"test 123\\ntest 234"}', '[{"category":"","name":"650-10 PS","alias":"650-10-PS","price":"1200000","quantity":"1","value":1200000,"valueDiscount":60000,"valueAfterDiscount":1140000,"totalValueAfterDiscount":1140000,"formatValueDiscount":"60,000","formatValueAfterDiscount":"1,140,000","formatTotalValueAfterDiscount":"1,140,000","amountProductsInCart":2},{"category":"","name":"600-9 Nh\\u1eadt","alias":"600-9-Nhat","price":"2000000","quantity":"1","value":2000000,"valueDiscount":0,"valueAfterDiscount":2000000,"totalValueAfterDiscount":2000000,"formatValueDiscount":"0","formatValueAfterDiscount":"2,000,000","formatTotalValueAfterDiscount":"2,000,000","amountProductsInCart":2}]', '', '2', '2', 1381038552);
+(11, '{"username":"gilla","email":"ngoctuan3010842003@yahoo.com","full_name":"Bui Doan Ngoc Tuan","phone":"0977757911","address":"27\\/21 Bui Tu Toan","description":"Design Web, Yii Framework, Symfony, HTML, CSS, JQuery\\nacbdddd"}', '{"full_name":"Bui Doan Ngoc Tuan","phone":"0977757911","address":"27\\/21 Bui Tu Toan","other":"test 123\\ntest 234"}', '[{"category":"","name":"650-10 PS","alias":"650-10-PS","price":"1200000","quantity":"1","value":1200000,"valueDiscount":60000,"valueAfterDiscount":1140000,"totalValueAfterDiscount":1140000,"formatValueDiscount":"60,000","formatValueAfterDiscount":"1,140,000","formatTotalValueAfterDiscount":"1,140,000","amountProductsInCart":2},{"category":"","name":"600-9 Nh\\u1eadt","alias":"600-9-Nhat","price":"2000000","quantity":"1","value":2000000,"valueDiscount":0,"valueAfterDiscount":2000000,"totalValueAfterDiscount":2000000,"formatValueDiscount":"0","formatValueAfterDiscount":"2,000,000","formatTotalValueAfterDiscount":"2,000,000","amountProductsInCart":2}]', '', '1', '2', 1381038552);
 
 -- --------------------------------------------------------
 
@@ -433,29 +293,11 @@ CREATE TABLE IF NOT EXISTS `shop_products` (
 --
 
 INSERT INTO `shop_products` (`id`, `cate_id`, `cate_name`, `name`, `alias`, `info`, `description`, `image`, `price`, `barcode`, `quantity`, `is_sale_off`, `discount`, `total_buy`, `is_popular`, `page`, `status`, `create_date`) VALUES
-(1, 3, NULL, 'Vỏ xe nâng Bergougnan đặc ruột 600-9', 'Vo-xe-nang-Bergougnan-dac-ruot-600-9', 'Chúng tôi chuyên cung cấp mâm xe nâng và vỏ xe nâng Aichi, Bridgestone,Yokohama, ... đăc biệt cung cấp các loại vỏ xe nâng mới/cũ hiệu Bergougnan đặc ruột 600-9', '<p>Ch&uacute;ng t&ocirc;i chuy&ecirc;n b&aacute;n c&aacute;c loại&nbsp;<strong>vỏ xe n&acirc;ng</strong>,&nbsp;<strong>m&acirc;m xe n&acirc;ng</strong>&nbsp;với nhiều thương hiệu v&agrave; th&ocirc;ng số size phong ph&uacute;, đa dạng.</p>\r\n<p>Đặt biệt ch&uacute;ng t&ocirc;i chuy&ecirc;n b&aacute;n&nbsp;<strong>vỏ xe n&acirc;ng mới/cũ</strong>&nbsp;c&aacute;c loại nhập khẩu hiệu (Aichi, Bridgestone,Yokohama,&nbsp;Pio, Komachi, Pro, Rhino, caosumina, Deestone, Heung ah, Solido, cho c&aacute;c h&atilde;ng xe TCM, TOYOTA, KOMATSU, NISSAN, MITSUBISHI, HYSTER...)</p>\r\n<p>Ch&uacute;ng t&ocirc;i tự h&agrave;o l&agrave; nh&agrave; cung cấp sản phẩm mới / cũ hiệu&nbsp;<strong>Bergougnan đặc ruột 600-9</strong>&nbsp;với gi&aacute; cả phải chăng nhưng đảm bảo chất lượng</p>', '2013_10_06_23_30_18-vomamxenang-Vo-xe-nang-Bergougnan_600-9_1.jpg,2013_10_06_23_30_18-vomamxenang-Vo-xe-nang-Bergougnan_600-9_2.jpg', NULL, '6009Bergo', 0, '1', 5, 0, '1', '1', '1', 1378633484),
-(2, 3, NULL, 'Vỏ xe nâng Bridgestone Japan đặc ruột 700-12', 'Vo-xe-nang-Bridgestone-Japan-dac-ruot-700-12', 'Chúng tôi chuyên cung cấp mâm xe nâng và vỏ xe nâng mới/cũ hiệu Bridgestone Japan đặc ruột 700-12 Aichi, Bridgestone,Yokohama', '<p>Ch&uacute;ng t&ocirc;i chuy&ecirc;n b&aacute;n c&aacute;c loại <strong>vỏ xe n&acirc;ng</strong>, <strong>m&acirc;m xe n&acirc;ng</strong> với nhiều thương hiệu v&agrave; th&ocirc;ng số size phong ph&uacute;, đa dạng.</p>\r\n<p>Đặt biệt ch&uacute;ng t&ocirc;i chuy&ecirc;n b&aacute;n <strong>vỏ xe n&acirc;ng mới/cũ</strong> c&aacute;c loại nhập khẩu hiệu (Aichi, Bridgestone,Yokohama,&nbsp;<span>Pio, Komachi, Pro, Rhino, caosumina, Deestone, Heung ah, Solido, cho c&aacute;c h&atilde;ng xe TCM, TOYOTA, KOMATSU, NISSAN, MITSUBISHI, HYSTER</span>...)</p>\r\n<p>Ch&uacute;ng t&ocirc;i tự h&agrave;o l&agrave; nh&agrave; cung cấp sản phẩm mới / cũ hiệu <strong>Bridgestone Japan đặc ruột 700-12</strong>&nbsp;với gi&aacute; cả phải chăng nhưng đảm bảo chất lượng</p>', '2013_10_06_23_17_36-vomamxenang-Vo-xe-nang-Tong-Yong_700-12.jpg', NULL, '70012ToYo', 10, '0', 0, 0, '1', '1', '1', 1378781469),
-(3, 2, NULL, 'Xe điện abc', 'Xe-dien-abc', 'Chuyên cung cấp vỏ đặc, vỏ có ruột, mâm xe nâng, xe điện abc', '<p>Chuy&ecirc;n cung cấp vỏ đặc, vỏ c&oacute; ruột, m&acirc;m xe n&acirc;ng, xe điện abc</p>\r\n<p>Chuy&ecirc;n cung cấp vỏ đặc, vỏ c&oacute; ruột, m&acirc;m xe n&acirc;ng, xe điện abc</p>\r\n<p>Chuy&ecirc;n cung cấp vỏ đặc, vỏ c&oacute; ruột, m&acirc;m xe n&acirc;ng, xe điện abc</p>', '2013_09_13_16_32_50_vo-xe-dien-1.jpg,2013_09_13_16_35_21_vo-xe-dien-2.jpg', NULL, '50010D-D', 9, '0', 0, 1, '0', '1', '1', 1378782670),
-(4, 3, NULL, 'Vỏ xe nâng Aichi đặc ruột 700-12', 'Vo-xe-nang-Aichi-dac-ruot-700-12', 'Chúng tôi chuyên cung cấp mâm xe nâng và vỏ xe nâng mới/cũ hiệu Aichi đặc ruột 700-12, Aichi, Bridgestone,Yokohama, ... đăc biệt cung cấp các loại vỏ xe nâng ', '<p>Ch&uacute;ng t&ocirc;i chuy&ecirc;n b&aacute;n c&aacute;c loại&nbsp;<strong>vỏ xe n&acirc;ng</strong>,&nbsp;<strong>m&acirc;m xe n&acirc;ng</strong>&nbsp;với nhiều thương hiệu v&agrave; th&ocirc;ng số size phong ph&uacute;, đa dạng.</p>\r\n<p>Đặt biệt ch&uacute;ng t&ocirc;i chuy&ecirc;n b&aacute;n&nbsp;<strong>vỏ xe n&acirc;ng mới/cũ</strong>&nbsp;c&aacute;c loại nhập khẩu hiệu (Aichi, Bridgestone,Yokohama,&nbsp;Pio, Komachi, Pro, Rhino, caosumina, Deestone, Heung ah, Solido, cho c&aacute;c h&atilde;ng xe TCM, TOYOTA, KOMATSU, NISSAN, MITSUBISHI, HYSTER...)</p>\r\n<p>Ch&uacute;ng t&ocirc;i tự h&agrave;o l&agrave; nh&agrave; cung cấp sản phẩm mới / cũ hiệu&nbsp;<strong>Aichi đặc ruột 700-12</strong>&nbsp;với gi&aacute; cả phải chăng nhưng đảm bảo chất lượng</p>', '2013_10_06_23_46_32-vomamxenang-Vo-xe-nang-Aichi_700-12_1.jpg', NULL, '', 1, '0', 0, 0, '1', '1', '1', 1381077992),
-(6, 3, NULL, 'Vỏ xe nâng Aichi đặc ruột 28x9-15/700', 'Vo-xe-nang-Aichi-dac-ruot-28x9-15-700', 'Chúng tôi chuyên cung cấp mâm xe nâng và vỏ xe nâng mới/cũ hiệu Aichi đặc ruột 28x9-15/700 Aichi, Bridgestone,Yokohama', '<p>Ch&uacute;ng t&ocirc;i chuy&ecirc;n b&aacute;n c&aacute;c loại&nbsp;<strong>vỏ xe n&acirc;ng</strong>,&nbsp;<strong>m&acirc;m xe n&acirc;ng</strong>&nbsp;với nhiều thương hiệu v&agrave; th&ocirc;ng số size phong ph&uacute;, đa dạng.</p>\r\n<p>Đặt biệt ch&uacute;ng t&ocirc;i chuy&ecirc;n b&aacute;n&nbsp;<strong>vỏ xe n&acirc;ng mới/cũ</strong>&nbsp;c&aacute;c loại nhập khẩu hiệu (Aichi, Bridgestone,Yokohama,&nbsp;Pio, Komachi, Pro, Rhino, caosumina, Deestone, Heung ah, Solido, cho c&aacute;c h&atilde;ng xe TCM, TOYOTA, KOMATSU, NISSAN, MITSUBISHI, HYSTER...)</p>\r\n<p>Ch&uacute;ng t&ocirc;i tự h&agrave;o l&agrave; nh&agrave; cung cấp sản phẩm mới / cũ hiệu&nbsp;<strong>Aichi đặc ruột 28x9-15/700</strong>&nbsp;với gi&aacute; cả phải chăng nhưng đảm bảo chất lượng</p>', '2013_10_07_00_26_09-vomamxenang-Vo-xe-nang-Aichi_28x9-15-700_1.jpg,2013_10_07_00_26_09-vomamxenang-Vo-xe-nang-Aichi_28x9-15-700_2.jpg', NULL, '', 10, '0', 0, 0, '1', '1', '1', 1381080369);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `shop_qa`
---
-
-CREATE TABLE IF NOT EXISTS `shop_qa` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `subject` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `content` text COLLATE utf8_unicode_ci,
-  `full_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `parent_id` int(11) unsigned NOT NULL DEFAULT '0',
-  `user_id` int(11) unsigned DEFAULT NULL,
-  `status` char(1) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `create_date` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+(1, 3, 'Vỏ xe nâng đăc ruột', 'Vỏ xe nâng Bergougnan đặc ruột 600-9', 'Vo-xe-nang-Bergougnan-dac-ruot-600-9', 'Chúng tôi chuyên cung cấp mâm xe nâng và vỏ xe nâng Aichi, Bridgestone,Yokohama, ... đăc biệt cung cấp các loại vỏ xe nâng mới/cũ hiệu Bergougnan đặc ruột 600-9', '<p>Ch&uacute;ng t&ocirc;i chuy&ecirc;n b&aacute;n c&aacute;c loại&nbsp;<strong>vỏ xe n&acirc;ng</strong>,&nbsp;<strong>m&acirc;m xe n&acirc;ng</strong>&nbsp;với nhiều thương hiệu v&agrave; th&ocirc;ng số size phong ph&uacute;, đa dạng.</p>\r\n<p>Đặt biệt ch&uacute;ng t&ocirc;i chuy&ecirc;n b&aacute;n&nbsp;<strong>vỏ xe n&acirc;ng mới/cũ</strong>&nbsp;c&aacute;c loại nhập khẩu hiệu (Aichi, Bridgestone,Yokohama,&nbsp;Pio, Komachi, Pro, Rhino, caosumina, Deestone, Heung ah, Solido, cho c&aacute;c h&atilde;ng xe TCM, TOYOTA, KOMATSU, NISSAN, MITSUBISHI, HYSTER...)</p>\r\n<p>Ch&uacute;ng t&ocirc;i tự h&agrave;o l&agrave; nh&agrave; cung cấp sản phẩm mới / cũ hiệu&nbsp;<strong>Bergougnan đặc ruột 600-9</strong>&nbsp;với gi&aacute; cả phải chăng nhưng đảm bảo chất lượng</p>', '2013_10_06_23_30_18-vomamxenang-Vo-xe-nang-Bergougnan_600-9_1.jpg,2013_10_06_23_30_18-vomamxenang-Vo-xe-nang-Bergougnan_600-9_2.jpg', NULL, '6009Bergo', 0, '1', 5, 0, '1', '1', '1', 1378633484),
+(2, 3, 'Vỏ xe nâng đăc ruột', 'Vỏ xe nâng Bridgestone Japan đặc ruột 700-12', 'Vo-xe-nang-Bridgestone-Japan-dac-ruot-700-12', 'Chúng tôi chuyên cung cấp mâm xe nâng và vỏ xe nâng mới/cũ hiệu Bridgestone Japan đặc ruột 700-12 Aichi, Bridgestone,Yokohama', '<p>Ch&uacute;ng t&ocirc;i chuy&ecirc;n b&aacute;n c&aacute;c loại <strong>vỏ xe n&acirc;ng</strong>, <strong>m&acirc;m xe n&acirc;ng</strong> với nhiều thương hiệu v&agrave; th&ocirc;ng số size phong ph&uacute;, đa dạng.</p>\r\n<p>Đặt biệt ch&uacute;ng t&ocirc;i chuy&ecirc;n b&aacute;n <strong>vỏ xe n&acirc;ng mới/cũ</strong> c&aacute;c loại nhập khẩu hiệu (Aichi, Bridgestone,Yokohama,&nbsp;<span>Pio, Komachi, Pro, Rhino, caosumina, Deestone, Heung ah, Solido, cho c&aacute;c h&atilde;ng xe TCM, TOYOTA, KOMATSU, NISSAN, MITSUBISHI, HYSTER</span>...)</p>\r\n<p>Ch&uacute;ng t&ocirc;i tự h&agrave;o l&agrave; nh&agrave; cung cấp sản phẩm mới / cũ hiệu <strong>Bridgestone Japan đặc ruột 700-12</strong>&nbsp;với gi&aacute; cả phải chăng nhưng đảm bảo chất lượng</p>', '2013_10_06_23_17_36-vomamxenang-Vo-xe-nang-Tong-Yong_700-12.jpg', NULL, '70012ToYo', 10, '0', 0, 0, '1', '1', '1', 1378781469),
+(3, 2, 'Vỏ xe điện', 'Vỏ xe điện Komatsu 305x152', 'Vo-xe-dien-Komatsu-305x152', 'Chúng tôi chuyên cung cấp mâm xe nâng và vỏ xe nâng mới/cũ, vỏ xe điện Komatsu 305x152, Aichi, Bridgestone,Yokohama, ... đăc biệt cung cấp các loại vỏ xe nâng ', '<p>Ch&uacute;ng t&ocirc;i chuy&ecirc;n b&aacute;n c&aacute;c loại&nbsp;<strong>vỏ xe n&acirc;ng</strong>,&nbsp;<strong>m&acirc;m xe n&acirc;ng</strong>&nbsp;với nhiều thương hiệu v&agrave; th&ocirc;ng số size phong ph&uacute;, đa dạng.</p>\r\n<p>Đặt biệt ch&uacute;ng t&ocirc;i chuy&ecirc;n b&aacute;n&nbsp;<strong>vỏ xe n&acirc;ng mới/cũ</strong>&nbsp;c&aacute;c loại nhập khẩu hiệu (Aichi, Bridgestone,Yokohama,&nbsp;Pio, Komachi, Pro, Rhino, caosumina, Deestone, Heung ah, Solido, cho c&aacute;c h&atilde;ng xe TCM, TOYOTA, KOMATSU, NISSAN, MITSUBISHI, HYSTER...)</p>\r\n<p>Ch&uacute;ng t&ocirc;i tự h&agrave;o l&agrave; nh&agrave; cung cấp sản phẩm mới / cũ&nbsp;<strong>vỏ xe điện Komatsu 305x152</strong>&nbsp;với gi&aacute; cả phải chăng nhưng đảm bảo chất lượng</p>', '2013_10_09_13_49_03-vomamxenang-Vo-xe-dien-1.jpg,2013_10_09_13_49_03-vomamxenang-Vo-xe-dien-2.jpg', NULL, '50010D-D', 9, '0', 0, 1, '0', '1', '1', 1378782670),
+(4, 3, 'Vỏ xe nâng đăc ruột', 'Vỏ xe nâng Aichi đặc ruột 700-12', 'Vo-xe-nang-Aichi-dac-ruot-700-12', 'Chúng tôi chuyên cung cấp mâm xe nâng và vỏ xe nâng mới/cũ hiệu Aichi đặc ruột 700-12, Aichi, Bridgestone,Yokohama, ... đăc biệt cung cấp các loại vỏ xe nâng ', '<p>Ch&uacute;ng t&ocirc;i chuy&ecirc;n b&aacute;n c&aacute;c loại&nbsp;<strong>vỏ xe n&acirc;ng</strong>,&nbsp;<strong>m&acirc;m xe n&acirc;ng</strong>&nbsp;với nhiều thương hiệu v&agrave; th&ocirc;ng số size phong ph&uacute;, đa dạng.</p>\r\n<p>Đặt biệt ch&uacute;ng t&ocirc;i chuy&ecirc;n b&aacute;n&nbsp;<strong>vỏ xe n&acirc;ng mới/cũ</strong>&nbsp;c&aacute;c loại nhập khẩu hiệu (Aichi, Bridgestone,Yokohama,&nbsp;Pio, Komachi, Pro, Rhino, caosumina, Deestone, Heung ah, Solido, cho c&aacute;c h&atilde;ng xe TCM, TOYOTA, KOMATSU, NISSAN, MITSUBISHI, HYSTER...)</p>\r\n<p>Ch&uacute;ng t&ocirc;i tự h&agrave;o l&agrave; nh&agrave; cung cấp sản phẩm mới / cũ hiệu&nbsp;<strong>Aichi đặc ruột 700-12</strong>&nbsp;với gi&aacute; cả phải chăng nhưng đảm bảo chất lượng</p>', '2013_10_06_23_46_32-vomamxenang-Vo-xe-nang-Aichi_700-12_1.jpg', NULL, '', 1, '0', 0, 0, '1', '1', '1', 1381077992),
+(6, 3, 'Vỏ xe nâng đăc ruột', 'Vỏ xe nâng Aichi đặc ruột 28x9-15/700', 'Vo-xe-nang-Aichi-dac-ruot-28x9-15-700', 'Chúng tôi chuyên cung cấp mâm xe nâng và vỏ xe nâng mới/cũ hiệu Aichi đặc ruột 28x9-15/700 Aichi, Bridgestone,Yokohama', '<p>Ch&uacute;ng t&ocirc;i chuy&ecirc;n b&aacute;n c&aacute;c loại&nbsp;<strong>vỏ xe n&acirc;ng</strong>,&nbsp;<strong>m&acirc;m xe n&acirc;ng</strong>&nbsp;với nhiều thương hiệu v&agrave; th&ocirc;ng số size phong ph&uacute;, đa dạng.</p>\r\n<p>&nbsp;</p>\r\n<p>Đặt biệt ch&uacute;ng t&ocirc;i chuy&ecirc;n b&aacute;n&nbsp;<strong>vỏ xe n&acirc;ng mới/cũ</strong>&nbsp;c&aacute;c loại nhập khẩu hiệu (Aichi, Bridgestone,Yokohama,&nbsp;Pio, Komachi, Pro, Rhino, caosumina, Deestone, Heung ah, Solido, cho c&aacute;c h&atilde;ng xe TCM, TOYOTA, KOMATSU, NISSAN, MITSUBISHI, HYSTER...)</p>\r\n<p>&nbsp;</p>\r\n<p>Ch&uacute;ng t&ocirc;i tự h&agrave;o l&agrave; nh&agrave; cung cấp sản phẩm mới / cũ hiệu&nbsp;<strong>Aichi đặc ruột 28x9-15/700</strong>&nbsp;với gi&aacute; cả phải chăng nhưng đảm bảo chất lượng</p>', '2013_10_07_00_26_09-vomamxenang-Vo-xe-nang-Aichi_28x9-15-700_1.jpg,2013_10_07_00_26_09-vomamxenang-Vo-xe-nang-Aichi_28x9-15-700_2.jpg', NULL, '', 10, '0', 0, 0, '1', '1', '1', 1381080369);
 
 -- --------------------------------------------------------
 
@@ -481,10 +323,59 @@ CREATE TABLE IF NOT EXISTS `shop_review` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `shop_video`
+-- Table structure for table `site_banner`
 --
 
-CREATE TABLE IF NOT EXISTS `shop_video` (
+CREATE TABLE IF NOT EXISTS `site_banner` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `alias` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `info` text COLLATE utf8_unicode_ci,
+  `page_link` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `image` varchar(1000) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `position` char(1) COLLATE utf8_unicode_ci NOT NULL,
+  `page` char(15) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `status` char(1) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `ordering` int(11) DEFAULT NULL,
+  `create_date` int(11) DEFAULT NULL,
+  `expired_date` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `site_banner`
+--
+
+INSERT INTO `site_banner` (`id`, `name`, `alias`, `info`, `page_link`, `image`, `position`, `page`, `status`, `ordering`, `create_date`, `expired_date`) VALUES
+(1, 'Banner 1', 'Banner-1', '12345', 'http://voxe.web3in1.com', '', '1', '2', '1', NULL, 1378789311, 1410282000),
+(2, 'Banner Vỏ xe nâng Aichi 28x9-15 - 700', 'Banner-Vo-xe-nang-Aichi-28x9-15---700', 'Vỏ xe nâng Aichi 28x9-15 - 700, giá cả phải chăng,luôn làm hài lòng quý khách gần xa.Hotline: 0913.600.210', 'http://vomamxenang.com/shop/Vo-xe-nang-dac-ruot/Vo-xe-nang-Aichi-dac-ruot-28x9-15-700', '2013_10_09_10_22_59-vomamxenang-Vo-xe-nang-Aichi_28x9-15-700_2.jpg', '1', '1,2', '1', 2, 1378882209, 1410368400),
+(3, 'Banner Vỏ xe nâng Bergougnan 600-9', 'Banner-Vo-xe-nang-Bergougnan-600-9', 'Vỏ xe nâng Bergougnan 600-9, giá cả phải chăng,luôn làm hài lòng quý khách gần xa.Hotline: 0913.600.210', 'http://vomamxenang.com/shop/Vo-xe-nang-dac-ruot/Vo-xe-nang-Bergougnan-dac-ruot-600-9', '2013_10_09_10_26_07-vomamxenang-Vo-xe-nang-Bergougnan_600-9.jpg', '1', '1,3', '1', 3, 1378885871, 1410368400);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `site_qa`
+--
+
+CREATE TABLE IF NOT EXISTS `site_qa` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `subject` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `content` text COLLATE utf8_unicode_ci,
+  `full_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `parent_id` int(11) unsigned NOT NULL DEFAULT '0',
+  `user_id` int(11) unsigned DEFAULT NULL,
+  `status` char(1) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `create_date` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `site_video`
+--
+
+CREATE TABLE IF NOT EXISTS `site_video` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `alias` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
@@ -498,11 +389,11 @@ CREATE TABLE IF NOT EXISTS `shop_video` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
 
 --
--- Dumping data for table `shop_video`
+-- Dumping data for table `site_video`
 --
 
-INSERT INTO `shop_video` (`id`, `name`, `alias`, `cate_id`, `link_youtube`, `status`, `page`, `create_date`) VALUES
-(1, 'Gangnam style', 'Gangnam-style', 3, 'http://www.youtube.com/watch?v=VwwMzuiSEH0', '1', 1, 1379065872);
+INSERT INTO `site_video` (`id`, `name`, `alias`, `cate_id`, `link_youtube`, `status`, `page`, `create_date`) VALUES
+(1, 'Style Vo mam xe nang', 'Style-Vo-mam-xe-nang', 3, 'http://www.youtube.com/watch?v=6q2FN8Fphew', '1', 1, 1379065872);
 
 -- --------------------------------------------------------
 
@@ -539,8 +430,8 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `email`, `fullname`, `birthday`, `phone`, `address`, `country`, `description`, `avatar`, `website`, `created_date`, `last_login`, `is_online`, `validation_code`, `validation_type`, `validation_expired`, `status`, `type`) VALUES
-(1, 'gilla', '827ccb0eea8a706c4c34a16891f84e7b', 'ngoctuan3010842003@yahoo.com', 'Bui Doan Ngoc Tuan', '1984-10-30', '0977757911', '27/21 Bui Tu Toan', 'Viet Nam', 'Design Web, Yii Framework, Symfony, HTML, CSS, JQuery', '2013_08_23_06_27_37_Tulips.jpg,2013_08_23_06_27_37_Penguins.jpg,2013_08_23_06_28_25_Koala.jpg', 'http://web3in1.com', '2013-04-07', '2013-10-06', '1', '', NULL, NULL, '1', '0'),
-(2, 'admin', '827ccb0eea8a706c4c34a16891f84e7b', 'ngoctuan3010842003@yahoo.com1', 'Bui Tran Ngoc Phu', '2010-03-19', '09040909099', '27/21 Bui Tu Toan F.An Lac Q.Binh Tan', 'VN', 'tét', '', NULL, '2013-04-08', '2013-10-07', '1', '', NULL, 0, '1', '1'),
+(1, 'gilla', '827ccb0eea8a706c4c34a16891f84e7b', 'ngoctuan3010842003@yahoo.com', 'Bui Doan Ngoc Tuan', '1984-10-30', '0977757911', '27/21 Bui Tu Toan', 'Viet Nam', 'Design Web, Yii Framework, Symfony, HTML, CSS, JQuery', '2013_08_23_06_27_37_Tulips.jpg,2013_08_23_06_27_37_Penguins.jpg,2013_08_23_06_28_25_Koala.jpg', 'http://web3in1.com', '2013-04-07', '2013-10-07', '1', '', NULL, NULL, '1', '0'),
+(2, 'admin', '827ccb0eea8a706c4c34a16891f84e7b', 'ngoctuan3010842003@yahoo.com1', 'Bui Tran Ngoc Phu', '2010-03-19', '09040909099', '27/21 Bui Tu Toan F.An Lac Q.Binh Tan', 'VN', 'tét', '', NULL, '2013-04-08', '2013-10-09', '1', '', NULL, 0, '1', '1'),
 (3, 'user', '827ccb0eea8a706c4c34a16891f84e7b', 'ngoctuan3010842003@yahoo.com2', 'wwww', '0000-00-00', '3543412345', '4334', 'VN', '11111111', NULL, NULL, '2013-04-08', '2013-04-08', NULL, NULL, NULL, 0, '1', '3'),
 (7, 'abctest', 'e10adc3949ba59abbe56e057f20f883e', 'gangtergilla4@gmail.com', 'abc test', '1988-07-15', '09090909090', '27.21 bui tu toan', 'VN', 'vvvvvvvvvv', '2013_08_23_05_28_15_create-crud-by-model.png,2013_08_23_05_28_15_Chrysanthemum.jpg', 'http://web3in1.com', '2013-08-23', '0000-00-00', '2', '', NULL, NULL, '1', '3');
 
@@ -561,9 +452,9 @@ ALTER TABLE `shop_review`
   ADD CONSTRAINT `FK_review_product` FOREIGN KEY (`product_id`) REFERENCES `shop_products` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Constraints for table `shop_video`
+-- Constraints for table `site_video`
 --
-ALTER TABLE `shop_video`
+ALTER TABLE `site_video`
   ADD CONSTRAINT `FK_video_category` FOREIGN KEY (`cate_id`) REFERENCES `shop_category` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

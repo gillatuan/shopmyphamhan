@@ -16,7 +16,7 @@
         </div>
         <span class="created-date threecol last"><?php echo Helper::getTimeAgo($data->create_date); ?></span>
         <div class="clearfix"></div>
-        <div class="content"><?php echo $data->description; ?></div>
+        <div class="content"><?php echo nl2br($data->description); ?></div>
     </div>
 </div>
 
@@ -34,7 +34,7 @@
             <span class="created-date fourcol last"><?php echo Helper::getTimeAgo($data->create_date); ?></span>
         </div>
         <h4><?php echo $data->subject; ?></h4>
-        <div class="review-desc"><?php echo $data->description; ?></div>
+        <div class="review-desc"><?php echo nl2br($data->description); ?></div>
     </div>
 </div>
 <?php } ?>
