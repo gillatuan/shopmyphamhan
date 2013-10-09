@@ -7,9 +7,10 @@
     <meta http-equiv="content-language" content="<?php echo Yii::app()->language ?>"/>
     <title><?php echo $this->pageTitle; ?></title>
     <meta name="author" content="Bui Doan Ngoc Tuan" />
-    <meta name="robots" content="index, follow, noarchive" />
+    <meta name="robots" content="index, follow, noarchive"/>
+    <meta name='revisit-after' content='1 days'/>
+
     <link rel="canonical" href="<?php echo $this->canonicalUrl; ?>">
-    <!--<meta name='revisit-after' content='1 days' />-->
     <link rel="stylesheet" href="<?php echo Helper::themeUrl(); ?>/css/default/default.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php echo Helper::themeUrl(); ?>/css/nivo-slider.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php echo Helper::themeUrl(); ?>/css/styleNivoSlider.css" type="text/css" media="screen"/>
@@ -20,7 +21,7 @@
     <!-- Your styles  -->
     <link rel="stylesheet" href="<?php echo Helper::themeUrl(); ?>/css/form.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php echo Helper::themeUrl(); ?>/css/styles.css" type="text/css" media="screen" />
-    <link rel="shortcut icon" href="<?php echo Helper::themeUrl(); ?>/images/favicon.ico" />
+    <link rel="shortcut icon" href="<?php echo Yii::getPathOfAlias('webroot'); ?>/favicon.ico" type="image/x-icon" />
 </head>
 <body>
 <div id="topNav">
@@ -54,9 +55,10 @@
     <div class="container">
         <div class="row overflow-visible">
              <ul class="twelvecol menu-categories">
-                <?php $this->widget('Shop.components.NavCategory', array(
+                 <?php $this->widget('Shop.components.NavCategory', array(
                     'parent' => 0
-                )) ?>
+                 )) ?>
+                 <li><a href="<?php echo Helper::url('/Shop/product/readNews', array('newsAlias' => 'Giao-nhan-hang-hoa-xuat-nhap-khau')) ?>" title="Giao nhận hàng hoá xuất nhập khẩu"><span>Giao nhận hàng hoá xuất nhập khẩu</span></a></li>
             </ul>
         </div>
         <div class="row topbottom-20 bg-white">
@@ -119,43 +121,8 @@
 
         <div class="row">
             <div class="quickLinks twelvecol">
-                <h2>Giới thiệu - Trợ giúp - Giao hàng, Đổi trả hàng - Tin tức</h2>
+                <h2>Giới Thiệu - Tin Tức - Tin Thông Báo - Tin Khuyến Mãi</h2>
                 <?php $this->widget('Shop.components.SomeNews'); ?>
-
-                <!--<div class="quickBox introduce threecol">
-                    <h3>Giới thiệu</h3>
-                    <ul>
-                        <li><a href="gioi-thieu-cong-ty.html">Giới thiệu công ty</a></li>
-                        <li><a href="danh-sach-cua-hang.html">Danh sách cửa hàng</a></li>
-                        <li><a href="lien-he.html">Liên hệ</a></li>
-                        <li><a href="lien-he-ky-gui.html">Liên hệ ký gởi hàng</a></li>
-                        <li><a href="#">Mua hàng giá s?</a></li>
-                    </ul>
-                </div>
-                <div class="quickBox help threecol">
-                    <h3>Trợ giúp</h3>
-                    <ul>
-                        <li><a href="cac-cau-hoi-thuong-gap.html">Các câu hỏi thường gặp F.A.Qs</a></li>
-                        <li><a href="quy-dinh-su-dung.html">Quy định sử dụng</a></li>
-                        <li><a href="phuong-thuc-thanh-toan.html">Phương thức thanh toán</a></li>
-                        <li><a href="phuong-thuc-van-chuyen.html">Phương thức vận chuyển</a></li>
-                       <li><a href="chinh-sach-bao-mat-thong-tin.html">Chính sách bảo mật thông tin</a></li>
-                    </ul>
-                </div>
-                <div class="quickBox help threecol">
-                    <h3>Giao hàng - Đổi hàng</h3>
-                    <ul class="subnav">
-                        <li><a href="phuong-thuc-van-chuyen.html">Giao hàng</a></li>
-                        <li><a href="chinh-sach-doi-va-tra-hang.html">Đổi trả hàng</a></li>
-                    </ul>
-                </div>
-                <div class="quickBox news threecol last">
-                    <h3>Tin tức</h3>
-                    <ul class="subnav">
-                        <li><a href="tin-caubevang.html">Tin tức mới</a></li>
-                        <li><a href="hot-deal.html">Hot Deal</a></li>
-                    </ul>
-                </div>-->
             </div>
         </div>
     </div>
@@ -171,9 +138,9 @@
                 <p><strong>8h sáng - 18h tối</strong>.(Từ Thứ 2 - Chủ Nhật)</p>
             </div>
             <div class="copyright fourcol">
-                <h3>BẢN QUYỀN THUỘC CTY TNHH TMDV NGỌC THANH.</h3>
+                <h3>BẢN QUYỀN THUỘC CTY TNHH VỎ MÂM XE NÂNG NGỌC THANH.</h3>
                 <p>Địa chỉ: Số 3 Bùi Tư Toàn F.An Lạc Q.Bình Tân</p>
-                <p>Email: <a href="mailto:banhang@caubevang.com">tuan.bui@web3in1.com</a></p>
+                <p>Email: <a href="mailto:tuan.buidoanngoc@gmail.com">tuan.buidoanngoc@gmail.com</a></p>
                 <p>All Rights Reserved. Designed by <a href="http://web3in1.com" title="Web3in1.com">Web3in1.com</a></p>
             </div>
             <div class="pttt fourcol last">
@@ -195,38 +162,42 @@
         <li class="hot-products twocol last"><a href="#" title="Hot product">Hot Products</a></li>
         <li class="hot-line threecol last"><p>Hot line: <span>0903.66.44.64</span></p></li>
         <li class="nav-social floatright fourcol last">
-            <a href="#" target="_blank">
-                <img class="footer_social" src="<?php echo Helper::themeUrl(); ?>/images/facebook_24.png" border="0" alt="facebook social">
+            <?php $url = Yii::app()->createAbsoluteUrl(Yii::app()->request->requestUri); ?>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $url; ?>" target="_blank" title="Facebook social">
+                <img class="footer_social" src="<?php echo Helper::themeUrl(); ?>/images/facebook_24.png" border="0" alt="facebook social" />
             </a>
-            <a href="#" target="_blank">
-                <img class="footer_social" src="<?php echo Helper::themeUrl(); ?>/images/twitter_24.png" border="0" alt="twitter social">
+            <a href="https://twitter.com/share?url=<?php echo $url; ?>" title="Twitter social">
+                <img class="footer_social" src="<?php echo Helper::themeUrl(); ?>/images/twitter_24.png" border="0" alt="twitter social" />
             </a>
-            <a href="#" target="_blank">
-                <img class="footer_social" src="<?php echo Helper::themeUrl(); ?>/images/digg_24.png" border="0" alt="digg social">
+            <a href="https://plus.google.com/share?url=<?php echo $url; ?>" title="Google Plus social" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+                <img src="https://www.gstatic.com/images/icons/gplus-32.png" alt="Share on Google+" />
             </a>
-            <a href="#" target="_blank">
-                <img class="footer_social" src="<?php echo Helper::themeUrl(); ?>/images/linkedin_24.png" border="0" alt="linkedin social">
+            <!--<a class="" title="Pinterest social">
+                <img class="footer_social" src="<?php /*echo Helper::themeUrl(); */?>/images/stumble_24.png" border="0" alt="Pinterest social" />
             </a>
-            <a href="#" target="_blank">
-                <img class="footer_social" src="<?php echo Helper::themeUrl(); ?>/images/stumble_24.png" border="0" alt="stumble social">
-            </a>
-            <a href="#" target="_blank">
-                <img class="footer_social" src="<?php echo Helper::themeUrl(); ?>/images/blogger_24.png" border="0" alt="blogger social">
-            </a>
+            <a class="" title="More social">
+                <img class="footer_social" src="<?php /*echo Helper::themeUrl(); */?>/images/blogger_24.png" border="0" alt="More social" />
+            </a>-->
         </li>
     </ul>
 </div>
 
 <?php Helper::cs()->registerCoreScript('jquery'); ?>
 <?php Helper::cs()->registerCoreScript('jquery.ui'); ?>
-<script type="text/javascript" src="<?php echo Helper::themeUrl(); ?>/js/jquery.nivo.slider.js"></script>
-<script type="text/javascript" src="<?php echo Helper::themeUrl(); ?>/js/imgLiquid-min.js"></script>
-<script type="text/javascript" src="<?php echo Helper::themeUrl(); ?>/js/css3-mediaqueries.js"></script>
+<?php Helper::cs()->registerScriptFile(Helper::themeUrl() . '/js/imgLiquid-min.js', CClientScript::POS_END); ?>
+<?php Helper::cs()->registerScriptFile(Helper::themeUrl() . '/js/css3-mediaqueries.js', CClientScript::POS_END); ?>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-32319582-2', 'vomamxenang.com');
+  ga('send', 'pageview');
+
+</script>
 <script type="text/javascript">
     $(function() {
-        // nivoSlider
-        $('#slider').nivoSlider();
-
         /* scroll to top*/
         $(window).scroll(function(){
             if ($(this).scrollTop() > 300) {
@@ -247,7 +218,7 @@
         $window.scroll(function (e) {
             if ($window.scrollTop() > pos) {
                 $this.css({
-                    width: '7%',
+                    width: '8%',
                     position: 'fixed',
                     top: 0,
                     left: 0,
@@ -256,7 +227,7 @@
                 });
             } else {
                 $this.css({
-                    width: 650,
+                    width: '54%',
                     position: 'relative',
                     top: 0,
                     size: '35px',
@@ -316,7 +287,7 @@
                                 $("#id-" + alias).parent().parent().find(".bold").text(dataCart.formatValueDiscount);
 
                                 if ($("tbody .bold").text() == "") {
-                                    $("table tbody").html("<tr><td colspan=5>Không có bất kỳ sản phẩm nào trong giỏ hàng của bạn cả .</td></tr>")
+                                    $("table tbody").html("<tr><td colspan=5>Không có bất kỳ sản phẩm nào trong giỏ hàng của bạn cả.</td></tr>")
                                 } else {
                                     $(".total-value").val(dataCart.totalValueAfterDiscount)
                                     $(".total").text(dataCart.formatTotalValueAfterDiscount);
@@ -330,7 +301,7 @@
                     objectThis.parent().parent().remove();
 
                     if ($("tbody .bold").text() == "") {
-                        $("table tbody").html("<tr><td colspan=5>Không có bất kỳ sản phẩm nào trong giỏ hàng của bạn cả .</td></tr>");
+                        $("table tbody").html("<tr><td colspan=5>Không có bất kỳ sản phẩm nào trong giỏ hàng của bạn cả.</td></tr>");
                         $(".your-cart").text("Giỏ hàng rỗng.");
                     } else {
                         $(".total-value").val(decodeData[1])

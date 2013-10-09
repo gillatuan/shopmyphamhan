@@ -25,11 +25,11 @@
                         <?php } else { ?>
                             <p class="price"><span class="price-text">Giá: </span><span class="price-value"><?php echo Helper::formatNumber($product->price); ?></span></p>
                         <?php } ?>
-                        <p class="price"><span class="price-text">Mã SP: </span><span class="price-value"><?php echo $product->barcode; ?></span></p>
+                        <?php if (!empty($product->barcode)) { ?><p class="price"><span class="price-text">Mã SP: </span><span class="price-value"><?php echo $product->barcode; ?></span></p><?php } ?>
                         <a href="javascript:;" title="Mua Hàng" class="add-cart link" id="id-<?php echo $product->alias; ?>">Mua Hàng</a>
                     <?php } else { ?>
                         <p class="price"><span class="price-text">Giá: </span><span class="price-value">Liên hệ</span></p>
-                        <p class="price"><span class="price-text">Mã SP: </span><span class="price-value"><?php echo $product->barcode; ?></span></p>
+                        <?php if (!empty($product->barcode)) { ?><p class="price"><span class="price-text">Mã SP: </span><span class="price-value"><?php echo $product->barcode; ?></span></p><?php } ?>
                     <?php } ?>
                     <div class="vote">
                         <?php $this->widget('CStarRating', array(

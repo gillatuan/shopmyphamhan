@@ -1,5 +1,4 @@
 <div class="product-list bg-f5f5f5 topbottom-20 leftright-20 clearfix">
-    <h2>Liên hệ</h2>
     <p><?php echo Helper::t('Contact_Info'); ?></p>
     <?php Helper::renderFlash('successContact', 'addcart-success link active block', false, 'addcart-success') ?>
 
@@ -13,7 +12,7 @@
         ),
     )); ?>
 
-        <p class="note">Fields with <span class="required">*</span> are required.</p>
+        <p class="note"><?php echo Helper::t('Fields_required'); ?></p>
 
         <?php echo $form->errorSummary($model); ?>
 
@@ -64,6 +63,6 @@
     </div><!-- form -->
 
     <div class="map sixcol last">
-        <iframe src="http://mapsengine.google.com/map/view?mid=z22EohenwnGA.ktgCx6gKKM9w" width="385" height="400"></iframe>
+        <iframe src="http://mapsengine.google.com/map/embed?mid=z22EohenwnGA.kOzlbPlkTYuM" width="400" height="371"></iframe>
     </div>
 </div>

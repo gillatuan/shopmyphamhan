@@ -26,7 +26,7 @@ $thumbImage = Helper::explodeCharData($data->image);
     <div class="clear top-30">&nbsp;</div>
 
     <div class="product-desc">
-        <h3 class="title">Description</h3>
+        <h3 class="title"><?php echo Helper::t('description'); ?></h3>
         <?php echo $data->content; ?>
     </div>
 </div>

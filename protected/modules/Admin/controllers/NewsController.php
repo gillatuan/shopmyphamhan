@@ -72,10 +72,13 @@ class NewsController extends BackendController
 		// Uncomment the following line if AJAX validation is needed
         Helper::performAjaxValidation($model, 'news-form');
 
-		if(isset($_POST['News']))
+		if(Helper::post('News'))
 		{
-			$model->attributes=$_POST['News'];
-            $uploadImage = Helper::uploadImage($model, 'image', 'News');
+			$model->attributes=Helper::post('News');
+            $size = array(
+                'w' => 391, 'h' => 293, 'typeSize' => 'maxWidth'
+            );
+            $uploadImage = Helper::uploadImage($model, 'image', 'News', true, false, $size);
             $model->image = $uploadImage;
 
             if($model->save()) {

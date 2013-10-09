@@ -58,7 +58,7 @@
             </tbody>
         </table>
     </div>
-    <div class="checkout-info">
+    <div class="checkout-info output">
         <div class="sixcol billto">
             <h3>Thông tin người mua</h3>
 
