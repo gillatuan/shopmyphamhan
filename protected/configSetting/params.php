@@ -15,15 +15,15 @@
 //
 	define('commentCount', 10);
 //
-	define('DB_HOST' , '205.178.146.106');
+	define('DB_HOST' , 'localhost');
 //
-	define('DB_NAME' , 'myphamhan');
+	define('DB_NAME' , 'thietkew_shopmyphamhan');
 //
 	define('DB_PORT' , 3306);
 //
-	define('DB_PSWD' , 'M6ph1mh1n');
+	define('DB_PSWD' , '0903664464');
 //
-	define('DB_USER' , 'myphamhan');
+	define('DB_USER' , 'thietkew_mypham');
 //
 	define('DEFAULT_BO_LAYOUT', '//layouts/main');
 //
