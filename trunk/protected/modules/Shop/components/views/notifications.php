@@ -6,11 +6,11 @@
         <h3><?php echo $type; ?></h3>
         <?php if (count($news)) { ?>
         <ul>
-            <?php foreach ($news as $tin) { ?>
+            <?php foreach ($news as $k=>$tin) { ?>
                 <?php if ($tin->type_news == $code) { ?>
                 <li><a href="<?php echo Helper::url('/Shop/product/readNews', array('newsAlias' => $tin->alias)); ?>" title="<?php echo $tin->title; ?>"><?php echo $tin->title; ?></a> </li>
                 <?php } else { ?>
-                <li><?php echo Helper::t('NO_RESULTS_KEY'); ?></li>
+                <li ><?php if ($k == 0) echo Helper::t('NO_RESULTS_KEY'); ?></li>
                 <?php } ?>
             <?php } ?>
         </ul>

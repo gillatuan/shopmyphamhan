@@ -146,7 +146,6 @@ class Products extends CActiveRecord {
             $this->create_date = time();
         }
         $this->alias = Helper::unicode_convert($this->name);
-        $this->page = implode(',', $postProduct['page']);
 
         return parent::beforeSave();
     }
@@ -160,17 +159,19 @@ class Products extends CActiveRecord {
     }
 
     protected function beforeValidate() {
-        $postProduct = Helper::post('Products');
-        $this->page =  implode(',', $postProduct['page']);
+        if (Helper::post('Products') || Helper::post('attr') == 'page') {
+            $postProduct = Helper::post('Products');
+            $this->page = $postProduct ? implode(',', $postProduct['page']) : Helper::post('value');
+        }
 
         return parent::beforeValidate();
     }
 
-    protected function afterFind() {
+    /*protected function afterFind() {
         $this->page = explode(',', $this->page);
 
         return parent::afterFind();
-    }
+    }*/
 
     public function createCriteria($category = '', $alias = '', $tab = '', $limit = '', $orderBy = 'id DESC') {
         $criteria = new CDbCriteria();

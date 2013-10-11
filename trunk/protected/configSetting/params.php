@@ -21,13 +21,13 @@
 //
 	define('DB_PORT' , 3306);
 //
-	define('DB_PSWD' , '0903664464');
+	define('DB_PSWD' , 'm6ph1m0903664464');
 //
 	define('DB_USER' , 'thietkew_mypham');
 //
 	define('DEFAULT_BO_LAYOUT', '//layouts/main');
 //
-	define('DEFAULT_LAYOUT', '//layouts/main');
+	define('DEFAULT_LAYOUT', '//layouts/home');
 //
 	define('DEFAULT_META_DESCRIPTION', 'Chuyên cung cấp vỏ xe nâng, mâm xe nâng, vỏ xe điện mới, cũ, nhiều kích cớ,đầy đủ nhà sản xuất Aichi,Bridgestone,... giá cả phải chăng,luôn làm hài lòng quý khách gần xa.Hotline: 0913.600.210');
 //

@@ -1,8 +1,8 @@
 <div class="product-list bg-f5f5f5 topbottom-20 leftright-20 clearfix">
-    <p><?php echo Helper::t('Contact_Info'); ?></p>
+    <h3 class="contact-info"><?php echo Helper::t('Contact_Info'); ?></h3>
     <?php Helper::renderFlash('successContact', 'addcart-success link active block', false, 'addcart-success') ?>
 
-    <div class="form sixcol">
+    <div class="form sixcol output">
 
     <?php $form=$this->beginWidget('CActiveForm', array(
         'id'=>'contact-form',
@@ -36,7 +36,7 @@
 
         <div class="row">
             <?php echo $form->labelEx($model,'body'); ?>
-            <?php echo $form->textArea($model,'body',array('style' => 'width: 96%;', 'rows'=>6, 'cols'=>50)); ?>
+            <?php echo $form->textArea($model,'body',array('style' => 'width: 92%;', 'rows'=>6, 'cols'=>50)); ?>
             <?php echo $form->error($model,'body'); ?>
         </div>
 
