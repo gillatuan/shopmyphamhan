@@ -29,8 +29,8 @@
         <div class="row">
             <div class="threecol floatleft logo">
                 <h1><a href="<?php echo Helper::url('/Shop/product/index') ?>" title="shopmyphamhan.com">
-                    <span class="voxenang">Shopmypham</span>
-                    <span class="cacloai">han</span>
+                    <span class="shopmypham">Shopmypham</span>
+                    <span class="han">han</span>
                     <span class="domain">.com</span>
                 </a></h1>
             </div>

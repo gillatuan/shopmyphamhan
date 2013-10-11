@@ -136,10 +136,10 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
 #topNav { min-height: 65px; background-color: #90d900; }
 #topNav .logo { position: relative; }
     .logo h1 { text-align: left; }
-    .logo h1 span { font-size: 16px; }
+    .logo h1 span { font-size: 20px; }
     .logo h1 a:hover { color: white; text-decoration: none; }
-    .voxenang { line-height: 55px; letter-spacing: 2px; font-size: 35px !important; text-transform: uppercase; }
-    .cacloai { position: absolute; top: 40px; left: 205px; }
+    .shopmypham { line-height: 55px; letter-spacing: 2px; font-size: 35px !important; text-transform: uppercase; }
+    .han { position: absolute; top: 40px; left: 202px; }
     .domain { color: white; position: absolute; top: 40px; left: 233px; }
 
     #topNav .menu { float: right; }
