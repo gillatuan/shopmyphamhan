@@ -7,6 +7,8 @@ body {
 
 p, span, li { color: #999999; font: 14px Arial, VNI-Bodan, sans-serif;  margin: 0; padding: 0; text-align: justify; }
 
+p { padding-top: 5px; }
+p:first-child { padding-top: 0; }
 li { list-style-type: none; }
 
 a { color: #0088CC; display: block; text-decoration: none; }
@@ -298,13 +300,14 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
     color: #fff !important;
     text-shadow: 0 1px rgba(0, 0, 0, .2) !important;
 }
+.product-list .contact-info { margin-bottom: 20px; }
 
 .price-group .price { margin-top: 5px; }
 .price-group .price .price-text, .price-group .price .price-value { color: #02ABD6; font-weight: bold; text-shadow: 0 1px #FFFFFF; }
 .price-group .price.destroy { text-decoration: line-through; }
 .price-group .price.destroy .price-text, .price-group .price.destroy .price-value { color: #989898; text-shadow: 0 1px #FFFFFF; }
 
-            .product-list .readmore { text-align: right; margin: 15px; }
+.product-list .readmore { text-align: right; margin: 15px; }
 
 /* Products by Category voxenangcacloai-icon-category */
 #wrapper h2.product-name-by-cate { padding: 10px; background-color: #90d900; color: white; font-size: 20px; font-weight: bold; text-align: left; text-shadow: none; }
@@ -682,6 +685,8 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
     .signs { margin: 5px 10px 0 !important; }
     .signs a { width: 48% !important; height: 28px; overflow: hidden; }
 
+    .signs a.online-useful { height: 32px; overflow: hidden; }
+
     ul.tabs li.tab {
         width: 31%;
     }
@@ -694,7 +699,7 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
     #nav-fixed li.nav-social { position: absolute; right: 20px; }
     #nav-fixed ul li.hot-line { border-left: none; }
     #nav-fixed ul li.hot-line p, #nav-fixed ul li.hot-line span { font: bold 15px Tahoma !important; }
-    #footer .row { padding: 0 10px; }
+    #footer .row { width: 93%; padding: 0 10px; }
 }
 
 /* ========================================== */

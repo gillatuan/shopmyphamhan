@@ -47,6 +47,7 @@ $dataImage = $data->image ? (is_array($explode) ? $explode[0] : $explode) : $noI
             <?php Helper::renderFlash('successUpdateProfile', 'link active', false, 'active'); ?>
 
             <div class="link active addcart-success"></div>
+            <div class="clearfix"></div>
             <h2><?php echo $data->name; ?></h2>
         </div>
         <div class="sixcol buy-area last">
@@ -109,7 +110,7 @@ $dataImage = $data->image ? (is_array($explode) ? $explode[0] : $explode) : $noI
         </div>
         <div class="product-desc">
             <h3 class="title"><?php echo Helper::t('description'); ?></h3>
-            <div><?php echo nl2br($data->description); ?></div>
+            <?php echo $data->description; ?>
         </div>
         <div class="mod-review clearfix">
             <h3 class="title"><?php echo Helper::t('reviews'); ?></h3>
@@ -128,7 +129,12 @@ $(function() {
 
     $(".thumb-image img").click(function () {
         var srcImage = $(this).attr("alt");
+        $(".main-image img").attr("src", "' . Helper::themeUrl() . '/images/loading.gif");
         $(".main-image img").attr("src", "/uploads/detail/Products/" + srcImage);
+
+        /*setTimeout(function() {
+            $(".main-image img").attr("src", "/uploads/detail/Products/" + srcImage);
+        }, 10);*/
 
         return false;
     });

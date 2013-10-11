@@ -35,7 +35,7 @@ $('.search-form form').submit(function(){
     <div class="tab-content default-tab" id="tab1">
 <!--        --><?php //echo Helper::renderFlash($id, $message); ?>
 
-<?php $this->widget('zii.widgets.grid.CGridView', array(
+<?php $grid = $this->widget('zii.widgets.grid.CGridView', array(
 	'id'=>'user-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
