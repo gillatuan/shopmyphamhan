@@ -1,5 +1,5 @@
 <?php
-$dataImage = $data->image ? Helper::renderImage($data->image, 'uploads/News', ',', true, true) : Helper::baseUrl() . '/uploads/no_image.gif';
+$dataImage = $data->image ? Helper::renderImage($data->image, 'uploads/original/News', ',', false, true) : Helper::baseUrl() . '/uploads/no_image.gif';
 $thumbImage = Helper::explodeCharData($data->image);
  ?>
 <div class="wrapper-module module product-detail">
@@ -10,7 +10,7 @@ $thumbImage = Helper::explodeCharData($data->image);
         <!--<ul class="thumb-image">
             <?php /*if (is_array($thumbImage)) { */?>
                 <?php /*foreach ($thumbImage as $image) { */?>
-                    <li><img src="<?php /*echo Helper::baseUrl() . '/uploads/News/' . $image */?>" alt="<?php /*echo $image; */?>" /></li>
+                    <li><img src="<?php /*echo Helper::baseUrl() . '/uploads/thumb/News/' . $image; */?>" alt="<?php /*echo $image; */?>" /></li>
                 <?php /*} */?>
             <?php /*} else { */?>
                 <li><img src="<?php /*echo Helper::baseUrl() . '/uploads/News/' . $thumbImage */?>" alt="<?php /*echo $data->title; */?>" /></li>

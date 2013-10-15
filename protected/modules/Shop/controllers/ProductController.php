@@ -241,7 +241,7 @@ class ProductController extends FrontendController {
                         'link'     => CHtml::link($url, $url, array('target' => '_blank')),
                     ),
                     'mailTo'   => $model->email,
-                    'mailFrom' => array(ADMIN_EMAIL => ADMIN_EMAIL . ' - Shopmyphamhan.com')
+                    'mailFrom' => array(ADMIN_EMAIL => 'Shopmyphamhan.com - ' .ADMIN_EMAIL )
                 );
                 // send
                 Helper::sendMail($params);
@@ -376,7 +376,7 @@ class ProductController extends FrontendController {
             $params = array(
                 'viewPath' => 'application.views.site.mail',
                 'view'     => 'send_cart_order',
-                'subject'  => 'Shopmyphamhan.com - Đơn đặt hàng',
+                'subject'  => 'vomamxenang.com - Đơn đặt hàng',
                 'body'     => array(
                     'billTo'   => $billTo,
                     'shipTo'   => $shipTo,
