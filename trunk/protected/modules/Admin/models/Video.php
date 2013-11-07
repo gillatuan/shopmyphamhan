@@ -45,10 +45,11 @@ class Video extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('name, link_youtube', 'required'),
-			array('create_date, page', 'numerical', 'integerOnly'=>true),
+			array('create_date, ', 'numerical', 'integerOnly'=>true),
 			array('name, alias, link_youtube', 'length', 'max'=>255),
 			array('cate_id', 'length', 'max'=>11),
 			array('status', 'length', 'max'=>1),
+			array('page', 'length', 'max'=>15),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
 			array('id, name, alias, cate_id, link_youtube, status, page, create_date', 'safe', 'on'=>'search'),

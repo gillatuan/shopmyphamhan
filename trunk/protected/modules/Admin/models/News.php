@@ -47,10 +47,11 @@ class News extends CActiveRecord
 			array('create_date, update_date', 'numerical', 'integerOnly'=>true),
 			array('title, alias, image', 'length', 'max'=>255),
 			array('status, type_news', 'length', 'max'=>1),
-			array('content', 'safe'),
+            array('page', 'length', 'max' => 15),
+            array('content', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, title, alias, info, content, image, status, create_date, update_date, type_news', 'safe', 'on'=>'search'),
+			array('id, title, alias, info, content, image, status, create_date, update_date, type_news, page', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -81,7 +82,8 @@ class News extends CActiveRecord
 			'create_date' => Helper::t('create_date'),
 			'update_date' => Helper::t('update_date'),
 			'type_news' => Helper::t('type_news'),
-		);
+            'page'        => Helper::t('page'),
+        );
 	}
 
 	/**
@@ -106,6 +108,7 @@ class News extends CActiveRecord
         $criteria->compare('create_date',$this->create_date);
         $criteria->compare('update_date',$this->update_date);
         $criteria->compare('type_news',$this->type_news,true);
+        $criteria->compare('page', $this->page, true);
 
         if (Helper::get('type')) {
             $criteria->compare('type_news', Helper::get('type'));
@@ -120,12 +123,27 @@ class News extends CActiveRecord
     public function sortPost()
     {
         $i = 1;
-        if ($_POST['news']) {
-            foreach ($_POST['news'] as $id) {
+        if (Helper::post('News')) {
+            foreach (Helper::post('News') as $id) {
                 News::model()->updateByPk($id, array('ordering' => $i));
                 $i++;
             }
         }
+    }
+
+    protected function beforeValidate() {
+        if (Helper::post('News') || Helper::post('attr') == 'page') {
+            $postProduct = Helper::post('News');
+            $this->page = $postProduct ? implode(',', $postProduct['page']) : Helper::post('value');
+        }
+
+        return parent::beforeValidate();
+    }
+
+    protected function afterFind() {
+        $this->page = explode(',', $this->page);
+
+        return parent::afterFind();
     }
 
     protected function beforeSave() {

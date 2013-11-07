@@ -51,6 +51,7 @@ $('.search-form form').submit(function(){
                     <thead>
                         <tr>
                             <th align="left">Category Name</th>
+                            <th align="left">Hiển thị trên</th>
                             <th style="width: 25px;">Visible</th>
                             <th width="100">Action </th>
                         </tr>

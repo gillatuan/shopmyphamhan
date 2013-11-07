@@ -152,4 +152,5 @@ return array(
     'TEXT_NOTIFICATION_RESET_PASSWORD' => 'Password Reset.',
 
     'DELETE_ASSETS_CACHE' 	       => 'Assets & Cache have been deleted successfully.',
+    'No_Results_key'                   => 'Không có dữ liệu !!!',
 );

@@ -11,8 +11,7 @@ class ListCategory extends CPortlet {
         $criteriaCate->compare('alias', $this->cateAlias);
         $criteriaCate->compare('status', APPROVED);
 
-        $arrCate = array();
-        $modelCate = Cache::model()->usingCache('Category', $criteriaCate, $this->cateAlias, false, Cache_Time, 1, 1, $this->cateAlias);
+        $modelCate = Cache::usingCache('Category', $criteriaCate, $this->cateAlias, false, Cache_Time, 1, 1, $this->cateAlias);
         $cateName = $modelCate->name;
         if (count($modelCate->children)) {
             $arrCate = $modelCate->children;

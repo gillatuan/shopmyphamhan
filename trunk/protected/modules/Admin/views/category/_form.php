@@ -1,9 +1,7 @@
-<?php
-
-/* @var $this CategoryController */
-/* @var $model Category */
-/* @var $form CActiveForm */
-?>
+<style>
+    .checkboxList #Category_page input { width: 2% !important; display: inline; }
+    .checkboxList #Category_page label { display: inline; }
+</style>
     <div class="tab-content form">
         <?php $form = $this->beginWidget('CActiveForm', array(
             'id'                     => 'category-form',
@@ -42,14 +40,31 @@
             <?php echo $form->textField($model, 'name', array('class' => 'text-input small-input')); ?>
             <?php echo $form->error($model, 'name'); ?>
         </div>
-        <div class="row">
+
+        <div class="row tinymce">
             <?php echo $form->labelEx($model, 'description'); ?>
-            <?php echo $form->textArea($model, 'description', array(
-                'rows'  => 12,
-                'class' => 'medium-input textarea'
-            )) ?>
+            <?php
+            $this->widget('ext.tinymce.TinyMce', array(
+                'model' => $model,
+                'attribute' => 'description',
+                // Optional config
+//                'compressorRoute' => 'tinyMce/compressor',
+                'spellcheckerUrl' => array('tinyMce/spellchecker'),
+                // or use yandex spell: http://api.yandex.ru/speller/doc/dg/tasks/how-to-spellcheck-tinymce.xml
+//                'spellcheckerUrl' => 'http://speller.yandex.net/services/tinyspell',
+                'fileManager' => array(
+                    'class' => 'ext.elFinder.TinyMceElFinder',
+                    'connectorRoute'=> 'elfinder/connector', // elfinder controller, connector action
+                ),
+                'htmlOptions' => array(
+                    'rows' => 6,
+                    'cols' => 60,
+                ),
+            ));
+            ?>
             <?php echo $form->error($model, 'description'); ?>
         </div>
+
         <div class="row">
             <?php echo $form->labelEx($model, 'image'); ?>
             <?php echo $form->hiddenField($model, "image"); ?>
@@ -89,6 +104,12 @@
                 <?php echo $form->error($model, 'status'); ?>
             </div>
         <?php } ?>
+
+        <div class="row checkboxList">
+            <?php echo $form->labelEx($model, 'page'); ?>
+            <?php echo $form->checkBoxList($model, 'page', Lookup::items('Display_On_Page'), array('class' => 'text-input small-input')); ?>
+            <?php echo $form->error($model, 'page'); ?>
+        </div>
 
         <div class="row buttons">
             <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

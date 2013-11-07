@@ -11,7 +11,7 @@ class FrontendController extends Controller {
         Yii::app()->theme = THEME;
 
         /*$memcache = new Memcache;
-        $memcache->addServer('http://web3in1.com/', 11211);
+        $memcache->addServer('http://thietkeweb3in1.com/', 11211);
 		if (!extension_loaded('apc')) {
 			if (!dl('memcache.so')) {
 				exit;

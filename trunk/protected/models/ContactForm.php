@@ -38,7 +38,7 @@ class ContactForm extends CFormModel
 		return array(
 			'verifyCode' => Helper::t('verifyCode'),
 			'name' => Helper::t('name'),
-			'email' => Helper::t('email'),
+			'email' => Helper::t('Email_key'),
 			'subject' => Helper::t('subject'),
 			'body' => Helper::t('body'),
 		);

@@ -3,7 +3,7 @@
 
     <div class="product-neighbours">
         <strong>Giỏ hàng của bạn</strong>
-        <a href="<?php echo Helper::url('/Shop/product/index'); ?>" class="next-page">Tiếp tục mua hàng</a>
+        <a href="<?php echo Helper::url('/site/index'); ?>" class="next-page">Tiếp tục mua hàng</a>
 
         <div class="clear"></div>
     </div>
@@ -126,7 +126,7 @@ $scriptBuyThisOrder = '
                 type: "post",
                 data: { confirmOrder: confirmOrder },
                 success: function(data){
-                    window.location = "' . Helper::url('/Shop/product/index', array('flashOrder' => true)) . '";
+                    window.location = "' . Helper::url('/site/index', array('flashOrder' => true)) . '";
                 }
             });
 

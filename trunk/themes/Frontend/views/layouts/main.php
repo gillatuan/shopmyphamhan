@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//VI" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//<?php echo Yii::app()->language ?>" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo Yii::app()->language ?>" lang="<?php echo Yii::app()->language ?>">
 <head>    <!-- Mobile viewport optimisation -->
@@ -10,18 +10,8 @@
     <meta name="robots" content="index, follow, noarchive"/>
     <meta name='revisit-after' content='1 days'/>
 
-    <link rel="canonical" href="<?php echo $this->canonicalUrl; ?>">
-    <link rel="stylesheet" href="<?php echo Helper::themeUrl(); ?>/css/default/default.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="<?php echo Helper::themeUrl(); ?>/css/nivo-slider.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="<?php echo Helper::themeUrl(); ?>/css/styleNivoSlider.css" type="text/css" media="screen"/>
-    <!-- 1140px Grid styles for IE --><!--[if lte IE 9]>
-    <link rel="stylesheet" href="<?php echo Helper::themeUrl(); ?>/css/ie.css" type="text/css" media="screen" /><![endif]-->
-    <!-- The 1140px Grid - http://cssgrid.net/ -->
-    <link rel="stylesheet" href="<?php echo Helper::themeUrl(); ?>/css/1140.css" type="text/css" media="screen" />
-    <!-- Your styles  -->
-    <link rel="stylesheet" href="<?php echo Helper::themeUrl(); ?>/css/form.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="<?php echo Helper::themeUrl(); ?>/css/styles.css" type="text/css" media="screen" />
-    <link rel="shortcut icon" href="<?php echo Yii::getPathOfAlias('webroot'); ?>/favicon.ico" type="image/x-icon" />
+    <link rel="canonical" href="<?php echo $this->canonicalUrl; ?>" />
+    <link rel="shortcut icon" href="/uploads/favicon.ico" type="image/x-icon" />
 </head>
 <body>
 <div id="topNav">
@@ -44,7 +34,7 @@
                     <?php } ?>
                     <li><a href="<?php echo Helper::url('/Shop/product/faq'); ?>" title="Hỏi đáp">Hỏi đáp</a></li>
                     <li><a href="<?php echo Helper::url('/site/contact'); ?>" title="Liên hệ">Liên hệ</a></li>
-                    <li><a class="yahoo" href="ymsgr:sendim?ngoctuan3010842003" title="Hỗ trợ Online"><img border=0 src="http://opi.yahoo.com/online?u=ngoctuan3010842003&m=g&t=2&l=us"></a></li>
+                    <li><a class="yahoo" href="ymsgr:sendim?ngoctuan3010842003" title="Hỗ trợ Online"><img src="http://opi.yahoo.com/online?u=ngoctuan3010842003&m=g&t=2&l=us" /></a></li>
                 </ul>
             </div>
         </div>
@@ -64,13 +54,13 @@
         <div class="row topbottom-20 bg-white">
             <div class="search sixcol">
                 <div class="form">
-                    <form id="searchform" name="searchform" method="get" action="<?php echo Helper::url('/Shop/product/search'); ?>">
+                    <form id="searchform" method="get" action="<?php echo Helper::url('/Shop/product/search'); ?>">
                         <div class="row">
                             <label>Tìm kiếm</label>
                             <input type="text" name="kw" />
                         </div>
                         <div class="row buttons">
-                            <input type="submit" value="Tìm kiếm" />
+                            <input type="submit" class="link" value="Tìm kiếm" />
                         </div>
                     </form>
                 </div>
@@ -116,6 +106,8 @@
 
         <!--Products in Category-->
         <div class="row content">
+            <?php Helper::renderFlash('send-mail', 'addcart-success link active block', false, 'addcart-success', 5000, Helper::url('/Shop/product/index')) ?>
+
             <?php echo $content; ?>
         </div>
 
@@ -170,7 +162,7 @@
                 <img class="footer_social" src="<?php echo Helper::themeUrl(); ?>/images/twitter_24.png" border="0" alt="twitter social" />
             </a>
             <a href="https://plus.google.com/share?url=<?php echo $url; ?>" title="Google Plus social" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
-                <img src="https://www.gstatic.com/images/icons/gplus-32.png" alt="Share on Google+" />
+                <img src="<?php echo Helper::themeUrl(); ?>/images/gplus-32.png" alt="Share on Google+" />
             </a>
             <!--<a class="" title="Pinterest social">
                 <img class="footer_social" src="<?php /*echo Helper::themeUrl(); */?>/images/stumble_24.png" border="0" alt="Pinterest social" />
@@ -182,72 +174,84 @@
     </ul>
 </div>
 
+<!-- CSS -->
+<?php Helper::cs()->registerCssFile(Helper::themeUrl() . '/css/default/default.css', 'screen'); ?>
+<?php Helper::cs()->registerCssFile(Helper::themeUrl() . '/css/nivo-slider.css', 'screen'); ?>
+<?php Helper::cs()->registerCssFile(Helper::themeUrl() . '/css/styleNivoSlider.css', 'screen'); ?>
+<!--[if lte IE 9]><?php Helper::cs()->registerCssFile(Helper::themeUrl() . '/css/ie.css', 'screen'); ?><![endif]-->
+<?php Helper::cs()->registerCssFile(Helper::themeUrl() . '/css/1140.css', 'screen'); ?>
+<?php Helper::cs()->registerCssFile(Helper::themeUrl() . '/css/form.css', 'screen'); ?>
+<?php Helper::cs()->registerCssFile(Helper::themeUrl() . '/css/styles.css', 'screen'); ?>
+
+<!-- JS -->
 <?php Helper::cs()->registerCoreScript('jquery'); ?>
-<?php Helper::cs()->registerCoreScript('jquery.ui'); ?>
-<?php Helper::cs()->registerScriptFile(Helper::themeUrl() . '/js/imgLiquid-min.js', CClientScript::POS_END); ?>
-<?php Helper::cs()->registerScriptFile(Helper::themeUrl() . '/js/css3-mediaqueries.js', CClientScript::POS_END); ?>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-32319582-2', 'vomamxenang.com');
-  ga('send', 'pageview');
-
-</script>
-<script type="text/javascript">
-    $(function() {
-        /* scroll to top*/
-        $(window).scroll(function(){
-            if ($(this).scrollTop() > 300) {
-                $('.scrollup').fadeIn();
-            } else {
-                $('.scrollup').fadeOut();
-            }
-        });
-        $('.scrollup').click(function(){
-            $("html, body").animate({ scrollTop: 0 }, 600);
-            return false;
-        });
-    })
-    $.fn.followTo = function (pos) {
+<?php Helper::cs()->registerScriptFile(Helper::themeUrl() . "/js/jquery.nivo.slider.js", CClientScript::POS_END) ;?>
+<?php Helper::cs()->registerScriptFile(Helper::themeUrl() . "/js/imgLiquid-min.js", CClientScript::POS_END) ;?>
+<?php $scriptJSMainPage = '
+$.fn.followTo = function (name, pos, width) {
         var $this = this,
             $window = $(window);
 
         $window.scroll(function (e) {
             if ($window.scrollTop() > pos) {
-                $this.css({
-                    width: '8%',
-                    position: 'fixed',
-                    top: 0,
-                    left: 0,
-                    size: '27px',
-                    align: 'center'
-                });
+                if (name == "yahoo") {
+                    $this.css({
+                        width: width,
+                        position: "fixed",
+                        bottom: 25
+//                        right: 10
+                    });
+                } else {
+                    $this.css({
+                        width: width,
+                        position: "fixed",
+                        bottom: 45,
+                        left: 10
+                    })
+                }
             } else {
                 $this.css({
-                    width: '54%',
-                    position: 'relative',
-                    top: 0,
-                    size: '35px',
-                    align: 'center'
-                });
+                    position: "relative",
+                    bottom: 0
+                })
             }
         });
     };
+$(function() {
+        /* scroll to top*/
+        $(window).scroll(function(){
+            if ($(this).scrollTop() > 100) {
+                $(".scrollup").fadeIn();
+            } else {
+                $(".scrollup").fadeOut();
+            }
+        });
 
-    $('.cart').followTo(350);
-</script>
-<script type="text/javascript">
-    $(function() {
+        /* imgLiquid */
+        $(".product-list .imgLiquid").css({
+            width: "100%",
+            height: "170px"
+        })
+
+        $(".imgLiquid").imgLiquid({
+            fill: false,
+            horizontalAlign: "center"
+        });
+
+        /* scrollup */
+        $(".scrollup").click(function(){
+            $("html, body").animate({ scrollTop: 0 }, 600);
+            return false;
+        });
+
+        /* add cart */
         $(".add-cart").click(function() {
-            var url = "<?php echo Helper::url('/Shop/product/updateOrDeleteCart'); ?>";
+            var url = "' . Helper::url("/Shop/product/updateOrDeleteCart") . '";
             var $this = $(this);
             var productAlias = $this.attr("id").replace("id-", "");
 
             param = {
-                category: "<?php echo Helper::get('category'); ?>",
+                category: "' . Helper::get("category") . '",
                 alias: productAlias,
                 quantity: 1,
                 valueBefore: 0,
@@ -259,10 +263,9 @@
 
             return false;
         })
-    })
 
     function processAjax(url, param, objectThis, alias, typeCart) {
-        $(".addcart-success").show().html('<img src="<?php echo Helper::themeUrl(); ?>/images/loading.gif" alt="loading image" />');
+        $(".addcart-success").show().html(\'<img src="' . Helper::themeUrl() .'/images/loading.gif" alt="loading image" />\');
         $.ajax({
             url: url,
             type: "post",
@@ -316,6 +319,44 @@
             }
         });
     }
-</script>
+
+        /* followTo */
+        $(".yahoo").followTo("yahoo", 150, 125)
+        $(".cart").followTo("cart", 650, 650)
+
+        /* add active class while hover menu */
+        $(".menu-categories a").hover(function() {
+            $(this).addClass("active");
+        }).mouseout(function() {
+                $(this).removeClass("active");
+            })
+
+        // nivoSlider
+        $("#slider").nivoSlider({
+            effect: "random", /* Specify sets like: "fold,fade,sliceDown" */
+            slices: 15, // For slice animations
+            boxCols: 8, // For box animations
+            boxRows: 4, // For box animations
+            animSpeed: 500, // Slide transition speed
+            pauseTime: 3000, // How long each slide will show
+            startSlide: 0, // Set starting Slide (0 index)
+            directionNav: true, // Next & Prev navigation
+            controlNav: true, // 1,2,3... navigation
+            controlNavThumbs: false, // Use thumbnails for Control Nav
+            pauseOnHover: true, // Stop animation while hovering
+            manualAdvance: false, // Force manual transitions
+            prevText: "Prev", // Prev directionNav text
+            nextText: "Next", // Next directionNav text
+            randomStart: false, // Start on a random slide
+            beforeChange: function(){}, // Triggers before a slide transition
+            afterChange: function(){}, // Triggers after a slide transition
+            slideshowEnd: function(){}, // Triggers after all slides have been shown
+            lastSlide: function(){}, // Triggers when last slide is shown
+            afterLoad: function(){} // Triggers when slider has loaded
+        });
+    })
+';
+Helper::cs()->registerScript('scriptJSMainPage', $scriptJSMainPage,CClientScript::POS_END);
+?>
 </body>
 </html>

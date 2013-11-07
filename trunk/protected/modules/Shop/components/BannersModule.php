@@ -4,14 +4,14 @@ Yii::import('zii.widgets.CPortlet');
 Yii::import('Admin.models.Category');
 
 class BannersModule extends CPortlet {
-    public $position = 1;
-    public $page = 1;
+    public $position = '';
+    public $page = '';
 
     public function renderContent() {
         $criteriaCate = new CDbCriteria();
         $criteriaCate->compare('status', APPROVED);
         $model = 'Banner';
-        $modelBanner = Cache::model()->usingCache($model, $criteriaCate, '', false, Cache_Time, '', 1, 'getBanner-' . $this->position);
+        $modelBanner = Cache::usingCache($model, $criteriaCate, '', false, Cache_Time, '', 1, 'getBanner-' . $this->position . '-' . $this->page);
 
         $dataBanner = array();
         if (count($modelBanner)) {

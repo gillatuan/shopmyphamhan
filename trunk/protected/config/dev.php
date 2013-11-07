@@ -59,16 +59,21 @@ return array(
             'itemChildTable'=>'authitemchild',
             'assignmentTable'=>'authassignment',
         ),
-        // uncomment the following to enable URLs in path-format
 
+        // MinifyClientScript
+        'clientScript'=>array(
+            'class'=>'application.components.MinifyClientScript',
+        ),
+
+        // uncomment the following to enable URLs in path-format
         'urlManager'=> array(
-            'urlFormat'=>'path',
-//            'urlSuffix'=>'.web3in1',
+//            'urlFormat'=>'path',
+//            'urlSuffix'=>'.html',
             'showScriptName' => false,
             'rules'          => array(
                 // backend
                 // gii
-                '/gii-controller'         => 'gii/controller',
+                /*'/gii-controller'         => 'gii/controller',
                 '/gii-crud'               => 'gii/crud',
                 '/gii-module'             => 'gii/module',
                 '/gii-model'              => 'gii/model',
@@ -91,7 +96,7 @@ return array(
 
 
                 // front end
-                '<action:\w+>'=>'site/<action>',
+                '<action:\w+>'=>'site/<action>',*/
             ),
         ),
 

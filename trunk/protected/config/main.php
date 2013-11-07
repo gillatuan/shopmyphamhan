@@ -17,6 +17,9 @@ return array(
     // preloading 'log' component
     'preload'=>array('log'),
 
+    /*'onBeginRequest'=>create_function('$event', 'return ob_start("ob_gzhandler");'),
+    'onEndRequest'=>create_function('$event', 'return ob_end_flush();'),*/
+
     // autoloading model and component classes
     'import'=>array(
         'application.models.*',
@@ -59,8 +62,13 @@ return array(
             'itemChildTable'=>'authitemchild',
             'assignmentTable'=>'authassignment',
         ),
-        // uncomment the following to enable URLs in path-format
 
+        // MinifyClientScript
+        /*'clientScript'=>array(
+            'class'=>'application.components.MinifyClientScript',
+        ),*/
+
+        // uncomment the following to enable URLs in path-format
         'urlManager'=>require(dirname(__FILE__).'/../configSetting/rewriteUrl.php'),
 
 
@@ -98,7 +106,7 @@ return array(
         ),
         'mail' => array(
             'class' => 'ext.yii-mail.YiiMail',
-            'transportType' => 'smtp', // php
+            'transportType' => MAIL_METHOD, // smtp, php
             'transportOptions' => array(
                 'host'=>SMTP_HOST,
                 'username'=>SMTP_USERNAME,

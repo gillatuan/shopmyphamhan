@@ -68,17 +68,32 @@ class PostsController extends BackEndController
 	public function actionUpdate($id = '')
 	{
 		$model= $id ? $this->loadModel($id) : new Posts;
+        $postPosts = Helper::post('Products');
 
-		// Uncomment the following line if AJAX validation is needed
-	Helper::performAjaxValidation($model, 'posts-form');
+		if($postPosts) {
+            // Uncomment the following line if AJAX validation is needed
+            Helper::performAjaxValidation($model, 'posts-form');
 
-		if(isset($_POST['Posts']))
-		{
-			$model->attributes=$_POST['Posts'];
-	    $result = Helper::uploadImage($model, 'image');
+            // assign value
+            $model->attributes = $postPosts;
+            $size = array(
+                'w' => '150',
+                'h' => '170',
+                'typeSize' => ''
+            );
+            $uploadImage = Helper::uploadImage($model, 'image', 'Posts', true, false, $size);
+            $model->image = $uploadImage;
 
-			if($result->save())
+			if($model->save()) {
+                Helper::setFlash('successMessage', 'Successfully.');
+                // rebuild Cache
+                Cache::model()->getCacheDependency(array(
+                    'name'        => 'cache-Posts-' . $model->alias,
+                    'description' => 'cache for Posts ' . $model->alias
+                ));
+
                 $this->redirect(array('/Admin/default/deleteall'));
+            }
 		}
 
 		$this->render('update',array(

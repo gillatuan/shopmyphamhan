@@ -73,8 +73,12 @@ class ProductsController extends BackendController {
             // assign value
             $model->attributes = $postProduct;
             $size = array(
-                'w' => '150',
-                'h' => '170',
+                'wOnIndex' => '224',
+                'hOnIndex' => '253',
+                'thumbW' => '75',
+                'thumbH' => '85',
+                'detailW' => '391',
+                'detailH' => '300',
                 'typeSize' => ''
             );
             $uploadImage = Helper::uploadImage($model, 'image', 'Products', true, true , $size);
@@ -88,7 +92,7 @@ class ProductsController extends BackendController {
                     'description' => 'cache for Product ' . $model->alias
                 ));
 
-                $this->redirect(array('/Admin/default/deleteall'));
+                $this->redirect(array('update', 'id' => $id));
             }
         }
         $this->render('update', array(

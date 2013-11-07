@@ -1,8 +1,7 @@
-<?php
-/* @var $this NewsController */
-/* @var $model News */
-/* @var $form CActiveForm */
-?>
+<style>
+    .checkboxList #News_page input { width: 2% !important; display: inline; }
+    .checkboxList #News_page label { display: inline; }
+</style>
 
 <div class="tab-content form">
 
@@ -84,6 +83,13 @@
             <?php
             endforeach;
         endif;?>
+    </div>
+
+    <div class="row checkboxList">
+        <?php echo $form->labelEx($model, 'page'); ?>
+        <div class="clearfix"></div>
+        <?php echo $form->checkBoxList($model, 'page', Lookup::items('Display_On_Page'), array('class' => 'text-input small-input')); ?>
+        <?php echo $form->error($model, 'page'); ?>
     </div>
 
     <!--<div class="row">
