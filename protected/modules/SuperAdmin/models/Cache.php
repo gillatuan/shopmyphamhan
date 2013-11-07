@@ -104,7 +104,7 @@ class Cache extends CActiveRecord {
         ));
     }
 
-    public function usingCache($model, $criteria, $alias = '', $pagingAjax = true, $duration = Cache_Time, $limit = '', $page = 1, $category = '') {
+    public static function usingCache($model, $criteria, $alias = '', $pagingAjax = true, $duration = Cache_Time, $limit = '', $page = 1, $category = '') {
         $limitTrue = is_array($limit) ? 'true' : (is_int($limit) ? 'int-' . $limit : 'false-');
         if ($alias) {
             $cache = 'cache-' . $model . '_duration-' . $duration . '_alias-' . $alias . '_category-' . $category;
@@ -142,7 +142,7 @@ class Cache extends CActiveRecord {
         return $cacheFile;
     }
 
-    public function getCacheDependency($params) {
+    public static function getCacheDependency($params) {
         $name = $params['name'];
         if (empty($name)) {
             return;
@@ -154,7 +154,7 @@ class Cache extends CActiveRecord {
         return $dependency;
     }
 
-    public function create($params) {
+    public static function create($params) {
         $name = $params['name'];
         $description = $params['description'];
         $duration = isset($params['duration']) && !empty($params['duration']) ? $params['duration'] : Cache_Time;

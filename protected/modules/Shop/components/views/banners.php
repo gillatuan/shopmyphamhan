@@ -2,7 +2,7 @@
     <?php if ($position == 1 && $page == 1) { ?>
         <div id="slider" class="nivoSlider">
             <?php foreach ($banners as $banner) { ?>
-                <?php $imgBanner = $banner->image ? Helper::renderImage($banner->image, 'uploads/resize/' . $model, ',', false, true) : '/uploads/no_image.gif'; ?>
+                <?php $imgBanner = $banner->image ? Helper::renderImage($banner->image, 'uploads/resizeOnIndex/' . $model, ',', false, true) : '/uploads/no_image.gif'; ?>
                 <?php $bannerInfo[] = array(
                     'alias' => $banner->alias,
                     'info' => $banner->info

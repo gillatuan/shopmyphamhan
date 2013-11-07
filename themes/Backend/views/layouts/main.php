@@ -184,15 +184,14 @@
 
 </div>
 
-
 <?php Helper::cs()->registerCoreScript('jquery'); ?>
 <?php Helper::cs()->registerCoreScript('jquery.ui');?>
-<script type="text/javascript" src="<?php echo Helper::themeUrl(); ?>/js/simpla.jquery.configuration.js"></script>
-<script type="text/javascript" src="<?php echo Helper::themeUrl(); ?>/js/menudrop.js"></script>
-<script type="text/javascript" src="<?php echo Helper::themeUrl(); ?>/js/common.js"></script>
-<script type="text/javascript" src="<?php echo Helper::themeUrl(); ?>/js/multi-delete.js"></script>
+<?php Helper::cs()->registerScriptFile(Helper::themeUrl() . "/js/simpla.jquery.configuration.js", CClientScript::POS_END) ;?>
+<?php Helper::cs()->registerScriptFile(Helper::themeUrl() . "/js/menudrop.js", CClientScript::POS_END) ;?>
+<?php Helper::cs()->registerScriptFile(Helper::themeUrl() . "/js/common.js", CClientScript::POS_END) ;?>
+<?php Helper::cs()->registerScriptFile(Helper::themeUrl() . "/js/multi-delete.js", CClientScript::POS_END) ;?>
 <!-- Facebox jQuery Plugin -->
-<script type="text/javascript" src="<?php echo Helper::themeUrl(); ?>/js/facebox.js"></script>
+<?php Helper::cs()->registerScriptFile(Helper::themeUrl() . "/js/facebox.js", CClientScript::POS_END) ;?>
 <script type="text/javascript">
     $(function () {
         $('.yiiPager .page').addClass('number');

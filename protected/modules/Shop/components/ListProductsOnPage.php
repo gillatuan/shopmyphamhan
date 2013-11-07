@@ -88,13 +88,13 @@ class ListProductsOnPage extends CPortlet {
             $this->tab = 'latest-items' . INDEX_PAGE;
         }
         $page = Helper::get('page') ? Helper::get('page') : 1;
-        $cache['products'] = Cache::model()->usingCache('Products', $criteriaProducts, '', false, Cache_Time, '', $page, $alias . $this->tab . $this->isOnIndex);
+        $cache['products'] = Cache::usingCache('Products', $criteriaProducts, '', false, Cache_Time, '', $page, str_replace(',', '-', $alias) . $this->tab . $this->isOnIndex . $page);
 
         if (count($cache['products'])) {
             $cache['paging'] = new Paging($this->url, count($cache['products']), ITEM_PER_PAGE, $page, 5, $this->tab);
 
             $limit = array('begin' => $cache['paging']->begin, 'end' => $cache['paging']->rows_in_page);
-            $cache['products'] = Cache::model()->usingCache('Products', $criteriaProducts, '', false, Cache_Time, $limit, $page, $alias . $this->tab . $this->isOnIndex);
+            $cache['products'] = Cache::usingCache('Products', $criteriaProducts, '', false, Cache_Time, $limit, $page, $alias . $this->tab . $this->isOnIndex);
         }
 
         return $cache;

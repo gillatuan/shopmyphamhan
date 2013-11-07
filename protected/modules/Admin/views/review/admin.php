@@ -41,23 +41,35 @@ $('.search-form form').submit(function(){
     'id'           => 'review-grid',
     'dataProvider' => $model->search(),
     'filter'       => $model,
-    'afterAjaxUpdate'  => 'js:function(){
-        $(".changeValue").change(function() {
+    'afterAjaxUpdate' => 'js:function(){
+        $(".changeValue").bind("click change", function() {
             var orderId = $(this).attr("id").replace("changeValue_", "");
             var orderValue = $(this).val();
             var orderAttribute = $(this).attr("class").replace("changeValue ", "");
-            if (orderAttribute == "page") {
-                orderValue = $(this).is(":checked") == true ? 1 : 0;
+            var gridName = "' . Yii::app()->controller->id .'";
+            var modelName = "' . ucfirst(Yii::app()->controller->id) .'";
+
+            switch (orderAttribute) {
+                case "page":
+                    orderValue = $(this).is(":checked") == true ? 1 : 0;
+                    break;
+                case "is_popular":
+                    orderValue = $(this).is(":checked") == true ? 1 : 0;
+                    break;
+                case "status":
+                    orderValue = $(this).attr("alt") == "active" ? 1 : 2;
+                    break;
             }
 
             $.ajax({
                 url:"' . Helper::url('/Admin/default/ajaxUpdate') . '",
                 type: "post",
-                data: { "id": orderId, "value": orderValue, "attr": orderAttribute, "model": "Review" },
+                data: { "id": orderId, "value": orderValue, "attr": orderAttribute, "model": modelName },
                 success: function(){
-                    $.fn.yiiGridView.update("review-grid");
+                    $.fn.yiiGridView.update(gridName + "-grid");
                 }
             });
+
             return false;
         })
     }',
@@ -76,7 +88,7 @@ $('.search-form form').submit(function(){
         ),
         array(
             'name'        => 'status',
-            'value'       => '"<a href=\"#\" class=\"set-status\" id=\"".$data->id."\">".($data->status == 1 ? CHtml::image(Yii::app()->theme->baseUrl."/images/log_severity1.gif","active") : CHtml::image(Yii::app()->theme->baseUrl."/images/delicon.gif","inactive"))."</a>"',
+            'value'       => '$data->status == 1 ? CHtml::image(Helper::themeUrl()."/images/log_severity1.gif","active", array("id" => "changeValue_$data->id", "class" => "changeValue status")) : CHtml::image(Helper::themeUrl()."/images/delicon.gif", "inactive", array("id" => "changeValue_$data->id", "class" => "changeValue status"))',
             'type'        => 'raw',
             'filter'      => Lookup::items('status'),
             'htmlOptions' => array('style' => 'text-align: center'),
@@ -99,35 +111,34 @@ $('.search-form form').submit(function(){
 
 <?php
 $script = '
-    $("a.set-status").live("click", function(){
-        status = $(this).find("img").attr("alt") == "active" ? "inactive" : "active";
-        $.ajax({
-            url:"' . Helper::url('/Admin/review/admin') . '",
-            type: "get",
-            data: {"status": status, "id": $(this).attr("id"), "model": "Review"},
-            success: function(){
-                $.fn.yiiGridView.update("review-grid");
-            }
-        });
-        return false;
-    })
-
-    $(".changeValue").change(function() {
+    $(".changeValue").bind("click change", function() {
         var orderId = $(this).attr("id").replace("changeValue_", "");
         var orderValue = $(this).val();
         var orderAttribute = $(this).attr("class").replace("changeValue ", "");
-        if (orderAttribute == "page") {
-            orderValue = $(this).is(":checked") == true ? 1 : 0;
+        var gridName = "' . Yii::app()->controller->id .'";
+        var modelName = "' . ucfirst(Yii::app()->controller->id) .'";
+
+        switch (orderAttribute) {
+            case "page":
+                orderValue = $(this).is(":checked") == true ? 1 : 0;
+                break;
+            case "is_popular":
+                orderValue = $(this).is(":checked") == true ? 1 : 0;
+                break;
+            case "status":
+                orderValue = $(this).attr("alt") == "active" ? 1 : 2;
+                break;
         }
 
         $.ajax({
             url:"' . Helper::url('/Admin/default/ajaxUpdate') . '",
             type: "post",
-            data: { "id": orderId, "value": orderValue, "attr": orderAttribute, "model": "Review" },
+            data: { "id": orderId, "value": orderValue, "attr": orderAttribute, "model": modelName },
             success: function(){
-                $.fn.yiiGridView.update("review-grid");
+                $.fn.yiiGridView.update(gridName + "-grid");
             }
         });
+
         return false;
     })
 ';

@@ -12,6 +12,14 @@ $this->breadcrumbs = array(
 );
 
 ?>
+<?php if (Yii::app()->user->hasFlash('deleteCached') || Yii::app()->user->hasFlash('deleteAssets') || Yii::app()->user->hasFlash('DELETE_ASSETS_CACHE')) { ?>
+    <div class="notification SUCCESS_MESSAGE png_bg">
+        <a href="#" class="close">
+            <img src="<?php echo Helper::themeUrl(); ?>/images/icons/cross_grey_small.png" title="Close this notification" alt="close"/></a>
+
+        <div><?php echo Helper::renderFlash('DELETE_ASSETS_CACHE', 'label label-success span12', false, 'SUCCESS_MESSAGE'); ?></div>
+    </div>
+<?php } ?>
 
 <?php if (!Helper::user()->checkAccess('Super')) { ?>
     <div class="content-box-header">

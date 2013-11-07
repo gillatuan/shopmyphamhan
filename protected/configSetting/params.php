@@ -15,7 +15,7 @@
 //
 	define('commentCount', 10);
 //
-	define('DB_HOST' , 'localhost');
+	define('DB_HOST' , 'power3.mschosting.com');
 //
 	define('DB_NAME' , 'thietkew_shopmyphamhan');
 //

@@ -13,6 +13,7 @@
  * @property string     $image
  * @property integer    $parent_id
  * @property string     $status
+ * @property string     $page
  * @property integer    $ordering
  *
  * The followings are the available model relations:
@@ -63,6 +64,7 @@ class Category extends CActiveRecord {
                 'length',
                 'max' => 1
             ),
+            array('page', 'length', 'max'=>15),
             array(
                 'description',
                 'safe'
@@ -102,6 +104,7 @@ class Category extends CActiveRecord {
             'image'       => Helper::t('image'),
             'parent_id'   => Helper::t('parent'),
             'status'      => Helper::t('status'),
+            'page'      => Helper::t('page'),
         );
     }
 
@@ -120,6 +123,7 @@ class Category extends CActiveRecord {
         $criteria->compare('image', $this->image, true);
         $criteria->compare('parent_id', $this->parent_id);
         $criteria->compare('status', $this->status, true);
+        $criteria->compare('page', $this->page, true);
         $criteria->order = 'id asc';
         $duration        = 1 * 60;
         $cache           = array(
@@ -141,7 +145,24 @@ class Category extends CActiveRecord {
         $postCate        = Helper::post('Category');
         $this->parent_id = $postCate['parent_id'] ? $postCate['parent_id'] : 0;
         $this->alias     = Helper::unicode_convert($this->name);
+        $this->page = !empty($postCate['page']) ? implode(',', $postCate['page']) : '';
+
 
         return parent::beforeSave();
+    }
+
+    protected function afterFind() {
+        $this->page = explode(',', $this->page);
+
+        return parent::afterFind();
+    }
+
+    protected function beforeValidate() {
+        $postCate = Helper::post('Category');
+        if (!empty($postCate['page'])) {
+            $this->page = count($postCate['page']) ? implode(',', $postCate['page']) : $postCate['page'];
+        }
+
+        return parent::beforeValidate();
     }
 }

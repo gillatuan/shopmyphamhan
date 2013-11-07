@@ -130,7 +130,7 @@ class Banner extends CActiveRecord
                 $this->expired_date = Helper::changeDateToFormat($dataPostBanner['expired_date'], 'm-d-Y');
             }
         }
-        $this->page = implode(',', $dataPostBanner['page']);
+        $this->page = !empty($dataPostBanner['page']) ? implode(',', $dataPostBanner['page']) : '';
         $this->alias = Helper::unicode_convert($this->name);
 
         return parent::beforeSave();
@@ -146,7 +146,7 @@ class Banner extends CActiveRecord
     protected function beforeValidate() {
         $postBanner = Helper::post('Banner');
         if (!empty($postBanner['page'])) {
-            $this->page = count($postBanner['page']) > 1 ? implode(',', $postBanner['page']) : $postBanner['page'];
+            $this->page = count($postBanner['page']) ? implode(',', $postBanner['page']) : $postBanner['page'];
         }
         if (!$this->isNewRecord) {
             $this->expired_date = Helper::changeDateToFormat($this->expired_date, 'm-d-Y');

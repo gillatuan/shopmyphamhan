@@ -18,7 +18,7 @@ $dataImage = $data->image ? (is_array($explode) ? $explode[0] : $explode) : $noI
         </div>
         <div class="sixcol product-images">
             <div class="main-image">
-                <img src="<?php echo $dataImage != $noImage ? '/uploads/detail/Products/' . $dataImage : $noImage; ?>" alt="<?php echo $data->name; ?>" />
+                <img src="<?php echo $dataImage != $noImage ? '/uploads/details/Products/' . $dataImage : $noImage; ?>" alt="<?php echo $data->name; ?>" />
             </div>
             <?php if (is_array($explode)) { ?>
             <ul class="thumb-image clearfix">
@@ -75,7 +75,7 @@ $dataImage = $data->image ? (is_array($explode) ? $explode[0] : $explode) : $noI
                         <p><?php echo Helper::t('price'); ?>: <span><?php echo Helper::formatNumber($data->price) ?></span></p>
                     <?php } ?>
                 <?php } else { ?>
-                    <p class="no-price"><?php echo Helper::t('price'); ?>: <span>LIÊN HỆ</span></p>
+                    <p class="no-price"><?php echo Helper::t('price'); ?>: <span><?php echo Helper::t('Contact_menu'); ?></span></p>
                 <?php } ?>
 
                 <?php if (!empty($data->barcode)) { ?>
@@ -95,7 +95,7 @@ $dataImage = $data->image ? (is_array($explode) ? $explode[0] : $explode) : $noI
                         </div>
 
                         <?php if (!empty($data->price)) { ?>
-                            <input type="submit" name="addtocart" class="addtocart-button" value="Mua sản phẩm" title="Mua sản phẩm" />
+                            <input type="submit" name="addtocart" class="addtocart-button" value="<?php echo Helper::t('BUY_THIS_ITEM'); ?>" title="<?php echo Helper::t('BUY_THIS_ITEM'); ?>" />
                         <?php } ?>
                     </div>
             </div>
@@ -130,10 +130,10 @@ $(function() {
     $(".thumb-image img").click(function () {
         var srcImage = $(this).attr("alt");
         $(".main-image img").attr("src", "' . Helper::themeUrl() . '/images/loading.gif");
-        $(".main-image img").attr("src", "/uploads/detail/Products/" + srcImage);
+        $(".main-image img").attr("src", "/uploads/details/Products/" + srcImage);
 
         /*setTimeout(function() {
-            $(".main-image img").attr("src", "/uploads/detail/Products/" + srcImage);
+            $(".main-image img").attr("src", "/uploads/details/Products/" + srcImage);
         }, 10);*/
 
         return false;

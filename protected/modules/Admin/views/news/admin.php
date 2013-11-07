@@ -52,6 +52,38 @@ $('.search-form form').submit(function(){
 	'filter'=>$model,
     'selectableRows'=>2,
     'selectionChanged'=>"updateSelectors",
+    'afterAjaxUpdate' => 'js:function(){
+        $(".changeValue").bind("click change", function() {
+            var orderId = $(this).attr("id").replace("changeValue_", "");
+            var orderValue = $(this).val();
+            var orderAttribute = $(this).attr("class").replace("changeValue ", "");
+            var gridName = "' . Yii::app()->controller->id .'";
+            var modelName = "' . ucfirst(Yii::app()->controller->id) .'";
+
+            switch (orderAttribute) {
+                case "page":
+                    orderValue = $(this).is(":checked") == true ? 1 : 0;
+                    break;
+                case "is_popular":
+                    orderValue = $(this).is(":checked") == true ? 1 : 0;
+                    break;
+                case "status":
+                    orderValue = $(this).attr("alt") == "active" ? 1 : 2;
+                    break;
+            }
+
+            $.ajax({
+                url:"' . Helper::url('/Admin/default/ajaxUpdate') . '",
+                type: "post",
+                data: { "id": orderId, "value": orderValue, "attr": orderAttribute, "model": modelName },
+                success: function(){
+                    $.fn.yiiGridView.update(gridName + "-grid");
+                }
+            });
+
+            return false;
+        })
+    }',
 	'columns'=>array(
         array(
             'class'=>'CCheckBoxColumn',
@@ -61,11 +93,18 @@ $('.search-form form').submit(function(){
 		'title',
 		'info',
         array(
-            'name' => 'status',
-            'value' => '"<a href=\"#\" class=\"set-status\" id=\"".$data->id."\">".($data->status == 1 ? CHtml::image(Yii::app()->theme->baseUrl."/images/log_severity1.gif","active") : CHtml::image(Yii::app()->theme->baseUrl."/images/delicon.gif","inactive"))."</a>"',
-            'type' => 'raw',
-            'filter' => Lookup::items('status'),
+            'name'        => 'status',
+            'value'       => '$data->status == 1 ? CHtml::image(Helper::themeUrl()."/images/log_severity1.gif","active", array("id" => "changeValue_$data->id", "class" => "changeValue status")) : CHtml::image(Helper::themeUrl()."/images/delicon.gif", "inactive", array("id" => "changeValue_$data->id", "class" => "changeValue status"))',
+            'type'        => 'raw',
+            'filter'      => Lookup::items('status'),
             'htmlOptions' => array('style' => 'text-align: center'),
+        ),
+        array(
+            'name' => 'page',
+            'value' => 'Helper::printArray("Display_On_Page", $data->page)',
+            /* 'CHtml::checkBox("changeValue[$data->id]", $data->page, array("style" => "width: 70px; padding: 2px 5px;", "class" => "changeValue page"))',*/
+            'type'  => 'raw',
+            'htmlOptions' => array('style' => 'width: 70px; max-width: 70px; word-wrap: break-word; overflow: hidden')
         ),
 		/*
 		'id',
@@ -96,17 +135,34 @@ $('.search-form form').submit(function(){
 
 <?php
 $script = '
-    $("a.set-status").live("click", function(){
-        status = $(this).find("img").attr("alt") == "active" ? "inactive" : "active";
+    $(".changeValue").bind("click change", function() {
+        var orderId = $(this).attr("id").replace("changeValue_", "");
+        var orderValue = $(this).val();
+        var orderAttribute = $(this).attr("class").replace("changeValue ", "");
+        var gridName = "' . Yii::app()->controller->id .'";
+        var modelName = "' . ucfirst(Yii::app()->controller->id) .'";
+
+        switch (orderAttribute) {
+            case "page":
+                orderValue = $(this).is(":checked") == true ? 1 : 0;
+                break;
+            case "is_popular":
+                orderValue = $(this).is(":checked") == true ? 1 : 0;
+                break;
+            case "status":
+                orderValue = $(this).attr("alt") == "active" ? 1 : 2;
+                break;
+        }
+
         $.ajax({
-            url:"' . Helper::url('/Admin/news/admin') . '",
-            type: "get",
-            data: {"status": status, "id": $(this).attr("id"), "model": "News"},
+            url:"' . Helper::url('/Admin/default/ajaxUpdate') . '",
+            type: "post",
+            data: { "id": orderId, "value": orderValue, "attr": orderAttribute, "model": modelName },
             success: function(){
-//                alert("Update Status is successful");
-                $.fn.yiiGridView.update("news-grid");
+                $.fn.yiiGridView.update(gridName + "-grid");
             }
         });
+
         return false;
     })
 ';

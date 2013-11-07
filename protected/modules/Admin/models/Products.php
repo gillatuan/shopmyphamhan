@@ -58,7 +58,8 @@ class Products extends CActiveRecord {
             array('name, alias', 'length', 'max' => 255),
             array('image', 'length', 'max' => 500),
             array('is_sale_off, status, is_popular', 'length', 'max' => 1),
-            array('barcode, page', 'length', 'max' => 10),
+            array('barcode', 'length', 'max' => 10),
+            array('page', 'length', 'max' => 15),
             array('description', 'safe'),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
@@ -146,6 +147,7 @@ class Products extends CActiveRecord {
             $this->create_date = time();
         }
         $this->alias = Helper::unicode_convert($this->name);
+	$this->page = !empty($postProduct['page']) ? implode(',', $postProduct['page']) : '';
 
         return parent::beforeSave();
     }
@@ -159,19 +161,19 @@ class Products extends CActiveRecord {
     }
 
     protected function beforeValidate() {
-        if (Helper::post('Products') || Helper::post('attr') == 'page') {
+        if (Helper::post('Products')) {
             $postProduct = Helper::post('Products');
-            $this->page = $postProduct ? implode(',', $postProduct['page']) : Helper::post('value');
+            $this->page = !empty($postProduct['page']) ? implode(',', $postProduct['page']) : Helper::post('value');
         }
 
         return parent::beforeValidate();
     }
 
-    /*protected function afterFind() {
+    protected function afterFind() {
         $this->page = explode(',', $this->page);
 
         return parent::afterFind();
-    }*/
+    }
 
     public function createCriteria($category = '', $alias = '', $tab = '', $limit = '', $orderBy = 'id DESC') {
         $criteria = new CDbCriteria();
@@ -179,7 +181,7 @@ class Products extends CActiveRecord {
         if ($category) {
             $criteriaCate = new CDbCriteria();
             $criteriaCate->compare('alias', $category);
-            $cate = Cache::model()->usingCache('Category', $criteriaCate, $category, false);
+            $cate = Cache::usingCache('Category', $criteriaCate, $category, false);
             $criteria->compare('cate_id', $cate->id);
         }
         if ($alias) {

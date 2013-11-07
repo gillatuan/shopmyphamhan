@@ -57,6 +57,9 @@ $('.search-form form').submit(function(){
                 case "page":
                     orderValue = $(this).is(":checked") == true ? 1 : 0;
                     break;
+                case "is_popular":
+                    orderValue = $(this).is(":checked") == true ? 1 : 0;
+                    break;
                 case "status":
                     orderValue = $(this).attr("alt") == "active" ? 1 : 2;
                     break;
@@ -131,6 +134,9 @@ $script = '
 
         switch (orderAttribute) {
             case "page":
+                orderValue = $(this).is(":checked") == true ? 1 : 0;
+                break;
+            case "is_popular":
                 orderValue = $(this).is(":checked") == true ? 1 : 0;
                 break;
             case "status":

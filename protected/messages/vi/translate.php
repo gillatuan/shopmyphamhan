@@ -128,6 +128,7 @@ return array(
     // Contact Form
     'verifyCode' => 'Mã xác nhận',
 
+    'BUY_THIS_ITEM'                   => 'Mua sản phẩm',
 
     // Error
     'ERROR_USER_NOT_ACTIVE_OR_NOT_REGISTERED' => 'User này chưa được đăng ký hoặc chưa được kích hoạt.',

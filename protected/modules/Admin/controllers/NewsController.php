@@ -68,13 +68,14 @@ class NewsController extends BackendController
 	public function actionUpdate($id='')
 	{
 		$model = $id ? $this->loadModel($id) : new News();
+        $postNews = Helper::post('News');
 
-		// Uncomment the following line if AJAX validation is needed
-        Helper::performAjaxValidation($model, 'news-form');
+		if($postNews) {
+            // Uncomment the following line if AJAX validation is needed
+            Helper::performAjaxValidation($model, 'news-form');
 
-		if(Helper::post('News'))
-		{
-			$model->attributes=Helper::post('News');
+            // assign value
+            $model->attributes=$postNews;
             $size = array(
                 'w' => 391, 'h' => 293, 'typeSize' => 'maxWidth'
             );
@@ -82,6 +83,13 @@ class NewsController extends BackendController
             $model->image = $uploadImage;
 
             if($model->save()) {
+                Helper::setFlash('successMessage', 'Successfully.');
+                // rebuild Cache
+                Cache::model()->getCacheDependency(array(
+                    'name'        => 'cache-News-' . $model->alias,
+                    'description' => 'cache for News ' . $model->alias
+                ));
+                
                 if (Helper::get('type')) {
                     $this->redirect(array('admin', 'type' => Helper::get('type')));
                 }

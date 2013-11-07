@@ -10,7 +10,8 @@ class NavCategory extends CPortlet {
         $criteria = new CDbCriteria();
         $criteria->compare('parent_id', $this->parent);
         $criteria->compare('status', APPROVED);
-        $modelCate = Cache::model()->usingCache('Category', $criteria, '', false);
+        $criteria->order = 'id DESC';
+        $modelCate = Cache::usingCache('Category', $criteria, '', false);
 
         $this->renderNestedCategory($modelCate);
     }

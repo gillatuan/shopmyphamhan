@@ -1,7 +1,7 @@
 <?php
 
 class ProductController extends FrontendController {
-    public $includeText = 'Shop Mỹ Phẩm Hàn - ';
+    public $includeText = 'Vỏ mâm xe nâng Ngọc Thanh | ';
 
     public function actionIndex($flashOrder = '') {
         if ($flashOrder) {
@@ -11,15 +11,17 @@ class ProductController extends FrontendController {
         Yii::import('Admin.models.Category');
         $criteria = new CDbCriteria();
         $criteria->compare('parent_id', 0);
-        $categories = Cache::model()->usingCache('Category', $criteria, '', false);
+        $categories = Cache::usingCache('Category', $criteria, '', false);
 
         // seo
         $this->breadcrumbs = array(
             ' - Trang chủ'
         );
+
         $pageTitle = $this->pageTitle = $this->includeText . 'Trang chủ';
+        $keywords =  str_replace(' - ', ',', $pageTitle);
         $seo = array(
-            'keywords' => Yii::app()->language == 'vi' ? '' : 'homepage, ',
+            'keywords' => Yii::app()->language == 'vi' ?  : 'homepage, ',
             'description' => Yii::app()->language == 'vi' ? '' : 'homepage, ',
             'title' => $pageTitle,
             'type' => 'Shop',
@@ -42,11 +44,11 @@ class ProductController extends FrontendController {
 
             $criteria->compare('status', APPROVED);
             $criteria->addSearchCondition('name', $kw);
-            $modelProducts = Cache::model()->usingCache('Products', $criteria, '', false, Cache_Time, '', 1, 'search-' . $aliasKW);
+            $modelProducts = Cache::usingCache('Products', $criteria, '', false, Cache_Time, '', 1, 'search-' . $aliasKW);
 
             $cache['paging'] = new Paging(Helper::url('/Shop/product/search', array('kw' => $kw)), count($modelProducts), 2, $page);
             $limit = array('begin' => $cache['paging']->begin, 'end' => $cache['paging']->rows_in_page);
-            $cache['products'] = Cache::model()->usingCache('Products', $criteria, '', false, Cache_Time, $limit, $page, 'search-' . $aliasKW);
+            $cache['products'] = Cache::usingCache('Products', $criteria, '', false, Cache_Time, $limit, $page, 'search-' . $aliasKW);
 
             // seo
             $this->breadcrumbs = array(
@@ -54,8 +56,8 @@ class ProductController extends FrontendController {
             );
             $pageTitle = $this->pageTitle =  $this->includeText . 'Tìm kiếm - Từ khóa"' . $kw . '"';
             $seo = array(
-                'keywords'    => Yii::app()->language == 'vi' ? "Tìm kiếm - Từ khóa'{$kw}' " . DEFAULT_META_KEYWORDS . ' Shopmyphamhan.com' : "product '{$kw}', product '{$kw}' design web, product '{$kw}' Shopmyphamhan.com",
-                'description' => Yii::app()->language == 'vi' ? "Tìm kiếm - Từ khóa '{$kw}' " . DEFAULT_META_DESCRIPTION . ' Shopmyphamhan.com'  : "product '{$kw}', product '{$kw}' design web, product '{$kw}' Shopmyphamhan.com",
+                'keywords'    => Yii::app()->language == 'vi' ? "Tìm kiếm - Từ khóa'{$kw}' " . DEFAULT_META_KEYWORDS . ' vomamxenang.com' : "product '{$kw}', product '{$kw}' design web, product '{$kw}' vomamxenang.com",
+                'description' => Yii::app()->language == 'vi' ? "Tìm kiếm - Từ khóa '{$kw}' " . DEFAULT_META_DESCRIPTION . ' vomamxenang.com'  : "product '{$kw}', product '{$kw}' design web, product '{$kw}' vomamxenang.com",
                 'title'       => $pageTitle,
                 'type'        => 'Sản phẩm',
                 'url'         => Yii::app()->createAbsoluteUrl(Yii::app()->request->requestUri),
@@ -81,17 +83,17 @@ class ProductController extends FrontendController {
         $criteriaCate->compare('status', APPROVED);
 
         $arrCate = array();
-        $modelCate = Cache::model()->usingCache('Category', $criteriaCate, $cateAlias, false, Cache_Time, 1, 1, '-view-' . $tab . $cateAlias);
+        $modelCate = Cache::usingCache('Category', $criteriaCate, $cateAlias, false, Cache_Time, 1, 1, '-view-' . $tab . $cateAlias);
         $cateName = ucfirst($modelCate->name);
 
         // seo
         $this->breadcrumbs = array(
-            "Danh mục {$cateName}"
+            "{$cateName}"
         );
         $pageTitle = $this->pageTitle = $this->includeText . "{$modelCate->name}";
         $seo = array(
-            'keywords' => Yii::app()->language == 'vi' ? "{$modelCate->description} " . DEFAULT_META_KEYWORDS . 'Shopmyphamhan.com' : 'homepage, homepage design web, homepage Shopmyphamhan.com',
-            'description' => Yii::app()->language == 'vi' ? "{$modelCate->description} " . DEFAULT_META_DESCRIPTION . ' Shopmyphamhan.com' : 'homepage, homepage design web, homepage Shopmyphamhan.com',
+            'keywords' => Yii::app()->language == 'vi' ? "{$modelCate->description} " . DEFAULT_META_KEYWORDS . 'vomamxenang.com' : 'homepage, homepage design web, homepage vomamxenang.com',
+            'description' => Yii::app()->language == 'vi' ? "{$modelCate->description} " . DEFAULT_META_DESCRIPTION . ' vomamxenang.com' : 'homepage, homepage design web, homepage vomamxenang.com',
             'title' => $pageTitle,
             'type' => 'Sản phẩm',
             'url' => Yii::app()->createAbsoluteUrl(Yii::app()->request->requestUri),
@@ -112,7 +114,7 @@ class ProductController extends FrontendController {
         }
         $this->layout = '//layouts/list';
         $criteria = Products::model()->createCriteria();
-        $products = Cache::model()->usingCache('Products', $criteria, '', false, Cache_Time, '', 1, 'view-' . $alias);
+        $products = Cache::usingCache('Products', $criteria, '', false, Cache_Time, '', 1, 'view-' . $alias);
         if (count($products)) {
             $productDetail = $older = $newer = array();
             foreach ($products as $k => $product) {
@@ -177,12 +179,12 @@ class ProductController extends FrontendController {
         );
         $pageTitle = $this->pageTitle = $this->includeText . $productDetail->name;
         $seo = array(
-            'keywords'    => Yii::app()->language == 'vi' ? "{$productDetail->name}, {$productDetail->info} " . DEFAULT_META_KEYWORDS . 'Shopmyphamhan.com' : "{$productDetail->name}, {$productDetail->info}",
-            'description' => Yii::app()->language == 'vi' ? "{$productDetail->name}, {$productDetail->info} " . DEFAULT_META_DESCRIPTION . ' Shopmyphamhan.com'  : "{$productDetail->name}, {$productDetail->info}",
+            'keywords'    => Yii::app()->language == 'vi' ? "{$productDetail->name}, {$productDetail->info} " . DEFAULT_META_KEYWORDS . 'vomamxenang.com' : "{$productDetail->name}, {$productDetail->info}",
+            'description' => Yii::app()->language == 'vi' ? "{$productDetail->name}, {$productDetail->info} " . DEFAULT_META_DESCRIPTION . ' vomamxenang.com'  : "{$productDetail->name}, {$productDetail->info}",
             'title'       => $pageTitle,
             'type'        => 'Sản phẩm',
             'url'         => Yii::app()->createAbsoluteUrl(Yii::app()->request->requestUri),
-            'image'       => Helper::renderImage($productDetail->image, 'uploads/detail/Products', ',', true, true),
+            'image'       => Yii::app()->createAbsoluteUrl(Helper::renderImage($productDetail->image, 'uploads/detail/Products', ',', true, true)),
             'site_name'   => $pageTitle,
         );
         Helper::seo($seo);
@@ -234,14 +236,14 @@ class ProductController extends FrontendController {
                 $params = array(
                     'viewPath' => 'application.views.site.mail',
                     'view'     => 'registration_confirmation',
-                    'subject'  => 'Shopmyphamhan.com Member Registration Confirmation',
+                    'subject'  => 'Vomamxenang.com Member Registration Confirmation',
                     'body'     => array(
                         'username' => $model->username,
                         'password' => $postUser['password'],
                         'link'     => CHtml::link($url, $url, array('target' => '_blank')),
                     ),
                     'mailTo'   => $model->email,
-                    'mailFrom' => array(ADMIN_EMAIL => 'Shopmyphamhan.com - ' .ADMIN_EMAIL )
+		    'mailFrom' => array(ADMIN_EMAIL => 'Vomamxenang.com - ' .ADMIN_EMAIL )
                 );
                 // send
                 Helper::sendMail($params);
@@ -257,8 +259,8 @@ class ProductController extends FrontendController {
         );
         $pageTitle = $this->pageTitle = $this->includeText . 'Giỏ hàng của bạn - Thông tin giỏ hàng';
         $seo = array(
-            'keywords'    => Yii::app()->language == 'vi' ? "giỏ hàng của bạn, thông tin giỏ hàng " . DEFAULT_META_KEYWORDS . 'Shopmyphamhan.com' : "your card, your cart info",
-            'description' => Yii::app()->language == 'vi' ? "giỏ hàng của bạn, thông tin giỏ hàng " . DEFAULT_META_DESCRIPTION . ' Shopmyphamhan.com' : "your card, your cart info",
+            'keywords'    => Yii::app()->language == 'vi' ? "giỏ hàng của bạn, thông tin giỏ hàng " . DEFAULT_META_KEYWORDS . 'vomamxenang.com' : "your card, your cart info",
+            'description' => Yii::app()->language == 'vi' ? "giỏ hàng của bạn, thông tin giỏ hàng " . DEFAULT_META_DESCRIPTION . ' vomamxenang.com' : "your card, your cart info",
             'title'       => $pageTitle,
             'type'        => 'Sản phẩm',
             'url'         => Yii::app()->createAbsoluteUrl(Yii::app()->request->requestUri),
@@ -376,7 +378,7 @@ class ProductController extends FrontendController {
             $params = array(
                 'viewPath' => 'application.views.site.mail',
                 'view'     => 'send_cart_order',
-                'subject'  => 'vomamxenang.com - Đơn đặt hàng',
+                'subject'  => 'Vomamxenang.com - Đơn đặt hàng',
                 'body'     => array(
                     'billTo'   => $billTo,
                     'shipTo'   => $shipTo,
@@ -384,7 +386,7 @@ class ProductController extends FrontendController {
                     'cartInfo' => $cartInfo
                 ),
                 'mailTo'   => $billTo['email'],
-                'mailFrom' => array(ADMIN_EMAIL => 'Shop Mỹ Phẩm Hàn - ' . ADMIN_EMAIL)
+                'mailFrom' => array(ADMIN_EMAIL => 'Vỏ mâm xe nâng - ' . ADMIN_EMAIL)
             );
             // send
             Helper::sendMail($params);
@@ -402,8 +404,8 @@ class ProductController extends FrontendController {
         );
         $pageTitle = $this->pageTitle = $this->includeText . 'Xác nhận đơn hàng';
         $seo = array(
-            'keywords'    => Yii::app()->language == 'vi' ? "xác nhận đơn hàng, xác nhân đơn hàng của bạn " . DEFAULT_META_KEYWORDS . 'Shopmyphamhan.com' : "confirm your order",
-            'description' => Yii::app()->language == 'vi' ? "xác nhận đơn hàng, xác nhân đơn hàng của bạn " . DEFAULT_META_DESCRIPTION . ' Shopmyphamhan.com' : "confirm your order",
+            'keywords'    => Yii::app()->language == 'vi' ? "xác nhận đơn hàng, xác nhân đơn hàng của bạn " . DEFAULT_META_KEYWORDS . 'vomamxenang.com' : "confirm your order",
+            'description' => Yii::app()->language == 'vi' ? "xác nhận đơn hàng, xác nhân đơn hàng của bạn " . DEFAULT_META_DESCRIPTION . ' vomamxenang.com' : "confirm your order",
             'title'       => $pageTitle,
             'type'        => 'Sản phẩm',
             'url'         => Yii::app()->createAbsoluteUrl(Yii::app()->request->requestUri),
@@ -426,7 +428,7 @@ class ProductController extends FrontendController {
         $criteria->compare('status', APPROVED);
         $criteria->compare('alias', $newsAlias);
 
-        $news = Cache::model()->usingCache('News', $criteria, $newsAlias, false, Cache_Time, 1, 1, $newsAlias);
+        $news = Cache::usingCache('News', $criteria, $newsAlias, false, Cache_Time, 1, 1, $newsAlias);
         if (!$news) {
             throw new CHttpException(400, Helper::t('ERROR_LINK'));
         }
@@ -438,8 +440,8 @@ class ProductController extends FrontendController {
         );
         $pageTitle = $this->pageTitle = $this->includeText . $news->title . " - " . $typeNews;
         $seo = array(
-            'keywords'    => Yii::app()->language == 'vi' ? "$news->title, $typeNews $news->title " . DEFAULT_META_KEYWORDS . 'Shopmyphamhan.com' : "$news->title, $typeNews $news->title",
-            'description' => Yii::app()->language == 'vi' ? "$news->title, $typeNews $news->title " . DEFAULT_META_DESCRIPTION . ' Shopmyphamhan.com' : "$news->title, $typeNews $news->title",
+            'keywords'    => Yii::app()->language == 'vi' ? "$news->title, $typeNews $news->title " . DEFAULT_META_KEYWORDS . 'vomamxenang.com' : "$news->title, $typeNews $news->title",
+            'description' => Yii::app()->language == 'vi' ? "$news->title, $typeNews $news->title " . DEFAULT_META_DESCRIPTION . ' vomamxenang.com' : "$news->title, $typeNews $news->title",
             'title'       => $pageTitle,
             'type'        => 'Tin Tức',
             'url'         => Yii::app()->createAbsoluteUrl(Yii::app()->request->requestUri),
@@ -473,10 +475,10 @@ class ProductController extends FrontendController {
         $this->breadcrumbs = array(
             'Hỏi đáp'
         );
-        $pageTitle = $this->includeText . 'Hỏi đáp - Shopmyphamhan.com';
+        $pageTitle = $this->includeText . 'Hỏi đáp - vomamxenang.com';
         $seo = array(
-            'keywords'    => Yii::app()->language == 'vi' ? "Hỏi đáp, đặt câu hỏi, những vấn đề liên quan đến shop của chúng tôi " . DEFAULT_META_KEYWORDS . 'Shopmyphamhan.com' : "FAQ, send your question, regarding to our shop",
-            'description' => Yii::app()->language == 'vi' ? "Hỏi đáp, đặt câu hỏi, những vấn đề liên quan đến shop của chúng tôi " . DEFAULT_META_DESCRIPTION . ' Shopmyphamhan.com' : "FAQ, send your question, regarding to our shop",
+            'keywords'    => Yii::app()->language == 'vi' ? "Hỏi đáp, đặt câu hỏi, những vấn đề liên quan đến shop của chúng tôi " . DEFAULT_META_KEYWORDS . 'vomamxenang.com' : "FAQ, send your question, regarding to our shop",
+            'description' => Yii::app()->language == 'vi' ? "Hỏi đáp, đặt câu hỏi, những vấn đề liên quan đến shop của chúng tôi " . DEFAULT_META_DESCRIPTION . ' vomamxenang.com' : "FAQ, send your question, regarding to our shop",
             'title'       => $pageTitle,
             'type'        => 'Tin Tức',
             'url'         => Yii::app()->createAbsoluteUrl(Yii::app()->request->requestUri),

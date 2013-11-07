@@ -84,12 +84,20 @@ class CategoryController extends BackendController {
             Helper::performAjaxValidation($model, 'category-form');
             // assign value
             $model->attributes = Helper::post('Category');
-            $uploadImage       = Helper::uploadImage($model, 'image', 'category');
+            $size = array(
+                'w' => '250',
+                'h' => '159',
+                'typeSize' => ''
+            );
+            $uploadImage       = Helper::uploadImage($model, 'image', 'Category', true, false, $size);
             $model->image      = $uploadImage;
             if ($model->save()) {
                 Helper::setFlash('SUCCESS_MESSAGE', 'Successfully.');
                 // rebuild Cache
-//                CreateCache::rebuildCacheByName('Admin.Category');
+                Cache::model()->getCacheDependency(array(
+                    'name'        => 'cache-category-' . $model->alias,
+                    'description' => 'cache for Category ' . $model->alias
+                ));
                 $this->redirect(array('/Admin/default/deleteall'));
             }
         }

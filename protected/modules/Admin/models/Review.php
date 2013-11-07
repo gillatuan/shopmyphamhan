@@ -45,7 +45,8 @@ class Review extends CActiveRecord {
             array('create_date', 'numerical', 'integerOnly' => true),
             array('rating', 'numerical'),
             array('full_name, subject', 'length', 'max' => 255),
-            array('status, page', 'length', 'max' => 1),
+            array('status', 'length', 'max' => 1),
+            array('page', 'length', 'max' => 15),
             array('product_id', 'length', 'max' => 11),
             array('ip_address', 'length', 'max' => 15), // The following rule is used by search().
             // Please remove those attributes that should not be searched.

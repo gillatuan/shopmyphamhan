@@ -92,15 +92,16 @@ class UserController extends BackendController {
             $model->setScenario('register');
         }
 
-		// Uncomment the following line if AJAX validation is needed
-        Helper::performAjaxValidation($model, 'user-form');
         $dataPost = Helper::post('User');
 		if($dataPost)
 		{
+            // Uncomment the following line if AJAX validation is needed
+            Helper::performAjaxValidation($model, 'user-form');
 			$model->attributes=$dataPost;
 			if($model->save()) {
 	        	Helper::setFlash('successUpdateProfile', Helper::t('successUpdateProfile'));
-	        	$this->redirect(array('/Admin/default/deleteall'));           	}
+	        	$this->redirect(array('/Admin/default/deleteall'));
+            }
 		}
 		$this->render('update',array(
 			'model'=>$model,

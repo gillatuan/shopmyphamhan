@@ -73,28 +73,30 @@ class BannerController extends BackendController {
             );
         }
         // Uncomment the following line if AJAX validation is needed
-        
+
         Helper::performAjaxValidation($model, 'banner-form');
         if (Helper::post('Banner')) {
             $postModel = Helper::post('Banner');
             $model->attributes = $postModel;
             $model->info = $postModel['info'];
-            switch ($postModel['position']) {
-                case 1:
-                    $size = array(
-                        'w' => 640, 'h' => 400, 'typeSize' => 'exact'
-                    );
-                    break;
-                case 3:
-                    $size = array(
-                        'w' => 230, 'h' => 500, 'typeSize' => 'maxWidth'
-                    );
-                    break;
-            }
-            $uploadImage = Helper::uploadImage($model, 'image', 'Banner', true, true , $size);
+            $size = array(
+                'wOnIndex' => '640',
+                'hOnIndex' => '400',
+                'wBanner' => '296',
+                'hBanner' => '190',
+                'wOnList' => '230',
+                'hOnList' => '150',
+                'typeSize' => 'exact'
+            );
+            $uploadImage = Helper::uploadImage($model, 'image', 'Banner', true, false, $size);
             $model->image = $uploadImage;
             if ($model->save()) {
                 Helper::setFlash('SUCCESS_MESSAGE', 'Successfully.');
+                // rebuild Cache
+                Cache::model()->getCacheDependency(array(
+                    'name'        => 'cache-banner-' . $model->alias,
+                    'description' => 'cache for Banner ' . $model->alias
+                ));
                 $this->redirect(array('/Admin/default/deleteall'));
             }
         }

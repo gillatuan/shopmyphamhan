@@ -25,7 +25,7 @@ class VideoYoutube extends CPortlet {
             $criteriaCate->compare('status', APPROVED);
 
             $arrayProducts = array();
-            $modelCate = Cache::model()->usingCache('Category', $criteriaCate, $cateAlias, false, Cache_Time, 1, 1, $cateAlias);
+            $modelCate = Cache::usingCache('Category', $criteriaCate, $cateAlias, false, Cache_Time, 1, 1, $cateAlias);
             if (!$modelCate->children) {
                 $arrData = $this->processVideo($modelCate);
             }
@@ -57,7 +57,7 @@ class VideoYoutube extends CPortlet {
         if ($this->isOnIndex) {
             $criteriaProducts->compare('page', INDEX_PAGE);
         }
-        $cacheVideo = Cache::model()->usingCache('Video', $criteriaProducts, '', false, Cache_Time, '', PAGE_SIZE,     $cateAlias . $this->isOnIndex);
+        $cacheVideo = Cache::usingCache('Video', $criteriaProducts, '', false, Cache_Time, '', PAGE_SIZE,     $cateAlias . $this->isOnIndex);
 
         return $cacheVideo;
     }
