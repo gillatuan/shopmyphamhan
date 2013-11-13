@@ -17,13 +17,13 @@
 //
 	define('DB_HOST' , 'power3.mschosting.com');
 //
-	define('DB_NAME' , 'thietkew_vomam');
+	define('DB_NAME' , 'thietkew_shopmyphamhan');
 //
 	define('DB_PORT' , 3306);
 //
-	define('DB_PSWD' , 'Ng9cT71n!@#BcA');
+	define('DB_PSWD' , 'T71n@123');
 //
-	define('DB_USER' , 'thietkew');
+	define('DB_USER' , 'thietkew_root');
 //
 	define('DEFAULT_BO_LAYOUT', '//layouts/main');
 //

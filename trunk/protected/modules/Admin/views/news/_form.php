@@ -85,13 +85,6 @@
         endif;?>
     </div>
 
-    <div class="row checkboxList">
-        <?php echo $form->labelEx($model, 'page'); ?>
-        <div class="clearfix"></div>
-        <?php echo $form->checkBoxList($model, 'page', Lookup::items('Display_On_Page'), array('class' => 'text-input small-input')); ?>
-        <?php echo $form->error($model, 'page'); ?>
-    </div>
-
     <!--<div class="row">
         <?php /*echo $form->labelEx($model,'type_news'); */?>
         <?php /*echo $form->dropDownList($model, 'type_news', Lookup::items('Type_News')); */?>
