@@ -13,7 +13,7 @@
     <meta name='revisit-after' content='1 days'/>
 
     <link rel="canonical" href="<?php echo $this->canonicalUrl; ?>" />
-    <link rel="shortcut icon" href="/uploads/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/uploads/shopmyphamhan-favicon.ico" type="image/x-icon" />
 
     <script>
         (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
@@ -21,7 +21,7 @@
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,"script","//www.google-analytics.com/analytics.js","ga");
 
-        ga("create", "UA-32319582-2", "vomamxenang.com");
+        ga("create", "UA-32319582-2", "shopmyphamhan.com");
         ga("send", "pageview");
     </script>
 </head>
@@ -30,9 +30,9 @@
     <div class="container clearfix">
         <div class="row">
             <div class="threecol floatleft logo">
-                <h1><a href="<?php echo Helper::url('/Shop/product/index') ?>" title="vomamxenang.com">
-                    <span class="voxenang">Vomam</span>
-                    <span class="xenang">xenang</span>
+                <h1><a href="<?php echo Helper::url('/Shop/product/index') ?>" title="shopmyphamhan.com">
+                    <span class="shopmypham">Shopmypham</span>
+                    <span class="han">han</span>
                     <span class="domain">.com</span>
                 </a></h1>
             </div>
@@ -80,7 +80,7 @@
             <div class="signs sixcol last">
                 <a href="<?php echo Helper::url('/Shop/product/readNews', array('newsAlias' => 'Cam-ket-loi-ich-khi-mua-online')) ?> " title="Cam kết lợi ích khi mua online" class="online-useful">Cam kết lợi ích khi mua online</a>
                 <a href="#" title="Sản phẩm chất lượng">
-                    <img src="<?php echo Helper::themeUrl(); ?>/images/voxenangcacloai-cam-ket-dam-bao-san-pham-chat-luong.jpg" alt="Vỏ xe nâng Ngọc Thanh đảm bảo sản phẩm chất lượng" /></a>
+                    <img src="<?php echo Helper::themeUrl(); ?>/images/shopmyphamhan-cam-ket-dam-bao-san-pham-chat-luong.jpg" alt="Shop Mỹ Phẩm Hàn đảm bảo sản phẩm chất lượng" /></a>
             </div>
         </div>
     </div>
@@ -111,7 +111,7 @@
                 <?php
                 $amountProducts = Cart::hasCookie('amountProducts') ? 'Bạn có ' . Cart::getCookie('amountProducts') . ' sản phẩm trong giỏ hàng.' : 'Giỏ hàng'; ?>
                 <a href="<?php echo Helper::url('/Shop/product/viewCart'); ?>" title="<?php echo $amountProducts; ?>" class="your-cart"><?php echo $amountProducts; ?>
-                    <img src="<?php echo Helper::themeUrl(); ?>/images/voxenangcacloai-gio-hang.gif" alt="vỏ xe nâng các loại giỏ hàng">
+                    <img src="<?php echo Helper::themeUrl(); ?>/images/shopmyphamhan-gio-hang.gif" alt="Shop Mỹ Phẩm Hàn giỏ hàng">
                 </a>
             </div>
         </div>
@@ -142,14 +142,14 @@
                 <p><strong>8h sáng - 18h tối</strong>.(Từ Thứ 2 - Chủ Nhật)</p>
             </div>
             <div class="copyright fourcol">
-                <h3>BẢN QUYỀN THUỘC CTY TNHH VỎ MÂM XE NÂNG NGỌC THANH.</h3>
+                <h3>BẢN QUYỀN THUỘC SHOPMYPHAMHAN.COM.</h3>
                 <p>Địa chỉ: Số 3 Bùi Tư Toàn F.An Lạc Q.Bình Tân</p>
                 <p>Email: <a href="mailto:tuan.buidoanngoc@gmail.com">tuan.buidoanngoc@gmail.com</a></p>
                 <p>All Rights Reserved. Designed by <a href="http://web3in1.com" title="Web3in1.com">Web3in1.com</a></p>
             </div>
             <div class="pttt fourcol last">
                 <h3>Phương thức thanh toán:</h3>
-                <p><img src="<?php echo Helper::themeUrl(); ?>/images/payment-methods.png" border="0" alt="payment-methods.png"></p>
+                <p><img src="<?php echo Helper::themeUrl(); ?>/images/shopmyphamhan-payment-methods.png" border="0" alt="payment-methods.png"></p>
             </div>
         </div>
     </div>
@@ -164,23 +164,23 @@
             </form>
         </li>
         <li class="hot-products twocol last"><a href="#" title="Hot product">Hot Products</a></li>
-        <li class="hot-line fourcol last"><p>Hot line: <span>0913.600210 - 012.79.59.39.79</span></p></li>
+        <li class="hot-line fourcol last"><p>Hot line: <span>0903.66.44.64</span></p></li>
         <li class="nav-social floatright threecol last">
             <?php $url = Yii::app()->createAbsoluteUrl(Yii::app()->request->requestUri); ?>
             <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $url; ?>" target="_blank" title="Facebook social">
-                <img class="footer_social" src="<?php echo Helper::themeUrl(); ?>/images/facebook_24.png" border="0" alt="facebook social" />
+                <img class="footer_social" src="<?php echo Helper::themeUrl(); ?>/images/shopmyphamhan-facebook_24.png" border="0" alt="facebook social" />
             </a>
             <a href="https://twitter.com/share?url=<?php echo $url; ?>" title="Twitter social">
-                <img class="footer_social" src="<?php echo Helper::themeUrl(); ?>/images/twitter_24.png" border="0" alt="twitter social" />
+                <img class="footer_social" src="<?php echo Helper::themeUrl(); ?>/images/shopmyphamhan-twitter_24.png" border="0" alt="twitter social" />
             </a>
             <a href="https://plus.google.com/share?url=<?php echo $url; ?>" title="Google Plus social" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
-                <img src="<?php echo Helper::themeUrl(); ?>/images/gplus-32.png" alt="Share on Google+" />
+                <img src="<?php echo Helper::themeUrl(); ?>/images/shopmyphamhan-gplus-32.png" alt="Share on Google+" />
             </a>
             <!--<a class="" title="Pinterest social">
-                <img class="footer_social" src="<?php /*echo Helper::themeUrl(); */?>/images/stumble_24.png" border="0" alt="Pinterest social" />
+                <img class="footer_social" src="<?php /*echo Helper::themeUrl(); */?>/images/shopmyphamhan-stumble_24.png" border="0" alt="Pinterest social" />
             </a>
             <a class="" title="More social">
-                <img class="footer_social" src="<?php /*echo Helper::themeUrl(); */?>/images/blogger_24.png" border="0" alt="More social" />
+                <img class="footer_social" src="<?php /*echo Helper::themeUrl(); */?>/images/shopmyphamhan-blogger_24.png" border="0" alt="More social" />
             </a>-->
         </li>
     </ul>
@@ -279,7 +279,7 @@
         })
 
     function processAjax(url, param, objectThis, alias, typeCart) {
-        $(".addcart-success").show().html(\'<img src="' . Helper::themeUrl() .'/images/loading.gif" alt="loading image" />\');
+        $(".addcart-success").show().html(\'<img src="' . Helper::themeUrl() .'/images/shopmyphamhan-loading.gif" alt="loading image" />\');
         $.ajax({
             url: url,
             type: "post",

@@ -3,7 +3,7 @@
 class SiteController extends FrontendController
 {
     public $includeText = ' với mong muốn luôn làm hài lòng quý khách khi đến với chúng tôi. Hãy gọi ngay: 09.777.5.7.9.11';
-    public $includeTitleText = 'Vỏ mâm xe nâng | ';
+    public $includeTitleText = 'Shop Mỹ Phẩm Hàn | ';
     /**
      * Declares class-based actions.
      */
@@ -39,8 +39,8 @@ class SiteController extends FrontendController
         $keywords =  str_replace(' - ', ',', $pageTitle);
 
         $seo = array(
-            'keywords' => Yii::app()->language == 'vi' ? $keywords : 'homepage, homepage design web, homepage vomamxenang.com',
-            'description' => Yii::app()->language == 'vi' ? $keywords : 'homepage, homepage design web, homepage vomamxenang.com',
+            'keywords' => Yii::app()->language == 'vi' ? $keywords : 'homepage, homepage design web, homepage shopmyphamhan',
+            'description' => Yii::app()->language == 'vi' ? $keywords : 'homepage, homepage design web, homepage shopmyphamhan',
             'title' => $pageTitle,
             'type' => 'Blog',
             'url' => Yii::app()->createAbsoluteUrl('/site/index'),
@@ -78,14 +78,14 @@ class SiteController extends FrontendController
                     $params = array(
                         'viewPath' => 'application.views.site.mail',
                         'view' => 'registration_confirmation',
-                        'subject' => 'Vỏ mâm xe nâng - ' . Helper::t('TEXT_NOTIFICATION_CONFIRM_SUCCESS_REGISTRATION'),
+                        'subject' => 'Shop Mỹ Phẩm Hàn - ' . Helper::t('TEXT_NOTIFICATION_CONFIRM_SUCCESS_REGISTRATION'),
                         'body' => array(
                             'username' => $model->username,
                             'password' => $postUser['password'],
                             'link' => CHtml::link($url, $url, array('target' => '_blank')),
                         ),
                         'mailTo' => $model->email,
-                        'mailFrom' => array(ADMIN_EMAIL => 'Vỏ mâm xe nâng - ' . ADMIN_EMAIL)
+                        'mailFrom' => array(ADMIN_EMAIL => 'Shop Mỹ Phẩm Hàn - ' . ADMIN_EMAIL)
                     );
                     // send
                     Helper::sendMail($params);
@@ -104,8 +104,8 @@ class SiteController extends FrontendController
         $keywords =  str_replace(' - ', ',', $pageTitle);
 
         $seo = array(
-            'keywords' => Yii::app()->language == 'vi' ? 'Đăng ký tài khoản, Đăng ký tài khoản thiết kế web, Đăng ký tài khoản vomamxenang.com' : 'Register page, register page design web, homepage vomamxenang.com',
-            'description' => Yii::app()->language == 'vi' ? 'Đăng ký tài khoản, Đăng ký tài khoản thiết kế web, Đăng ký tài khoản vomamxenang.com' : 'Register page, register page design web, homepage vomamxenang.com',
+            'keywords' => Yii::app()->language == 'vi' ? 'Đăng ký tài khoản, Đăng ký tài khoản Shop mỹ phẩm hàn, Đăng ký tài khoản shopmyphamhan' : 'Register page, register page design web, homepage shopmyphamhan',
+            'description' => Yii::app()->language == 'vi' ? 'Đăng ký tài khoản, Đăng ký tài khoản Shop mỹ phẩm hàn, Đăng ký tài khoản shopmyphamhan' : 'Register page, register page design web, homepage shopmyphamhan',
             'title' => $pageTitle,
             'type' => 'Blog',
             'url' => Yii::app()->createAbsoluteUrl('/site/register'),
@@ -135,12 +135,12 @@ class SiteController extends FrontendController
                 $params = array(
                     'viewPath' => 'application.views.site.mail',
                     'view' => 'welcome',
-                    'subject' => 'Vỏ mâm xe nâng - ' . Helper::t('TEXT_NOTIFICATION_SUCCESS_WELCOME'),
+                    'subject' => 'Shop Mỹ Phẩm Hàn - ' . Helper::t('TEXT_NOTIFICATION_SUCCESS_WELCOME'),
                     'body' => array(
                         'username' => $findUser->username,
                     ),
                     'mailTo' => $findUser->email,
-                    'mailFrom' => array(ADMIN_EMAIL => 'Vỏ mâm xe nâng - Welcome')
+                    'mailFrom' => array(ADMIN_EMAIL => 'Shop Mỹ Phẩm Hàn - Welcome')
                 );
                 // send
                 Helper::sendMail($params);
@@ -175,7 +175,7 @@ class SiteController extends FrontendController
                             'comment' => nl2br($model->body)
                         ),
                         'mailTo' => ADMIN_EMAIL,
-                        'mailFrom' => array($model->email => 'Vỏ mâm xe nâng - Liên hệ - ' . $model->email)
+                        'mailFrom' => array($model->email => 'Shop Mỹ Phẩm Hàn - Liên hệ - ' . $model->email)
                     );
                     // send
                     Helper::sendMail($params);
@@ -193,8 +193,8 @@ class SiteController extends FrontendController
         $keywords =  str_replace(' - ', ',', $pageTitle);
 
         $seo = array(
-            'keywords'    => Yii::app()->language == 'vi' ? 'liên hệ, liên hệ vỏ mâm xe nâng, liên hệ vỏ mâm xe nâng cũ các loại' : 'contact, contact to design web, contact to vomamxenang.com',
-            'description' => Yii::app()->language == 'vi' ? 'liên hệ, liên hệ vỏ mâm xe nâng, liên hệ vỏ mâm xe nâng cũ các loại' : 'contact, contact to design web, contact to vomamxenang.com',
+            'keywords'    => Yii::app()->language == 'vi' ? 'liên hệ, liên hệ Shop Mỹ Phẩm Hàn, liên hệ Shop Mỹ Phẩm Hàn cũ các loại' : 'contact, contact to design web, contact to shopmyphamhan',
+            'description' => Yii::app()->language == 'vi' ? 'liên hệ, liên hệ Shop Mỹ Phẩm Hàn, liên hệ Shop Mỹ Phẩm Hàn cũ các loại' : 'contact, contact to design web, contact to shopmyphamhan',
             'title' => $pageTitle,
             'type' => 'Shop',
             'url' => Yii::app()->createAbsoluteUrl('/site/contact'),
@@ -218,12 +218,12 @@ class SiteController extends FrontendController
             $params = array(
                 'viewPath' => 'application.views.site.mail',
                 'view' => 'send-mail-to-friend',
-                'subject' => 'Vỏ mâm xe nâng - ' . Helper::t('TEXT_NOTIFICATION_SUCCESS_SEND_MAIL_TO_FRIENDS'),
+                'subject' => 'Shop Mỹ Phẩm Hàn - ' . Helper::t('TEXT_NOTIFICATION_SUCCESS_SEND_MAIL_TO_FRIENDS'),
                 'body' => array(
                     'products' => $products
                 ),
                 'mailTo' => Helper::post('send-mail-to-friend'),
-                'mailFrom' => array(ADMIN_EMAIL => 'Vỏ mâm xe nâng - Thiết kế website')
+                'mailFrom' => array(ADMIN_EMAIL => 'Shop Mỹ Phẩm Hàn - Admin')
             );
             // send
             Helper::sendMail($params);
@@ -263,8 +263,8 @@ class SiteController extends FrontendController
         $keywords =  str_replace(' - ', ',', $pageTitle);
 
         $seo = array(
-            'keywords'    => Yii::app()->language == 'vi' ? 'đăng nhập, đăng nhập thiết kế web, đăng nhập vomamxenang.com' : 'login, login to design web, login to vomamxenang.com',
-            'description' => Yii::app()->language == 'vi' ? 'đăng nhập, đăng nhập thiết kế web, đăng nhập vomamxenang.com' : 'login, login to design web, login to vomamxenang.com',
+            'keywords'    => Yii::app()->language == 'vi' ? 'đăng nhập, đăng nhập Shop mỹ phẩm hàn, đăng nhập shopmyphamhan' : 'login, login to design web, login to shopmyphamhan',
+            'description' => Yii::app()->language == 'vi' ? 'đăng nhập, đăng nhập Shop mỹ phẩm hàn, đăng nhập shopmyphamhan' : 'login, login to design web, login to shopmyphamhan',
             'title' => $pageTitle,
             'type' => 'Blog',
             'url' => Yii::app()->createAbsoluteUrl('/site/login'),
@@ -304,7 +304,7 @@ class SiteController extends FrontendController
                     $params = array(
                         'viewPath' => 'application.views.site.mail',
                         'view' => 'password_reset_confirmation',
-                        'subject' => 'Vỏ mâm xe nâng - ' . Helper::t('TEXT_NOTIFICATION_RESET_PASSWORD'),
+                        'subject' => 'Shop Mỹ Phẩm Hàn - ' . Helper::t('TEXT_NOTIFICATION_RESET_PASSWORD'),
                         'body' => array(
                             'username' => ucfirst($updateModel->username),
                             'link'     => CHtml::link($urlResetConfirm, $urlResetConfirm, array('target' => '_blank')),
@@ -312,7 +312,7 @@ class SiteController extends FrontendController
                             'code'     => $resetCode,
                         ),
                         'mailTo' => $updateModel->email,
-                        'mailFrom' => array(ADMIN_EMAIL => 'Vỏ mâm xe nâng - ' . ADMIN_EMAIL)
+                        'mailFrom' => array(ADMIN_EMAIL => 'Shop Mỹ Phẩm Hàn - ' . ADMIN_EMAIL)
                     );
                     // send
                     Helper::sendMail($params);
@@ -329,8 +329,8 @@ class SiteController extends FrontendController
         $keywords =  str_replace(' - ', ',', $pageTitle);
 
         $seo = array(
-            'keywords'    => Yii::app()->language == 'vi' ? 'Quên mật khẩu, Quên mật khẩu thiết kế web, Quên mật khẩu vomamxenang.com' : 'forgot, forgot to design web, forgot to vomamxenang.com',
-            'description' => Yii::app()->language == 'vi' ? 'Quên mật khẩu, Quên mật khẩu thiết kế web, Quên mật khẩu vomamxenang.com' : 'forgot, forgot to design web, forgot to vomamxenang.com',
+            'keywords'    => Yii::app()->language == 'vi' ? 'Quên mật khẩu, Quên mật khẩu Shop mỹ phẩm hàn, Quên mật khẩu shopmyphamhan' : 'forgot, forgot to design web, forgot to shopmyphamhan',
+            'description' => Yii::app()->language == 'vi' ? 'Quên mật khẩu, Quên mật khẩu Shop mỹ phẩm hàn, Quên mật khẩu shopmyphamhan' : 'forgot, forgot to design web, forgot to shopmyphamhan',
             'title' => $pageTitle,
             'type' => 'Blog',
             'url' => Yii::app()->createAbsoluteUrl('/site/forgot'),
@@ -382,12 +382,12 @@ class SiteController extends FrontendController
                 $params = array(
                     'viewPath' => 'application.views.site.mail',
                     'view' => 'success_change_password',
-                    'subject' => 'Vỏ mâm xe nâng - ' . Helper::t('TEXT_NOTIFICATION_SUCCESS_CHANGE_PASSWORD'),
+                    'subject' => 'Shop Mỹ Phẩm Hàn - ' . Helper::t('TEXT_NOTIFICATION_SUCCESS_CHANGE_PASSWORD'),
                     'body' => array(
                         'username' => $findUser->username
                     ),
                     'mailTo' => $findUser->email,
-                    'mailFrom' => array(ADMIN_EMAIL => 'Vỏ mâm xe nâng - ' . ADMIN_EMAIL)
+                    'mailFrom' => array(ADMIN_EMAIL => 'Shop Mỹ Phẩm Hàn - ' . ADMIN_EMAIL)
                 );
                 // send
                 Helper::sendMail($params);
@@ -413,12 +413,12 @@ class SiteController extends FrontendController
         $this->breadcrumbs = array(
             ' Thay đổi mật khẩu'
         );
-        $pageTitle = $this->pageTitle = $this->includeTitleText . 'Trang Thay đổi mật khẩu';
+        $pageTitle = $this->pageTitle = $this->includeTitleText . 'Trang Thay Đổi Mật Khẩu';
         $keywords =  str_replace(' - ', ',', $pageTitle);
 
         $seo = array(
-            'keywords' => Yii::app()->language == 'vi' ? 'Thay đổi mật khẩu, Thay đổi mật khẩu thiết kế web, Thay đổi mật khẩu vomamxenang.com' : 'forgot, forgot to design web, forgot to vomamxenang.com',
-            'description' => Yii::app()->language == 'vi' ? 'Thay đổi mật khẩu, Thay đổi mật khẩu thiết kế web, Thay đổi mật khẩu vomamxenang.com' : 'forgot, forgot to design web, forgot to vomamxenang.com',
+            'keywords' => Yii::app()->language == 'vi' ? 'Thay đổi mật khẩu, Thay đổi mật khẩu Shop mỹ phẩm hàn, Thay đổi mật khẩu shopmyphamhan' : 'forgot, forgot to design web, forgot to shopmyphamhan',
+            'description' => Yii::app()->language == 'vi' ? 'Thay đổi mật khẩu, Thay đổi mật khẩu Shop mỹ phẩm hàn, Thay đổi mật khẩu shopmyphamhan' : 'forgot, forgot to design web, forgot to shopmyphamhan',
             'title' => $pageTitle,
             'type' => 'Blog',
             'url' => Yii::app()->createAbsoluteUrl('/site/changePassword'),
@@ -443,8 +443,8 @@ class SiteController extends FrontendController
         $keywords =  str_replace(' - ', ',', $pageTitle);
 
         $seo = array(
-            'keywords' => Yii::app()->language == 'vi' ? 'trang thông báo lỗi, trang thông báo lỗi thiết kế web, trang thông báo lỗi vomamxenang.com' : 'errorpage, homepage design web, errorpage homepage vomamxenang.com',
-            'description' => Yii::app()->language == 'vi' ? 'trang thông báo lỗi, trang thông báo lỗi thiết kế web, trang thông báo lỗi vomamxenang.com' : 'errorpage, homepage design web, errorpage homepage vomamxenang.com',
+            'keywords' => Yii::app()->language == 'vi' ? 'trang thông báo lỗi, trang thông báo lỗi Shop mỹ phẩm hàn, trang thông báo lỗi shopmyphamhan' : 'errorpage, homepage design web, errorpage homepage shopmyphamhan',
+            'description' => Yii::app()->language == 'vi' ? 'trang thông báo lỗi, trang thông báo lỗi Shop mỹ phẩm hàn, trang thông báo lỗi shopmyphamhan' : 'errorpage, homepage design web, errorpage homepage shopmyphamhan',
             'title' => $pageTitle,
             'type' => 'Blog',
             'url' => Yii::app()->createAbsoluteUrl('/site/error'),

@@ -116,7 +116,7 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
     color: #02ABD6;
     text-decoration: none;
     font-weight: bold;
-    background: url(../images/breadcrumbs-separator.png) no-repeat right;
+    background: url(../images/shopmyphamhan-breadcrumbs-separator.png) no-repeat right;
 }
 
 .breadcrumb span {
@@ -131,7 +131,7 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
     right:20px;
     display:none;
     text-indent:-9999px;
-    background: url('../images/icon_top.png') no-repeat;
+    background: url('../images/shopmyphamhan-icon_top.png') no-repeat;
 }
 
 /* topNav */
@@ -310,12 +310,12 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
 
 .product-list .readmore { text-align: right; margin: 15px; }
 
-/* Products by Category voxenangcacloai-icon-category */
+/* Products by Category shopmyphamhan-icon-category */
 #wrapper h2.product-name-by-cate { padding: 10px; background-color: #90d900; color: white; font-size: 20px; font-weight: bold; text-align: left; text-shadow: none; }
 #wrapper .module-left {  }
 .module-left .category-list { border: 1px solid #EAEAEA; }
 .category-list h3 { background-color: #F4F4F4; padding: 5px 10px; color: #0088CC; font-weight: bold; text-align: left; }
-.category-list li { line-height: 30px; padding-left: 35px; padding-right: 10px; border-bottom: 1px dotted #EAEAEA; background: url("../images/voxenangcacloai-icon-category.jpg") no-repeat 10px 3px; }
+.category-list li { line-height: 30px; padding-left: 35px; padding-right: 10px; border-bottom: 1px dotted #EAEAEA; background: url("../images/shopmyphamhan-icon-category.jpg") no-repeat 10px 3px; }
 .category-list li a { text-align: left; }
 .module-left .banner { margin-top: 10px; border: 1px solid #EAEAEA; }
 .module-left .banner:first-child { margin-top: 0; }
@@ -323,7 +323,7 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
             .module-left .banner ul { margin-top: 20px; padding-bottom: 10px; }
             .module-left .banner li { line-height: 20px; margin: 10px 10px 0; border-bottom: 1px dotted #EAEAEA;
                 /*padding: 5px 10px 5px 20px;
-                background: url("../images/voxenangcacloai-icon-category.jpg") no-repeat 0 8px;*/ }
+                background: url("../images/shopmyphamhan-icon-category.jpg") no-repeat 0 8px;*/ }
             .module-left .banner li:last-child { border-bottom: none; }
             .module-left .banner li:first-child { margin: 0 10px; }
     #wrapper .module-cart { }
@@ -339,8 +339,8 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
                 table td.value { color: #f44747!important; font-size: 140%; font-family: Georgia,"Times New Roman",Times,serif; font-style: italic; text-align: right; }
                 table td input { width: 10%;}
                 table td.bold { font-weight: bold; text-align: right; }
-                    span.button-update-cart { padding: 5px 15px; cursor: pointer; background: url(../images/vm2-sprite.png) no-repeat top left!important;  }
-                    span.delete-product { padding: 5px 10px; cursor: pointer; background: url(../images/vm2-sprite.png) no-repeat top left!important; background-position: 0 -212px!important }
+                    span.button-update-cart { padding: 5px 15px; cursor: pointer; background: url(../images/shopmyphamhan-vm2-sprite.png) no-repeat top left!important;  }
+                    span.delete-product { padding: 5px 10px; cursor: pointer; background: url(../images/shopmyphamhan-vm2-sprite.png) no-repeat top left!important; background-position: 0 -212px!important }
             .cart-order { padding: 15px 0; overflow: hidden; }
                 .cart-order h3 { font-size: 18px; font-weight: bold; }
                 .cart-order a, .cart-order p { float: right; padding: 5px 9px; text-align: center; border: solid #CAC9C9 1px; border-radius: 4px; -webkit-border-radius: 4px; }
@@ -376,8 +376,8 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
 .product-detail span, .product-detail .product-short-description, .product-detail p { line-height: 20px; color: #999; }
 .product-detail p.no-price span { color: #02ABD6; font-weight: bold; }
 .product-detail .product-neighbours { margin-bottom: 30px; border-top: none; }
-.product-detail .product-neighbours .previous-page { float: left; line-height: 20px; padding-left: 24px; background: url('../images/control.png') 0 2px no-repeat }
-.product-detail .product-neighbours .next-page { float: right; line-height: 20px; padding-right: 24px; background: url('../images/control.png') 100% -19px no-repeat }
+.product-detail .product-neighbours .previous-page { float: left; line-height: 20px; padding-left: 24px; background: url('../images/shopmyphamhan-control.png') 0 2px no-repeat }
+.product-detail .product-neighbours .next-page { float: right; line-height: 20px; padding-right: 24px; background: url('../images/shopmyphamhan-control.png') 100% -19px no-repeat }
 
 /* image */
 .product-detail .product-images .main-image { max-height: 300px; margin-bottom: 10px; text-align: center; }
@@ -466,8 +466,8 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
 }
 
 .quantity-controls input[type="button"] { height: 15px; border: none; width: 15px; border: 0 !important; background-color: transparent !important; box-shadow: none !important; cursor: pointer; }
-.quantity-controls .quantity-plus { background: url(../images/quantity-controls.png) repeat-x; margin-bottom: 2px; }
-.quantity-controls .quantity-minus { background: url(../images/quantity-controls.png) repeat-x; background-position: 15px 0; }
+.quantity-controls .quantity-plus { background: url(../images/shopmyphamhan-quantity-controls.png) repeat-x; margin-bottom: 2px; }
+.quantity-controls .quantity-minus { background: url(../images/shopmyphamhan-quantity-controls.png) repeat-x; background-position: 15px 0; }
 
 
 .manufacturer, .product-desc { color: #999999; }
@@ -637,7 +637,7 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
 .quickLinks .quickBox {  }
 .quickLinks .quickBox h3 { padding-left: 15px; color: #333; font-weight: bold; text-align: left; }
 .quickLinks .quickBox ul { padding-left: 15px; }
-.quickLinks .quickBox li { margin-top: 5px; padding-left: 23px; background: url("../images/voxenangcacloai-icon-category.jpg") no-repeat 0 3px; }
+.quickLinks .quickBox li { margin-top: 5px; padding-left: 23px; background: url("../images/shopmyphamhan-icon-category.jpg") no-repeat 0 3px; }
 .quickLinks .quickBox a { color: #0088CC; }
 .quickLinks .quickBox a:hover { color: #333; }
 
