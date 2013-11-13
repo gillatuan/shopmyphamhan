@@ -147,7 +147,7 @@ class Products extends CActiveRecord {
             $this->create_date = time();
         }
         $this->alias = Helper::unicode_convert($this->name);
-	$this->page = !empty($postProduct['page']) ? implode(',', $postProduct['page']) : '';
+        $this->page = !empty($postProduct['page']) ? implode(',', $postProduct['page']) : '';
 
         return parent::beforeSave();
     }

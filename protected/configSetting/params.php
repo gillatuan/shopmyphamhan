@@ -17,21 +17,21 @@
 //
 	define('DB_HOST' , 'power3.mschosting.com');
 //
-	define('DB_NAME' , 'thietkew_shopmyphamhan');
+	define('DB_NAME' , 'thietkew_vomam');
 //
 	define('DB_PORT' , 3306);
 //
-	define('DB_PSWD' , 'm6ph1m0903664464');
+	define('DB_PSWD' , 'Ng9cT71n!@#BcA');
 //
-	define('DB_USER' , 'thietkew_mypham');
+	define('DB_USER' , 'thietkew');
 //
 	define('DEFAULT_BO_LAYOUT', '//layouts/main');
 //
 	define('DEFAULT_LAYOUT', '//layouts/home');
 //
-	define('DEFAULT_META_DESCRIPTION', 'Chuyên cung cấp vỏ xe nâng, mâm xe nâng, vỏ xe điện mới, cũ, nhiều kích cớ,đầy đủ nhà sản xuất Aichi,Bridgestone,... giá cả phải chăng,luôn làm hài lòng quý khách gần xa.Hotline: 0913.600.210');
+	define('DEFAULT_META_DESCRIPTION', 'Chuyên cung cấp vỏ xe nâng Bergougnan đặc ruột 600-9,Vỏ xe nâng TongYong đặc ruột 700-12,Vỏ xe điện Komatsu 305x152,Vỏ xe nâng Aichi đặc ruột 700-12,Vỏ xe nâng Aichi đặc ruột 28x9-15/700,Vỏ xe nâng TongYong đặc ruột 700-12, vỏ xe nâng, mâm xe nâng, vỏ xe điện mới, cũ, nhiều kích cớ,đầy đủ nhà sản xuất Aichi,Bridgestone,... giá cả phải chăng,luôn làm hài lòng quý khách gần xa.Hotline: 0913.600.210');
 //
-	define('DEFAULT_META_KEYWORDS', 'Vỏ xe nâng, mâm xe nâng, vỏ xe điện mới, cũ, nhiều loại từ 500-9,650-10,300-10... với đầy đủ nhà sản xuất Aichi,Bridgestone,... ');
+	define('DEFAULT_META_KEYWORDS', 'Vỏ xe nâng, mâm xe nâng, vỏ xe điện mới, cũ, nhiều loại từ 500-9,650-10,300-10, đến 28x9-15,... với đầy đủ nhà sản xuất Aichi,Bridgestone,Kumho... ');
 //
 	define('INDEX_PAGE', 1);
 //
@@ -41,7 +41,7 @@
 //
 	define('MAIL_SENDER_ADDRESS', 'gangtergilla4@gmail.com');
 //
-	define('MAIL_SENDER_NAME', 'Contact Web3in1');
+	define('MAIL_SENDER_NAME', 'Contact Thietkeweb3in1');
 //
 	define('None_Spam', 2);
 //
@@ -72,4 +72,3 @@
 	define('Type_Post', 1);
 
 
-        

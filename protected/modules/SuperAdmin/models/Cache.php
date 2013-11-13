@@ -44,12 +44,7 @@ class Cache extends CActiveRecord {
                 'integerOnly' => true
             ),
             array(
-                'name',
-                'length',
-                'max' => 255
-            ),
-            array(
-                'description',
+                'name, description',
                 'length',
                 'max' => 255
             ), // The following rule is used by search().

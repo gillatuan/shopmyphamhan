@@ -1,7 +1,7 @@
 <?php
 $explode = Helper::explodeCharData($data->image);
 $noImage = Helper::baseUrl() . '/uploads/no_image.gif';
-$dataImage = $data->image ? (is_array($explode) ? $explode[0] : $explode) : $noImage;
+$dataImage = $data->image ? Helper::renderImage($data->image, 'uploads/details/Products', ',', true) : '/uploads/no_image.gif';
 ?>
     <div class="wrapper-module module product-detail">
         <div class="product-neighbours">
@@ -18,7 +18,7 @@ $dataImage = $data->image ? (is_array($explode) ? $explode[0] : $explode) : $noI
         </div>
         <div class="sixcol product-images">
             <div class="main-image">
-                <img src="<?php echo $dataImage != $noImage ? '/uploads/details/Products/' . $dataImage : $noImage; ?>" alt="<?php echo $data->name; ?>" />
+                <img src="<?php echo $dataImage; ?>" />
             </div>
             <?php if (is_array($explode)) { ?>
             <ul class="thumb-image clearfix">

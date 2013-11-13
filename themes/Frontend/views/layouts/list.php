@@ -62,7 +62,6 @@
 </div>
 
 <!--JS-->
-<?php Helper::cs()->registerCoreScript('jquery'); ?>
 <?php Helper::cs()->registerScriptFile(Helper::themeUrl() . '/js/imgLiquid-min.js', CClientScript::POS_END); ?>
 <?php Helper::cs()->registerScriptFile(Helper::themeUrl() . '/js/css3-mediaqueries.js', CClientScript::POS_END); ?>
 

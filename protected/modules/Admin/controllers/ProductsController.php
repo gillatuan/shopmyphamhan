@@ -85,7 +85,7 @@ class ProductsController extends BackendController {
             $model->info = $postProduct['info'];
             $model->image = $uploadImage;
             if ($model->save()) {
-                Helper::setFlash('successMessage', 'Successfully.');
+                Helper::setFlash('SUCCESS_MESSAGE', 'Successfully.');
                 // rebuild Cache
                 Cache::model()->getCacheDependency(array(
                     'name'        => 'cache-product-' . $model->alias,

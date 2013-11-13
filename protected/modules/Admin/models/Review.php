@@ -13,6 +13,7 @@
  * @property string $product_id
  * @property double $rating
  * @property string $ip_address
+ * @property string   $page
  *
  * The followings are the available model relations:
  * @property Products $product
@@ -118,8 +119,24 @@ class Review extends CActiveRecord {
             $this->create_date = time();
             $this->status = PENDING;
         }
+        $this->page = !empty($postProduct['page']) ? implode(',', $postProduct['page']) : '';
 
         return parent::beforeSave();
+    }
+
+    protected function beforeValidate() {
+        if (Helper::post('Review')) {
+            $postReview = Helper::post('Review');
+            $this->page = !empty($postReview['page']) ? implode(',', $postReview['page']) : Helper::post('value');
+        }
+
+        return parent::beforeValidate();
+    }
+
+    protected function afterFind() {
+        $this->page = explode(',', $this->page);
+
+        return parent::afterFind();
     }
 
     public function saveParams($model, $params, $fk) {

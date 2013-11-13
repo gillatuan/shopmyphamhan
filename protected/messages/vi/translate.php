@@ -120,7 +120,7 @@ return array(
 
 
     'confirmDelete'                   => 'Bạn chắc chắn muốn xóa item này',
-    'Contact_Info'                    => 'Nếu bạn có bất kỳ câu hỏi, hay ý kiến đóng góp về Shop Mỹ Phầm Hàn đừng ngần ngại liên hệ với chúng tôi bằng cách điền vào biểu mẫu bên dưới. Chân thành cảm ơn.',
+    'Contact_Info'                    => 'Nếu bạn có bất kỳ câu hỏi, hay ý kiến đóng góp, về sản phẩm Vỏ mâm xe nâng Ngọc Thanh đừng ngần ngại liên hệ với chúng tôi bằng cách điền vào biểu mẫu bên dưới. Chân thành cảm ơn.',
 
     // Captcha
     'hintField' => 'Hãy điền vào ô trống phía dưới chính xác những chữ mà bạn thấy trong hình.<br /> Không phân biệt hoa thường', //'Please enter the letters as they are shown in the image above.<br/>Letters are not case-sensitive.',
@@ -151,6 +151,8 @@ return array(
     'SUCCESS_ORDER' => 'Cám ơn bạn đã mua hàng tại cửa hàng chúng tôi. Chúc bạn 1 ngày thật vui vẻ và hạnh phúc. !!!',
     'SUCCESS_CONTACT' => 'Cám ơn bạn đã liên hệ với chúng tôi. Chúng tôi sẽ liên lạc với bạn trong thời gian sớm nhất. Chân thành cám ơn.',
     'SUCCESS_MESSAGE' => 'Chúc mừng, Bạn đã cập nhật dữ liệu thành công !!!',
+    'successSubmittingReview' => 'Cám ơn bạn đã chia sẻ ý kiến, chúng tôi cần kiểm duyệt lại. Thanks !!!',
+
     'TEXT_NOTIFICATION_SUCCESS_WELCOME' => 'Chúng tôi hân hạnh chào đón bạn',/* Welcome */
     /* Change Password Successfully.*/
     'TEXT_NOTIFICATION_SUCCESS_CHANGE_PASSWORD' => 'Thay đổi mật khẩu thành công',
