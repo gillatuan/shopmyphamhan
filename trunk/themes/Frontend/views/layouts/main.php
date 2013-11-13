@@ -6,21 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="content-language" content="<?php echo Yii::app()->language ?>"/>
     <title><?php echo $this->pageTitle; ?></title>
+<!--<meta name="majestic-site-verification" content="MJ12_bde25495-e68e-4fd7-9ccf-898054e7af80" />-->
+    <meta name="google-site-verification" content="sAmO6s7z_MB7TXyiescu6zh8ubWEvOSXxdRm_JnpoAc" />
     <meta name="author" content="Bui Doan Ngoc Tuan" />
     <meta name="robots" content="index, follow, noarchive"/>
     <meta name='revisit-after' content='1 days'/>
 
     <link rel="canonical" href="<?php echo $this->canonicalUrl; ?>" />
     <link rel="shortcut icon" href="/uploads/favicon.ico" type="image/x-icon" />
+
+    <script>
+        (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,"script","//www.google-analytics.com/analytics.js","ga");
+
+        ga("create", "UA-32319582-2", "vomamxenang.com");
+        ga("send", "pageview");
+    </script>
 </head>
 <body>
 <div id="topNav">
     <div class="container clearfix">
         <div class="row">
             <div class="threecol floatleft logo">
-                <h1><a href="<?php echo Helper::url('/Shop/product/index') ?>" title="shopmyphamhan.com">
-                    <span class="shopmypham">Shopmypham</span>
-                    <span class="han">han</span>
+                <h1><a href="<?php echo Helper::url('/Shop/product/index') ?>" title="vomamxenang.com">
+                    <span class="voxenang">Vomam</span>
+                    <span class="xenang">xenang</span>
                     <span class="domain">.com</span>
                 </a></h1>
             </div>
@@ -152,8 +164,8 @@
             </form>
         </li>
         <li class="hot-products twocol last"><a href="#" title="Hot product">Hot Products</a></li>
-        <li class="hot-line threecol last"><p>Hot line: <span>0903.66.44.64</span></p></li>
-        <li class="nav-social floatright fourcol last">
+        <li class="hot-line fourcol last"><p>Hot line: <span>0913.600210 - 012.79.59.39.79</span></p></li>
+        <li class="nav-social floatright threecol last">
             <?php $url = Yii::app()->createAbsoluteUrl(Yii::app()->request->requestUri); ?>
             <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $url; ?>" target="_blank" title="Facebook social">
                 <img class="footer_social" src="<?php echo Helper::themeUrl(); ?>/images/facebook_24.png" border="0" alt="facebook social" />
@@ -185,10 +197,11 @@
 
 <!-- JS -->
 <?php Helper::cs()->registerCoreScript('jquery'); ?>
+<?php Helper::cs()->registerCoreScript('jquery.ui');?>
 <?php Helper::cs()->registerScriptFile(Helper::themeUrl() . "/js/jquery.nivo.slider.js", CClientScript::POS_END) ;?>
 <?php Helper::cs()->registerScriptFile(Helper::themeUrl() . "/js/imgLiquid-min.js", CClientScript::POS_END) ;?>
 <?php $scriptJSMainPage = '
-$.fn.followTo = function (name, pos, width) {
+    $.fn.followTo = function (name, pos, width) {
         var $this = this,
             $window = $(window);
 
@@ -217,7 +230,8 @@ $.fn.followTo = function (name, pos, width) {
             }
         });
     };
-$(function() {
+
+    $(function() {
         /* scroll to top*/
         $(window).scroll(function(){
             if ($(this).scrollTop() > 100) {

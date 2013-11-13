@@ -185,7 +185,7 @@
 </div>
 
 <?php Helper::cs()->registerCoreScript('jquery'); ?>
-<?php Helper::cs()->registerCoreScript('jquery.ui');?>
+<?php Helper::cs()->registerCoreScript('jquery.ui'); ?>
 <?php Helper::cs()->registerScriptFile(Helper::themeUrl() . "/js/simpla.jquery.configuration.js", CClientScript::POS_END) ;?>
 <?php Helper::cs()->registerScriptFile(Helper::themeUrl() . "/js/menudrop.js", CClientScript::POS_END) ;?>
 <?php Helper::cs()->registerScriptFile(Helper::themeUrl() . "/js/common.js", CClientScript::POS_END) ;?>

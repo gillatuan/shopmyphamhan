@@ -83,8 +83,10 @@ $('.search-form form').submit(function(){
         'rating',
         array(
             'name' => 'page',
-            'value' => 'CHtml::checkBox("changeValue[$data->id]", $data->page, array("style" => "width: 70px; padding: 2px 5px;", "class" => "changeValue page"))',
+            'value' => 'Helper::printArray("Display_On_Page", $data->page)',
+            /* 'CHtml::checkBox("changeValue[$data->id]", $data->page, array("style" => "width: 70px; padding: 2px 5px;", "class" => "changeValue page"))',*/
             'type'  => 'raw',
+            'htmlOptions' => array('style' => 'width: 70px; max-width: 70px; word-wrap: break-word; overflow: hidden')
         ),
         array(
             'name'        => 'status',
