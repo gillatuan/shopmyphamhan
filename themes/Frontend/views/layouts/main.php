@@ -12,7 +12,7 @@
     <meta name="robots" content="index, follow, noarchive"/>
     <meta name='revisit-after' content='1 days'/>
 
-    <link rel="canonical" href="<?php echo $this->canonicalUrl; ?>" />
+<!--    <link rel="canonical" href="--><?php //echo $this->canonicalUrl; ?><!--" />-->
     <link rel="shortcut icon" href="/uploads/shopmyphamhan-favicon.ico" type="image/x-icon" />
 
     <script>
