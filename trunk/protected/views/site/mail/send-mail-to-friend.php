@@ -69,7 +69,7 @@
     <?php if (count($products)) { ?>
         <?php foreach ($products as $k=>$product) {
             $classLast = ($k+1) % 3 == 0 ? 'last' : '';
-            $image = $product->image ? Helper::baseUrl() . '/uploads/Products/' . Helper::explodeCharData($product->image, ',', false, true) : Helper::baseUrl() . '/uploads/no_image.gif';
+            $image = $product->image ? Helper::baseUrl() . '/uploads/Products/' . Helper::explodeCharData($product->image, ',', false, true) : Helper::baseUrl() . '/uploads/no_image.jpg';
             $notMarginTop = $k==0 || $k == 1 || $k == 2 ? 'not-margin-top' : '';
             ?>
             <div class="product <?php echo $notMarginTop; ?> threecol <?php echo $classLast; ?>">

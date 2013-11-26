@@ -28,6 +28,7 @@ return array(
         'application.modules.SuperAdmin.models.Cache',
         'application.modules.SuperAdmin.models.Lookup',
         'application.modules.Admin.models.*',
+        'ext.ExtendedClientScript.jsmin.JSMin',
     ),
 
     'modules'=>array(
@@ -62,11 +63,6 @@ return array(
             'itemChildTable'=>'authitemchild',
             'assignmentTable'=>'authassignment',
         ),
-
-        // MinifyClientScript
-        /*'clientScript'=>array(
-            'class'=>'application.components.MinifyClientScript',
-        ),*/
 
         // uncomment the following to enable URLs in path-format
         'urlManager'=>require(dirname(__FILE__).'/../configSetting/rewriteUrl.php'),

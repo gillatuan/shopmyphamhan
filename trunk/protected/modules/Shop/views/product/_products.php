@@ -1,6 +1,6 @@
 <?php
-$image = $data->image ? Helper::baseUrl() . '/uploads/Products/' . Helper::explodeCharData($data->image, ',', false, true) : Helper::baseUrl() . '/uploads/no_image.gif';
-$image = $data->image ? Helper::renderImage($data->image, 'uploads/Products', ',', false, true) : Helper::baseUrl() . '/uploads/no_image.gif';
+$image = $data->image ? Helper::baseUrl() . '/uploads/Products/' . Helper::explodeCharData($data->image, ',', false, true) : Helper::baseUrl() . '/uploads/no_image.jpg';
+$image = $data->image ? Helper::renderImage($data->image, 'uploads/Products', ',', false, true) : Helper::baseUrl() . '/uploads/no_image.jpg';
 $last = ($index + 1) % 4 == 0 ? 'last' : '';
 ?>
 <div class="style-product <?php echo $last; ?>">

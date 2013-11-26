@@ -6,7 +6,7 @@
     <?php if (count($modelProducts)) { ?>
         <?php foreach ($modelProducts as $k=>$product) {
             $classLast = $isOnIndex ? (($k+1)%4 == 0 ? 'last' : '') : (($k+1)%3 == 0 ? 'last' : '');
-            $image = $product->image ? '/uploads/resizeOnIndex/' . $model . '/' . Helper::explodeCharData($product->image, ',', false, true) : '/uploads/no_image.gif';
+            $image = $product->image ? '/uploads/resizeOnIndex/' . $model . '/' . Helper::explodeCharData($product->image, ',', false, true) : '/uploads/no_image.jpg';
             $notMarginTop = !$isOnIndex ? ($k==0 || $k == 1 || $k == 2 ? 'not-margin-top' : '') : '';
         ?>
             <div class="product <?php echo $notMarginTop; ?> <?php echo $amountCol; ?> <?php echo $classLast; ?>">

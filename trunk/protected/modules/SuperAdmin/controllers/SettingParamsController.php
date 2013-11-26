@@ -121,7 +121,7 @@ class SettingParamsController extends BackendController {
         if (isset($_POST['SettingParams'])) {
             $model->attributes = $_POST['SettingParams'];
             if ($model->save()) {
-                $this->redirect(array('configParams'));
+                $this->redirect(array('update'));
             }
         }
         $this->render('update', array(
