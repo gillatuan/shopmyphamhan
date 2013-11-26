@@ -60,14 +60,9 @@ return array(
             'assignmentTable'=>'authassignment',
         ),
 
-        // MinifyClientScript
-        'clientScript'=>array(
-            'class'=>'application.components.MinifyClientScript',
-        ),
-
         // uncomment the following to enable URLs in path-format
         'urlManager'=> array(
-//            'urlFormat'=>'path',
+            'urlFormat'=>'path',
 //            'urlSuffix'=>'.html',
             'showScriptName' => false,
             'rules'          => array(

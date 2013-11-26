@@ -1,7 +1,7 @@
 <?php
 $explode = Helper::explodeCharData($data->image);
-$noImage = Helper::baseUrl() . '/uploads/no_image.gif';
-$dataImage = $data->image ? Helper::renderImage($data->image, 'uploads/details/Products', ',', true) : '/uploads/no_image.gif';
+$noImage = Helper::baseUrl() . '/uploads/no_image.jpg';
+$dataImage = $data->image ? Helper::renderImage($data->image, 'uploads/details/Products', ',', true) : '/uploads/no_image.jpg';
 ?>
     <div class="wrapper-module module product-detail">
         <div class="product-neighbours">

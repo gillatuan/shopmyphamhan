@@ -1,74 +1,74 @@
 <?php
 
-            //
-	define('ADMIN_EMAIL', 'gangtergilla4@gmail.com');
 //
-	define('APPROVED', 1);
+define('ADMIN_EMAIL', 'master@shopmyphamhan.com');
 //
-	define('BO_PAGE_SIZE', 10);
+define('APPROVED', 1);
 //
-	define('BO_SUPER_ADMIN_THEME', 'SuperAdmin');
+define('BO_PAGE_SIZE', 10);
 //
-	define('BO_THEME', 'Backend');
+define('BO_SUPER_ADMIN_THEME', 'SuperAdmin');
 //
-	define('Cache_Time', 600);
+define('BO_THEME', 'Backend');
 //
-	define('commentCount', 10);
+define('Cache_Time', 600);
 //
-	define('DB_HOST' , 'power3.mschosting.com');
+define('commentCount', 10);
 //
-	define('DB_NAME' , 'thietkew_shopmyphamhan');
+define('DB_HOST' , 'localhost');
 //
-	define('DB_PORT' , 3306);
+define('DB_NAME' , 'tuanbui_shopmyphamhan');
 //
-	define('DB_PSWD' , 'T71n@123');
+define('DB_PORT' , 3306);
 //
-	define('DB_USER' , 'thietkew_root');
+define('DB_PSWD' , 'u2e2a7yqa');
 //
-	define('DEFAULT_BO_LAYOUT', '//layouts/main');
+define('DB_USER' , 'tuanbui');
 //
-	define('DEFAULT_LAYOUT', '//layouts/home');
+define('DEFAULT_BO_LAYOUT', '//layouts/main');
 //
-	define('DEFAULT_META_DESCRIPTION', 'Chuyên cung cấp vỏ xe nâng Bergougnan đặc ruột 600-9,Vỏ xe nâng TongYong đặc ruột 700-12,Vỏ xe điện Komatsu 305x152,Vỏ xe nâng Aichi đặc ruột 700-12,Vỏ xe nâng Aichi đặc ruột 28x9-15/700,Vỏ xe nâng TongYong đặc ruột 700-12, vỏ xe nâng, mâm xe nâng, vỏ xe điện mới, cũ, nhiều kích cớ,đầy đủ nhà sản xuất Aichi,Bridgestone,... giá cả phải chăng,luôn làm hài lòng quý khách gần xa.Hotline: 0913.600.210');
+define('DEFAULT_LAYOUT', '//layouts/home');
 //
-	define('DEFAULT_META_KEYWORDS', 'Vỏ xe nâng, mâm xe nâng, vỏ xe điện mới, cũ, nhiều loại từ 500-9,650-10,300-10, đến 28x9-15,... với đầy đủ nhà sản xuất Aichi,Bridgestone,Kumho... ');
+define('DEFAULT_META_DESCRIPTION', 'Chuyên cung cấp vỏ xe nâng Bergougnan đặc ruột 600-9,Vỏ xe nâng TongYong đặc ruột 700-12,Vỏ xe điện Komatsu 305x152,Vỏ xe nâng Aichi đặc ruột 700-12,Vỏ xe nâng Aichi đặc ruột 28x9-15/700,Vỏ xe nâng TongYong đặc ruột 700-12, vỏ xe nâng, mâm xe nâng, vỏ xe điện mới, cũ, nhiều kích cớ,đầy đủ nhà sản xuất Aichi,Bridgestone,... giá cả phải chăng,luôn làm hài lòng quý khách gần xa.Hotline: 0913.600.210');
 //
-	define('INDEX_PAGE', 1);
+define('DEFAULT_META_KEYWORDS', 'Vỏ xe nâng, mâm xe nâng, vỏ xe điện mới, cũ, nhiều loại từ 500-9,650-10,300-10, đến 28x9-15,... với đầy đủ nhà sản xuất Aichi,Bridgestone,Kumho... ');
 //
-	define('ITEM_PER_PAGE', 10);
+define('INDEX_PAGE', 1);
 //
-	define('MAIL_METHOD', 'smtp');
+define('ITEM_PER_PAGE', 10);
 //
-	define('MAIL_SENDER_ADDRESS', 'gangtergilla4@gmail.com');
+define('MAIL_METHOD', 'smtp');
 //
-	define('MAIL_SENDER_NAME', 'Contact Thietkeweb3in1');
+define('MAIL_SENDER_ADDRESS', 'gangtergilla4@gmail.com');
 //
-	define('None_Spam', 2);
+define('MAIL_SENDER_NAME', 'Contact Thietkeweb3in1');
 //
-	define('Offline' , 2);
+define('None_Spam', 2);
 //
-	define('Online'  , 1);
+define('Offline' , 2);
 //
-	define('PAGE_SIZE', 10);
+define('Online'  , 1);
 //
-	define('PENDING' , 2);
+define('PAGE_SIZE', 10);
 //
-	define('SMTP_HOST', 'smtp.gmail.com');
+define('PENDING' , 2);
 //
-	define('SMTP_PASSWORD', 'Ng9cT71n');
+define('SMTP_HOST', 'smtp.gmail.com');
 //
-	define('SMTP_PORT', 465);
+define('SMTP_PASSWORD', 'Ng9cT71n');
 //
-	define('SMTP_SECURE', 'ssl');
+define('SMTP_PORT', 465);
 //
-	define('SMTP_USERNAME', 'gangtergilla4@gmail.com');
+define('SMTP_SECURE', 'ssl');
 //
-	define('tagCloudCount ', 10);
+define('SMTP_USERNAME', 'gangtergilla4@gmail.com');
 //
-	define('THEME'   , 'Frontend');
+define('tagCloudCount ', 10);
 //
-	define('Transport_Charge', 0);
+define('THEME'   , 'Frontend');
 //
-	define('Type_Post', 1);
+define('Transport_Charge', 0);
+//
+define('Type_Post', 1);
 
 

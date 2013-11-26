@@ -105,6 +105,12 @@
             </div>
         <?php } ?>
 
+        <div class="row checkboxList">
+            <?php echo $form->labelEx($model, 'page'); ?>
+            <?php echo $form->checkBoxList($model, 'page', Lookup::items('Display_On_Page'), array('class' => 'text-input small-input')); ?>
+            <?php echo $form->error($model, 'page'); ?>
+        </div>
+
         <div class="row buttons">
             <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
         </div>

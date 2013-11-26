@@ -1,5 +1,5 @@
 <?php
-$dataImage = $data->image ? Helper::renderImage($data->image, 'uploads/original/News', ',', false, true) : Helper::baseUrl() . '/uploads/no_image.gif';
+$dataImage = $data->image ? Helper::renderImage($data->image, 'uploads/original/News', ',', false, true) : Helper::baseUrl() . '/uploads/no_image.jpg';
 $thumbImage = Helper::explodeCharData($data->image);
  ?>
 <div class="wrapper-module module product-detail">

@@ -63,6 +63,6 @@
     </div><!-- form -->
 
     <div class="map sixcol last">
-        <iframe src="http://mapsengine.google.com/map/embed?mid=z22EohenwnGA.kOzlbPlkTYuM" width="400" height="371"></iframe>
+        <iframe width="400" height="371" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?ie=UTF8&amp;cid=6933340410710384689&amp;q=V%E1%BB%8F+m%C3%A2m+xe+n%C3%A2ng+Ng%E1%BB%8Dc+Thanh&amp;gl=US&amp;hl=vi&amp;hq=V%E1%BB%8F+m%C3%A2m+xe+n%C3%A2ng+Ng%E1%BB%8Dc+Thanh&amp;hnear=&amp;t=m&amp;iwloc=A&amp;ll=10.73226,106.61278&amp;spn=0.006295,0.006295&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com/maps?ie=UTF8&amp;cid=6933340410710384689&amp;q=V%E1%BB%8F+m%C3%A2m+xe+n%C3%A2ng+Ng%E1%BB%8Dc+Thanh&amp;gl=US&amp;hl=vi&amp;hq=V%E1%BB%8F+m%C3%A2m+xe+n%C3%A2ng+Ng%E1%BB%8Dc+Thanh&amp;hnear=&amp;t=m&amp;iwloc=A&amp;ll=10.73226,106.61278&amp;spn=0.006295,0.006295&amp;source=embed" style="color:#0000FF;text-align:left">Xem Bản đồ cỡ lớn hơn</a></small>
     </div>
 </div>
