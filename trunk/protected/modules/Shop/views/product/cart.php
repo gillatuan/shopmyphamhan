@@ -24,7 +24,7 @@
                 if (count($showCart)) {
                     foreach ($showCart as $cart) {
                         ?>
-                        <tr>
+                        <tr id="id-<?php echo $cart['alias']; ?>">
                             <td class="product-name"><?php echo $cart['name']; ?></td>
                             <td><?php echo Helper::formatNumber($cart['price']); ?></td>
                             <td><input type="text" class="product-amount" value="<?php echo $cart['quantity']; ?>" />
@@ -32,7 +32,7 @@
                                 <input type="hidden" class="product-price" value="<?php echo $cart['price']; ?>" />
                                 <input type="hidden" class="product-discount" value="<?php echo $cart['valueDiscount'] ?>" />
                                 <input type="hidden" class="product-value" value="<?php echo $cart['valueAfterDiscount']; ?>" />
-                                <span class="button-update-cart" title="Cập nhật số lượng" id="id-<?php echo $cart['alias']; ?>"></span>
+                                <span class="button-update-cart" title="Cập nhật số lượng"></span>
                                 <span class="delete-product" title="Xóa sản phẩm"></span>
                             </td>
                             <td class="bold"><?php echo $cart['formatValueDiscount']; ?></td>

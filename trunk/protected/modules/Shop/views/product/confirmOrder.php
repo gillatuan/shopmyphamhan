@@ -126,7 +126,7 @@ $scriptBuyThisOrder = '
                 type: "post",
                 data: { confirmOrder: confirmOrder },
                 success: function(data){
-                    window.location = "' . Helper::url('/site/index', array('flashOrder' => true)) . '";
+                    window.location = "' . Helper::url('/Shop/product/index', array('flashOrder' => true)) . '";
                 }
             });
 

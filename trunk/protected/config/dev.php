@@ -62,7 +62,7 @@ return array(
 
         // uncomment the following to enable URLs in path-format
         'urlManager'=> array(
-            'urlFormat'=>'path',
+//            'urlFormat'=>'path',
 //            'urlSuffix'=>'.html',
             'showScriptName' => false,
             'rules'          => array(
@@ -98,7 +98,7 @@ return array(
 
         // uncomment the following to use a MySQL database
         'db'=>array(
-            'connectionString' => 'mysql:host=localhost;port=3306;dbname=prj_voxe',
+            'connectionString' => 'mysql:host=localhost;port=3306;dbname=prj_myphamhan',
             'emulatePrepare'   => true,
             'username'         => 'root',
             'password'         => '',
