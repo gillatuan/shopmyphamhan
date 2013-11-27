@@ -324,6 +324,7 @@
 
                 if (typeCart != "delOneCart" && param.quantity > 0) {
                     $.each( decodeData, function( key, dataCart ) {
+//                    console.log(dataCart.alias); return;
                         if (dataCart.alias == alias) {
                             if($(".your-cart").text() == "Cart Empty") {
                                 $(".your-cart").text("Bạn có 1 Sản phẩm trong giỏ hàng.");
@@ -334,8 +335,8 @@
                             if (typeCart == "updateCart") {
                                 $(".addcart-success").html("Bạn đã cập nhật sản phẩm " + dataCart.name + " với số lượng " + dataCart.quantity + " vào giỏ hàng.");
                                 objectThis.parent().find(".product-value").val(dataCart.valueAfterDiscount);
-                                $("#id-" + alias).parent().parent().find(".value.formatValueAfterDiscount").text(dataCart.formatValueAfterDiscount);
-                                $("#id-" + alias).parent().parent().find(".bold").text(dataCart.formatValueDiscount);
+                                $("#id-" + alias + " .formatValueAfterDiscount").text(dataCart.formatValueAfterDiscount);
+                                $("#id-" + alias + " .bold").text(dataCart.formatValueDiscount);
 
                                 if ($("tbody .bold").text() == "") {
                                     $("table tbody").html("<tr><td colspan=5>Không có bất kỳ sản phẩm nào trong giỏ hàng của bạn cả.</td></tr>")
