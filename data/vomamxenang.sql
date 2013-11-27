@@ -348,8 +348,8 @@ CREATE TABLE IF NOT EXISTS `site_banner` (
 
 INSERT INTO `site_banner` (`id`, `name`, `alias`, `info`, `page_link`, `image`, `position`, `page`, `status`, `ordering`, `create_date`, `expired_date`) VALUES
 (1, 'Banner 1', 'Banner-1', '12345', 'http://voxe.web3in1.com', '', '1', '2', '1', NULL, 1378789311, 1410282000),
-(2, 'Banner Vỏ xe nâng Aichi 28x9-15 - 700', 'Banner-Vo-xe-nang-Aichi-28x9-15---700', 'Vỏ xe nâng Aichi 28x9-15 - 700, giá cả phải chăng,luôn làm hài lòng quý khách gần xa.Hotline: 0913.600.210', 'http://vomamxenang.com/shop/Vo-xe-nang-dac-ruot/Vo-xe-nang-Aichi-dac-ruot-28x9-15-700', '2013_10_09_10_22_59-vomamxenang-Vo-xe-nang-Aichi_28x9-15-700_2.jpg', '1', '1,2', '1', 2, 1378882209, 1410368400),
-(3, 'Banner Vỏ xe nâng Bergougnan 600-9', 'Banner-Vo-xe-nang-Bergougnan-600-9', 'Vỏ xe nâng Bergougnan 600-9, giá cả phải chăng,luôn làm hài lòng quý khách gần xa.Hotline: 0913.600.210', 'http://vomamxenang.com/shop/Vo-xe-nang-dac-ruot/Vo-xe-nang-Bergougnan-dac-ruot-600-9', '2013_10_09_10_26_07-vomamxenang-Vo-xe-nang-Bergougnan_600-9.jpg', '1', '1,3', '1', 3, 1378885871, 1410368400);
+(2, 'Banner Vỏ xe nâng Aichi 28x9-15 - 700', 'Banner-Vo-xe-nang-Aichi-28x9-15---700', 'Vỏ xe nâng Aichi 28x9-15 - 700, giá cả phải chăng,luôn làm hài lòng quý khách gần xa.Hotline: 0913.600.210', 'http://shopmyphamhan.com/shop/Vo-xe-nang-dac-ruot/Vo-xe-nang-Aichi-dac-ruot-28x9-15-700', '2013_10_09_10_22_59-vomamxenang-Vo-xe-nang-Aichi_28x9-15-700_2.jpg', '1', '1,2', '1', 2, 1378882209, 1410368400),
+(3, 'Banner Vỏ xe nâng Bergougnan 600-9', 'Banner-Vo-xe-nang-Bergougnan-600-9', 'Vỏ xe nâng Bergougnan 600-9, giá cả phải chăng,luôn làm hài lòng quý khách gần xa.Hotline: 0913.600.210', 'http://shopmyphamhan.com/shop/Vo-xe-nang-dac-ruot/Vo-xe-nang-Bergougnan-dac-ruot-600-9', '2013_10_09_10_26_07-vomamxenang-Vo-xe-nang-Bergougnan_600-9.jpg', '1', '1,3', '1', 3, 1378885871, 1410368400);
 
 -- --------------------------------------------------------
 

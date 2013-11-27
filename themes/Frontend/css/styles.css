@@ -2,7 +2,7 @@
 /* ! Layout for desktop version   */
 /* ============================== */
 body {
-    background: #FAFAFA;
+    background: #FAEBD7;
 }
 
 p, span, li { color: #999999; font: 14px Arial, VNI-Bodan, sans-serif;  margin: 0; padding: 0; text-align: justify; }
@@ -135,14 +135,14 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
 }
 
 /* topNav */
-#topNav { min-height: 65px; background-color: #90d900; }
+#topNav { min-height: 65px; background-color: #FFA07A; }
 #topNav .logo { position: relative; }
     .logo h1 { text-align: left; }
-    .logo h1 span { font-size: 20px; }
-    .logo h1 a:hover { color: white; text-decoration: none; }
+    .logo h1 span { font-family: Trebuchet MS; color: white; font-size: 20px; }
+    .logo h1 a:hover { color: #02ABD6; text-decoration: none; }
     .shopmypham { line-height: 55px; letter-spacing: 2px; font-size: 35px !important; text-transform: uppercase; }
-    .han { position: absolute; top: 40px; left: 202px; }
-    .domain { color: white; position: absolute; top: 40px; left: 233px; }
+    .han { position: absolute; top: 40px; left: 157px; }
+    .domain { color: white; position: absolute; top: 40px; left: 191px; }
 
     #topNav .menu { float: right; }
     #topNav .menu a, #topNav .menu p { line-height: 60px; color: #ffffff; font-weight: bold; }
@@ -157,13 +157,13 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
 #header .menu-categories { background-color: #F4F4F4; border-radius: 4px 4px 0 0; display: inline-block;}
 .menu-categories li { float: left; position: relative; }
 .menu-categories a { padding: 10px 15px; color: #02ABD6; font-size: 18px; }
-.menu-categories a span { color: #02ABD6; }
+.menu-categories a span { color: #02ABD6; font-weight: bold; }
 .menu-categories a:hover span { color: #848400; }
 .menu-categories a:hover, .menu-categories a.active { color: white; background-color: #ffffbb; border-radius: 4px 4px 0 0; text-decoration: none; }
 
         /* Sub menu khi hover qua category */
         .menu-categories ul li:hover a, .menu-categories li:hover li a {
-            background: #ffffbb;
+            background: #FFA07A;
             border: none;
             color: white;
         }
@@ -216,7 +216,7 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
 #wrapper .products-in-category { margin-top: 30px; border-bottom: 1px solid #EAEAEA; }
 #wrapper .products-in-category:first-child { margin-top: 0; }
 #wrapper .products-in-category.not-border-bottom .addcart-success { margin: 20px 0; }
-.products-in-category h2 { padding: 10px; color: #fff; background-color: #90d900; font-size: 20px; font-weight: bold; text-align: left; text-shadow: none; }
+.products-in-category h2 { padding: 10px; color: #fff; background-color: #FFA07A; font-size: 20px; font-weight: bold; text-align: left; text-shadow: none; }
 
 /* tabs */
 .tab-buttons { overflow: hidden; }
@@ -252,7 +252,7 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
         .products-in-category .product-list { margin-bottom: 10px; padding: 0 18px 0 22px; }
         .products-in-category .product-list.topbottom-20 { padding: 20px 18px 20px 22px; }
         .product-list .product {
-            height: 385px; margin-right: 3.5%; margin-top: 20px; padding: 10px 0; overflow: hidden;
+            height: 415px; margin-right: 3.5%; margin-top: 20px; padding: 10px 0; overflow: hidden;
             box-shadow: 0 0 1px #ccc;
             -moz-box-shadow: 0 0 1px #ccc;
             -webkit-box-shadow: 0 0 1px #ccc;
@@ -311,11 +311,11 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
 .product-list .readmore { text-align: right; margin: 15px; }
 
 /* Products by Category shopmyphamhan-icon-category */
-#wrapper h2.product-name-by-cate { padding: 10px; background-color: #90d900; color: white; font-size: 20px; font-weight: bold; text-align: left; text-shadow: none; }
+#wrapper h2.product-name-by-cate { padding: 10px; background-color: #FFA07A; color: white; font-size: 20px; font-weight: bold; text-align: left; text-shadow: none; }
 #wrapper .module-left {  }
 .module-left .category-list { border: 1px solid #EAEAEA; }
 .category-list h3 { background-color: #F4F4F4; padding: 5px 10px; color: #0088CC; font-weight: bold; text-align: left; }
-.category-list li { line-height: 30px; padding-left: 35px; padding-right: 10px; border-bottom: 1px dotted #EAEAEA; background: url("../images/shopmyphamhan-icon-category.jpg") no-repeat 10px 3px; }
+.category-list li { line-height: 30px; padding-left: 35px; padding-right: 10px; border-bottom: 1px dotted #EAEAEA; background: url("../images/shopmyphamhan-icon-category.jpg") no-repeat 10px 8px; }
 .category-list li a { text-align: left; }
 .module-left .banner { margin-top: 10px; border: 1px solid #EAEAEA; }
 .module-left .banner:first-child { margin-top: 0; }
@@ -395,7 +395,7 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
 .product-detail .vote { overflow: hidden; }
 .product-detail .vote span { float: left; }
 .product-detail .vote .text-rating { margin-right: 10px; }
-.price-group .vote { margin-top: 5px; }
+.price-group .vote { margin-top: 5px; position: relative; top: 5px; }
 
 .product-detail .price { margin-top: 10px; }
 .product-detail .price .sale-off {
@@ -511,7 +511,7 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
 
 /* Some Review */
 #wrapper .comments { margin-bottom: 20px; }
-.comments h2 { padding: 10px; background-color: #FBCA15; color: #ffffff; font-size: 18px; font-weight: bold; text-align: left; text-shadow: none;
+.comments h2 { padding: 10px; background-color: #FFA07A; color: #ffffff; font-size: 18px; font-weight: bold; text-align: left; text-shadow: none;
 }
 .comments .comment-list { padding: 0 1%; }
 .comment-list .comment { margin-right: 1.9%; margin-top: 20px; padding-right: 1%; border-right: 1px solid #EAEAEA; }
@@ -632,7 +632,7 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
 
 /* quickLinks */
 #wrapper .quickLinks { padding-bottom: 20px; }
-.quickLinks h2 { padding: 10px; background-color: green; color: #ffffff; font-size: 18px; font-weight: bold; text-align: left; text-shadow: none;
+.quickLinks h2 { padding: 10px; background-color: #FFA07A; color: #ffffff; font-size: 18px; font-weight: bold; text-align: left; text-shadow: none;
 }
 .quickLinks .quickBox {  }
 .quickLinks .quickBox h3 { padding-left: 15px; color: #333; font-weight: bold; text-align: left; }
@@ -648,7 +648,7 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
 
 
 /* nav-fixed */
-#nav-fixed { width: 99%; background-color: green; border-radius: 5px 5px 0 0; position: fixed; bottom: 0; left: 0.5%; z-index: 10; }
+#nav-fixed { width: 99%; background-color: #FFA07A; border-radius: 5px 5px 0 0; position: fixed; bottom: 0; left: 0.5%; z-index: 10; }
     #nav-fixed ul { padding: 10px; overflow: hidden; }
     #nav-fixed ul li { padding-left: 10px; border-left: 1px solid #808080; }
     #nav-fixed ul li:first-child { padding-right: 10px; border-left: none; }
@@ -658,16 +658,17 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
 
     /* .hot-products */
     #nav-fixed ul li.hot-products { padding: 4px 10px 0; }
-    #nav-fixed ul li.hot-products a { color: #FBCA15; font-weight: bold; font-size: 18px !important; }
+    #nav-fixed ul li.hot-products a { color: #FFA07A; font-weight: bold; font-size: 18px !important; }
 
     /* .hot-line */
     #nav-fixed ul li.hot-line {  }
     #nav-fixed ul li.hot-line p { color: #ffffff; font: bold 18px Tahoma !important; }
-    #nav-fixed ul li.hot-line span { color: #FBCA15; font-size: 20px !important; font-weight: bold; }
+    #nav-fixed ul li.hot-line span { color: #0088CC; font-size: 20px !important; font-weight: bold; }
 
     /* .nav-social */
     #nav-fixed li.nav-social { width: 8%; height: 26px; }
     #nav-fixed li.nav-social a { float: left; margin-left: 5px; opacity: 0.5; }
+    #nav-fixed li.nav-social a img { width: 24px; height: 25px; }
     #nav-fixed li.nav-social a:hover { opacity: 1; }
     #nav-fixed li.nav-social a:first-child { margin-left: 0; }
 

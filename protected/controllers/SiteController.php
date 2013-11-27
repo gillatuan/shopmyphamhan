@@ -42,7 +42,7 @@ class SiteController extends FrontendController
             'keywords' => Yii::app()->language == 'vi' ? $keywords : 'homepage, homepage design web, homepage shopmyphamhan',
             'description' => Yii::app()->language == 'vi' ? $keywords : 'homepage, homepage design web, homepage shopmyphamhan',
             'title' => $pageTitle,
-            'type' => 'Blog',
+            'type' => 'Shop',
             'url' => Yii::app()->createAbsoluteUrl('/site/index'),
             'image' => '',
             'site_name' => $pageTitle,

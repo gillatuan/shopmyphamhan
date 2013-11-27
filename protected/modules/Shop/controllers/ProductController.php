@@ -236,7 +236,7 @@ class ProductController extends FrontendController {
                 $params = array(
                     'viewPath' => 'application.views.site.mail',
                     'view'     => 'registration_confirmation',
-                    'subject'  => 'Vomamxenang.com Member Registration Confirmation',
+                    'subject'  => 'Shopmyphamhan.com Member Registration Confirmation',
                     'body'     => array(
                         'username' => $model->username,
                         'password' => $postUser['password'],
@@ -300,6 +300,7 @@ class ProductController extends FrontendController {
                 $dataCart[] = count($newCart);
                 $dataCart = array_merge($dataCart);
             }
+            $dataCart = Helper::objectToArray($dataCart);
 
             echo CJSON::encode($dataCart);
             Yii::app()->end();
@@ -378,7 +379,7 @@ class ProductController extends FrontendController {
             $params = array(
                 'viewPath' => 'application.views.site.mail',
                 'view'     => 'send_cart_order',
-                'subject'  => 'Vomamxenang.com - Đơn đặt hàng',
+                'subject'  => 'Shopmyphamhan.com - Đơn đặt hàng',
                 'body'     => array(
                     'billTo'   => $billTo,
                     'shipTo'   => $shipTo,
@@ -386,7 +387,7 @@ class ProductController extends FrontendController {
                     'cartInfo' => $cartInfo
                 ),
                 'mailTo'   => $billTo['email'],
-                'mailFrom' => array(ADMIN_EMAIL => 'Vỏ mâm xe nâng - ' . ADMIN_EMAIL)
+                'mailFrom' => array(ADMIN_EMAIL => 'Shop Mỹ Phẩm Hàn - ' . ADMIN_EMAIL)
             );
             // send
             Helper::sendMail($params);
@@ -477,11 +478,9 @@ class ProductController extends FrontendController {
         );
         $pageTitle = $this->includeText . 'Hỏi đáp';
         $seo = array(
-<<<<<<< .mine            'keywords'    => Yii::app()->language == 'vi' ? "Hỏi đáp, đặt câu hỏi, những vấn đề liên quan đến shop của chúng tôi " . DEFAULT_META_KEYWORDS . 'vomamxenang.com' : "FAQ, send your question, regarding to our shop",
-            'description' => Yii::app()->language == 'vi' ? "Hỏi đáp, đặt câu hỏi, những vấn đề liên quan đến shop của chúng tôi " . DEFAULT_META_DESCRIPTION . ' vomamxenang.com' : "FAQ, send your question, regarding to our shop",
-=======            'keywords'    => Yii::app()->language == 'vi' ? "Hỏi đáp, đặt câu hỏi, những vấn đề liên quan đến shop của chúng tôi " . DEFAULT_META_KEYWORDS . 'shopmyphamhan.com' : "FAQ, send your question, regarding to our shop",
+            'keywords'    => Yii::app()->language == 'vi' ? "Hỏi đáp, đặt câu hỏi, những vấn đề liên quan đến shop của chúng tôi " . DEFAULT_META_KEYWORDS . 'shopmyphamhan.com' : "FAQ, send your question, regarding to our shop",
             'description' => Yii::app()->language == 'vi' ? "Hỏi đáp, đặt câu hỏi, những vấn đề liên quan đến shop của chúng tôi " . DEFAULT_META_DESCRIPTION . ' shopmyphamhan.com' : "FAQ, send your question, regarding to our shop",
->>>>>>> .theirs            'title'       => $pageTitle,
+            'title'       => $pageTitle,
             'type'        => 'Tin Tức',
             'url'         => Yii::app()->createAbsoluteUrl(Yii::app()->request->requestUri),
             'image'       => '',

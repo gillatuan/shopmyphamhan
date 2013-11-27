@@ -14,7 +14,7 @@
         </div>
         <div class="products-in-category not-border-bottom not-margin-top ninecol last">
             <?php $this->widget('zii.widgets.CBreadcrumbs', array(
-                'homeLink'    => CHtml::link('Vỏ mâm xe nâng Ngọc Thanh', Helper::url('/Shop/product/index'), array('title' => 'Vỏ mâm xe nâng Ngọc Thanh')),
+                'homeLink'    => CHtml::link('Shop Mỹ Phẩm Hàn', Helper::url('/Shop/product/index'), array('title' => 'Shop Mỹ Phẩm Hàn')),
                 'links'       => $this->breadcrumbs,
                 'htmlOptions' => array(
                     'id'    => 'PageBreadcrumb',
