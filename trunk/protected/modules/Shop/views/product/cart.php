@@ -36,7 +36,7 @@
                                 <span class="delete-product" title="Xóa sản phẩm"></span>
                             </td>
                             <td class="bold"><?php echo $cart['formatValueDiscount']; ?></td>
-                            <td class="value"><?php echo $cart['formatValueAfterDiscount']; ?></td>
+                            <td class="value formatValueAfterDiscount"><?php echo $cart['formatValueAfterDiscount']; ?></td>
                         </tr>
                         <?php $valueItem += $cart['valueAfterDiscount']; ?>
                     <?php } ?>

@@ -29,14 +29,14 @@
 <div id="topNav">
     <div class="container clearfix">
         <div class="row">
-            <div class="threecol floatleft logo">
+            <div class="fourcol floatleft logo">
                 <h1><a href="<?php echo Helper::url('/Shop/product/index') ?>" title="shopmyphamhan.com">
                     <span class="shopmypham">Shopmypham</span>
                     <span class="han">han</span>
                     <span class="domain">.com</span>
                 </a></h1>
             </div>
-            <div class="ninecol floatright last">
+            <div class="eightcol floatright last">
                 <ul class="menu">
                     <?php if (Helper::user()->isGuest) { ?>
                         <li><a href="<?php echo Helper::url('/site/login'); ?>" title="Đăng nhập">Đăng nhập</a></li>
@@ -46,7 +46,7 @@
                     <?php } ?>
                     <li><a href="<?php echo Helper::url('/Shop/product/faq'); ?>" title="Hỏi đáp">Hỏi đáp</a></li>
                     <li><a href="<?php echo Helper::url('/site/contact'); ?>" title="Liên hệ">Liên hệ</a></li>
-                    <li><a class="yahoo" href="ymsgr:sendim?ngoctuan3010842003" title="Hỗ trợ Online"><img src="http://opi.yahoo.com/online?u=ngoctuan3010842003&m=g&t=2&l=us" /></a></li>
+                    <li><a class="yahoo" href="ymsgr:sendim?thuylinhshop06" title="Hỗ trợ Online"><img src="http://opi.yahoo.com/online?u=thuylinhshop06&m=g&t=2&l=us" /></a></li>
                 </ul>
             </div>
         </div>
@@ -60,7 +60,6 @@
                  <?php $this->widget('Shop.components.NavCategory', array(
                     'parent' => 0
                  )) ?>
-                 <li><a href="<?php echo Helper::url('/Shop/product/readNews', array('newsAlias' => 'Giao-nhan-hang-hoa-xuat-nhap-khau')) ?>" title="Giao nhận hàng hoá xuất nhập khẩu"><span>Giao nhận hàng hoá xuất nhập khẩu</span></a></li>
             </ul>
         </div>
         <div class="row topbottom-20 bg-white">
@@ -139,12 +138,12 @@
         <div class="row">
             <div class="time-activity fourcol">
                 <h3>THỜI GIAN BÁN HÀNG:</h3>
-                <p><strong>8h sáng - 18h tối</strong>.(Từ Thứ 2 - Chủ Nhật)</p>
+                <p><strong>8h sáng - 20h tối</strong>.(Từ Thứ 2 - Chủ Nhật)</p>
             </div>
             <div class="copyright fourcol">
                 <h3>BẢN QUYỀN THUỘC SHOPMYPHAMHAN.COM.</h3>
-                <p>Địa chỉ: Số 3 Bùi Tư Toàn F.An Lạc Q.Bình Tân</p>
-                <p>Email: <a href="mailto:tuan.buidoanngoc@gmail.com">tuan.buidoanngoc@gmail.com</a></p>
+                <p>Địa chỉ: 32/53/19 Ông Ích Khiêm, F.14, Quận 11</p>
+                <p>Email: <a href="mailto:thuylinhshop06@yahoo.com">thuylinhshop06@yahoo.com</a></p>
                 <p>All Rights Reserved. Designed by <a href="http://web3in1.com" title="Web3in1.com">Web3in1.com</a></p>
             </div>
             <div class="pttt fourcol last">
@@ -164,7 +163,7 @@
             </form>
         </li>
         <li class="hot-products twocol last"><a href="#" title="Hot product">Hot Products</a></li>
-        <li class="hot-line fourcol last"><p>Hot line: <span>0903.66.44.64</span></p></li>
+        <li class="hot-line sixcol last"><p>Hot line: <span>0906977244 - 0903.66.44.64 - Ms.Linh, Mr.Thanh</span></p></li>
         <li class="nav-social floatright threecol last">
             <?php $url = Yii::app()->createAbsoluteUrl(Yii::app()->request->requestUri); ?>
             <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $url; ?>" target="_blank" title="Facebook social">
@@ -211,21 +210,21 @@
                     $this.css({
                         width: width,
                         position: "fixed",
-                        bottom: 25
+                        top: 10
 //                        right: 10
                     });
                 } else {
                     $this.css({
                         width: width,
                         position: "fixed",
-                        bottom: 45,
+                        top: 10,
                         left: 10
                     })
                 }
             } else {
                 $this.css({
                     position: "relative",
-                    bottom: 0
+                    top: 0
                 })
             }
         });
@@ -278,62 +277,6 @@
             return false;
         })
 
-    function processAjax(url, param, objectThis, alias, typeCart) {
-        $(".addcart-success").show().html(\'<img src="' . Helper::themeUrl() .'/images/shopmyphamhan-loading.gif" alt="loading image" />\');
-        $.ajax({
-            url: url,
-            type: "post",
-            data: param,
-            success: function(data){
-                var decodeData = jQuery.parseJSON(data);
-
-                if (typeCart != "delOneCart" && param.quantity > 0) {
-                    $.each( decodeData, function( key, dataCart ) {
-                        if (dataCart.alias == alias) {
-                            if($(".your-cart").text() == "Cart Empty") {
-                                $(".your-cart").text("Bạn có 1 Sản phẩm trong giỏ hàng.");
-                            } else {
-                                $(".your-cart").text("Bạn có " + dataCart.amountProductsInCart + " Sản phẩm trong giỏ hàng.");
-                            }
-
-                            if (typeCart == "updateCart") {
-                                $(".addcart-success").html("Bạn đã cập nhật sản phẩm " + dataCart.name + " với số lượng " + dataCart.quantity + " vào giỏ hàng.");
-
-                                objectThis.parent().find(".product-value").val(dataCart.valueAfterDiscount);
-                                $("#id-" + alias).parent().parent().find(".value").text(dataCart.formatValueAfterDiscount);
-                                $("#id-" + alias).parent().parent().find(".bold").text(dataCart.formatValueDiscount);
-
-                                if ($("tbody .bold").text() == "") {
-                                    $("table tbody").html("<tr><td colspan=5>Không có bất kỳ sản phẩm nào trong giỏ hàng của bạn cả.</td></tr>")
-                                } else {
-                                    $(".total-value").val(dataCart.totalValueAfterDiscount)
-                                    $(".total").text(dataCart.formatTotalValueAfterDiscount);
-                                }
-                            } else {
-                                $(".addcart-success").html("Bạn đã thêm sản phẩm " + dataCart.name + " với số lượng " + dataCart.quantity + " vào giỏ hàng.");
-                            }
-                        }
-                    });
-                } else if (typeCart == "delOneCart" || param.quantity == 0) {
-                    objectThis.parent().parent().remove();
-
-                    if ($("tbody .bold").text() == "") {
-                        $("table tbody").html("<tr><td colspan=5>Không có bất kỳ sản phẩm nào trong giỏ hàng của bạn cả.</td></tr>");
-                        $(".your-cart").text("Giỏ hàng rỗng.");
-                    } else {
-                        $(".total-value").val(decodeData[1])
-                        $(".total").text(decodeData[2]);
-                        $(".your-cart").text("Bạn còn " + (decodeData[3]) + " Sản phẩm trong giỏ hàng.");
-                    }
-                    $(".addcart-success").html("Bạn đã xóa sản phẩm " + objectThis.parent().parent().find(".product-name").text() + " thành công.");
-                }
-                setTimeout(function() { $(".addcart-success").fadeOut("slow"); }, 3000);
-
-                return false;
-            }
-        });
-    }
-
         /* followTo */
         $(".yahoo").followTo("yahoo", 150, 125)
         $(".cart").followTo("cart", 650, 650)
@@ -369,6 +312,61 @@
             afterLoad: function(){} // Triggers when slider has loaded
         });
     })
+
+    function processAjax(url, param, objectThis, alias, typeCart) {
+        $(".addcart-success").show().html(\'<img src="' . Helper::themeUrl() .'/images/shopmyphamhan-loading.gif" alt="loading image" />\');
+        $.ajax({
+            url: url,
+            type: "post",
+            data: param,
+            success: function(data){
+                var decodeData = jQuery.parseJSON(data);
+
+                if (typeCart != "delOneCart" && param.quantity > 0) {
+                    $.each( decodeData, function( key, dataCart ) {
+                        if (dataCart.alias == alias) {
+                            if($(".your-cart").text() == "Cart Empty") {
+                                $(".your-cart").text("Bạn có 1 Sản phẩm trong giỏ hàng.");
+                            } else {
+                                $(".your-cart").text("Bạn có " + dataCart.amountProductsInCart + " Sản phẩm trong giỏ hàng.");
+                            }
+
+                            if (typeCart == "updateCart") {
+                                $(".addcart-success").html("Bạn đã cập nhật sản phẩm " + dataCart.name + " với số lượng " + dataCart.quantity + " vào giỏ hàng.");
+                                objectThis.parent().find(".product-value").val(dataCart.valueAfterDiscount);
+                                $("#id-" + alias).parent().parent().find(".value.formatValueAfterDiscount").text(dataCart.formatValueAfterDiscount);
+                                $("#id-" + alias).parent().parent().find(".bold").text(dataCart.formatValueDiscount);
+
+                                if ($("tbody .bold").text() == "") {
+                                    $("table tbody").html("<tr><td colspan=5>Không có bất kỳ sản phẩm nào trong giỏ hàng của bạn cả.</td></tr>")
+                                } else {
+                                    $(".total-value").val(dataCart.totalValueAfterDiscount)
+                                    $(".total").text(dataCart.formatTotalValueAfterDiscount);
+                                }
+                            } else {
+                                $(".addcart-success").html("Bạn đã thêm sản phẩm " + dataCart.name + " với số lượng " + dataCart.quantity + " vào giỏ hàng.");
+                            }
+                        }
+                    });
+                } else if (typeCart == "delOneCart" || param.quantity == 0) {
+                    objectThis.parent().parent().remove();
+
+                    if ($("tbody .bold").text() == "") {
+                        $("table tbody").html("<tr><td colspan=5>Không có bất kỳ sản phẩm nào trong giỏ hàng của bạn cả.</td></tr>");
+                        $(".your-cart").text("Giỏ hàng rỗng.");
+                    } else {
+                        $(".total-value").val(decodeData[1])
+                        $(".total").text(decodeData[2]);
+                        $(".your-cart").text("Bạn còn " + (decodeData[3]) + " Sản phẩm trong giỏ hàng.");
+                    }
+                    $(".addcart-success").html("Bạn đã xóa sản phẩm " + objectThis.parent().parent().find(".product-name").text() + " thành công.");
+                }
+                setTimeout(function() { $(".addcart-success").fadeOut("slow"); }, 3000);
+
+                return false;
+            }
+        });
+    }
 ';
 Helper::cs()->registerScript('scriptJSMainPage', $scriptJSMainPage,CClientScript::POS_END);
 ?>

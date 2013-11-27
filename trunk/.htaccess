@@ -2,8 +2,8 @@
 
 RewriteEngine on
 
-#RewriteCond %{HTTP_HOST} !^vomamxenang\.com$ [NC]
-#RewriteRule ^(.*)$ http://vomamxenang.com/$1 [R=301,L]
+#RewriteCond %{HTTP_HOST} !^shopmyphamhan\.com$ [NC]
+#RewriteRule ^(.*)$ http://shopmyphamhan.com/$1 [R=301,L]
 
 # Specify the folder in which the application resides.
 # Use / if the application is in the root.

@@ -92,7 +92,7 @@ class ProductsController extends BackendController {
                     'description' => 'cache for Product ' . $model->alias
                 ));
 
-                $this->redirect(array('update', 'id' => $id));
+                $this->redirect(array('update', 'id' => $id ? $id : $model->id));
             }
         }
         $this->render('update', array(
