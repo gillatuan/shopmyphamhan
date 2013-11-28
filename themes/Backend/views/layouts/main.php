@@ -213,7 +213,7 @@
         });
     })
 </script>
-<!-- Internet Explorer .png-fix --><!--[if IE 6]>
+<!-- Internet Explorer .png-fix --><!--[if lt IE 6]>
 <script type="text/javascript" src="<?php echo Helper::themeUrl(); ?>/js/DD_belatedPNG_0.0.7a.js"></script>
 <script type="text/javascript">
     DD_belatedPNG.fix('.png_bg, img, li');

@@ -41,7 +41,8 @@ class CategoryController extends BackendController {
                 'allow', // allow admin user to perform 'admin' and 'delete' actions
                 'actions' => array(
                     'admin',
-                    'delete'
+                    'delete',
+                    'updateNested'
                 ),
                 'users'   => array('admin'),
             ),
@@ -85,8 +86,8 @@ class CategoryController extends BackendController {
             // assign value
             $model->attributes = Helper::post('Category');
             $size = array(
-                'w' => '250',
-                'h' => '159',
+                'wOnIndex' => '250',
+                'hOnIndex' => '159',
                 'typeSize' => ''
             );
             $uploadImage       = Helper::uploadImage($model, 'image', 'Category', true, false, $size);
@@ -135,11 +136,6 @@ class CategoryController extends BackendController {
 
      */
     public function actionAdmin() {
-        $model = new Category('search');
-        $model->unsetAttributes(); // clear any default values
-        if (isset($_GET['Category'])) {
-            $model->attributes = Helper::get('Category');
-        }
         $criteria = new CDbCriteria;
         $criteria->compare('parent_id', 0);
         $criteria->order = 'id desc';
@@ -169,18 +165,38 @@ class CategoryController extends BackendController {
         ));
     }
 
+    public function actionUpdateNested() {
+        if (Helper::post() && Helper::post('type')) {
+            $decodeNested = CJSON::decode(Helper::post('dataNested'));
+            $this->renderNested($decodeNested);
+        }
+    }
+
+    protected function renderNested($nested, $parentId=0) {
+        if (!empty($nested)) {
+            foreach ($nested as $nest) {
+                Category::model()->updateByPk($nest['id'], array(
+                    'parent_id' => $parentId
+                ));
+                if (!empty($nest['children']) && !empty($nest['id'])) {
+                    $this->renderNested($nest['children'], $nest['id']);
+                }
+            }
+        }
+    }
+
     public function renderNestedCategory($viewFile, $models) {
         foreach ($models as $index => $model) {
-            echo '<li class="sortable" id="items-' . $model->id . '">';
+            echo '<li class="dd-item" data-id="' . $model->id . '">';
             Yii::app()->controller->renderFile($viewFile, array(
                 'class' => 'odd',
                 'model' => $model
             ));
             $children = $model->children;
             if (is_array($children) && count($children)) {
-                echo '<ul>';
+                echo '<ol class="dd-list">';
                 $this->renderNestedCategory($viewFile, $children);
-                echo '</ul>';
+                echo '</ol>';
             }
             echo '</li>';
         }

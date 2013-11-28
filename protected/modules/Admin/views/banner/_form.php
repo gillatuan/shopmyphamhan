@@ -25,11 +25,29 @@
         <?php echo $form->error($model, 'name'); ?>
     </div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'info'); ?>
-        <?php echo $form->textArea($model,'info', array('rows' => 8, 'class' => 'medium-input')); ?>
-        <?php echo $form->error($model,'info'); ?>
-	</div>
+        <div class="row tinymce">
+            <?php echo $form->labelEx($model, 'info'); ?>
+            <?php
+            $this->widget('ext.tinymce.TinyMce', array(
+                'model' => $model,
+                'attribute' => 'info',
+                // Optional config
+//                'compressorRoute' => 'tinyMce/compressor',
+                'spellcheckerUrl' => array('tinyMce/spellchecker'),
+                // or use yandex spell: http://api.yandex.ru/speller/doc/dg/tasks/how-to-spellcheck-tinymce.xml
+//                'spellcheckerUrl' => 'http://speller.yandex.net/services/tinyspell',
+                'fileManager' => array(
+                    'class' => 'ext.elFinder.TinyMceElFinder',
+                    'connectorRoute'=> 'elfinder/connector', // elfinder controller, connector action
+                ),
+                'htmlOptions' => array(
+                    'rows' => 6,
+                    'cols' => 60,
+                ),
+            ));
+            ?>
+            <?php echo $form->error($model, 'info'); ?>
+        </div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'page_link'); ?>

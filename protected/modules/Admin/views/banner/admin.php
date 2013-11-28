@@ -28,7 +28,7 @@ $('.search-form form').submit(function(){
 
 
 <div class="content-box-header">
-    <h3>Qu?n lý Banner</h3>
+    <h3>Quản lý Banner</h3>
     <ul class="content-box-tabs">
         <li><a href="#tab1" class="default-tab">Table</a></li>
         <!-- href must be unique and match the id of target div -->
