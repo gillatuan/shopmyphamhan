@@ -139,6 +139,12 @@
             <div class="time-activity fourcol">
                 <h3>THỜI GIAN BÁN HÀNG:</h3>
                 <p><strong>8h sáng - 20h tối</strong>.(Từ Thứ 2 - Chủ Nhật)</p>
+                <p>online: <?php echo Yii::app()->counter->getOnline(); ?></p>
+                <p>today: <?php echo Yii::app()->counter->getToday(); ?></p>
+                <p>yesterday: <?php echo Yii::app()->counter->getYesterday(); ?></p>
+                <p>total: <?php echo Yii::app()->counter->getTotal(); ?></p>
+                <p>maximum: <?php echo Yii::app()->counter->getMaximal(); ?></p>
+                <p>date for maximum: <?php echo date('d.m.Y', Yii::app()->counter->getMaximalTime()); ?></p>
             </div>
             <div class="copyright fourcol">
                 <h3>BẢN QUYỀN THUỘC SHOPMYPHAMHAN.COM.</h3>

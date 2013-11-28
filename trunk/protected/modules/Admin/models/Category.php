@@ -143,9 +143,9 @@ class Category extends CActiveRecord {
             $this->status = APPROVED;
         }
         $postCate        = Helper::post('Category');
-        $this->parent_id = $postCate['parent_id'] ? $postCate['parent_id'] : 0;
+        $this->parent_id = !empty($postCate['parent_id']) ? $postCate['parent_id'] : (!empty($this->parent_id) ? $this->parent_id : 0);
         $this->alias     = Helper::unicode_convert($this->name);
-        $this->page = !empty($postCate['page']) ? implode(',', $postCate['page']) : '';
+        $this->page = !empty($postCate['page']) ? implode(',', $postCate['page']) : (!empty($this->page) ? $this->page : '');
 
 
         return parent::beforeSave();

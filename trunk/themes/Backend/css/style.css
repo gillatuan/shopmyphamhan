@@ -795,3 +795,4 @@ body#login {
 .category li ul { padding: 0; }
 .items-cate { }
     .items-cate ul { padding-left: 20px !important; }
+.sortable li { cursor: move; }
