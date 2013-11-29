@@ -60,6 +60,11 @@ return array(
             'assignmentTable'=>'authassignment',
         ),
 
+        // UserCounter
+        'counter' => array(
+            'class' => 'UserCounter',
+        ),
+
         // uncomment the following to enable URLs in path-format
         'urlManager'=> array(
 //            'urlFormat'=>'path',

@@ -256,4 +256,26 @@ class UserCounter extends CComponent
 		return $this->user_time;
 	}
 
+    /**
+     * Draw image for each digit.
+     * $value: the number to be drawn.
+     * $st: style name.
+     * $ex: digit image extension.
+     */
+    public function drawValue($value,$st,$ex)
+    {
+        $base_url = "images/";
+        $default_style = 'blue';
+        $style      = (strlen(trim($st)) > 0) ? $st : $default_style;
+        $style_dir  = 'counterstyles/' . $style . '/';
+        $default_ext = 'gif';
+        $ext        = (strlen(trim($ex)) > 0) ? $ex : $default_ext;
+
+        /* Print out Javascript code and exit */
+        $len = strlen($value);
+        for ($i=0;$i<$len;$i++)
+        {
+            echo '<img src="'.$base_url . $style_dir . substr($value,$i,1) . '.' . $ext .'" border="0">';
+        }
+    }
 }
