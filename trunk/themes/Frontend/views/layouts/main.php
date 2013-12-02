@@ -162,15 +162,15 @@
 
 <div id="nav-fixed">
     <ul class="twelvecol">
-        <li class="threecol last">
+        <li class="last">
             <form action="<?php echo Helper::url('/site/sendToFriend') ?>" method="post">
                 <input type="text" name="send-mail-to-friend" onfocus="if(this.value=='Gửi email cho bạn bè') this.value='';" onblur="if(this.value=='') this.value='Gửi email cho bạn bè';" value="Gửi email cho bạn bè"> |
                 <input type="submit" value="Gửi">
             </form>
         </li>
-        <li class="hot-products twocol last"><a href="#" title="Hot product">Hot Products</a></li>
+        <li class="hot-products last"><a href="<?php echo Helper::url('/Shop/product/index'); ?>" title="Hot product">Hot Products</a></li>
         <li class="hot-line sixcol last"><p>Hot line: <span>0906.977.244 - 0903.66.44.64 - Ms.Linh, Mr.Thanh</span></p></li>
-        <li class="nav-social floatright threecol last">
+        <li class="nav-social floatright last">
             <?php $url = Yii::app()->createAbsoluteUrl(Yii::app()->request->requestUri); ?>
             <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $url; ?>" target="_blank" title="Facebook social">
                 <img class="footer_social" src="<?php echo Helper::themeUrl(); ?>/images/shopmyphamhan-facebook_24.png" border="0" alt="facebook social" />

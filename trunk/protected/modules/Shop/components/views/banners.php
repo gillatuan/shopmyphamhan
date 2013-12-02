@@ -6,9 +6,9 @@
                 <?php $bannerInfo[] = array(
                     'alias' => $banner->alias,
                     'info' => $banner->info
-                    ) ?>
+                    ); ?>
                 <a href="<?php echo $banner->page_link; ?>" title="<?php echo $banner->name; ?>">
-                    <img src="<?php echo $imgBanner; ?>" alt="<?php echo $banner->name; ?>" title="#htmlcaption-<?php echo $banner->alias; ?>" />
+                    <img src="<?php echo $imgBanner; ?>" alt="<?php echo $banner->name; ?>" title="#htmlcaption-<?php echo $banner->alias; ?>" <?php if (empty($banner->image)) { ?>height="400px" width="400px" <?php } ?> />
                 </a>
             <?php } ?>
         </div>
