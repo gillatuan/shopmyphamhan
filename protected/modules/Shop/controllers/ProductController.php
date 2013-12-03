@@ -59,7 +59,7 @@ class ProductController extends FrontendController {
                 'keywords'    => Yii::app()->language == 'vi' ? "Tìm kiếm - Từ khóa'{$kw}' " . DEFAULT_META_KEYWORDS . ' shopmyphamhan.com' : "product '{$kw}', product '{$kw}' design web, product '{$kw}' shopmyphamhan.com",
                 'description' => Yii::app()->language == 'vi' ? "Tìm kiếm - Từ khóa '{$kw}' " . DEFAULT_META_DESCRIPTION . ' shopmyphamhan.com'  : "product '{$kw}', product '{$kw}' design web, product '{$kw}' shopmyphamhan.com",
                 'title'       => $pageTitle,
-                'type'        => 'Sản phẩm',
+                'type'        => 'Products',
                 'url'         => Yii::app()->createAbsoluteUrl(Yii::app()->request->requestUri),
                 'image'       => '',
                 'site_name'   => $pageTitle,
@@ -92,10 +92,10 @@ class ProductController extends FrontendController {
         );
         $pageTitle = $this->pageTitle = $this->includeText . "{$modelCate->name}";
         $seo = array(
-            'keywords' => Yii::app()->language == 'vi' ? "{$modelCate->description} " . DEFAULT_META_KEYWORDS . 'shopmyphamhan.com' : 'homepage, homepage design web, homepage shopmyphamhan.com',
+            'keywords' => Yii::app()->language == 'vi' ? "{$modelCate->name} " . DEFAULT_META_KEYWORDS . 'shopmyphamhan.com' : 'homepage, homepage design web, homepage shopmyphamhan.com',
             'description' => Yii::app()->language == 'vi' ? "{$modelCate->description} " . DEFAULT_META_DESCRIPTION . ' shopmyphamhan.com' : 'homepage, homepage design web, homepage shopmyphamhan.com',
             'title' => $pageTitle,
-            'type' => 'Sản phẩm',
+            'type' => 'Products',
             'url' => Yii::app()->createAbsoluteUrl(Yii::app()->request->requestUri),
             'image' => '',
             'site_name' => $pageTitle,
@@ -182,7 +182,7 @@ class ProductController extends FrontendController {
             'keywords'    => Yii::app()->language == 'vi' ? "{$productDetail->name}, {$productDetail->info} " . DEFAULT_META_KEYWORDS . 'shopmyphamhan.com' : "{$productDetail->name}, {$productDetail->info}",
             'description' => Yii::app()->language == 'vi' ? "{$productDetail->name}, {$productDetail->info} " . DEFAULT_META_DESCRIPTION . ' shopmyphamhan.com'  : "{$productDetail->name}, {$productDetail->info}",
             'title'       => $pageTitle,
-            'type'        => 'Sản phẩm',
+            'type'        => 'Products',
             'url'         => Yii::app()->createAbsoluteUrl(Yii::app()->request->requestUri),
             'image'       => Yii::app()->createAbsoluteUrl(Helper::renderImage($productDetail->image, 'uploads/details/Products', ',', true, true)),
             'site_name'   => $pageTitle,
@@ -262,7 +262,7 @@ class ProductController extends FrontendController {
             'keywords'    => Yii::app()->language == 'vi' ? "giỏ hàng của bạn, thông tin giỏ hàng " . DEFAULT_META_KEYWORDS . 'shopmyphamhan.com' : "your card, your cart info",
             'description' => Yii::app()->language == 'vi' ? "giỏ hàng của bạn, thông tin giỏ hàng " . DEFAULT_META_DESCRIPTION . ' shopmyphamhan.com' : "your card, your cart info",
             'title'       => $pageTitle,
-            'type'        => 'Sản phẩm',
+            'type'        => 'Products',
             'url'         => Yii::app()->createAbsoluteUrl(Yii::app()->request->requestUri),
             'image'       => '',
             'site_name'   => $pageTitle,
@@ -408,7 +408,7 @@ class ProductController extends FrontendController {
             'keywords'    => Yii::app()->language == 'vi' ? "xác nhận đơn hàng, xác nhân đơn hàng của bạn " . DEFAULT_META_KEYWORDS . 'shopmyphamhan.com' : "confirm your order",
             'description' => Yii::app()->language == 'vi' ? "xác nhận đơn hàng, xác nhân đơn hàng của bạn " . DEFAULT_META_DESCRIPTION . ' shopmyphamhan.com' : "confirm your order",
             'title'       => $pageTitle,
-            'type'        => 'Sản phẩm',
+            'type'        => 'Products',
             'url'         => Yii::app()->createAbsoluteUrl(Yii::app()->request->requestUri),
             'image'       => '',
             'site_name'   => $pageTitle,
@@ -444,7 +444,7 @@ class ProductController extends FrontendController {
             'keywords'    => Yii::app()->language == 'vi' ? "$news->title, $typeNews $news->title " . DEFAULT_META_KEYWORDS . 'shopmyphamhan.com' : "$news->title, $typeNews $news->title",
             'description' => Yii::app()->language == 'vi' ? "$news->title, $typeNews $news->title " . DEFAULT_META_DESCRIPTION . ' shopmyphamhan.com' : "$news->title, $typeNews $news->title",
             'title'       => $pageTitle,
-            'type'        => 'Tin Tức',
+            'type'        => 'News',
             'url'         => Yii::app()->createAbsoluteUrl(Yii::app()->request->requestUri),
             'image'       => '',
             'site_name'   => $pageTitle,
@@ -476,12 +476,12 @@ class ProductController extends FrontendController {
         $this->breadcrumbs = array(
             'Hỏi đáp'
         );
-        $pageTitle = $this->includeText . 'Hỏi đáp';
+        $pageTitle = $this->pageTitle = $this->includeText . 'Hỏi đáp';
         $seo = array(
             'keywords'    => Yii::app()->language == 'vi' ? "Hỏi đáp, đặt câu hỏi, những vấn đề liên quan đến shop của chúng tôi " . DEFAULT_META_KEYWORDS . 'shopmyphamhan.com' : "FAQ, send your question, regarding to our shop",
             'description' => Yii::app()->language == 'vi' ? "Hỏi đáp, đặt câu hỏi, những vấn đề liên quan đến shop của chúng tôi " . DEFAULT_META_DESCRIPTION . ' shopmyphamhan.com' : "FAQ, send your question, regarding to our shop",
             'title'       => $pageTitle,
-            'type'        => 'Tin Tức',
+            'type'        => 'FAQ',
             'url'         => Yii::app()->createAbsoluteUrl(Yii::app()->request->requestUri),
             'image'       => '',
             'site_name'   => $pageTitle,

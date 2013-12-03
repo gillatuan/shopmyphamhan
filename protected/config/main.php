@@ -28,7 +28,6 @@ return array(
         'application.modules.SuperAdmin.models.Cache',
         'application.modules.SuperAdmin.models.Lookup',
         'application.modules.Admin.models.*',
-        'ext.ExtendedClientScript.jsmin.JSMin',
     ),
 
     'modules'=>array(

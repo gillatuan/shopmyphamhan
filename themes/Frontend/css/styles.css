@@ -317,7 +317,7 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
 #wrapper .module-left {  }
 .module-left .category-list { border: 1px solid #EAEAEA; }
 .category-list h3 { background-color: #F4F4F4; padding: 5px 10px; color: #0088CC; font-weight: bold; text-align: left; }
-.category-list li { line-height: 30px; padding-left: 35px; padding-right: 10px; border-bottom: 1px dotted #EAEAEA; background: url("../images/shopmyphamhan-icon-category.jpg") no-repeat 10px 4px; }
+.category-list li { line-height: 30px; padding-left: 35px; padding-right: 10px; border-bottom: 1px dotted #FFA07A; background: url("../images/shopmyphamhan-icon-category.jpg") no-repeat 10px 8px; }
 .category-list li a { text-align: left; }
 .module-left .banner { margin-top: 10px; border: 1px solid #EAEAEA; }
 .module-left .banner:first-child { margin-top: 0; }
