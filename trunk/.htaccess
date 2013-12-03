@@ -1,9 +1,8 @@
 # Enable mod_rewrite
-
 RewriteEngine on
 
-#RewriteCond %{HTTP_HOST} !^shopmyphamhan\.com$ [NC]
-#RewriteRule ^(.*)$ http://shopmyphamhan.com/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} !^shopmyphamhan\.com$ [NC]
+RewriteRule ^(.*)$ http://shopmyphamhan.com/$1 [R=301,L]
 
 # Specify the folder in which the application resides.
 # Use / if the application is in the root.
@@ -122,6 +121,10 @@ SetOutputFilter DEFLATE
 BrowserMatch ^Mozilla/4 gzip-only-text/html
 BrowserMatch ^Mozilla/4.0[678] no-gzip
 BrowserMatch bMSIE !no-gzip !gzip-only-text/html
+
+# Refuse direct access to all files
+Order deny,allow
+Allow from 162.243.99.101
 
 ## otherwise forward it to index.php
 RewriteRule ^.*$ index.php [L]
