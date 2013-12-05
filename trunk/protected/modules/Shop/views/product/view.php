@@ -2,6 +2,12 @@
 $explode = Helper::explodeCharData($data->image);
 $noImage = Helper::baseUrl() . '/uploads/no_image.jpg';
 $dataImage = $data->image ? Helper::renderImage($data->image, 'uploads/details/Products', ',', true) : '/uploads/no_image.jpg';
+
+$explodeFolder = explode('/', $dataImage);
+$imgZoom = '';
+if ($explodeFolder[2] != 'no_image.gif') {
+    $imgZoom = str_replace($explodeFolder[2], 'original', $dataImage);
+}
 ?>
     <div class="wrapper-module module product-detail">
         <div class="product-neighbours">
@@ -18,7 +24,7 @@ $dataImage = $data->image ? Helper::renderImage($data->image, 'uploads/details/P
         </div>
         <div class="sixcol product-images">
             <div class="main-image">
-                <img src="<?php echo $dataImage; ?>" />
+                <img class="zoomImg" src="<?php echo $dataImage; ?>" data-large="<?php echo $imgZoom; ?>" alt="<?php echo $data->name; ?>" />
             </div>
             <?php if (is_array($explode)) { ?>
             <ul class="thumb-image clearfix">
@@ -130,7 +136,10 @@ $(function() {
     $(".thumb-image img").click(function () {
         var srcImage = $(this).attr("alt");
         $(".main-image img").attr("src", "' . Helper::themeUrl() . '/images/loading.gif");
-        $(".main-image img").attr("src", "/uploads/details/Products/" + srcImage);
+        $(".main-image img").attr({
+            "src": "/uploads/details/Products/" + srcImage,
+            "data-large": "/uploads/original/Products/" + srcImage
+        });
 
         /*setTimeout(function() {
             $(".main-image img").attr("src", "/uploads/details/Products/" + srcImage);
