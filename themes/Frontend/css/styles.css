@@ -175,7 +175,7 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
             display: block;
         }
         /* level 2 list */
-        .menu-categories ul { width: 270%; display: none; margin: 0; padding: 0; position: absolute; top: 40px; left: 0; z-index: 1111111; background-color: #F4F4F4; box-shadow: 0 1px 3px rgba(0,0,0, .3); }
+        .menu-categories ul { width: 270%; display: none; margin: 0; padding: 0; position: absolute; top: 40px; left: 0; z-index: 1111111; background-color: #F4F4F4; -webkit-box-shadow: 0 1px 3px #7C7C7C; box-shadow: 0 1px 3px #7C7C7C; }
         .menu-categories ul:hover { background-color: #f4f4f4; }
         .menu-categories ul li { float: none; margin: 0; padding: 0; }
         .menu-categories ul a { font-weight: normal; text-shadow: none; background-color: white }
@@ -272,7 +272,7 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
     max-width: 93%;
     margin: 5px auto;
 }
-.product-list .product .product-image a { overflow: hidden; }
+.product-list .product .product-image a { overflow: hidden; -webkit-box-shadow: 2px 2px 3px 0px #7C7C7C;box-shadow: 2px 2px 3px 0px #7C7C7C; }
 .product-list .product .product-image img { padding: 5px; background-color: white; }
 .product-list .product .info { max-height: 67px; padding: 0 10px; margin: 0.7em 0; text-shadow: 0 1px #fff; overflow: hidden; }
 .product-list .product .info a { line-height: 22px; color: #999; text-shadow: 0 1px #fff; }
@@ -383,9 +383,9 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
 
 /* image */
 .product-detail .product-images .main-image { max-height: 300px; margin-bottom: 10px; text-align: center; }
-.product-detail .product-images .main-image img { max-height: 300px; }
+.product-detail .product-images .main-image img { max-height: 300px; -webkit-box-shadow: 2px 2px 10px 1px #7C7C7C; box-shadow: 2px 2px 10px 1px #7C7C7C; }
 .product-detail .product-images .thumb-image { margin-bottom: 10px; }
-.product-detail .thumb-image li { float: left; width: 50px; height: auto; margin-left: 5px; padding: 6px; border-top: 1px solid #fff; border-right: 1px solid #e6e6e6; border-bottom: 1px solid #ccc; border-left: 0; cursor: pointer; }
+.product-detail .thumb-image li { float: left; width: 50px; height: auto; margin-left: 5px; padding: 6px; border-top: 1px solid #fff; border-right: 1px solid #e6e6e6; border-bottom: 1px solid #ccc; border-left: 0; cursor: pointer; -webkit-box-shadow: 1px 1px 5px 1px #7C7C7C; box-shadow: 1px 1px 5px 1px #7C7C7C; }
 .product-detail .thumb-image li:first-child { margin-left: 0; }
 .product-detail .product-info h2 { line-height: 140%; margin: 0 0 6px; padding: 0; background: none; color: #0088CC; font-size: 22px; font-weight: 700; text-shadow: 0 1px 1px #F9FDFF; border-bottom: 1px solid #E9E8E8; }
 .product-detail .social { }
@@ -679,6 +679,7 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
     .pager .yiiPager  li { float: left; margin-right: 10px; }
 
 .yahoo img { width: 125px; height: 25px; }
+.youtube { -webkit-box-shadow: 0px 2px 2px 0px #7C7C7C; box-shadow: 0px 2px 2px 0px #7C7C7C; }
 /*
 Important:
     set "visibility:hidden" for better results
@@ -687,6 +688,12 @@ Important:
 .imgLiquid img{
     visibility:hidden;
     width: 97%;
+}
+
+/* zoom image */
+.round-loupe{
+    border-radius: 75px;
+    border: 5px solid #F0F0F0;
 }
 
 /* ============================= */

@@ -8,12 +8,18 @@
             $classLast = $isOnIndex ? (($k+1)%4 == 0 ? 'last' : '') : (($k+1)%3 == 0 ? 'last' : '');
             $image = $product->image ? '/uploads/resizeOnIndex/' . $model . '/' . Helper::explodeCharData($product->image, ',', false, true) : '/uploads/no_image.jpg';
             $notMarginTop = !$isOnIndex ? ($k==0 || $k == 1 || $k == 2 ? 'not-margin-top' : '') : '';
+
+            $explodeFolder = explode('/', $image);
+            $imgZoom = '';
+            if ($explodeFolder[2] != 'no_image.gif') {
+                $imgZoom = str_replace($explodeFolder[2], 'original', $image);
+            }
         ?>
             <div class="product <?php echo $notMarginTop; ?> <?php echo $amountCol; ?> <?php echo $classLast; ?>">
                 <h3 class="title"><a href="<?php echo Helper::url('/Shop/product/view', array('cateAlias' => $product->cate->alias, 'alias' => $product->alias)); ?>" title="<?php echo $product->name; ?>"><?php echo $product->name; ?></a></h3>
                 <div class="product-image">
                     <a href="<?php echo Helper::url('/Shop/product/view', array('cateAlias' => $product->cate->alias, 'alias' => $product->alias)); ?>" title="<?php echo $product->name; ?>" class="imgLiquid">
-                        <img src="<?php echo $image; ?>" alt="<?php echo $product->name; ?>" />
+                        <img class="zoomImg" src="<?php echo $image; ?>" data-large="<?php echo $imgZoom; ?>" alt="<?php echo $product->name; ?>" />
                     </a>
                 </div>
                 <div class="info"><a href="<?php echo Helper::url('/Shop/product/view', array('cateAlias' => $product->cate->alias, 'alias' => $product->alias)); ?>" title="<?php echo $product->info; ?>"><?php echo $product->info; ?></a></div>

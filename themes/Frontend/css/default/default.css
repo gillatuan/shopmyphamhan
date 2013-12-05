@@ -21,6 +21,7 @@ Supports Thumbs: true
 	top:0px;
 	left:0px;
 	display:none;
+    box-shadow: 2px 2px 3px 0px #444;
 }
 .theme-default .nivoSlider a {
 	border:0;

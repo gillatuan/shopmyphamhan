@@ -46,7 +46,7 @@
                     <?php } ?>
                     <li><a href="<?php echo Helper::url('/Shop/product/faq'); ?>" title="Hỏi đáp">Hỏi đáp</a></li>
                     <li><a href="<?php echo Helper::url('/site/contact'); ?>" title="Liên hệ">Liên hệ</a></li>
-                    <li><a class="yahoo" href="ymsgr:sendim?thuylinhshop06" title="Hỗ trợ Online"><img src="http://opi.yahoo.com/online?u=thuylinhshop06&m=g&t=2&l=us" /></a></li>
+                    <li><a class="yahoo" href="ymsgr:sendim?thuylinhshop06" title="Hỗ trợ Online"><img src="http://opi.yahoo.com/online?u=thuylinhshop06&m=g&t=2&l=us" alt="Shopmyphamhan.com yahoo hỏi đáp" /></a></li>
                 </ul>
             </div>
         </div>
@@ -96,7 +96,7 @@
                         'page' => 1
                     )) ?>
                 </div>
-                <div class="fivecol last">
+                <div class="youtube fivecol last">
                     <?php $this->widget('Shop.components.VideoYoutube', array(
                         'isOnIndex' => 1
                     )); ?>
@@ -205,6 +205,7 @@
 <?php Helper::cs()->registerCoreScript('jquery.ui');?>
 <?php Helper::cs()->registerScriptFile(Helper::themeUrl() . "/js/jquery.nivo.slider.js", CClientScript::POS_END) ;?>
 <?php Helper::cs()->registerScriptFile(Helper::themeUrl() . "/js/imgLiquid-min.js", CClientScript::POS_END) ;?>
+<?php Helper::cs()->registerScriptFile(Helper::themeUrl() . '/js/zoomsl-3.0.min.js', CClientScript::POS_END); ?>
 <?php $scriptJSMainPage = '
     $.fn.followTo = function (name, pos, width) {
         var $this = this,
@@ -237,6 +238,16 @@
     };
 
     $(function() {
+        /* zoom image */
+        $(".zoomImg").imagezoomsl({
+            innerzoommagnifier: true,
+            classmagnifier: window.external ? window.navigator.vendor === "Yandex" ? "" : "round-loupe" : "",
+            magnifierborder: "5px solid #F0F0F0", // fix Opera, Safary, Yandex
+            zoomrange: [2, 8],
+            zoomstart: 3,
+            magnifiersize: [200, 200]
+        });
+
         /* scroll to top*/
         $(window).scroll(function(){
             if ($(this).scrollTop() > 100) {
