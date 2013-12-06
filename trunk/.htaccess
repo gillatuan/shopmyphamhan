@@ -8,6 +8,9 @@ RewriteRule ^(.*)$ http://shopmyphamhan.com/$1 [R=301,L]
 # Use / if the application is in the root.
 RewriteBase /
 
+# No index any folder on web server
+Options -Indexes
+
 AddType 'text/html; charset=UTF-8' html
 
 # Serve cross-domain Ajax requests, disabled by default.
