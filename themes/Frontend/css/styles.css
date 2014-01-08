@@ -2,7 +2,7 @@
 /* ! Layout for desktop version   */
 /* ============================== */
 body {
-    background: #FAEBD7;
+    background: url('../images/body-bg.jpg') repeat 0 0;
 }
 
 p, span, li { color: #999999; font: 14px Arial, VNI-Bodan, sans-serif;  margin: 0; padding: 0; text-align: justify; }
