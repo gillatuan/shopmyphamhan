@@ -141,13 +141,14 @@ class Products extends CActiveRecord {
 
     protected function beforeSave() {
         $postProduct = Helper::post('Products');
-
-        if ($this->isNewRecord) {
-            $this->status      = APPROVED;
-            $this->create_date = time();
+        if ($postProduct) {
+            if ($this->isNewRecord) {
+                $this->status      = APPROVED;
+                $this->create_date = time();
+            }
+            $this->alias = Helper::unicode_convert($this->name);
+            $this->page = is_array($postProduct['page']) ? implode(',', $postProduct['page']) : '';
         }
-        $this->alias = Helper::unicode_convert($this->name);
-        $this->page = !empty($postProduct['page']) ? implode(',', $postProduct['page']) : '';
 
         return parent::beforeSave();
     }
