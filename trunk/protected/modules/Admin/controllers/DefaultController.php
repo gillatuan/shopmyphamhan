@@ -43,8 +43,10 @@ class DefaultController extends BackendController {
                 'value' => Helper::post('value'),
                 'attr' => Helper::post('attr')
             );
+            if (is_array($loadModel->page)) {
+                $loadModel->page = implode(',', $loadModel->page);
+            }
             $model = Helper::updateFieldValue($loadModel, $params);
-            $model->page = implode(',', $model->page);
             $model->save();
         } else {
             throw new CHttpException(404, 'Page not found');
