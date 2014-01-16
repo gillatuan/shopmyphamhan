@@ -59,10 +59,12 @@ $('.search-form form').submit(function(){
                         var orderAttribute = $(this).attr("class").replace("changeValue ", "");
                         var gridName = "' . Yii::app()->controller->id .'";
                         var modelName = "' . ucfirst(Yii::app()->controller->id) .'";
+                        var pageCode = "";
 
                         switch (orderAttribute) {
                             case "page":
                                 orderValue = $(this).is(":checked") == true ? 1 : 0;
+                                pageCode = $(this).val();
                                 break;
                             case "is_popular":
                                 orderValue = $(this).is(":checked") == true ? 1 : 0;
@@ -75,7 +77,7 @@ $('.search-form form').submit(function(){
                         $.ajax({
                             url:"' . Helper::url('/Admin/default/ajaxUpdate') . '",
                             type: "post",
-                            data: { "id": orderId, "value": orderValue, "attr": orderAttribute, "model": modelName },
+                            data: { "id": orderId, "value": orderValue, "attr": orderAttribute, "model": modelName, "pageCode": pageCode },
                             success: function(){
                                 $.fn.yiiGridView.update(gridName + "-grid");
                             }
@@ -115,10 +117,10 @@ $('.search-form form').submit(function(){
                     ),
                     array(
                         'name' => 'page',
-                        'value' => 'Helper::printArray("Display_On_Page", $data->page)',
-                         /* 'CHtml::checkBox("changeValue[$data->id]", $data->page, array("style" => "width: 70px; padding: 2px 5px;", "class" => "changeValue page"))',*/
+                        'value' => 'Helper::printArray("Display_On_Page", $data->page, ",", $data->id)',
+                        /* 'CHtml::checkBox("changeValue[$data->id]", $data->page, array("style" => "width: 70px; padding: 2px 5px;", "class" => "changeValue page"))',*/
                         'type'  => 'raw',
-                        'htmlOptions' => array('style' => 'width: 70px; max-width: 70px; word-wrap: break-word; overflow: hidden')
+                        'htmlOptions' => array('style' => 'width: 100px; max-width: 100px; word-wrap: break-word; overflow: hidden')
                     ),
                     array(
                         'name' => 'is_popular',
@@ -155,10 +157,12 @@ $script = '
         var orderAttribute = $(this).attr("class").replace("changeValue ", "");
         var gridName = "' . Yii::app()->controller->id .'";
         var modelName = "' . ucfirst(Yii::app()->controller->id) .'";
+        var pageCode = "";
 
         switch (orderAttribute) {
             case "page":
                 orderValue = $(this).is(":checked") == true ? 1 : 0;
+                pageCode = $(this).val();
                 break;
             case "is_popular":
                 orderValue = $(this).is(":checked") == true ? 1 : 0;
@@ -171,7 +175,7 @@ $script = '
         $.ajax({
             url:"' . Helper::url('/Admin/default/ajaxUpdate') . '",
             type: "post",
-            data: { "id": orderId, "value": orderValue, "attr": orderAttribute, "model": modelName },
+            data: { "id": orderId, "value": orderValue, "attr": orderAttribute, "model": modelName, "pageCode": pageCode },
             success: function(){
                 $.fn.yiiGridView.update(gridName + "-grid");
             }
