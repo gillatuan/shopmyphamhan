@@ -148,7 +148,7 @@
             </div>
             <div class="copyright fourcol">
                 <h3>BẢN QUYỀN THUỘC SHOPMYPHAMHAN.COM.</h3>
-                <p>Địa chỉ: 32/53/19 Ông Ích Khiêm, F.14, Quận 11</p>
+                <p>Địa chỉ: <?php echo ADMIN_ADDRESS; ?></p>
                 <p>Email: <a href="mailto:thuylinhshop06@yahoo.com">thuylinhshop06@yahoo.com</a></p>
                 <p>All Rights Reserved. Designed by <a href="http://thietkeweb3in1.com" title="thietkeweb3in1.com">Thietkeweb3in1.com</a></p>
             </div>
