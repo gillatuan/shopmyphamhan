@@ -6,9 +6,9 @@
                 <?php $bannerInfo[] = array(
                     'alias' => $banner->alias,
                     'info' => $banner->info
-                    ); ?>
+                    ) ?>
                 <a href="<?php echo $banner->page_link; ?>" title="<?php echo $banner->name; ?>">
-                    <img src="<?php echo $imgBanner; ?>" alt="<?php echo $banner->name; ?>" title="#htmlcaption-<?php echo $banner->alias; ?>" <?php if (empty($banner->image)) { ?>height="400px" width="400px" <?php } ?> />
+                    <img src="<?php echo $imgBanner; ?>" alt="<?php echo $banner->name; ?>" title="#htmlcaption-<?php echo $banner->alias; ?>" />
                 </a>
             <?php } ?>
         </div>
@@ -21,7 +21,7 @@
     <?php } elseif ($position != 1) { ?>
         <?php foreach ($banners as $banner) { ?>
             <?php $imgBanner = $banner->image ? Helper::renderImage($banner->image, 'uploads/resizeBanner/Banner', ',', false, true) : '/uploads/no_image.jpg'; ?>
-            <li><a href="<?php echo $banner->page_link; ?>" title="<?php echo $banner->name; ?>"><img src="<?php echo $imgBanner; ?>" alt="<?php echo $banner->name; ?>" ></a></li>
+            <li><a href="<?php echo $banner->page_link; ?>" title="<?php echo $banner->name; ?>"><img src="<?php echo $imgBanner; ?>" alt="<?php echo $banner->name; ?>" /></a></li>
         <?php } ?>
     <?php } ?>
 <?php } ?>
