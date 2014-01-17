@@ -352,8 +352,8 @@
                             if (typeCart == "updateCart") {
                                 $(".addcart-success").html("Bạn đã cập nhật sản phẩm " + dataCart.name + " với số lượng " + dataCart.quantity + " vào giỏ hàng.");
                                 objectThis.parent().find(".product-value").val(dataCart.valueAfterDiscount);
-                                $("#id-" + alias + " .formatValueAfterDiscount").text(dataCart.formatValueAfterDiscount);
-                                $("#id-" + alias + " .bold").text(dataCart.formatValueDiscount);
+                                $("#id-" + alias).parent().parent().find(".value").text(dataCart.formatValueAfterDiscount);
+                                $("#id-" + alias).parent().parent().find(".bold").text(dataCart.formatValueDiscount);
 
                                 if ($("tbody .bold").text() == "") {
                                     $("table tbody").html("<tr><td colspan=5>Không có bất kỳ sản phẩm nào trong giỏ hàng của bạn cả.</td></tr>")
