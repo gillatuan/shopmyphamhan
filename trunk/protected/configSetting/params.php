@@ -45,9 +45,9 @@ define('MAIL_SENDER_NAME', 'Contact Thietkeweb3in1');
 //
 define('None_Spam', 2);
 //
-define('Offline' , 2);
+define('OFFLINE' , 2);
 //
-define('Online'  , 1);
+define('ONLINE'  , 1);
 //
 define('PAGE_SIZE', 10);
 //

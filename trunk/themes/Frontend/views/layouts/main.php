@@ -7,22 +7,22 @@
     <meta http-equiv="content-language" content="<?php echo Yii::app()->language ?>"/>
     <title><?php echo $this->pageTitle; ?></title>
 <!--<meta name="majestic-site-verification" content="MJ12_bde25495-e68e-4fd7-9ccf-898054e7af80" />-->
-    <meta name="google-site-verification" content="sAmO6s7z_MB7TXyiescu6zh8ubWEvOSXxdRm_JnpoAc" />
+    <meta name="google-site-verification" content="2eTdDxdZjQA4d9oNbOmHZMhQgRWanwFyYg3TZsIKcyU" />
     <meta name="author" content="Bui Doan Ngoc Tuan" />
     <meta name="robots" content="index, follow, noarchive"/>
     <meta name='revisit-after' content='1 days'/>
 
-<!--    <link rel="canonical" href="--><?php //echo $this->canonicalUrl; ?><!--" />-->
+    <link rel="canonical" href="<?php //echo $this->canonicalUrl; ?>" />
     <link rel="shortcut icon" href="/uploads/shopmyphamhan-favicon.ico" type="image/x-icon" />
 
     <script>
-        (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,"script","//www.google-analytics.com/analytics.js","ga");
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        ga("create", "UA-32319582-2", "shopmyphamhan.com");
-        ga("send", "pageview");
+        ga('create', 'UA-32319582-5', 'shopmyphamhan.com');
+        ga('send', 'pageview');
     </script>
 </head>
 <body>

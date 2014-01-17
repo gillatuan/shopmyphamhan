@@ -470,7 +470,7 @@ class SiteController extends FrontendController
 	{
         User::model()->updateByPk(Helper::user()->id, array(
             'last_login' => '',
-            'is_online' => Offline
+            'is_online' => OFFLINE
         ));
 		Yii::app()->user->logout();
 		$this->redirect(Yii::app()->homeUrl);
