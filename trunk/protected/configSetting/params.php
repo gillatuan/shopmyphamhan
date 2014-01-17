@@ -70,5 +70,6 @@ define('THEME'   , 'Frontend');
 define('Transport_Charge', 0);
 //
 define('Type_Post', 1);
+define('ADMIN_ADDRESS', '27/21');
 
 
