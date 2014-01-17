@@ -11,14 +11,6 @@ class FrontendController extends Controller {
         Yii::app()->theme = THEME;
 
         Yii::app()->counter->refresh();
-
-        /*$memcache = new Memcache;
-        $memcache->addServer('http://thietkeweb3in1.com/', 11211);
-		if (!extension_loaded('apc')) {
-			if (!dl('memcache.so')) {
-				exit;
-			}
-		}*/
     }
 
     /**
@@ -27,14 +19,6 @@ class FrontendController extends Controller {
      */
     public function getCanonicalUrl() {
         if ($this->_canonicalUrl === null) {
-            /*$params = array();
-            if (isset($_GET['id'])) {
-                //just keep the id, because it identifies our model pages
-                $params = array('id' => $_GET['id']);
-            }
-            $this->_canonicalUrl = Yii::app()->createAbsoluteUrl($this->route, $params);
-            */
-
             $this->_canonicalUrl = Yii::app()->createAbsoluteUrl(Yii::app()->request->requestUri);
         }
         return $this->_canonicalUrl;

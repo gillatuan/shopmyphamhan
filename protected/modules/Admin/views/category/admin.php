@@ -131,7 +131,7 @@ $this->menu = array(
 <?php
 Helper::cs()->registerScriptFile(Helper::themeUrl() . '/js/jquery.nestable.js', CClientScript::POS_END);
 $script = '
-    $(".changeValue").bind("click change", function() {
+     $(".changeValue").bind("click", function() {
         var orderId = $(this).attr("id").replace("changeValue_", "");
         var orderValue = $(this).val();
         var orderAttribute = $(this).attr("class").replace("changeValue ", "");
@@ -207,7 +207,10 @@ $scriptSort = '
             type: "post",
             data: {"type": "updateNested", "dataNested": valJson},
             success: function(data){
-
+                $("#response").html("<div class=\"label label-success span12\">Update Nested Category successfully.</div>");
+                setTimeout(function() {
+                    $("#response").fadeOut("slow");
+                }, 1000);
             }
         })
     });

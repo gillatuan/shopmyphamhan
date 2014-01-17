@@ -50,7 +50,7 @@ class UserIdentity extends CUserIdentity
 
             $user->updateByPk($user->id, array(
                 'last_login' => date('Y-m-d'),
-                'is_online' => Online
+                'is_online' => ONLINE
             ));
 
             $this->errorCode=self::ERROR_NONE;

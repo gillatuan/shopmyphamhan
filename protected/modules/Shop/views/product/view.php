@@ -88,9 +88,9 @@ if ($explodeFolder[2] != 'no_image.gif') {
                     <p><?php echo Helper::t('barcode'); ?>: <span><?php echo $data->barcode; ?></span></p>
                 <?php } ?>
 
-                <?php if (!empty($data->info)) { ?>
-                    <p><?php echo Helper::t('info'); ?>: <span><?php echo nl2br($data->info); ?></span></p>
-                <?php } ?>
+                <?php /*if (!empty($data->info)) { */?><!--
+                    <p><?php /*echo Helper::t('info'); */?>: <span><?php /*echo nl2br($data->info); */?></span></p>
+                --><?php //} ?>
 
                 <p class="showFormReview"><a href="javascript:void:;" title="Review" class="link"><?php echo Helper::t('yourComments'); ?></a></p>
                     <div class="addtocart-area">

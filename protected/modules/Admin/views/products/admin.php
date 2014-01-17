@@ -53,7 +53,7 @@ $('.search-form form').submit(function(){
                 'dataProvider'    => $model->search(),
                 'filter'          => $model,
                 'afterAjaxUpdate' => 'js:function(){
-                    $(".changeValue").bind("click change", function() {
+                    $(".changeValue").bind("click", function() {
                         var orderId = $(this).attr("id").replace("changeValue_", "");
                         var orderValue = $(this).val();
                         var orderAttribute = $(this).attr("class").replace("changeValue ", "");
@@ -151,7 +151,7 @@ $('.search-form form').submit(function(){
 
 <?php
 $script = '
-    $(".changeValue").bind("click change", function() {
+    $(".changeValue").bind("click", function() {
         var orderId = $(this).attr("id").replace("changeValue_", "");
         var orderValue = $(this).val();
         var orderAttribute = $(this).attr("class").replace("changeValue ", "");
@@ -175,6 +175,7 @@ $script = '
         $.ajax({
             url:"' . Helper::url('/Admin/default/ajaxUpdate') . '",
             type: "post",
+
             data: { "id": orderId, "value": orderValue, "attr": orderAttribute, "model": modelName, "pageCode": pageCode },
             success: function(){
                 $.fn.yiiGridView.update(gridName + "-grid");

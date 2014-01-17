@@ -30,6 +30,7 @@ class SiteController extends FrontendController
     public function actionIndex()
     {
 //        $time_start = microtime(true);
+        $this->redirect(array('Shop/product/index'));
 
         // seo
         $this->breadcrumbs = array(
@@ -39,8 +40,8 @@ class SiteController extends FrontendController
         $keywords =  str_replace(' - ', ',', $pageTitle);
 
         $seo = array(
-            'keywords' => Yii::app()->language == 'vi' ? $keywords : 'homepage, homepage design web, homepage shopmyphamhan',
-            'description' => Yii::app()->language == 'vi' ? $keywords : 'homepage, homepage design web, homepage shopmyphamhan',
+            'keywords' => Yii::app()->language == 'vi' ? $keywords : 'homepage, homepage design web, homepage shopphaideponline.com',
+            'description' => Yii::app()->language == 'vi' ? $keywords : 'homepage, homepage design web, homepage shopphaideponline.com',
             'title' => $pageTitle,
             'type' => 'Shop',
             'url' => Yii::app()->createAbsoluteUrl('/site/index'),

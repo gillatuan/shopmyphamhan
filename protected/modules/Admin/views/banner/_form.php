@@ -15,11 +15,11 @@
             ),
         )); ?>
 
-        <p class="note">Fields with <span class="required">*</span> are required.</p>
+	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
-        <?php echo $form->errorSummary($model); ?>
+	<?php echo $form->errorSummary($model); ?>
 
-        <div class="row">
+    <div class="row">
         <?php echo $form->labelEx($model, 'name'); ?>
         <?php echo $form->textField($model, 'name', array('class' => 'text-input small-input')); ?>
         <?php echo $form->error($model, 'name'); ?>
@@ -51,8 +51,8 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'page_link'); ?>
-        <?php echo $form->textField($model,'page_link', array('class' => 'text-input small-input')); ?>
-        <?php echo $form->error($model,'page_link'); ?>
+		<?php echo $form->textField($model,'page_link', array('class' => 'text-input small-input')); ?>
+		<?php echo $form->error($model,'page_link'); ?>
 	</div>
 
     <div class="row">
@@ -84,7 +84,7 @@
 	<div class="row">
 		<?php echo $form->labelEx($model,'position'); ?>
         <?php echo $form->dropDownList($model, 'position', Lookup::items('Position_Banner')); ?>
-        <?php echo $form->error($model,'position'); ?>
+		<?php echo $form->error($model,'position'); ?>
 	</div>
 
     <div class="row checkboxList">
@@ -93,24 +93,24 @@
         <?php echo $form->error($model, 'page'); ?>
     </div>
 
-        <?php if (!$model->isNewRecord) { ?>
-            <div class="row">
+    <?php if (!$model->isNewRecord) { ?>
+       <div class="row">
            <?php echo $form->labelEx($model, 'alias'); ?>
            <?php echo $model->alias; ?>
        </div>
 
-            <div class="row">
+       <div class="row">
            <?php echo $form->labelEx($model, 'status'); ?>
            <?php echo $form->dropDownList($model, 'status', Lookup::items('Status')); ?>
            <?php echo $form->error($model, 'status'); ?>
        </div>
 
-            <div class="row">
+       <div class="row">
            <?php echo $form->labelEx($model, 'create_date'); ?>
            <?php echo date('m-d-Y', $model->create_date); ?>
        </div>
 
-            <div class="row">
+        <div class="row">
             <?php echo $form->labelEx($model, 'expired_date'); ?>
             <?php $this->widget('zii.widgets.jui.CJuiDatePicker', array(
                 'model'       => $model,
@@ -134,13 +134,13 @@
             )); ?>
             <?php echo $form->error($model, 'expired_date'); ?>
         </div>
-        <?php } ?>
+    <?php } ?>
 
-        <div class="row buttons">
+	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>
 
-        <?php $this->endWidget(); ?>
+<?php $this->endWidget(); ?>
 
 </div><!-- form -->
 
