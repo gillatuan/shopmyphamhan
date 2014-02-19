@@ -46,7 +46,7 @@ $('.search-form form').submit(function(){
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
     'afterAjaxUpdate' => 'js:function(){
-         $(".changeValue").bind("click", function() {
+        $(".changeValue").bind("click change", function() {
             var orderId = $(this).attr("id").replace("changeValue_", "");
             var orderValue = $(this).val();
             var orderAttribute = $(this).attr("class").replace("changeValue ", "");
@@ -111,7 +111,7 @@ $('.search-form form').submit(function(){
 
 <?php
 $script = '
-     $(".changeValue").bind("click", function() {
+    $(".changeValue").bind("click change", function() {
         var orderId = $(this).attr("id").replace("changeValue_", "");
         var orderValue = $(this).val();
         var orderAttribute = $(this).attr("class").replace("changeValue ", "");

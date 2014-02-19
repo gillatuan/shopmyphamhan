@@ -4,7 +4,7 @@ Yii::import('zii.widgets.CPortlet');
 Yii::import('Admin.models.News');
 
 class SomeNews extends CPortlet {
-    public $isOnIndexPage = false;
+    public $isOnIndexPage = 1;
 
     public function renderContent() {
         $criteria = new CDbCriteria();
@@ -15,7 +15,7 @@ class SomeNews extends CPortlet {
         $dataNews = array();
         if (count($modelNews)) {
             foreach ($modelNews as $news) {
-                if (!empty($this->isOnIndexPage) && in_array($this->isOnIndexPage, $news->page)) {
+                if (!empty($this->isOnIndexPage) && in_array(intval($this->isOnIndexPage), $news->page)) {
                     $dataNews[] = $news;
                 }
             }

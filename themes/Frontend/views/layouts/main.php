@@ -217,21 +217,22 @@
                     $this.css({
                         width: width,
                         position: "fixed",
-                        top: 10,
-                        right: 10
+                        bottom: 25,
+                        right: 70
                     });
                 } else {
                     $this.css({
                         width: width,
                         position: "fixed",
-                        top: 10,
+                        bottom: 45,
                         left: 10
                     })
                 }
             } else {
                 $this.css({
                     position: "relative",
-                    top: 0
+                    bottom: 0,
+                    right: 0
                 })
             }
         });

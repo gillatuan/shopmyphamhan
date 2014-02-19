@@ -83,10 +83,6 @@ class ListProductsOnPage extends CPortlet {
         }
 
         $criteriaProducts->order = $orderBy;
-        if ($this->isOnIndex) {
-            $criteriaProducts->compare('page', INDEX_PAGE);
-            $this->tab = 'latest-items' . INDEX_PAGE;
-        }
         $page = Helper::get('page') ? Helper::get('page') : 1;
         $cache['products'] = Cache::usingCache('Products', $criteriaProducts, '', false, Cache_Time, '', $page, str_replace(',', '-', $alias) . $this->tab . $this->isOnIndex . $page);
 
