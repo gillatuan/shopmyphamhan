@@ -131,7 +131,7 @@ $this->menu = array(
 <?php
 Helper::cs()->registerScriptFile(Helper::themeUrl() . '/js/jquery.nestable.js', CClientScript::POS_END);
 $script = '
-     $(".changeValue").bind("click", function() {
+    $(".changeValue").bind("click change", function() {
         var orderId = $(this).attr("id").replace("changeValue_", "");
         var orderValue = $(this).val();
         var orderAttribute = $(this).attr("class").replace("changeValue ", "");

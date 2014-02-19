@@ -125,9 +125,5 @@ BrowserMatch ^Mozilla/4 gzip-only-text/html
 BrowserMatch ^Mozilla/4.0[678] no-gzip
 BrowserMatch bMSIE !no-gzip !gzip-only-text/html
 
-# Refuse direct access to all files
-Order deny,allow
-Allow from 162.243.99.101
-
 ## otherwise forward it to index.php
 RewriteRule ^.*$ index.php [L]

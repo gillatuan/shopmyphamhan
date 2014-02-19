@@ -5,7 +5,7 @@ body {
     background: url('../images/body-bg.jpg') repeat 0 0;
 }
 
-p, span, li { color: #999999; font: 14px Arial, VNI-Bodan, sans-serif;  margin: 0; padding: 0; text-align: justify; }
+p, span, li { color: #999999; font: 14px Arial, VNI-Bodan, sans-serif;  margin: 0; padding: 0; text-align: left; }
 
 p { padding-top: 5px; }
 p:first-child { padding-top: 0; }

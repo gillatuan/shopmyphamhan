@@ -17,6 +17,10 @@ return array(
     // preloading 'log' component
     'preload'=>array('log'),
 
+    // ob_gzhandler
+    'onBeginRequest' => create_function('$event', 'return ob_start("ob_gzhandler");'),
+    'onEndRequest' => create_function('$event', 'return ob_end_flush();'),
+
     // autoloading model and component classes
     'import'=>array(
         'application.models.*',
@@ -59,7 +63,6 @@ return array(
             'itemChildTable'=>'authitemchild',
             'assignmentTable'=>'authassignment',
         ),
-
         // UserCounter
         'counter' => array(
             'class' => 'UserCounter',
@@ -67,13 +70,13 @@ return array(
 
         // uncomment the following to enable URLs in path-format
         'urlManager'=> array(
-//            'urlFormat'=>'path',
+            'urlFormat'=>'path',
 //            'urlSuffix'=>'.html',
             'showScriptName' => false,
             'rules'          => array(
                 // backend
                 // gii
-                /*'/gii-controller'         => 'gii/controller',
+                '/gii-controller'         => 'gii/controller',
                 '/gii-crud'               => 'gii/crud',
                 '/gii-module'             => 'gii/module',
                 '/gii-model'              => 'gii/model',
@@ -96,7 +99,7 @@ return array(
 
 
                 // front end
-                '<action:\w+>'=>'site/<action>',*/
+                '<action:\w+>'=>'site/<action>',
             ),
         ),
 
