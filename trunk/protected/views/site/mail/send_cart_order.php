@@ -161,7 +161,7 @@
         <p>Chân thành cám ơn đã mua hàng.</p>
         <div class="contact">
             <p>Mọi chi tiết, thắc mắc vui lòng liên hệ:</p>
-            <p class="detail">ĐT: 0913.600.210 - 012.79.59.39.79</p>
+            <p class="detail">ĐT: <?php echo HOTLINE; ?></p>
             <p class="detail">Website: <a href="<?php echo Helper::url('/Shop/product/index'); ?>" title="Shop Mỹ Phẩm Hàn">http://shopmyphamhan.com</a></p>
         </div>
     </div>

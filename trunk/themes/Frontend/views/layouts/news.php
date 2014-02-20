@@ -4,12 +4,10 @@
         <div class="module-left threecol">
             <div class="banner">
                 <h3>Banner</h3>
-                <ul>
-                    <?php $this->widget('Shop.components.BannersModule', array(
-                        'position' => 3,
-                        'page' => 2
-                    )) ?>
-                </ul>
+                <?php $this->widget('Shop.components.BannersModule', array(
+                    'position' => 3,
+                    'page' => 2
+                )) ?>
             </div>
         </div>
         <div class="products-in-category not-border-bottom not-margin-top ninecol last">

@@ -67,6 +67,9 @@ if ($explodeFolder[2] != 'no_image.gif') {
             </div>
             <div class="price">
                 <?php if (!empty($data->price)) { ?>
+                    <?php if (!empty($data->price_curr)) { ?>
+                        <p class="price-current"><?php echo Helper::t('price_curr'); ?>: <span class="destroy"><?php echo Helper::formatNumber($data->price_curr) ?></span></p>
+                    <?php } ?>
                     <?php if ($data->is_sale_off != 0 && $data->discount != 0) {
                         $discountedPrice = $data->price * ((100 - $data->discount) / 100);
                         $discountPrice = $data->price * $data->discount / 100;
@@ -78,7 +81,7 @@ if ($explodeFolder[2] != 'no_image.gif') {
                                 <input type="hidden" class="price-discount" value="<?php echo $data->price * $data->discount / 100; ?>" />
                             </span></p>
                     <?php } else { ?>
-                        <p><?php echo Helper::t('price'); ?>: <span><?php echo Helper::formatNumber($data->price) ?></span></p>
+                        <p><?php echo Helper::t('price'); ?>: <span class="sale-off"><?php echo Helper::formatNumber($data->price) ?></span></p>
                     <?php } ?>
                 <?php } else { ?>
                     <p class="no-price"><?php echo Helper::t('price'); ?>: <span><?php echo Helper::t('Contact_menu'); ?></span></p>

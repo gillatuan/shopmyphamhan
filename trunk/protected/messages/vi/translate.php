@@ -54,6 +54,7 @@ return array(
     'title'                           => 'Tựa đề',
     'info'                            => 'Thông tin',
     'image'                           => 'Hình',
+    'price_curr'                           => 'Giá thị trường',
     'price'                           => 'Giá cả',
     'quantity'                        => 'Số lượng',
     'discount'                        => 'Giảm giá',

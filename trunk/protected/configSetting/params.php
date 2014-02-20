@@ -2,6 +2,7 @@
 
             //
 	define('ADMIN_ADDRESS', '32/53/19 Ông Ích Khiêm, F.14, Quận 11');
+	define('HOTLINE', '0906.977.244 - 0903.66.44.64 - Ms.Linh, Mr.Thanh');
 //
 	define('ADMIN_EMAIL', 'gangtergilla4@gmail.com');
 //
