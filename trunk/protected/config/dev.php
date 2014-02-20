@@ -17,10 +17,6 @@ return array(
     // preloading 'log' component
     'preload'=>array('log'),
 
-    // ob_gzhandler
-    'onBeginRequest' => create_function('$event', 'return ob_start("ob_gzhandler");'),
-    'onEndRequest' => create_function('$event', 'return ob_end_flush();'),
-
     // autoloading model and component classes
     'import'=>array(
         'application.models.*',
