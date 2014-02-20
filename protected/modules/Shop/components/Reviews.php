@@ -10,9 +10,6 @@ class Reviews extends CPortlet {
     public function renderContent() {
         $criteria = new CDbCriteria();
         $criteria->compare('status', APPROVED);
-        if ($this->isOnIndex) {
-            $criteria->compare('page', INDEX_PAGE);
-        }
         if ($this->productId) {
             $criteria->compare('product_id', $this->productId);
         }
@@ -21,7 +18,8 @@ class Reviews extends CPortlet {
 
         $this->render('reviews', array(
             'reviews' => $reviews,
-            'isListPage' => $this->isListPage
+            'isListPage' => $this->isListPage,
+            'isOnIndex' => $this->isOnIndex
         ));
     }
 }

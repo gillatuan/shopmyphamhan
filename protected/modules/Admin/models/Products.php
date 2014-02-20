@@ -14,6 +14,7 @@
  * @property string   $barcode
  * @property string   $description
  * @property string   $image
+ * @property double   $price_curr
  * @property double   $price
  * @property string   $is_sale_off
  * @property integer  $total_buy
@@ -53,7 +54,7 @@ class Products extends CActiveRecord {
         return array(
             array('cate_id, name, quantity', 'required'),
             array('total_buy, create_date, quantity', 'numerical', 'integerOnly' => true),
-            array('price, discount', 'numerical'),
+            array('price_curr, price, discount', 'numerical'),
             array('cate_id', 'length', 'max' => 11),
             array('name, alias', 'length', 'max' => 255),
             array('image', 'length', 'max' => 500),
@@ -64,7 +65,7 @@ class Products extends CActiveRecord {
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
             array(
-                'id, cate_id, name, alias, info, description, image, price, barcode, quantity, discount, is_sale_off, total_buy, status, page, is_popular, create_date',
+                'id, cate_id, name, alias, info, description, image, price_curr, price, barcode, quantity, discount, is_sale_off, total_buy, status, page, is_popular, create_date',
                 'safe',
                 'on' => 'search'
             ),
@@ -96,6 +97,7 @@ class Products extends CActiveRecord {
             'info'        => Helper::t('info'),
             'description' => Helper::t('description'),
             'image'       => Helper::t('image'),
+            'price_curr'       => Helper::t('price_curr'),
             'price'       => Helper::t('price'),
             'barcode'       => Helper::t('barcode'),
             'quantity'    => Helper::t('quantity'),
@@ -124,6 +126,7 @@ class Products extends CActiveRecord {
         $criteria->compare('info', $this->info, true);
         $criteria->compare('description', $this->description, true);
         $criteria->compare('image', $this->image, true);
+        $criteria->compare('price_curr', $this->price_curr);
         $criteria->compare('price', $this->price);
         $criteria->compare('barcode', $this->barcode);
         $criteria->compare('quantity', $this->quantity);

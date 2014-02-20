@@ -3,7 +3,7 @@
 <div class="clearfix"></div>
 <?php
 $this->widget('Shop.components.ListProductsOnPage', array(
-    'isOnIndex' => false,
+    'isOnIndex' => INDEX_PAGE,
     'cateAlias' => $cateAlias,
     'tab' => $tab,
     'url' => Helper::url('/Shop/product/listProductsByCategory', array('cateAlias' => $cateAlias))

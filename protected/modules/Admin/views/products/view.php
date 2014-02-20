@@ -53,6 +53,7 @@ $this->menu = array(
         'info',
         'description',
         'image',
+        'price_curr',
         'price',
         'barcode',
         'quantity',

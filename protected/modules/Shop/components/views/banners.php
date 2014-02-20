@@ -1,4 +1,4 @@
-<?php if (count($banners)) { ?>
+<?php if (!empty($banners)) { ?>
     <?php if ($position == 1 && $page == 1) { ?>
         <div id="slider" class="nivoSlider">
             <?php foreach ($banners as $banner) { ?>
@@ -19,9 +19,11 @@
             </div>
         <?php } ?>
     <?php } elseif ($position != 1) { ?>
-        <?php foreach ($banners as $banner) { ?>
-            <?php $imgBanner = $banner->image ? Helper::renderImage($banner->image, 'uploads/resizeBanner/Banner', ',', false, true) : '/uploads/no_image.jpg'; ?>
-            <li><a href="<?php echo $banner->page_link; ?>" title="<?php echo $banner->name; ?>"><img src="<?php echo $imgBanner; ?>" alt="<?php echo $banner->name; ?>" /></a></li>
-        <?php } ?>
+        <ul>
+            <?php foreach ($banners as $banner) { ?>
+                <?php $imgBanner = $banner->image ? Helper::renderImage($banner->image, 'uploads/resizeBanner/Banner', ',', false, true) : '/uploads/no_image.jpg'; ?>
+                <li><a href="<?php echo $banner->page_link; ?>" title="<?php echo $banner->name; ?>"><img src="<?php echo $imgBanner; ?>" alt="<?php echo $banner->name; ?>" /></a></li>
+            <?php } ?>
+        </ul>
     <?php } ?>
 <?php } ?>

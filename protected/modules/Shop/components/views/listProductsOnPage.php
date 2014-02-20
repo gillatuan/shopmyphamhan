@@ -1,14 +1,14 @@
-<?php $amountCol = $isOnIndex ? 'threecol' : 'fourcol'; ?>
-<?php $productList = $isOnIndex ? 'product-list' : 'product-list bg-f5f5f5 topbottom-20 leftright-20 clearfix'; ?>
+<?php $amountCol = $isOnIndex && !empty($tab) ? 'fourcol' : 'threecol'; ?>
+<?php $productList = $isOnIndex && !empty($tab) ? 'product-list bg-f5f5f5 topbottom-20 leftright-20 clearfix': 'product-list' ; ?>
 <div class="<?php echo $productList; ?>">
 <?php $modelProducts = isset($products['products']) ? $products['products'] : $products; ?>
 <?php $modelPaging = isset($products['paging']) ? $products['paging'] : ''; ?>
     <?php if (count($modelProducts)) { ?>
         <?php foreach ($modelProducts as $k=>$product) {
             if (in_array(intval($isOnIndex), $product->page)) {
-                $classLast = $isOnIndex ? (($k+1)%4 == 0 ? 'last' : '') : (($k+1)%3 == 0 ? 'last' : '');
+                $classLast = $isOnIndex && !empty($tab) ? (($k+1)%3 == 0 ? 'last' : '') : (($k+1)%4 == 0 ? 'last' : '');
                 $image = $product->image ? '/uploads/resizeOnIndex/' . $model . '/' . Helper::explodeCharData($product->image, ',', false, true) : '/uploads/no_image.jpg';
-                $notMarginTop = !$isOnIndex ? ($k==0 || $k == 1 || $k == 2 ? 'not-margin-top' : '') : '';
+                $notMarginTop = $isOnIndex && !empty($tab) ? '' : ($k==0 || $k == 1 || $k == 2 ? 'not-margin-top' : '');
 
                 $explodeFolder = explode('/', $image);
                 $imgZoom = '';
@@ -25,6 +25,9 @@
                 </div>
                 <div class="info"><a href="<?php echo Helper::url('/Shop/product/view', array('cateAlias' => $product->cate->alias, 'alias' => $product->alias)); ?>" title="<?php echo $product->info; ?>"><?php echo $product->info; ?></a></div>
                 <div class="price-group clearfix">
+                    <?php if (!empty($product->price_curr)) { ?>
+                        <p class="price destroy"><span class="price-text">Giá thị trường: </span><span class="price-value"><?php echo Helper::formatNumber($product->price_curr); ?></span></p>
+                    <?php } ?>
                     <?php if ($product->price > 0) { ?>
                         <?php if ($product->discount != 0 && $product->is_sale_off != 0) { ?>
                             <p class="price destroy"><span class="price-text">Giá: </span><span class="price-value"><?php echo Helper::formatNumber($product->price); ?></span></p>

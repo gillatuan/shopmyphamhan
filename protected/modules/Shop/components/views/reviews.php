@@ -2,7 +2,8 @@
 $this->widget('zii.widgets.CListView', array(
     'dataProvider' => $reviews,
     'viewData' => array(
-        'isListPage' => $isListPage
+        'isListPage' => $isListPage,
+        'isOnIndex' => $isOnIndex
     ),
     'itemView' => 'renderViews',
     'summaryText' => '',

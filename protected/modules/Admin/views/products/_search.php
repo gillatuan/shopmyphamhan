@@ -71,6 +71,11 @@
         )); ?>
     </div>
     <div class="row">
+        <?php echo $form->label($model, 'price_curr'); ?>
+
+        <?php echo $form->textField($model, 'price_curr'); ?>
+    </div>
+    <div class="row">
         <?php echo $form->label($model, 'price'); ?>
 
         <?php echo $form->textField($model, 'price'); ?>

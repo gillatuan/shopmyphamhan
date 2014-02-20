@@ -116,6 +116,12 @@
         </div>
 
         <div class="row">
+            <?php echo $form->labelEx($model, 'price_curr'); ?>
+            <?php echo $form->textField($model, 'price_curr', array('class' => 'text-input small-input')); ?>
+            <?php echo $form->error($model, 'price_curr'); ?>
+        </div>
+
+        <div class="row">
             <?php echo $form->labelEx($model, 'price'); ?>
             <?php echo $form->textField($model, 'price', array('class' => 'text-input small-input')); ?>
             <?php echo $form->error($model, 'price'); ?>

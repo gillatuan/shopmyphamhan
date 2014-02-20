@@ -169,7 +169,7 @@
             </form>
         </li>
         <li class="hot-products last"><a href="<?php echo Helper::url('/Shop/product/index'); ?>" title="Hot product">Hot Products</a></li>
-        <li class="hot-line sixcol last"><p>Hot line: <span>0906.977.244 - 0903.66.44.64 - Ms.Linh, Mr.Thanh</span></p></li>
+        <li class="hot-line sixcol last"><p>Hot line: <span><?php echo HOTLINE; ?></span></p></li>
         <li class="nav-social floatright last">
             <?php $url = Yii::app()->createAbsoluteUrl(Yii::app()->request->requestUri); ?>
             <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $url; ?>" target="_blank" title="Facebook social">

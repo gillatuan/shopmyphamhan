@@ -17,6 +17,7 @@ class ListProductsOnPage extends CPortlet {
             'products' => $products,
             'isOnIndex' => $this->isOnIndex,
             'cateAlias' => $this->cateAlias,
+            'tab' => $this->tab,
             'model' => 'Products'
         ));
     }
