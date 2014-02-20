@@ -15,7 +15,6 @@ class Reviews extends CPortlet {
         }
 
         $reviews = Cache::usingCache('Review', $criteria, '', true, Cache_Time, '', 1, 'page_' . $this->isOnIndex . '-productId_' . $this->productId);
-
         $this->render('reviews', array(
             'reviews' => $reviews,
             'isListPage' => $this->isListPage,
