@@ -1,3 +1,18 @@
+<?php /*if ($isOnIndex && !empty($tab)) {
+    $this->renderPartial('listProductWith3Col', array(
+        'amountCol' => 'threecol',
+        'tab' => $tab,
+        'productList' => 'product-list',
+        'products' => $products,
+    ));
+} else {
+    $this->renderPartial('listProductWith4Col', array(
+        'amountCol' => 'fourcol',
+        'tab' => $tab,
+        'productList' => 'product-list bg-f5f5f5 topbottom-20 leftright-20 clearfix',
+        'products' => $products,
+    ));
+} */?>
 <?php $amountCol = $isOnIndex && !empty($tab) ? 'fourcol' : 'threecol'; ?>
 <?php $productList = $isOnIndex && !empty($tab) ? 'product-list bg-f5f5f5 topbottom-20 leftright-20 clearfix': 'product-list' ; ?>
 <div class="<?php echo $productList; ?>">
