@@ -13,13 +13,33 @@ class ListProductsOnPage extends CPortlet {
     public function renderContent() {
         $products = $this->genCate($this->cateAlias);
 
-        $this->render('listProductsOnPage', array(
+        if ($this->isOnIndex) {
+            $this->render('listProductWith3Col', array(
+                'amountCol' => 'threecol',
+                'tab' => $this->tab,
+                'isOnIndex' => $this->isOnIndex,
+                'productList' => 'product-list',
+                'products' => $products,
+                'model' => 'Products'
+            ));
+        } else {
+            $this->render('listProductWith4Col', array(
+                'amountCol' => 'fourcol',
+                'tab' => $this->tab,
+                'isOnIndex' => $this->isOnIndex,
+                'productList' => 'product-list bg-f5f5f5 topbottom-20 leftright-20 clearfix',
+                'products' => $products,
+                'model' => 'Products'
+            ));
+        }
+
+        /*$this->render('listProductsOnPage', array(
             'products' => $products,
             'isOnIndex' => $this->isOnIndex,
             'cateAlias' => $this->cateAlias,
             'tab' => $this->tab,
             'model' => 'Products'
-        ));
+        ));*/
     }
 
     protected function genCate($cateAlias) {
