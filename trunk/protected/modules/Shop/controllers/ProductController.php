@@ -76,7 +76,7 @@ class ProductController extends FrontendController {
         }
     }
 
-    public function actionListProductsByCategory($cateAlias, $tab = 'latest-items') {
+    public function actionListProductsByCategory($cateAlias, $tab = '') {
         $this->layout = '//layouts/list';
         $criteriaCate = new CDbCriteria();
         $criteriaCate->compare('alias', $cateAlias);
