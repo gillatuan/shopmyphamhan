@@ -14,19 +14,21 @@ class ListProductsOnPage extends CPortlet {
         $products = $this->genCate($this->cateAlias);
 
         if ($this->isOnIndex) {
-            $this->render('listProductWith3Col', array(
+            $this->render('listProductWith4Col', array(
                 'amountCol' => 'threecol',
                 'tab' => $this->tab,
                 'isOnIndex' => $this->isOnIndex,
+                'cateAlias' => $this->cateAlias,
                 'productList' => 'product-list',
                 'products' => $products,
                 'model' => 'Products'
             ));
         } else {
-            $this->render('listProductWith4Col', array(
+            $this->render('listProductWith3Col', array(
                 'amountCol' => 'fourcol',
                 'tab' => $this->tab,
                 'isOnIndex' => $this->isOnIndex,
+                'cateAlias' => $this->cateAlias,
                 'productList' => 'product-list bg-f5f5f5 topbottom-20 leftright-20 clearfix',
                 'products' => $products,
                 'model' => 'Products'
