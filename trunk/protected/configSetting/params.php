@@ -38,7 +38,7 @@
 //
 	define('INDEX_PAGE', 1);
 //
-	define('ITEM_PER_PAGE', 10);
+	define('ITEM_PER_PAGE', 9);
 //
 	define('MAIL_METHOD', 'smtp');
 //
