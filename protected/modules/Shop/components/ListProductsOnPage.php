@@ -20,6 +20,7 @@ class ListProductsOnPage extends CPortlet {
                 'isOnIndex' => $this->isOnIndex,
                 'productList' => 'product-list',
                 'products' => $products,
+                'cateAlias' => $this->cateAlias,
                 'model' => 'Products'
             ));
         } else {
@@ -29,6 +30,7 @@ class ListProductsOnPage extends CPortlet {
                 'isOnIndex' => $this->isOnIndex,
                 'productList' => 'product-list bg-f5f5f5 topbottom-20 leftright-20 clearfix',
                 'products' => $products,
+                'cateAlias' => $this->cateAlias,
                 'model' => 'Products'
             ));
         }
