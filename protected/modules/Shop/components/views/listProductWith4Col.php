@@ -2,21 +2,18 @@
     <?php $modelProducts = isset($products['products']) ? $products['products'] : $products; ?>
     <?php $modelPaging = isset($products['paging']) ? $products['paging'] : ''; ?>
     <?php if (count($modelProducts)) { ?>
-        <?php foreach ($modelProducts as $prod) {
-                if (in_array(intval($isOnIndex), $prod->page)) {
-                    $arrProductOnIndex[] = $prod;
-                }
-            }
-            foreach ($arrProductOnIndex as $k=>$product) {
-                $classLast = ($k+1) % 4 == 0 ? 'last' : '';
+        <?php foreach ($modelProducts as $k=>$product) {
+            if (in_array(intval($isOnIndex), $product->page)) {
+                $classLast = $isOnIndex && !empty($tab) ? (($k+1)%3 == 0 ? 'last' : '') : (($k+1)%4 == 0 ? 'last' : '');
                 $image = $product->image ? '/uploads/resizeOnIndex/' . $model . '/' . Helper::explodeCharData($product->image, ',', false, true) : '/uploads/no_image.jpg';
-                $notMarginTop = $k==0 || $k == 1 || $k == 2 || $k == 3 ? 'not-margin-top' : '';
+                $notMarginTop = $isOnIndex && !empty($tab) ? '' : ($k==0 || $k == 1 || $k == 2 ? 'not-margin-top' : '');
 
                 $explodeFolder = explode('/', $image);
                 $imgZoom = '';
                 if ($explodeFolder[2] != 'no_image.gif') {
                     $imgZoom = str_replace($explodeFolder[2], 'original', $image);
-                } ?>
+                }
+                ?>
                 <div class="product <?php echo $notMarginTop; ?> <?php echo $amountCol; ?> <?php echo $classLast; ?>">
                     <h3 class="title"><a href="<?php echo Helper::url('/Shop/product/view', array('cateAlias' => $product->cate->alias, 'alias' => $product->alias)); ?>" title="<?php echo $product->name; ?>"><?php echo $product->name; ?></a></h3>
                     <div class="product-image">
@@ -53,7 +50,8 @@
                     </div>
                 </div>
                 <?php if ($isOnIndex && ($k+1) % 4 == 0) { ?><div class="clearfix"></div><?php } ?>
-            <?php } ?>
+                <?php if (!$isOnIndex && ($k+1) % 3 == 0) { ?><div class="clearfix"></div><?php } ?>
+            <?php }} ?>
         <div class="clearfix"></div>
         <?php if ($isOnIndex && isset($cateAlias)) { ?>
             <p class="readmore"><a href="<?php echo Helper::url('/Shop/product/listProductsByCategory', array('cateAlias' => $cateAlias)) ?>" title="Xem tất cả">Xem tất cả</a></p>
