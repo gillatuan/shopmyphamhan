@@ -220,6 +220,7 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
 #wrapper .products-in-category:first-child { margin-top: 0; }
 #wrapper .products-in-category.not-border-bottom .addcart-success { margin: 20px 0; }
 .products-in-category h2 { padding: 10px; color: #fff; background-color: #FFA07A; font-size: 20px; font-weight: bold; text-align: left; text-shadow: none; }
+.twelvecol.products-in-category { max-height: 970px; overflow: hidden; position: relative; }
 
 /* tabs */
 .tab-buttons { overflow: hidden; }
@@ -310,7 +311,7 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
 .price-group .price .price-text, .price-group .price .price-value { color: #02ABD6; font-weight: bold; text-shadow: 0 1px #FFFFFF; }
 .price-group .price.destroy .price-text, .price-group .price.destroy .price-value { color: #989898; text-shadow: 0 1px #FFFFFF; }
 
-.product-list .readmore { text-align: right; margin: 15px; }
+.product-list .readmore { margin: 15px; position: absolute; top: 0; right: 0; text-align: right; }
 
 /* Products by Category shopmyphamhan-icon-category */
 #wrapper h2.product-name-by-cate { padding: 10px; background-color: #FFA07A; color: white; font-size: 20px; font-weight: bold; text-align: left; text-shadow: none; }
