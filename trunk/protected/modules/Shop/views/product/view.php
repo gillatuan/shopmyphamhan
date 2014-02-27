@@ -12,12 +12,10 @@ if ($explodeFolder[2] != 'no_image.gif') {
     <div class="wrapper-module module product-detail">
         <div class="product-neighbours">
             <?php if ($older) { ?>
-                <a href="<?php echo Helper::url('/Shop/product/view', array('cateAlias' => $older->cate->alias, 'alias' => $older->alias)) ?>"
-                   class="previous-page"><?php echo count($older) ? $older->name : ''; ?></a>
+                <a href="<?php echo Helper::url('/Shop/product/view', array('cateAlias' => $older->cate->alias, 'alias' => $older->alias)) ?>" class="previous-page" title="<?php echo count($older) ? $older->name : ''; ?>"><?php echo count($older) ? $older->name : ''; ?></a>
             <?php } ?>
             <?php if ($newer) { ?>
-                <a href="<?php echo Helper::url('/Shop/product/view', array('cateAlias' => $newer->cate->alias, 'alias' => $newer->alias)) ?>"
-                   class="next-page"><?php echo count($newer) ? $newer->name : ''; ?></a>
+                <a href="<?php echo Helper::url('/Shop/product/view', array('cateAlias' => $newer->cate->alias, 'alias' => $newer->alias)) ?>" class="next-page" title="<?php echo count($newer) ? $newer->name : ''; ?>"><?php echo count($newer) ? $newer->name : ''; ?></a>
             <?php } ?>
 
             <div class="clear"></div>

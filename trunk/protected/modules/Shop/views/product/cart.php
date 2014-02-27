@@ -2,7 +2,7 @@
     <h3>Thông tin đặt hàng</h3>
     <div class="product-neighbours">
         <strong>Giỏ hàng của bạn</strong>
-        <a href="<?php echo Helper::url('/site/index'); ?>" class="next-page">Tiếp tục mua hàng</a>
+        <a href="<?php echo Helper::url('/site/index'); ?>" class="next-page" title="Tiếp tục mua hàng">Tiếp tục mua hàng</a>
 
         <div class="clear"></div>
     </div>
