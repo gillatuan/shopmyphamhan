@@ -187,7 +187,7 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
         .search {  }
         .search .row { display: inline; }
         .search label { float: left; height: 32px; line-height: 32px; margin-right: 10px; padding-left: 15px; color: #0088CC; font-weight: bold; }
-        .search input { padding: 5px 10px; font-size: 90%; border: 1px solid grey; background-color: #F4F4F4; }
+        .search input { padding: 5px; font-size: 90%; border: 1px solid grey; background-color: #F4F4F4; }
         .search input[type=text] { width: 40%; }
         .search input[type=submit] { cursor: pointer; }
         /* signs */
@@ -256,7 +256,7 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
         .products-in-category .product-list { margin-bottom: 10px; padding: 0 18px 0 22px; }
         .products-in-category .product-list.topbottom-20 { padding: 20px 18px 20px 22px; }
         .product-list .product {
-            height: 415px; margin-right: 3.5%; margin-top: 20px; padding: 10px 0; overflow: hidden;
+            height: 415px; margin-right: 3.5%; margin-top: 20px;  margin-bottom: 20px; padding: 10px 0; overflow: hidden;
             box-shadow: 0 0 1px #ccc;
             -moz-box-shadow: 0 0 1px #ccc;
             -webkit-box-shadow: 0 0 1px #ccc;
@@ -658,7 +658,7 @@ h1, h2, h3 { margin-bottom: 10px; font-weight: normal; background: none; }
     #nav-fixed ul li:first-child { padding-right: 10px; border-left: none; }
     /* send mail */
     #nav-fixed ul li input { padding: 5px; font-size: 12px; border: none; background-color: #ffffff; }
-    #nav-fixed ul li input[type=submit] { cursor: pointer; }
+    #nav-fixed ul li input[type=submit] { padding: 4px 5px; cursor: pointer; }
 
     /* .hot-products */
     #nav-fixed ul li.hot-products { padding: 4px 10px 0; }
@@ -719,12 +719,15 @@ Important:
     #nav-fixed {  }
     #nav-fixed ul { padding: 5px 10px; }
     #nav-fixed ul li:first-child { padding-right: 0; }
-    #nav-fixed ul li input[type=text] { float: left; width: 55%;}
+    #nav-fixed ul li input[type=text] { float: left; width: 72%;}
     #nav-fixed ul li.hot-products { display: none; }
     #nav-fixed li.nav-social { position: absolute; right: 20px; }
+    #nav-fixed li.nav-social a:first-child { margin-left: 5px; }
     #nav-fixed li.nav-social img { width: 24px; height: 25px; }
     #nav-fixed ul li.hot-line { border-left: none; }
     #nav-fixed ul li.hot-line p, #nav-fixed ul li.hot-line span { font: bold 15px Tahoma !important; }
+
+    #footer { padding: 40px 0 120px; }
     #footer .row { width: 93%; padding: 0 10px; }
 }
 

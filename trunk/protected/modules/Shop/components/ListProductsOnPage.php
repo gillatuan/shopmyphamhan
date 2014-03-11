@@ -34,14 +34,6 @@ class ListProductsOnPage extends CPortlet {
                 'model' => 'Products'
             ));
         }
-
-        /*$this->render('listProductsOnPage', array(
-            'products' => $products,
-            'isOnIndex' => $this->isOnIndex,
-            'cateAlias' => $this->cateAlias,
-            'tab' => $this->tab,
-            'model' => 'Products'
-        ));*/
     }
 
     protected function genCate($cateAlias) {

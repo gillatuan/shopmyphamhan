@@ -14,6 +14,7 @@ class Notifications extends CPortlet {
                 $criteria = new CDbCriteria();
                 $criteria->compare('status', APPROVED);
                 $news = Cache::model()->usingCache('News', $criteria, '', false, Cache_Time, '', 1, 'NEWS' . $this->alias);
+
                 break;
 
             default:
