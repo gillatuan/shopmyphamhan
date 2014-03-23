@@ -2,9 +2,8 @@
 
             //
 	define('ADMIN_ADDRESS', '32/53/19 Ông Ích Khiêm, F.14, Quận 11');
-	define('HOTLINE', '0906.977.244 - 0903.66.44.64 - Ms.Linh, Mr.Thanh');
 //
-	define('ADMIN_EMAIL', 'gangtergilla4@gmail.com');
+	define('ADMIN_EMAIL', 'ngoctuan3010842003@yahoo.com');
 //
 	define('APPROVED', 1);
 //
@@ -36,6 +35,8 @@
 //
 	define('DEFAULT_META_KEYWORDS', 'my pham xach tay,nuoc hoa,my pham cao cap,kem duong da,my pham tonymoly,my pham the face shop,bb cream,hàn quốc');
 //
+	define('HOTLINE' , '0906.977.244 - 0903.66.44.64 - Ms.Linh, Mr.Thanh');
+//
 	define('INDEX_PAGE', 1);
 //
 	define('ITEM_PER_PAGE', 9);
@@ -44,7 +45,7 @@
 //
 	define('MAIL_SENDER_ADDRESS', 'gangtergilla4@gmail.com');
 //
-define('MAIL_SENDER_NAME', 'Contact Thietkeweb3in1');
+	define('MAIL_SENDER_NAME', 'Contact Web3in1');
 //
 	define('None_Spam', 2);
 //
@@ -52,7 +53,7 @@ define('MAIL_SENDER_NAME', 'Contact Thietkeweb3in1');
 //
 	define('ONLINE'  , 1);
 //
-	define('PAGE_SIZE', 10);
+	define('PAGE_SIZE', 9);
 //
 	define('PENDING' , 2);
 //

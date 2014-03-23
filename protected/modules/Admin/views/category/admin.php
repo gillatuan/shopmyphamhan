@@ -57,7 +57,7 @@ $this->menu = array(
     border-radius: 3px;
     box-sizing: border-box; -moz-box-sizing: border-box;
     }
-    .dd-handle:hover, dd-handle tbody { color: #2ea8e5; background: #fff; }
+    .dd-handle:hover, .dd-handle tbody { color: #2ea8e5; background: #fff; }
 
     .dd-item > button { display: block; position: absolute; top: 12px; left: -20px; cursor: pointer; float: left; width: 25px; height: 20px; margin: 5px 0; padding: 0; text-indent: 100%; white-space: nowrap; overflow: hidden; border: 0; background: transparent; font-size: 12px; line-height: 1; text-align: center; font-weight: bold; }
     .dd-item > button:before { content: '+'; display: block; position: absolute; width: 100%; text-align: center; text-indent: 0; }
