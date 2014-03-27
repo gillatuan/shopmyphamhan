@@ -19,7 +19,7 @@
 //
 	define('DB_HOST' , 'localhost');
 //
-	define('DB_NAME' , 'tuanbui_shopmyphamhan');
+	define('DB_NAME' , 'tuanbui_voxecu');
 //
 	define('DB_PORT' , 3306);
 //

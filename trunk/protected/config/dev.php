@@ -102,7 +102,7 @@ return array(
 
         // uncomment the following to use a MySQL database
         'db'=>array(
-            'connectionString' => 'mysql:host=localhost;port=3306;dbname=prj_myphamhan',
+            'connectionString' => 'mysql:host=localhost;port=3306;dbname=prj_voxecu',
             'emulatePrepare'   => true,
             'username'         => 'root',
             'password'         => '',
