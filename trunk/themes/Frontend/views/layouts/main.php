@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo Yii::app()->language ?>" lang="<?php echo Yii::app()->language ?>">
 <head>    <!-- Mobile viewport optimisation -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=400, initial-scale=1.0"/>
     <meta http-equiv="content-language" content="<?php echo Yii::app()->language ?>"/>
     <title><?php echo $this->pageTitle; ?></title>
 <!--<meta name="majestic-site-verification" content="MJ12_bde25495-e68e-4fd7-9ccf-898054e7af80" />-->
