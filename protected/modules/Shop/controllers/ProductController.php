@@ -1,7 +1,7 @@
 <?php
 
 class ProductController extends FrontendController {
-    public $includeText = 'Vỏ xe cũ | ';
+    public $includeText = 'Shop Mỹ Phẩm Hàn | ';
 
     public function actionIndex($flashOrder = '') {
         if ($flashOrder) {
@@ -56,8 +56,8 @@ class ProductController extends FrontendController {
             );
             $pageTitle = $this->pageTitle =  $this->includeText . 'Tìm kiếm - Từ khóa"' . $kw . '"';
             $seo = array(
-                'keywords'    => Yii::app()->language == 'vi' ? "Tìm kiếm - Từ khóa'{$kw}' " . DEFAULT_META_KEYWORDS . ' voxecu.com' : "product '{$kw}', product '{$kw}' design web, product '{$kw}' voxecu.com",
-                'description' => Yii::app()->language == 'vi' ? "Tìm kiếm - Từ khóa '{$kw}' " . DEFAULT_META_DESCRIPTION . ' voxecu.com'  : "product '{$kw}', product '{$kw}' design web, product '{$kw}' voxecu.com",
+                'keywords'    => Yii::app()->language == 'vi' ? "Tìm kiếm - Từ khóa'{$kw}' " . DEFAULT_META_KEYWORDS . ' shopmyphamhan.com' : "product '{$kw}', product '{$kw}' design web, product '{$kw}' shopmyphamhan.com",
+                'description' => Yii::app()->language == 'vi' ? "Tìm kiếm - Từ khóa '{$kw}' " . DEFAULT_META_DESCRIPTION . ' shopmyphamhan.com'  : "product '{$kw}', product '{$kw}' design web, product '{$kw}' shopmyphamhan.com",
                 'title'       => $pageTitle,
                 'type'        => 'Sản phẩm',
                 'url'         => Yii::app()->createAbsoluteUrl(Yii::app()->request->requestUri),
@@ -92,8 +92,8 @@ class ProductController extends FrontendController {
         );
         $pageTitle = $this->pageTitle = $this->includeText . "{$modelCate->name}";
         $seo = array(
-            'keywords' => Yii::app()->language == 'vi' ? "{$modelCate->description} " . DEFAULT_META_KEYWORDS . 'voxecu.com' : 'homepage, homepage design web, homepage voxecu.com',
-            'description' => Yii::app()->language == 'vi' ? "{$modelCate->description} " . DEFAULT_META_DESCRIPTION . ' voxecu.com' : 'homepage, homepage design web, homepage voxecu.com',
+            'keywords' => Yii::app()->language == 'vi' ? "{$modelCate->description} " . DEFAULT_META_KEYWORDS . 'shopmyphamhan.com' : 'homepage, homepage design web, homepage shopmyphamhan.com',
+            'description' => Yii::app()->language == 'vi' ? "{$modelCate->description} " . DEFAULT_META_DESCRIPTION . ' shopmyphamhan.com' : 'homepage, homepage design web, homepage shopmyphamhan.com',
             'title' => $pageTitle,
             'type' => 'Sản phẩm',
             'url' => Yii::app()->createAbsoluteUrl(Yii::app()->request->requestUri),
@@ -179,8 +179,8 @@ class ProductController extends FrontendController {
         );
         $pageTitle = $this->pageTitle = $this->includeText . $productDetail->name;
         $seo = array(
-            'keywords'    => Yii::app()->language == 'vi' ? "{$productDetail->name}, {$productDetail->info} " . DEFAULT_META_KEYWORDS . 'voxecu.com' : "{$productDetail->name}, {$productDetail->info}",
-            'description' => Yii::app()->language == 'vi' ? "{$productDetail->name}, {$productDetail->info} " . DEFAULT_META_DESCRIPTION . ' voxecu.com'  : "{$productDetail->name}, {$productDetail->info}",
+            'keywords'    => Yii::app()->language == 'vi' ? "{$productDetail->name}, {$productDetail->info} " . DEFAULT_META_KEYWORDS . 'shopmyphamhan.com' : "{$productDetail->name}, {$productDetail->info}",
+            'description' => Yii::app()->language == 'vi' ? "{$productDetail->name}, {$productDetail->info} " . DEFAULT_META_DESCRIPTION . ' shopmyphamhan.com'  : "{$productDetail->name}, {$productDetail->info}",
             'title'       => $pageTitle,
             'type'        => 'Sản phẩm',
             'url'         => Yii::app()->createAbsoluteUrl(Yii::app()->request->requestUri),
@@ -236,14 +236,14 @@ class ProductController extends FrontendController {
                 $params = array(
                     'viewPath' => 'application.views.site.mail',
                     'view'     => 'registration_confirmation',
-                    'subject'  => 'Voxecu.com Member Registration Confirmation',
+                    'subject'  => 'Shopmyphamhan.com Member Registration Confirmation',
                     'body'     => array(
                         'username' => $model->username,
                         'password' => $postUser['password'],
                         'link'     => CHtml::link($url, $url, array('target' => '_blank')),
                     ),
                     'mailTo'   => $model->email,
-		    'mailFrom' => array(ADMIN_EMAIL => 'Voxecu.com - ' .ADMIN_EMAIL )
+		    'mailFrom' => array(ADMIN_EMAIL => 'Shopmyphamhan.com - ' .ADMIN_EMAIL )
                 );
                 // send
                 Helper::sendMail($params);
@@ -259,8 +259,8 @@ class ProductController extends FrontendController {
         );
         $pageTitle = $this->pageTitle = $this->includeText . 'Giỏ hàng của bạn - Thông tin giỏ hàng';
         $seo = array(
-            'keywords'    => Yii::app()->language == 'vi' ? "giỏ hàng của bạn, thông tin giỏ hàng " . DEFAULT_META_KEYWORDS . 'voxecu.com' : "your card, your cart info",
-            'description' => Yii::app()->language == 'vi' ? "giỏ hàng của bạn, thông tin giỏ hàng " . DEFAULT_META_DESCRIPTION . ' voxecu.com' : "your card, your cart info",
+            'keywords'    => Yii::app()->language == 'vi' ? "giỏ hàng của bạn, thông tin giỏ hàng " . DEFAULT_META_KEYWORDS . 'shopmyphamhan.com' : "your card, your cart info",
+            'description' => Yii::app()->language == 'vi' ? "giỏ hàng của bạn, thông tin giỏ hàng " . DEFAULT_META_DESCRIPTION . ' shopmyphamhan.com' : "your card, your cart info",
             'title'       => $pageTitle,
             'type'        => 'Sản phẩm',
             'url'         => Yii::app()->createAbsoluteUrl(Yii::app()->request->requestUri),
@@ -379,7 +379,7 @@ class ProductController extends FrontendController {
             $params = array(
                 'viewPath' => 'application.views.site.mail',
                 'view'     => 'send_cart_order',
-                'subject'  => 'Voxecu.com - Đơn đặt hàng',
+                'subject'  => 'Shopmyphamhan.com - Đơn đặt hàng',
                 'body'     => array(
                     'billTo'   => $billTo,
                     'shipTo'   => $shipTo,
@@ -387,7 +387,7 @@ class ProductController extends FrontendController {
                     'cartInfo' => $cartInfo
                 ),
                 'mailTo'   => $billTo['email'],
-                'mailFrom' => array(ADMIN_EMAIL => 'Vỏ xe cũ - ' . ADMIN_EMAIL)
+                'mailFrom' => array(ADMIN_EMAIL => 'Shop Mỹ Phẩm Hàn - ' . ADMIN_EMAIL)
             );
             // send
             Helper::sendMail($params);
@@ -405,8 +405,8 @@ class ProductController extends FrontendController {
         );
         $pageTitle = $this->pageTitle = $this->includeText . 'Xác nhận đơn hàng';
         $seo = array(
-            'keywords'    => Yii::app()->language == 'vi' ? "xác nhận đơn hàng, xác nhân đơn hàng của bạn " . DEFAULT_META_KEYWORDS . 'voxecu.com' : "confirm your order",
-            'description' => Yii::app()->language == 'vi' ? "xác nhận đơn hàng, xác nhân đơn hàng của bạn " . DEFAULT_META_DESCRIPTION . ' voxecu.com' : "confirm your order",
+            'keywords'    => Yii::app()->language == 'vi' ? "xác nhận đơn hàng, xác nhân đơn hàng của bạn " . DEFAULT_META_KEYWORDS . 'shopmyphamhan.com' : "confirm your order",
+            'description' => Yii::app()->language == 'vi' ? "xác nhận đơn hàng, xác nhân đơn hàng của bạn " . DEFAULT_META_DESCRIPTION . ' shopmyphamhan.com' : "confirm your order",
             'title'       => $pageTitle,
             'type'        => 'Sản phẩm',
             'url'         => Yii::app()->createAbsoluteUrl(Yii::app()->request->requestUri),
@@ -441,8 +441,8 @@ class ProductController extends FrontendController {
         );
         $pageTitle = $this->pageTitle = $this->includeText . $news->title . " - " . $typeNews;
         $seo = array(
-            'keywords'    => Yii::app()->language == 'vi' ? "$news->title, $typeNews $news->title " . DEFAULT_META_KEYWORDS . 'voxecu.com' : "$news->title, $typeNews $news->title",
-            'description' => Yii::app()->language == 'vi' ? "$news->title, $typeNews $news->title " . DEFAULT_META_DESCRIPTION . ' voxecu.com' : "$news->title, $typeNews $news->title",
+            'keywords'    => Yii::app()->language == 'vi' ? "$news->title, $typeNews $news->title " . DEFAULT_META_KEYWORDS . 'shopmyphamhan.com' : "$news->title, $typeNews $news->title",
+            'description' => Yii::app()->language == 'vi' ? "$news->title, $typeNews $news->title " . DEFAULT_META_DESCRIPTION . ' shopmyphamhan.com' : "$news->title, $typeNews $news->title",
             'title'       => $pageTitle,
             'type'        => 'Tin Tức',
             'url'         => Yii::app()->createAbsoluteUrl(Yii::app()->request->requestUri),
@@ -478,8 +478,8 @@ class ProductController extends FrontendController {
         );
         $pageTitle = $this->pageTitle = $this->includeText . 'Hỏi đáp';
         $seo = array(
-            'keywords'    => Yii::app()->language == 'vi' ? "Hỏi đáp, đặt câu hỏi, những vấn đề liên quan đến shop của chúng tôi " . DEFAULT_META_KEYWORDS . 'voxecu.com' : "FAQ, send your question, regarding to our shop",
-            'description' => Yii::app()->language == 'vi' ? "Hỏi đáp, đặt câu hỏi, những vấn đề liên quan đến shop của chúng tôi " . DEFAULT_META_DESCRIPTION . ' voxecu.com' : "FAQ, send your question, regarding to our shop",
+            'keywords'    => Yii::app()->language == 'vi' ? "Hỏi đáp, đặt câu hỏi, những vấn đề liên quan đến shop của chúng tôi " . DEFAULT_META_KEYWORDS . 'shopmyphamhan.com' : "FAQ, send your question, regarding to our shop",
+            'description' => Yii::app()->language == 'vi' ? "Hỏi đáp, đặt câu hỏi, những vấn đề liên quan đến shop của chúng tôi " . DEFAULT_META_DESCRIPTION . ' shopmyphamhan.com' : "FAQ, send your question, regarding to our shop",
             'title'       => $pageTitle,
             'type'        => 'FAQ',
             'url'         => Yii::app()->createAbsoluteUrl(Yii::app()->request->requestUri),

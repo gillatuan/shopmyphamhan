@@ -3,7 +3,7 @@
             //
 	define('ADMIN_ADDRESS', '32/53/19 Ông Ích Khiêm, F.14, Quận 11');
 //
-	define('ADMIN_EMAIL', 'ngoctuan3010842003@yahoo.com');
+	define('ADMIN_EMAIL', 'thuylinhshop06@yahoo.com');
 //
 	define('APPROVED', 1);
 //
@@ -19,7 +19,7 @@
 //
 	define('DB_HOST' , 'localhost');
 //
-	define('DB_NAME' , 'tuanbui_voxecu');
+	define('DB_NAME' , 'tuanbui_shopmyphamhan');
 //
 	define('DB_PORT' , 3306);
 //
