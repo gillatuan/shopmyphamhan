@@ -123,7 +123,7 @@ $('.search-form form').submit(function(){
                     array(
                         'name' => 'page',
                         'value' => 'Helper::printArray("Display_On_Page", $data->page, ",", $data->id)',
-                         /* 'CHtml::checkBox("changeValue[$data->id]", $data->page, array("style" => "width: 70px; padding: 2px 5px;", "class" => "changeValue page"))',*/
+                        /* 'CHtml::checkBox("changeValue[$data->id]", $data->page, array("style" => "width: 70px; padding: 2px 5px;", "class" => "changeValue page"))',*/
                         'type'  => 'raw',
                         'htmlOptions' => array('style' => 'width: 100px; max-width: 100px; word-wrap: break-word; overflow: hidden')
                     ),
@@ -180,6 +180,7 @@ $script = '
         $.ajax({
             url:"' . Helper::url('/Admin/default/ajaxUpdate') . '",
             type: "post",
+
             data: { "id": orderId, "value": orderValue, "attr": orderAttribute, "model": modelName, "pageCode": pageCode },
             success: function(){
                 $.fn.yiiGridView.update(gridName + "-grid");
@@ -191,11 +192,11 @@ $script = '
 ';
 Helper::cs()->registerScript('set-status', $script, CClientScript::POS_END);
 $scriptSort = '
-    $("#products-grid tr").each(function(){
-        order = $(this).find("td:first input").val();
-        $(this).attr("id","products_"+order);
-        $(this).css("cursor", "pointer")
-    });
+            $("#products-grid tr").each(function(){
+                order = $(this).find("td:first input").val();
+                $(this).attr("id","products_"+order);
+                $(this).css("cursor", "pointer")
+            });
 
     $("tbody").sortable({
         opacity: 0.8,
