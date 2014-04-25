@@ -121,7 +121,7 @@ return array(
 
 
     'confirmDelete'                   => 'Bạn chắc chắn muốn xóa item này',
-    'Contact_Info'                    => 'Nếu bạn có bất kỳ câu hỏi, hay ý kiến đóng góp, về sản phẩm Shop Mỹ Phẩm Hàn đừng ngần ngại liên hệ với chúng tôi bằng cách điền vào biểu mẫu bên dưới. Chân thành cảm ơn.',
+    'Contact_Info'                    => 'Nếu bạn có bất kỳ câu hỏi, hay ý kiến đóng góp, về sản phẩm Shop Phái Đẹp Online đừng ngần ngại liên hệ với chúng tôi bằng cách điền vào biểu mẫu bên dưới. Chân thành cảm ơn.',
 
     // Captcha
     'hintField' => 'Hãy điền vào ô trống phía dưới chính xác những chữ mà bạn thấy trong hình.<br /> Không phân biệt hoa thường', //'Please enter the letters as they are shown in the image above.<br/>Letters are not case-sensitive.',

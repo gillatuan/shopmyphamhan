@@ -13,7 +13,7 @@
     <meta name='revisit-after' content='1 days'/>
 
     <link rel="canonical" href="<?php //echo $this->canonicalUrl; ?>" />
-    <link rel="shortcut icon" href="/uploads/shopmyphamhan-favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/uploads/shopphaideponline-favicon.ico" type="image/x-icon" />
 
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -21,7 +21,7 @@
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        ga('create', 'UA-32319582-5', 'shopmyphamhan.com');
+        ga('create', 'UA-32319582-5', 'shopphaideponline.com');
         ga('send', 'pageview');
     </script>
 </head>
@@ -30,9 +30,9 @@
     <div class="container clearfix">
         <div class="row">
             <div class="fourcol floatleft logo">
-                <h1><a href="<?php echo Helper::url('/Shop/product/index') ?>" title="shopmyphamhan.com">
-                    <span class="shopmypham">Shopmypham</span>
-                    <span class="han">han</span>
+                <h1><a href="<?php echo Helper::url('/Shop/product/index') ?>" title="shopphaideponline.com">
+                    <span class="thoitrang">Thời Trang</span>
+                    <span class="shopphaideponline">shopphaideponline</span>
                     <span class="domain">.com</span>
                 </a></h1>
             </div>
@@ -46,7 +46,7 @@
                     <?php } ?>
                     <li><a href="<?php echo Helper::url('/Shop/product/faq'); ?>" title="Hỏi đáp">Hỏi đáp</a></li>
                     <li><a href="<?php echo Helper::url('/site/contact'); ?>" title="Liên hệ">Liên hệ</a></li>
-                    <li><a class="yahoo" href="ymsgr:sendim?thuylinhshop06" title="Hỗ trợ Online"><img src="http://opi.yahoo.com/online?u=thuylinhshop06&m=g&t=2&l=us" alt="Shopmyphamhan.com yahoo hỏi đáp" /></a></li>
+                    <li><a class="yahoo" href="ymsgr:sendim?ngoctuan3010842003" title="Hỗ trợ Online"><img src="http://opi.yahoo.com/online?u=ngoctuan3010842003&m=g&t=2&l=us" alt="Yahoo hỗ trợ shopphaideponline.com" /></a></li>
                 </ul>
             </div>
         </div>
@@ -79,7 +79,7 @@
             <div class="signs sixcol last">
                 <a href="<?php echo Helper::url('/Shop/product/readNews', array('newsAlias' => 'Cam-ket-loi-ich-khi-mua-online')) ?> " title="Cam kết lợi ích khi mua online" class="online-useful">Cam kết lợi ích khi mua online</a>
                 <a href="#" title="Sản phẩm chất lượng">
-                    <img src="<?php echo Helper::themeUrl(); ?>/images/shopmyphamhan-cam-ket-dam-bao-san-pham-chat-luong.jpg" alt="Shop Mỹ Phẩm Hàn đảm bảo sản phẩm chất lượng" /></a>
+                    <img src="<?php echo Helper::themeUrl(); ?>/images/shopphaideponline-cam-ket-dam-bao-san-pham-chat-luong.jpg" alt="Shop phái đẹp online đảm bảo sản phẩm chất lượng" /></a>
             </div>
         </div>
     </div>
@@ -110,7 +110,7 @@
                 <?php
                 $amountProducts = Cart::hasCookie('amountProducts') ? 'Bạn có ' . Cart::getCookie('amountProducts') . ' sản phẩm trong giỏ hàng.' : 'Giỏ hàng'; ?>
                 <a href="<?php echo Helper::url('/Shop/product/viewCart'); ?>" title="<?php echo $amountProducts; ?>" class="your-cart"><?php echo $amountProducts; ?>
-                    <img src="<?php echo Helper::themeUrl(); ?>/images/shopmyphamhan-gio-hang.gif" alt="Shop Mỹ Phẩm Hàn giỏ hàng">
+                    <img src="<?php echo Helper::themeUrl(); ?>/images/shopphaideponline-gio-hang.gif" alt="vỏ xe nâng các loại giỏ hàng">
                 </a>
             </div>
         </div>
@@ -147,14 +147,14 @@
                 <p>date for maximum: <?php echo date('d.m.Y', Yii::app()->counter->getMaximalTime()); ?></p>
             </div>
             <div class="copyright fourcol">
-                <h3>BẢN QUYỀN THUỘC SHOPMYPHAMHAN.COM.</h3>
+                <h3>BẢN QUYỀN THUỘC CTY TNHH SHOP PHÁI ĐẸP ONLINE.</h3>
                 <p>Địa chỉ: <?php echo ADMIN_ADDRESS; ?></p>
-                <p>Email: <a href="mailto:thuylinhshop06@yahoo.com">thuylinhshop06@yahoo.com</a></p>
-                <p>All Rights Reserved. Designed by <a href="http://thietkeweb3in1.com" title="thietkeweb3in1.com">Thietkeweb3in1.com</a></p>
+                <p>Email: <a href="mailto:<?php echo ADMIN_EMAIL; ?>"><?php echo ADMIN_EMAIL; ?></a></p>
+                <p>All Rights Reserved. Designed by <a href="http://thietkeweb3in1.com" title="thietkeweb3in1.com">thietkeweb3in1.com</a></p>
             </div>
             <div class="pttt fourcol last">
                 <h3>Phương thức thanh toán:</h3>
-                <p><img src="<?php echo Helper::themeUrl(); ?>/images/shopmyphamhan-payment-methods.png" border="0" alt="payment-methods.png"></p>
+                <p><img src="<?php echo Helper::themeUrl(); ?>/images/payment-methods.png" border="0" alt="payment-methods.png"></p>
             </div>
         </div>
     </div>
@@ -168,24 +168,24 @@
                 <input type="submit" value="Gửi">
             </form>
         </li>
-        <li class="hot-products last"><a href="<?php echo Helper::url('/Shop/product/index'); ?>" title="Hot product">Hot Products</a></li>
+        <li class="hot-products last"><a href="#" title="Hot product">Hot Products</a></li>
         <li class="hot-line sixcol last"><p>Hot line: <span><?php echo HOTLINE; ?></span></p></li>
         <li class="nav-social floatright last">
             <?php $url = Yii::app()->createAbsoluteUrl(Yii::app()->request->requestUri); ?>
             <a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $url; ?>" target="_blank" title="Facebook social">
-                <img class="footer_social" src="<?php echo Helper::themeUrl(); ?>/images/shopmyphamhan-facebook_24.png" border="0" alt="facebook social" />
+                <img class="footer_social" src="<?php echo Helper::themeUrl(); ?>/images/shopphaideponline-facebook_24.png" border="0" alt="facebook social" />
             </a>
             <a href="https://twitter.com/share?url=<?php echo $url; ?>" title="Twitter social">
-                <img class="footer_social" src="<?php echo Helper::themeUrl(); ?>/images/shopmyphamhan-twitter_24.png" border="0" alt="twitter social" />
+                <img class="footer_social" src="<?php echo Helper::themeUrl(); ?>/images/shopphaideponline-twitter_24.png" border="0" alt="twitter social" />
             </a>
             <a href="https://plus.google.com/share?url=<?php echo $url; ?>" title="Google Plus social" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
-                <img src="<?php echo Helper::themeUrl(); ?>/images/shopmyphamhan-gplus-32.png" alt="Share on Google+" />
+                <img src="<?php echo Helper::themeUrl(); ?>/images/shopphaideponline-gplus-32.png" alt="Share on Google+" />
             </a>
             <!--<a class="" title="Pinterest social">
-                <img class="footer_social" src="<?php /*echo Helper::themeUrl(); */?>/images/shopmyphamhan-stumble_24.png" border="0" alt="Pinterest social" />
+                <img class="footer_social" src="<?php /*echo Helper::themeUrl(); */?>/images/shopphaideponline-stumble_24.png" border="0" alt="Pinterest social" />
             </a>
             <a class="" title="More social">
-                <img class="footer_social" src="<?php /*echo Helper::themeUrl(); */?>/images/shopmyphamhan-blogger_24.png" border="0" alt="More social" />
+                <img class="footer_social" src="<?php /*echo Helper::themeUrl(); */?>/images/shopphaideponline-blogger_24.png" border="0" alt="More social" />
             </a>-->
         </li>
     </ul>
@@ -332,7 +332,7 @@
     })
 
     function processAjax(url, param, objectThis, alias, typeCart) {
-        $(".addcart-success").show().html(\'<img src="' . Helper::themeUrl() .'/images/shopmyphamhan-loading.gif" alt="loading image" />\');
+        $(".addcart-success").show().html(\'<img src="' . Helper::themeUrl() .'/images/shopphaideponline-loading.gif" alt="loading image" />\');
         $.ajax({
             url: url,
             type: "post",

@@ -9,7 +9,7 @@
     <!--Breadcrumbs-->
     <div class="products-in-category not-border-bottom not-margin-top ninecol last">
         <?php $this->widget('zii.widgets.CBreadcrumbs', array(
-            'homeLink'    => CHtml::link('Shop Mỹ Phẩm Hàn', Helper::url('/Shop/product/index'), array('title' => 'Shop Mỹ Phẩm Hàn')),
+            'homeLink'    => CHtml::link('Shop phái đẹp online ', Helper::url('/Shop/product/index'), array('title' => 'Shop phái đẹp online ')),
             'links'       => $this->breadcrumbs,
             'htmlOptions' => array(
                 'id'    => 'PageBreadcrumb',

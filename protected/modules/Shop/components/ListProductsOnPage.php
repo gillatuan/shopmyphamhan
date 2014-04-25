@@ -12,6 +12,7 @@ class ListProductsOnPage extends CPortlet {
 
     public function renderContent() {
         $products = $this->genCate($this->cateAlias);
+
         if ($this->isOnIndex) {
             $this->render('listProductWith3Col', array(
                 'amountCol' => 'threecol',
@@ -33,14 +34,6 @@ class ListProductsOnPage extends CPortlet {
                 'model' => 'Products'
             ));
         }
-
-        /*$this->render('listProductsOnPage', array(
-            'products' => $products,
-            'isOnIndex' => $this->isOnIndex,
-            'cateAlias' => $this->cateAlias,
-            'tab' => $this->tab,
-            'model' => 'Products'
-        ));*/
     }
 
     protected function genCate($cateAlias) {
