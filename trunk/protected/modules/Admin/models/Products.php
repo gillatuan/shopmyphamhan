@@ -148,8 +148,8 @@ class Products extends CActiveRecord {
             if ($this->isNewRecord) {
                 $this->status      = APPROVED;
                 $this->create_date = time();
+                $this->alias = Helper::unicode_convert($postProduct['name']);
             }
-            $this->alias = Helper::unicode_convert($postProduct['name']);
             $this->page = is_array($postProduct['page']) ? implode(',', $postProduct['page']) : '';
         }
 

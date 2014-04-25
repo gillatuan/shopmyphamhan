@@ -116,7 +116,7 @@
 $scriptBuyThisOrder = '
     $(function() {
         $(".buyOrder").click(function() {
-            $(this).parent().html(\'<p class="link active" style="display: block;"><img src="' . Helper::themeUrl() . '/images/shopmyphamhan-loading.gif" alt="loading image" /></p>\');
+            $(this).parent().html(\'<p class="link active" style="display: block;"><img src="' . Helper::themeUrl() . '/images/shopphaideponline-loading.gif" alt="loading image" /></p>\');
 
             var url = "' . Helper::url('/Shop/product/confirmOrder') . '";
             var confirmOrder = "Success";

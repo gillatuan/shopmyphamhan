@@ -162,6 +162,6 @@
         <div class="contact" style="border-top: 1px solid #E9E8E8; padding: 10px 5px">
             <p>Mọi chi tiết, thắc mắc vui lòng liên hệ:</p>
             <p style="margin-left: 20px; font-weight: bold;">ĐT: <?php echo HOTLINE; ?></p>
-            <p style="margin-left: 20px; font-weight: bold;">Website: <a href="<?php echo Helper::url('/Shop/product/index'); ?>" title="Shop Mỹ Phẩm Hàn">http://shopmyphamhan.com</a></p>
+            <p style="margin-left: 20px; font-weight: bold;">Website: <a href="<?php echo Helper::url('/Shop/product/index'); ?>" title="Shop Phái Đẹp Online">http://shopphaideponline.com</a></p>
         </div>
     </div>

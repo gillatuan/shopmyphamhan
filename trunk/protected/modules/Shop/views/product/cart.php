@@ -188,7 +188,7 @@ $scriptActionCart = '
             userInfo.push($(".shipto .other-info").val());
 
             if (dataError == false) {
-                $(this).parent().html(\'<p class="link active" style="display: block;"><img src="' . Helper::themeUrl() . '/images/shopmyphamhan-loading.gif" alt="loading image" /></p>\');
+                $(this).parent().html(\'<p class="link active" style="display: block;"><img src="' . Helper::themeUrl() . '/images/shopphaideponline-loading.gif" alt="loading image" /></p>\');
                 var url = "' . Helper::url('/Shop/product/userOrder') . '";
                 $.ajax({
                     url: url,
