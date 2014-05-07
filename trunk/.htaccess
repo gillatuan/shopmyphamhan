@@ -1,34 +1,15 @@
-# Enable mod_rewrite
+## Enable mod_rewrite
+#
 RewriteEngine on
-
+#
 #RewriteCond %{HTTP_HOST} !^shopmyphamhan\.com$ [NC]
 #RewriteRule ^(.*)$ http://shopmyphamhan.com/$1 [R=301,L]
-
-# Specify the folder in which the application resides.
-# Use / if the application is in the root.
-RewriteBase /
-
-# No index any folder on web server
-Options -Indexes
-
-AddType 'text/html; charset=UTF-8' html
-
-# Serve cross-domain Ajax requests, disabled by default.
-# enable-cors.org
-# code.google.com/p/html5security/wiki/CrossOriginRequestSecurity
-<IfModule mod_headers.c>
-    Header set Access-Control-Allow-Origin "*"
-    Header set Connection keep-alive
-</IfModule>
-
+#
+#
 #Rewrite to correct domain to avoid canonicalization problems
 RewriteCond %{HTTPS} off
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
-
-#RewriteRule ^(.*)index\.(php|html?)$ $1 [R=301,L]
-#RewriteRule ^(.*)index.php?/$1.html [R=301,L]
-#RewriteRule ^(.*)index.php?/$1 [R=301,L]
 
 # Connection keep-alive
 <ifModule mod_headers.c>
@@ -70,9 +51,6 @@ RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 #    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
 #    Header append Vary User-Agent
 
-RewriteRule ^(cache|components|modules|plugins|templates)/.*\.(jp(e?g|2)?|png|gif|bmp|css|js|swf|html?|mp(eg?|[34])|avi|wav|og[gv]|xlsx?|docx?|pptx?|zip|rar|pdf|xps|txt|7z|svg|od[tsp]|flv|mov)$ - [L]
-RewriteRule ^.*\.(jp(e?g|2)?|png|gif|bmp)$ - [L,NC]
-
 # BEGIN Cache-Control Headers
 <IfModule mod_headers.c>
   <FilesMatch ".(ico|jpe?g|png|gif|swf|woff)$">
@@ -100,16 +78,6 @@ RewriteRule ^.*\.(jp(e?g|2)?|png|gif|bmp)$ - [L,NC]
 </IfModule>
 # END Remove Last-Modified Header
 
-php_value memory_limit 64M
-
-#Set the Maximum Input time
-php_value max_input_time 1000
-#Maximum size allowed in Post method
-php_value post_max_size 64M
-#Set the Maximum Execution Time for Script
-php_value max_execution_time 1000
-#Set the Maximum Upload Filesize
-php_value upload_max_filesize 64M
 
 # if a directory or a file exists, use it directly
 RewriteCond %{REQUEST_FILENAME} !-f
@@ -117,17 +85,13 @@ RewriteCond %{REQUEST_FILENAME} !-d
 
 #AddOutputFilterByType DEFLATE text/html text/plain text/xml application/xml application/xhtml+xml text/javascript     text/css application/x-javascript
 # Or, compress certain file types by extension:
-<files *.html>
-SetOutputFilter DEFLATE
-</files>
 
 BrowserMatch ^Mozilla/4 gzip-only-text/html
 BrowserMatch ^Mozilla/4.0[678] no-gzip
 BrowserMatch bMSIE !no-gzip !gzip-only-text/html
-
-# Refuse direct access to all files
-Order deny,allow
-Allow from 162.243.99.101
-
+#
+# Specify the folder in which the application resides.
+# Use / if the application is in the root.
+RewriteBase /
 ## otherwise forward it to index.php
 RewriteRule ^.*$ index.php [L]

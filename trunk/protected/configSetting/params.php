@@ -19,19 +19,19 @@
 //
 	define('DB_HOST' , 'localhost');
 //
-	define('DB_NAME' , 'shopphaide_pol');
+	define('DB_NAME' , 'shopmypham_mp');
 //
 	define('DB_PORT' , 3306);
 //
-	define('DB_PSWD' , 'ku2RNxtS');
+	define('DB_PSWD' , 'rvxz8G1S');
 //
-	define('DB_USER' , 'shopphaide_pola');
+	define('DB_USER' , 'shopmypham_adm');
 //
 	define('DEFAULT_BO_LAYOUT', '//layouts/main');
 //
 	define('DEFAULT_LAYOUT', '//layouts/home');
 //
-	define('DEFAULT_META_DESCRIPTION', 'Shop Phái Đẹp Online chuyên cung cấp sản phẩm xách tay cao cấp 100% hàn quốc, giao hàng tận nơi, giá cực tốt. Liên hệ ngay: 0906.977.244');
+	define('DEFAULT_META_DESCRIPTION', 'Shop mỹ phẩm hàn chuyên cung cấp sản phẩm xách tay cao cấp 100% hàn quốc, giao hàng tận nơi, giá cực tốt. Liên hệ ngay: 0906.977.244');
 //
 	define('DEFAULT_META_KEYWORDS', 'my pham xach tay,nuoc hoa,my pham cao cap,kem duong da,my pham tonymoly,my pham the face shop,bb cream,hàn quốc');
 //
