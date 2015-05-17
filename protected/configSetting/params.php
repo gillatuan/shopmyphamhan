@@ -19,13 +19,13 @@
 //
 	define('DB_HOST' , 'localhost');
 //
-	define('DB_NAME' , 'shopmypham_mp');
+	define('DB_NAME' , 'prj_shoptaphoaonline');
 //
 	define('DB_PORT' , 3306);
 //
-	define('DB_PSWD' , 'rvxz8G1S');
+	define('DB_PSWD' , '');
 //
-	define('DB_USER' , 'shopmypham_adm');
+	define('DB_USER' , 'root');
 //
 	define('DEFAULT_BO_LAYOUT', '//layouts/main');
 //

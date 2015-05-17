@@ -1,0 +1,603 @@
+2015/05/17 05:58:01 [info] [application] User: Guest (ID: )
+
+$_COOKIE=array (
+  'PHPSESSID' => 'vv54o011bb28q2qsd29q0tc7c5',
+)
+
+$_SERVER=array (
+  'REDIRECT_MIBDIRS' => '/xampp/php/extras/mibs',
+  'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin',
+  'REDIRECT_OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf',
+  'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php',
+  'REDIRECT_PHPRC' => '\\xampp\\php',
+  'REDIRECT_TMP' => '\\xampp\\tmp',
+  'REDIRECT_STATUS' => '200',
+  'MIBDIRS' => '/xampp/php/extras/mibs',
+  'MYSQL_HOME' => '\\xampp\\mysql\\bin',
+  'OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf',
+  'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php',
+  'PHPRC' => '\\xampp\\php',
+  'TMP' => '\\xampp\\tmp',
+  'HTTP_HOST' => 'gitshopmyphamhan.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://gitshopmyphamhan.local/',
+  'HTTP_COOKIE' => 'PHPSESSID=vv54o011bb28q2qsd29q0tc7c5',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;E:\\Tools\\BitviseSSHClient624;E:\\Tools\\TortoiseSVN\\bin;D:\\xampp\\php;E:\\Tools\\NodeJs\\;D:\\RailsInstaller\\Git\\cmd;D:\\RailsInstaller\\Ruby1.9.3\\bin;C:\\Users\\My PC\\AppData\\Roaming\\npm',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.31 Server at gitshopmyphamhan.local Port 80</address>
+',
+  'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.31',
+  'SERVER_NAME' => 'gitshopmyphamhan.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/xampp/htdocs/FTPIT-server/Git/shopmyphamhan',
+  'REQUEST_SCHEME' => 'http',
+  'CONTEXT_PREFIX' => '',
+  'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs/FTPIT-server/Git/shopmyphamhan',
+  'SERVER_ADMIN' => 'tuan.buidoanngoc@gmail.com',
+  'SCRIPT_FILENAME' => 'D:/xampp/htdocs/FTPIT-server/Git/shopmyphamhan/index.php',
+  'REMOTE_PORT' => '52517',
+  'REDIRECT_URL' => '/uploads/resizeOnIndex/Banner/2014_08_30_11_03_32-shoptaphoaonline-hop-den.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/uploads/resizeOnIndex/Banner/2014_08_30_11_03_32-shoptaphoaonline-hop-den.png',
+  'SCRIPT_NAME' => '/index.php',
+  'PHP_SELF' => '/index.php',
+  'REQUEST_TIME_FLOAT' => 1431835081.4179999828338623046875,
+  'REQUEST_TIME' => 1431835081,
+)
+2015/05/17 05:58:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "uploads/resizeOnIndex/Banner/2014_08_30_11_03_32-shoptaphoaonline-hop-den.png".' in D:\xampp\htdocs\FTPIT-server\common\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\FTPIT-server\common\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/resizeO...')
+#1 D:\xampp\htdocs\FTPIT-server\common\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\FTPIT-server\Git\shopmyphamhan\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/uploads/resizeOnIndex/Banner/2014_08_30_11_03_32-shoptaphoaonline-hop-den.png
+HTTP_REFERER=http://gitshopmyphamhan.local/
+---
+2015/05/17 05:58:02 [info] [application] User: Guest (ID: )
+
+$_COOKIE=array (
+  'PHPSESSID' => 'vv54o011bb28q2qsd29q0tc7c5',
+)
+
+$_SERVER=array (
+  'REDIRECT_MIBDIRS' => '/xampp/php/extras/mibs',
+  'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin',
+  'REDIRECT_OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf',
+  'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php',
+  'REDIRECT_PHPRC' => '\\xampp\\php',
+  'REDIRECT_TMP' => '\\xampp\\tmp',
+  'REDIRECT_STATUS' => '200',
+  'MIBDIRS' => '/xampp/php/extras/mibs',
+  'MYSQL_HOME' => '\\xampp\\mysql\\bin',
+  'OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf',
+  'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php',
+  'PHPRC' => '\\xampp\\php',
+  'TMP' => '\\xampp\\tmp',
+  'HTTP_HOST' => 'gitshopmyphamhan.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://gitshopmyphamhan.local/',
+  'HTTP_COOKIE' => 'PHPSESSID=vv54o011bb28q2qsd29q0tc7c5',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;E:\\Tools\\BitviseSSHClient624;E:\\Tools\\TortoiseSVN\\bin;D:\\xampp\\php;E:\\Tools\\NodeJs\\;D:\\RailsInstaller\\Git\\cmd;D:\\RailsInstaller\\Ruby1.9.3\\bin;C:\\Users\\My PC\\AppData\\Roaming\\npm',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.31 Server at gitshopmyphamhan.local Port 80</address>
+',
+  'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.31',
+  'SERVER_NAME' => 'gitshopmyphamhan.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/xampp/htdocs/FTPIT-server/Git/shopmyphamhan',
+  'REQUEST_SCHEME' => 'http',
+  'CONTEXT_PREFIX' => '',
+  'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs/FTPIT-server/Git/shopmyphamhan',
+  'SERVER_ADMIN' => 'tuan.buidoanngoc@gmail.com',
+  'SCRIPT_FILENAME' => 'D:/xampp/htdocs/FTPIT-server/Git/shopmyphamhan/index.php',
+  'REMOTE_PORT' => '52523',
+  'REDIRECT_URL' => '/uploads/resizeOnIndex/Banner/2014_08_30_11_03_32-shoptaphoaonline-hop-den.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/uploads/resizeOnIndex/Banner/2014_08_30_11_03_32-shoptaphoaonline-hop-den.png',
+  'SCRIPT_NAME' => '/index.php',
+  'PHP_SELF' => '/index.php',
+  'REQUEST_TIME_FLOAT' => 1431835082.842999935150146484375,
+  'REQUEST_TIME' => 1431835082,
+)
+2015/05/17 05:58:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "uploads/resizeOnIndex/Banner/2014_08_30_11_03_32-shoptaphoaonline-hop-den.png".' in D:\xampp\htdocs\FTPIT-server\common\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\FTPIT-server\common\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/resizeO...')
+#1 D:\xampp\htdocs\FTPIT-server\common\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\FTPIT-server\Git\shopmyphamhan\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/uploads/resizeOnIndex/Banner/2014_08_30_11_03_32-shoptaphoaonline-hop-den.png
+HTTP_REFERER=http://gitshopmyphamhan.local/
+---
+2015/05/17 05:58:04 [info] [application] User: Guest (ID: )
+
+$_COOKIE=array (
+  'PHPSESSID' => 'vv54o011bb28q2qsd29q0tc7c5',
+)
+
+$_SERVER=array (
+  'REDIRECT_MIBDIRS' => '/xampp/php/extras/mibs',
+  'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin',
+  'REDIRECT_OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf',
+  'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php',
+  'REDIRECT_PHPRC' => '\\xampp\\php',
+  'REDIRECT_TMP' => '\\xampp\\tmp',
+  'REDIRECT_STATUS' => '200',
+  'MIBDIRS' => '/xampp/php/extras/mibs',
+  'MYSQL_HOME' => '\\xampp\\mysql\\bin',
+  'OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf',
+  'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php',
+  'PHPRC' => '\\xampp\\php',
+  'TMP' => '\\xampp\\tmp',
+  'HTTP_HOST' => 'gitshopmyphamhan.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://gitshopmyphamhan.local/',
+  'HTTP_COOKIE' => 'PHPSESSID=vv54o011bb28q2qsd29q0tc7c5',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;E:\\Tools\\BitviseSSHClient624;E:\\Tools\\TortoiseSVN\\bin;D:\\xampp\\php;E:\\Tools\\NodeJs\\;D:\\RailsInstaller\\Git\\cmd;D:\\RailsInstaller\\Ruby1.9.3\\bin;C:\\Users\\My PC\\AppData\\Roaming\\npm',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.31 Server at gitshopmyphamhan.local Port 80</address>
+',
+  'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.31',
+  'SERVER_NAME' => 'gitshopmyphamhan.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/xampp/htdocs/FTPIT-server/Git/shopmyphamhan',
+  'REQUEST_SCHEME' => 'http',
+  'CONTEXT_PREFIX' => '',
+  'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs/FTPIT-server/Git/shopmyphamhan',
+  'SERVER_ADMIN' => 'tuan.buidoanngoc@gmail.com',
+  'SCRIPT_FILENAME' => 'D:/xampp/htdocs/FTPIT-server/Git/shopmyphamhan/index.php',
+  'REMOTE_PORT' => '52528',
+  'REDIRECT_URL' => '/uploads/resizeOnIndex/Banner/2014_08_30_11_03_32-shoptaphoaonline-hop-den.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/uploads/resizeOnIndex/Banner/2014_08_30_11_03_32-shoptaphoaonline-hop-den.png',
+  'SCRIPT_NAME' => '/index.php',
+  'PHP_SELF' => '/index.php',
+  'REQUEST_TIME_FLOAT' => 1431835084.4820001125335693359375,
+  'REQUEST_TIME' => 1431835084,
+)
+2015/05/17 05:58:04 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "uploads/resizeOnIndex/Banner/2014_08_30_11_03_32-shoptaphoaonline-hop-den.png".' in D:\xampp\htdocs\FTPIT-server\common\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\FTPIT-server\common\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/resizeO...')
+#1 D:\xampp\htdocs\FTPIT-server\common\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\FTPIT-server\Git\shopmyphamhan\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/uploads/resizeOnIndex/Banner/2014_08_30_11_03_32-shoptaphoaonline-hop-den.png
+HTTP_REFERER=http://gitshopmyphamhan.local/
+---
+2015/05/17 05:58:05 [info] [application] User: Guest (ID: )
+
+$_COOKIE=array (
+  'PHPSESSID' => 'vv54o011bb28q2qsd29q0tc7c5',
+)
+
+$_SERVER=array (
+  'REDIRECT_MIBDIRS' => '/xampp/php/extras/mibs',
+  'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin',
+  'REDIRECT_OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf',
+  'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php',
+  'REDIRECT_PHPRC' => '\\xampp\\php',
+  'REDIRECT_TMP' => '\\xampp\\tmp',
+  'REDIRECT_STATUS' => '200',
+  'MIBDIRS' => '/xampp/php/extras/mibs',
+  'MYSQL_HOME' => '\\xampp\\mysql\\bin',
+  'OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf',
+  'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php',
+  'PHPRC' => '\\xampp\\php',
+  'TMP' => '\\xampp\\tmp',
+  'HTTP_HOST' => 'gitshopmyphamhan.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://gitshopmyphamhan.local/',
+  'HTTP_COOKIE' => 'PHPSESSID=vv54o011bb28q2qsd29q0tc7c5',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;E:\\Tools\\BitviseSSHClient624;E:\\Tools\\TortoiseSVN\\bin;D:\\xampp\\php;E:\\Tools\\NodeJs\\;D:\\RailsInstaller\\Git\\cmd;D:\\RailsInstaller\\Ruby1.9.3\\bin;C:\\Users\\My PC\\AppData\\Roaming\\npm',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.31 Server at gitshopmyphamhan.local Port 80</address>
+',
+  'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.31',
+  'SERVER_NAME' => 'gitshopmyphamhan.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/xampp/htdocs/FTPIT-server/Git/shopmyphamhan',
+  'REQUEST_SCHEME' => 'http',
+  'CONTEXT_PREFIX' => '',
+  'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs/FTPIT-server/Git/shopmyphamhan',
+  'SERVER_ADMIN' => 'tuan.buidoanngoc@gmail.com',
+  'SCRIPT_FILENAME' => 'D:/xampp/htdocs/FTPIT-server/Git/shopmyphamhan/index.php',
+  'REMOTE_PORT' => '52535',
+  'REDIRECT_URL' => '/uploads/resizeOnIndex/Banner/2014_08_30_11_03_32-shoptaphoaonline-hop-den.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/uploads/resizeOnIndex/Banner/2014_08_30_11_03_32-shoptaphoaonline-hop-den.png',
+  'SCRIPT_NAME' => '/index.php',
+  'PHP_SELF' => '/index.php',
+  'REQUEST_TIME_FLOAT' => 1431835085.8719999790191650390625,
+  'REQUEST_TIME' => 1431835085,
+)
+2015/05/17 05:58:05 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "uploads/resizeOnIndex/Banner/2014_08_30_11_03_32-shoptaphoaonline-hop-den.png".' in D:\xampp\htdocs\FTPIT-server\common\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\FTPIT-server\common\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/resizeO...')
+#1 D:\xampp\htdocs\FTPIT-server\common\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\FTPIT-server\Git\shopmyphamhan\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/uploads/resizeOnIndex/Banner/2014_08_30_11_03_32-shoptaphoaonline-hop-den.png
+HTTP_REFERER=http://gitshopmyphamhan.local/
+---
+2015/05/17 05:58:34 [info] [application] User: Guest (ID: )
+
+$_COOKIE=array (
+  'PHPSESSID' => 'vv54o011bb28q2qsd29q0tc7c5',
+)
+
+$_SERVER=array (
+  'REDIRECT_MIBDIRS' => '/xampp/php/extras/mibs',
+  'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin',
+  'REDIRECT_OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf',
+  'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php',
+  'REDIRECT_PHPRC' => '\\xampp\\php',
+  'REDIRECT_TMP' => '\\xampp\\tmp',
+  'REDIRECT_STATUS' => '200',
+  'MIBDIRS' => '/xampp/php/extras/mibs',
+  'MYSQL_HOME' => '\\xampp\\mysql\\bin',
+  'OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf',
+  'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php',
+  'PHPRC' => '\\xampp\\php',
+  'TMP' => '\\xampp\\tmp',
+  'HTTP_HOST' => 'gitshopmyphamhan.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://gitshopmyphamhan.local/',
+  'HTTP_COOKIE' => 'PHPSESSID=vv54o011bb28q2qsd29q0tc7c5',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;E:\\Tools\\BitviseSSHClient624;E:\\Tools\\TortoiseSVN\\bin;D:\\xampp\\php;E:\\Tools\\NodeJs\\;D:\\RailsInstaller\\Git\\cmd;D:\\RailsInstaller\\Ruby1.9.3\\bin;C:\\Users\\My PC\\AppData\\Roaming\\npm',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.31 Server at gitshopmyphamhan.local Port 80</address>
+',
+  'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.31',
+  'SERVER_NAME' => 'gitshopmyphamhan.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/xampp/htdocs/FTPIT-server/Git/shopmyphamhan',
+  'REQUEST_SCHEME' => 'http',
+  'CONTEXT_PREFIX' => '',
+  'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs/FTPIT-server/Git/shopmyphamhan',
+  'SERVER_ADMIN' => 'tuan.buidoanngoc@gmail.com',
+  'SCRIPT_FILENAME' => 'D:/xampp/htdocs/FTPIT-server/Git/shopmyphamhan/index.php',
+  'REMOTE_PORT' => '52593',
+  'REDIRECT_URL' => '/uploads/resizeOnIndex/Products/2014_08_31_06_48_06-shoptaphoaonline-hop-den.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/uploads/resizeOnIndex/Products/2014_08_31_06_48_06-shoptaphoaonline-hop-den.png',
+  'SCRIPT_NAME' => '/index.php',
+  'PHP_SELF' => '/index.php',
+  'REQUEST_TIME_FLOAT' => 1431835114.394999980926513671875,
+  'REQUEST_TIME' => 1431835114,
+)
+2015/05/17 05:58:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "uploads/resizeOnIndex/Products/2014_08_31_06_48_06-shoptaphoaonline-hop-den.png".' in D:\xampp\htdocs\FTPIT-server\common\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\FTPIT-server\common\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/resizeO...')
+#1 D:\xampp\htdocs\FTPIT-server\common\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\FTPIT-server\Git\shopmyphamhan\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/uploads/resizeOnIndex/Products/2014_08_31_06_48_06-shoptaphoaonline-hop-den.png
+HTTP_REFERER=http://gitshopmyphamhan.local/
+---
+2015/05/17 05:58:34 [info] [application] User: Guest (ID: )
+
+$_COOKIE=array (
+  'PHPSESSID' => 'vv54o011bb28q2qsd29q0tc7c5',
+)
+
+$_SERVER=array (
+  'REDIRECT_MIBDIRS' => '/xampp/php/extras/mibs',
+  'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin',
+  'REDIRECT_OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf',
+  'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php',
+  'REDIRECT_PHPRC' => '\\xampp\\php',
+  'REDIRECT_TMP' => '\\xampp\\tmp',
+  'REDIRECT_STATUS' => '200',
+  'MIBDIRS' => '/xampp/php/extras/mibs',
+  'MYSQL_HOME' => '\\xampp\\mysql\\bin',
+  'OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf',
+  'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php',
+  'PHPRC' => '\\xampp\\php',
+  'TMP' => '\\xampp\\tmp',
+  'HTTP_HOST' => 'gitshopmyphamhan.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://gitshopmyphamhan.local/',
+  'HTTP_COOKIE' => 'PHPSESSID=vv54o011bb28q2qsd29q0tc7c5',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;E:\\Tools\\BitviseSSHClient624;E:\\Tools\\TortoiseSVN\\bin;D:\\xampp\\php;E:\\Tools\\NodeJs\\;D:\\RailsInstaller\\Git\\cmd;D:\\RailsInstaller\\Ruby1.9.3\\bin;C:\\Users\\My PC\\AppData\\Roaming\\npm',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.31 Server at gitshopmyphamhan.local Port 80</address>
+',
+  'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.31',
+  'SERVER_NAME' => 'gitshopmyphamhan.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/xampp/htdocs/FTPIT-server/Git/shopmyphamhan',
+  'REQUEST_SCHEME' => 'http',
+  'CONTEXT_PREFIX' => '',
+  'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs/FTPIT-server/Git/shopmyphamhan',
+  'SERVER_ADMIN' => 'tuan.buidoanngoc@gmail.com',
+  'SCRIPT_FILENAME' => 'D:/xampp/htdocs/FTPIT-server/Git/shopmyphamhan/index.php',
+  'REMOTE_PORT' => '52601',
+  'REDIRECT_URL' => '/uploads/resizeOnIndex/Products/2014_08_31_11_13_49-shoptaphoaonline-nemo.jpg',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/uploads/resizeOnIndex/Products/2014_08_31_11_13_49-shoptaphoaonline-nemo.jpg',
+  'SCRIPT_NAME' => '/index.php',
+  'PHP_SELF' => '/index.php',
+  'REQUEST_TIME_FLOAT' => 1431835114.4059998989105224609375,
+  'REQUEST_TIME' => 1431835114,
+)
+2015/05/17 05:58:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "uploads/resizeOnIndex/Products/2014_08_31_11_13_49-shoptaphoaonline-nemo.jpg".' in D:\xampp\htdocs\FTPIT-server\common\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\FTPIT-server\common\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/resizeO...')
+#1 D:\xampp\htdocs\FTPIT-server\common\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\FTPIT-server\Git\shopmyphamhan\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/uploads/resizeOnIndex/Products/2014_08_31_11_13_49-shoptaphoaonline-nemo.jpg
+HTTP_REFERER=http://gitshopmyphamhan.local/
+---
+2015/05/17 05:59:11 [info] [application] User: Guest (ID: )
+
+$_COOKIE=array (
+  'PHPSESSID' => 'vv54o011bb28q2qsd29q0tc7c5',
+)
+
+$_SERVER=array (
+  'REDIRECT_MIBDIRS' => '/xampp/php/extras/mibs',
+  'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin',
+  'REDIRECT_OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf',
+  'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php',
+  'REDIRECT_PHPRC' => '\\xampp\\php',
+  'REDIRECT_TMP' => '\\xampp\\tmp',
+  'REDIRECT_STATUS' => '200',
+  'MIBDIRS' => '/xampp/php/extras/mibs',
+  'MYSQL_HOME' => '\\xampp\\mysql\\bin',
+  'OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf',
+  'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php',
+  'PHPRC' => '\\xampp\\php',
+  'TMP' => '\\xampp\\tmp',
+  'HTTP_HOST' => 'gitshopmyphamhan.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://gitshopmyphamhan.local/shop/san-pham',
+  'HTTP_COOKIE' => 'PHPSESSID=vv54o011bb28q2qsd29q0tc7c5',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;E:\\Tools\\BitviseSSHClient624;E:\\Tools\\TortoiseSVN\\bin;D:\\xampp\\php;E:\\Tools\\NodeJs\\;D:\\RailsInstaller\\Git\\cmd;D:\\RailsInstaller\\Ruby1.9.3\\bin;C:\\Users\\My PC\\AppData\\Roaming\\npm',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.31 Server at gitshopmyphamhan.local Port 80</address>
+',
+  'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.31',
+  'SERVER_NAME' => 'gitshopmyphamhan.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/xampp/htdocs/FTPIT-server/Git/shopmyphamhan',
+  'REQUEST_SCHEME' => 'http',
+  'CONTEXT_PREFIX' => '',
+  'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs/FTPIT-server/Git/shopmyphamhan',
+  'SERVER_ADMIN' => 'tuan.buidoanngoc@gmail.com',
+  'SCRIPT_FILENAME' => 'D:/xampp/htdocs/FTPIT-server/Git/shopmyphamhan/index.php',
+  'REMOTE_PORT' => '52674',
+  'REDIRECT_URL' => '/uploads/resizeOnIndex/Products/2014_08_31_06_48_07-shoptaphoaonline-banner-2.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/uploads/resizeOnIndex/Products/2014_08_31_06_48_07-shoptaphoaonline-banner-2.png',
+  'SCRIPT_NAME' => '/index.php',
+  'PHP_SELF' => '/index.php',
+  'REQUEST_TIME_FLOAT' => 1431835151.9179999828338623046875,
+  'REQUEST_TIME' => 1431835151,
+)
+2015/05/17 05:59:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "uploads/resizeOnIndex/Products/2014_08_31_06_48_07-shoptaphoaonline-banner-2.png".' in D:\xampp\htdocs\FTPIT-server\common\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\FTPIT-server\common\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/resizeO...')
+#1 D:\xampp\htdocs\FTPIT-server\common\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\FTPIT-server\Git\shopmyphamhan\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/uploads/resizeOnIndex/Products/2014_08_31_06_48_07-shoptaphoaonline-banner-2.png
+HTTP_REFERER=http://gitshopmyphamhan.local/shop/san-pham
+---
+2015/05/17 05:59:11 [info] [application] User: Guest (ID: )
+
+$_COOKIE=array (
+  'PHPSESSID' => 'vv54o011bb28q2qsd29q0tc7c5',
+)
+
+$_SERVER=array (
+  'REDIRECT_MIBDIRS' => '/xampp/php/extras/mibs',
+  'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin',
+  'REDIRECT_OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf',
+  'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php',
+  'REDIRECT_PHPRC' => '\\xampp\\php',
+  'REDIRECT_TMP' => '\\xampp\\tmp',
+  'REDIRECT_STATUS' => '200',
+  'MIBDIRS' => '/xampp/php/extras/mibs',
+  'MYSQL_HOME' => '\\xampp\\mysql\\bin',
+  'OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf',
+  'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php',
+  'PHPRC' => '\\xampp\\php',
+  'TMP' => '\\xampp\\tmp',
+  'HTTP_HOST' => 'gitshopmyphamhan.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://gitshopmyphamhan.local/shop/san-pham',
+  'HTTP_COOKIE' => 'PHPSESSID=vv54o011bb28q2qsd29q0tc7c5',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;E:\\Tools\\BitviseSSHClient624;E:\\Tools\\TortoiseSVN\\bin;D:\\xampp\\php;E:\\Tools\\NodeJs\\;D:\\RailsInstaller\\Git\\cmd;D:\\RailsInstaller\\Ruby1.9.3\\bin;C:\\Users\\My PC\\AppData\\Roaming\\npm',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.31 Server at gitshopmyphamhan.local Port 80</address>
+',
+  'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.31',
+  'SERVER_NAME' => 'gitshopmyphamhan.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/xampp/htdocs/FTPIT-server/Git/shopmyphamhan',
+  'REQUEST_SCHEME' => 'http',
+  'CONTEXT_PREFIX' => '',
+  'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs/FTPIT-server/Git/shopmyphamhan',
+  'SERVER_ADMIN' => 'tuan.buidoanngoc@gmail.com',
+  'SCRIPT_FILENAME' => 'D:/xampp/htdocs/FTPIT-server/Git/shopmyphamhan/index.php',
+  'REMOTE_PORT' => '52680',
+  'REDIRECT_URL' => '/uploads/resizeOnIndex/Products/2014_08_31_06_48_06-shoptaphoaonline-hop-den.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/uploads/resizeOnIndex/Products/2014_08_31_06_48_06-shoptaphoaonline-hop-den.png',
+  'SCRIPT_NAME' => '/index.php',
+  'PHP_SELF' => '/index.php',
+  'REQUEST_TIME_FLOAT' => 1431835151.926000118255615234375,
+  'REQUEST_TIME' => 1431835151,
+)
+2015/05/17 05:59:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "uploads/resizeOnIndex/Products/2014_08_31_06_48_06-shoptaphoaonline-hop-den.png".' in D:\xampp\htdocs\FTPIT-server\common\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\FTPIT-server\common\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/resizeO...')
+#1 D:\xampp\htdocs\FTPIT-server\common\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\FTPIT-server\Git\shopmyphamhan\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/uploads/resizeOnIndex/Products/2014_08_31_06_48_06-shoptaphoaonline-hop-den.png
+HTTP_REFERER=http://gitshopmyphamhan.local/shop/san-pham
+---
+2015/05/17 05:59:11 [info] [application] User: Guest (ID: )
+
+$_COOKIE=array (
+  'PHPSESSID' => 'vv54o011bb28q2qsd29q0tc7c5',
+)
+
+$_SERVER=array (
+  'REDIRECT_MIBDIRS' => '/xampp/php/extras/mibs',
+  'REDIRECT_MYSQL_HOME' => '\\xampp\\mysql\\bin',
+  'REDIRECT_OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf',
+  'REDIRECT_PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php',
+  'REDIRECT_PHPRC' => '\\xampp\\php',
+  'REDIRECT_TMP' => '\\xampp\\tmp',
+  'REDIRECT_STATUS' => '200',
+  'MIBDIRS' => '/xampp/php/extras/mibs',
+  'MYSQL_HOME' => '\\xampp\\mysql\\bin',
+  'OPENSSL_CONF' => '/xampp/apache/bin/openssl.cnf',
+  'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php',
+  'PHPRC' => '\\xampp\\php',
+  'TMP' => '\\xampp\\tmp',
+  'HTTP_HOST' => 'gitshopmyphamhan.local',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.3; WOW64; rv:37.0) Gecko/20100101 Firefox/37.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.5',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://gitshopmyphamhan.local/shop/san-pham',
+  'HTTP_COOKIE' => 'PHPSESSID=vv54o011bb28q2qsd29q0tc7c5',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Skype\\Phone\\;E:\\Tools\\BitviseSSHClient624;E:\\Tools\\TortoiseSVN\\bin;D:\\xampp\\php;E:\\Tools\\NodeJs\\;D:\\RailsInstaller\\Git\\cmd;D:\\RailsInstaller\\Ruby1.9.3\\bin;C:\\Users\\My PC\\AppData\\Roaming\\npm',
+  'SystemRoot' => 'C:\\Windows',
+  'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe',
+  'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC',
+  'WINDIR' => 'C:\\Windows',
+  'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.31 Server at gitshopmyphamhan.local Port 80</address>
+',
+  'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1h PHP/5.4.31',
+  'SERVER_NAME' => 'gitshopmyphamhan.local',
+  'SERVER_ADDR' => '127.0.0.1',
+  'SERVER_PORT' => '80',
+  'REMOTE_ADDR' => '127.0.0.1',
+  'DOCUMENT_ROOT' => 'D:/xampp/htdocs/FTPIT-server/Git/shopmyphamhan',
+  'REQUEST_SCHEME' => 'http',
+  'CONTEXT_PREFIX' => '',
+  'CONTEXT_DOCUMENT_ROOT' => 'D:/xampp/htdocs/FTPIT-server/Git/shopmyphamhan',
+  'SERVER_ADMIN' => 'tuan.buidoanngoc@gmail.com',
+  'SCRIPT_FILENAME' => 'D:/xampp/htdocs/FTPIT-server/Git/shopmyphamhan/index.php',
+  'REMOTE_PORT' => '52681',
+  'REDIRECT_URL' => '/uploads/resizeOnIndex/Products/2014_08_31_11_13_48-shoptaphoaonline-banner-2.png',
+  'GATEWAY_INTERFACE' => 'CGI/1.1',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'REQUEST_METHOD' => 'GET',
+  'QUERY_STRING' => '',
+  'REQUEST_URI' => '/uploads/resizeOnIndex/Products/2014_08_31_11_13_48-shoptaphoaonline-banner-2.png',
+  'SCRIPT_NAME' => '/index.php',
+  'PHP_SELF' => '/index.php',
+  'REQUEST_TIME_FLOAT' => 1431835151.926000118255615234375,
+  'REQUEST_TIME' => 1431835151,
+)
+2015/05/17 05:59:12 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Không thể giải quyết yêu cầu "uploads/resizeOnIndex/Products/2014_08_31_11_13_48-shoptaphoaonline-banner-2.png".' in D:\xampp\htdocs\FTPIT-server\common\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\FTPIT-server\common\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('uploads/resizeO...')
+#1 D:\xampp\htdocs\FTPIT-server\common\yii\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\FTPIT-server\Git\shopmyphamhan\index.php(16): CApplication->run()
+#3 {main}
+REQUEST_URI=/uploads/resizeOnIndex/Products/2014_08_31_11_13_48-shoptaphoaonline-banner-2.png
+HTTP_REFERER=http://gitshopmyphamhan.local/shop/san-pham
+---
